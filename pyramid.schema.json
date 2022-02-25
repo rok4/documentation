@@ -1,0 +1,211 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Pyramid's descriptor",
+    "type": "object",
+    "required": ["tile_matrix_set", "format", "levels"],
+    "properties": {
+        "tile_matrix_set": {
+            "type": "string"
+        },
+        "format": {
+            "type": "string",
+            "enum": [
+                "TIFF_RAW_INT8",
+                "TIFF_JPG_INT8",
+                "TIFF_JPG90_INT8",
+                "TIFF_PNG_INT8",
+                "TIFF_LZW_INT8",
+                "TIFF_ZIP_INT8",
+                "TIFF_PKB_INT8",
+                "TIFF_RAW_FLOAT32",
+                "TIFF_LZW_FLOAT32",
+                "TIFF_ZIP_FLOAT32",
+                "TIFF_PKB_FLOAT32",
+                "TIFF_PBF_MVT"
+            ]
+        },
+        "mask_format": {
+            "type": "string"
+        },
+        "raster_specifications": {
+            "type": "object",
+            "required": ["channels", "nodata", "photometric", "interpolation"],
+            "properties": {
+                "channels": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 4
+                },
+                "nodata": {
+                    "type": "string"
+                },
+                "photometric": {
+                    "type": "string",
+                    "enum": ["rgb", "gray", "mask"]
+                },
+                "interpolation": {
+                    "type": "string",
+                    "enum": ["nn","bicubic","linear","lanczos"]
+                }
+            }
+        },
+        "levels": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["storage", "tile_limits", "tiles_per_height", "tiles_per_width", "id"],
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "string": {
+                        "type": "integer"
+                    },
+                    "tiles_per_width": {
+                        "type": "integer"
+                    },
+                    "tile_limits": {
+                        "type": "object",
+                        "required": ["min_row", "min_col", "max_col", "max_row"],
+                        "properties": {
+                            "min_row": {
+                                "type": "integer"
+                            },
+                            "min_col": {
+                                "type": "integer"
+                            },
+                            "max_col": {
+                                "type": "integer"
+                            },
+                            "max_row": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "tables": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["name", "geometry", "attributes"],
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "geometry": {
+                                    "type": "string"
+                                },
+                                "attributes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": ["name", "type", "count"],
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "type": "integer"
+                                            },
+                                            "min": {
+                                                "type": "number"
+                                            },
+                                            "max": {
+                                                "type": "number"
+                                            },
+                                            "values": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "storage": {
+                        "oneOf": [
+                            {
+                                "type": "object",
+                                "required": ["path_depth", "image_directory", "type"],
+                                "properties": {
+                                    "path_depth": {
+                                        "type": "integer"
+                                    },
+                                    "image_directory": {
+                                        "type": "string"
+                                    },
+                                    "mask_directory": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "const": "FILE"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "required": ["pool_name", "image_prefix", "type"],
+                                "properties": {
+                                    "pool_name": {
+                                        "type": "string"
+                                    },
+                                    "image_prefix": {
+                                        "type": "string"
+                                    },
+                                    "mask_prefix": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "const": "CEPH"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "required": ["bucket_name", "image_prefix", "type"],
+                                "properties": {
+                                    "bucket_name": {
+                                        "type": "string"
+                                    },
+                                    "image_prefix": {
+                                        "type": "string"
+                                    },
+                                    "mask_prefix": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "const": "S3"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "required": ["container_name", "image_prefix", "type"],
+                                "properties": {
+                                    "container_name": {
+                                        "type": "string"
+                                    },
+                                    "image_prefix": {
+                                        "type": "string"
+                                    },
+                                    "mask_prefix": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "const": "SWIFT"
+                                    }
+                                }
+                            }
+
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
