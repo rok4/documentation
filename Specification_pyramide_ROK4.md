@@ -127,7 +127,7 @@ Selon le type de la pyramide, les informations présentes dans le descripteur so
 | Type de pyramide                                             | Raster                                                                                                                                                                             | Vecteur      |
 | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | Nom du TMS associé                                           | Présent                                                                                                                                                                            | Présent      |
-| Format<br>(contient la compression et le format des données) | TIFF_RAW_INT8<br>TIFF_RAW_FLOAT32<br>TIFF_LZW_INT8<br>TIFF_LZW_FLOAT32<br>TIFF_ZIP_INT8<br>TIFF_ZIP_FLOAT32<br>TIFF_PKB_INT8<br>TIFF_PKB_FLOAT32<br>TIFF_PNG_INT8<br>TIFF_JPG_INT8 | TIFF_PBF_MVT |
+| Format<br>(contient la compression et le format des données) | TIFF_RAW_UINT8<br>TIFF_RAW_FLOAT32<br>TIFF_LZW_UINT8<br>TIFF_LZW_FLOAT32<br>TIFF_ZIP_UINT8<br>TIFF_ZIP_FLOAT32<br>TIFF_PKB_UINT8<br>TIFF_PKB_FLOAT32<br>TIFF_PNG_UINT8<br>TIFF_JPG_UINT8 | TIFF_PBF_MVT |
 | Le nombre de canaux des données                              | Présent                                                                                                                                                                            | Absent       |
 | La valeur du nodata                                          | Présent                                                                                                                                                                            | Absent       |
 | L'interpolation utilisée à la génération                     | Présent                                                                                                                                                                            | Absent       |
@@ -138,7 +138,7 @@ Extrait d'un descripteur de pyramide raster, pour du MNT :
 ```json
 {
     "format": "TIFF_LZW_FLOAT32",
-    "mask_format": "TIFF_ZIP_INT8",
+    "mask_format": "TIFF_ZIP_UINT8",
     "tile_matrix_set": "RGM04UTM38S_10cm",
     "raster_specifications": {
         "channels": 1,
