@@ -461,13 +461,13 @@ Voici la structure globale d'une dalle de la pyramide ROK4, dalle contenant N tu
 
 #### Les références
 
-Lors de la création d'une pyramide de mise à jour, on ne va potentiellement pas recopier toutes les données de la version précédente, mais simplement les référencer à l'aide de liens symbolique en stockage fichier ou d'objets symboliques (objet contenant simplement le nom de l'objet cible précédé de la signature `SYMLINK#`) en stockage objet. Cela est mis en place par les outils ROK4GENERATION mais est transparent pour ROK4SERVER qui se contente de lire UNE pyramide.
+Lors de la création d'une pyramide de mise à jour, on ne va potentiellement pas recopier toutes les données de la version précédente, mais simplement les référencer à l'aide de liens symbolique en stockage fichier ou d'objets symboliques (objet contenant simplement le nom du contenant et de l'objet cible précédé de la signature `SYMLINK#` : `SYMLINK#<contenant>/<nom de l'objet>`) en stockage objet. Cela est mis en place par les outils de prégénération mais est transparent pour le serveur qui se contente de lire UNE pyramide.
 
 ### Le fichier liste
 
 Le fichier liste est un fichier texte (extension .list) au nom de la pyramide et situé à côté du descripteur de pyramide. Il contient la liste de toutes les dalles de données et masques que contient la pyramide. Si certaines dalles ne sont que des références dans la pyramide (liens/objets symboliques), c'est le nom du fichier/objet cible qui est listé (appartenant à la structure d'une autre pyramide).
 
-Ce fichier est uniquement utilisé par les outils ROK4GENERATION, pour connaître sans avoir à parcourir la pyramide son contenu exact (indispensable lors d'une mise à jour). Dans le cas du stockage objet, où aucun parcours n'est possible, ce fichier est particulièrement précieux.
+Ce fichier est uniquement utilisé par les outils de prégénération, pour connaître sans avoir à parcourir la pyramide son contenu exact (indispensable lors d'une mise à jour). Dans le cas du stockage objet, où aucun parcours n'est possible, ce fichier est particulièrement précieux.
 
 Le fichier liste est en deux parties, séparées par un dièse :
 
