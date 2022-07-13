@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs
+          sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs liblog-log4perl-perl
           sudo pip3 install mkdocs-material mkdocs-select-files
 
       - name: Build documentation
