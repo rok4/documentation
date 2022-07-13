@@ -51,4 +51,4 @@ jobs:
 
       - name: Publish on gh-pages branch
         run: |
-          git push origin `git subtree split --prefix build/target/dist master`:gh-pages --force
+          git push origin `git subtree split --prefix build/target/dist`:gh-pages --force
