@@ -1,0 +1,54 @@
+site_name: Projet ROK4
+site_author: IGN
+
+nav:
+    - Accueil: index.md
+    - Spécifications: 
+        - Pyramide: specifications/pyramid.md
+        - API du serveur (SwaggerUI): specifications/api_server_swaggerui.md
+        - API du serveur (Redoc): specifications/api_server_redoc.md
+    - Documentation utilisateur:
+        - Serveur: server/README.md
+        - Outils de pré-génération: pregeneration/README.md
+        - Outils de génération: generation/README.md
+        - Outils de gestion: tools/README.md
+    - Utilisation de Docker: 
+        - docker/README.md
+        - Compilation des images: docker/build/README.md
+        - Génération de pyramides: docker/run/datasets/README.md
+        - Exécution d'une stack avec le serveur: docker/run/server/README.md
+
+    - Documentation développeur: devs.md
+
+plugins:
+    - search
+    - select-files:
+        select: '([^\.]+)$'
+        where: 'lambda x : x == "md" or x == "png" or x == "json" or x == "yaml" or x == "css" or x == "js"'
+
+theme:
+    logo: images/rok4-carre.png
+    favicon: images/rok4-carre.png
+    name: material
+    palette:
+        primary: black
+    features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+    locale: fr
+
+markdown_extensions:
+    - attr_list
+    - md_in_html
+
+extra_css:
+    - extras/style.css
+    - extras/swagger-ui.css
+
+extra_javascript:
+    - extras/swagger-ui-bundle.js
+    - extras/swagger-ui-standalone-preset.js
+    - extras/redoc.min.js
+
+docs_dir: "../../build/sources/"
+site_dir: "../../build/target/mkdocs/"

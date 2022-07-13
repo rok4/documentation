@@ -1,23 +1,5 @@
 # Spécification d'une pyramide ROK4
 
-- [Glossaire](#glossaire)
-- [Le Tile Matrix Set](#le-tile-matrix-set)
-- [La pyramide](#la-pyramide)
-  - [Caractéristiques des données](#caractéristiques-des-données)
-  - [Les tables](#les-tables)
-  - [Les masques](#les-masques)
-  - [Le descripteur de pyramide](#le-descripteur-de-pyramide)
-    - [Informations globales](#informations-globales)
-    - [Informations par niveau](#informations-par-niveau)
-  - [L'architecture de stockage](#larchitecture-de-stockage)
-    - [En mode fichier](#en-mode-fichier)
-    - [En mode objet](#en-mode-objet)
-  - [La structure d'une dalle](#la-structure-dune-dalle)
-    - [L'en-tête](#len-tête)
-    - [Les données](#les-données)
-    - [Les références](#les-références)
-  - [Le fichier liste](#le-fichier-liste)
-
 ## Glossaire
 
 | Vocabulaire | Définition                                                                                                                                                                                                                              |
@@ -67,7 +49,7 @@ Un TM possède un identifiant (chaîne de caractères) unique dans le TMS. Les r
 }
 ```
 
-![Tile Matrix](./images/SPECIFICATION_PYRAMIDE/TileMatrix.png)
+![Tile Matrix](../images/TileMatrix.png)
 
 Ce découpage de l'espace en tuile permet de se localiser grâce à des indices (principe du WMTS et du Tile Map Service). Ainsi, une tuile peut être identifiée avec :
 
@@ -90,7 +72,7 @@ Schéma JSON d'un [descripteur de pyramide](./pyramid.schema.json)
 
 Quand la pyramide contient des tuiles, elles sont regroupées par contiguïté en dalles, stockées en tant que fichier ou objet (Ceph, S3 ou Swift).
 
-![Dalle](./images/SPECIFICATION_PYRAMIDE/Dalle.png "Dalle de 3 tuiles sur 2")
+![Dalle](../images/Dalle.png "Dalle de 3 tuiles sur 2")
 
 ### Caractéristiques des données
 
@@ -411,7 +393,7 @@ Ce document n'a par pour but de reprendre les spécifications du format TIFF, ma
 
 On retrouve dans cette partie toutes les informations sur le fichier que les logiciels vont utiliser pour afficher la dalle dans le cas du raster.
 
-![En-tête TIFF](./images/SPECIFICATION_PYRAMIDE/TiffEnTete.png)
+![En-tête TIFF](../images/TiffEnTete.png)
 
 Par exemple, l'étiquette _imageWidth_ (256), de type _Long_ (4), une seule valeur sur 32 bits, elle tient donc sans passer par une adresse : 4096. Ce qui donne en héxadécimal, little endian : `00 01   04 00   01 00 00 00   00 10 00 00`
 
@@ -427,7 +409,7 @@ Le format TIFF permet de stocker les données par bloc, ceci dans le but d’acc
 
 Pour ce faire, on renseigne l'adresse de début (_TileOffsets_) sur 4 octets et la taille en octet (_TileByteCounts_) sur 4 octets de chaque tuile. Ces valeurs sont stockées à partir de 2048 octets, ce sont les premières valeurs lues par ROK4SERVER.
 
-![Index des tuiles](./images/SPECIFICATION_PYRAMIDE/TiffDonnees.png)
+![Index des tuiles](../images/TiffDonnees.png)
 
 L'en-tête contient les étiquettes :
 
@@ -445,7 +427,7 @@ Le format TIFF permet officiellement de nombreuses compressions pour des donnée
 
 Le PNG a une particularité : la compression correspond à du Deflate, mais on veut que ROK4SERVER puisse retourner facilement des tuiles de PNG, avec l'en-tête. Dans ce cas, les dalles ne sont pas lisible par d'autres applications que ROK4. Les tuiles stockées contiennent chacune leur en-tête afin de pouvoir être renvoyées directement.
 
-![Dalle PNG](./images/SPECIFICATION_PYRAMIDE/TiffPNG.png)
+![Dalle PNG](../images/TiffPNG.png)
 
 ##### Cas vecteur
 
@@ -457,7 +439,7 @@ Concrètement, ce sont les tuiles au format Mapbox Vector Tile empaquetées en P
 
 Voici la structure globale d'une dalle de la pyramide ROK4, dalle contenant N tuiles.
 
-![Récapitulatif d'une dalle](./images/SPECIFICATION_PYRAMIDE/TiffRecapitulatif.png)
+![Récapitulatif d'une dalle](../images/TiffRecapitulatif.png)
 
 #### Les références
 

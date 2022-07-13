@@ -1,0 +1,12 @@
+DOXYFILE_ENCODING = UTF-8
+PROJECT_NAME = ROK4
+PROJECT_BRIEF = "Serveur de diffusion de données géographiques et outils de traitement"
+OUTPUT_DIRECTORY = ./build/target/doxygen/fr
+OUTPUT_LANGUAGE = french
+INPUT = ./build/sources/server ./build/sources/core-cpp ./build/sources/generation
+INPUT_ENCODING = UTF-8
+IMAGE_PATH = ./build/sources/server/docs/images ./build/sources/core-cpp/docs/images ./build/sources/generation/docs/images
+EXCLUDE_PATTERNS = *.md
+RECURSIVE = YES
+GENERATE_HTML = YES
+GENERATE_LATEX = NO

@@ -1,0 +1,149 @@
+Format: 1.51
+
+
+Title: ROK4 perl tools
+SubTitle: Perl tools and libraries
+
+Footer: (C) 2022 ROK4 - (R) IGN 2012
+Timestamp: Updated month day, year
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+Link: ROK4 project global description  (https://github.com/rok4/documentation)
+
+Group: Managment tools  {
+
+   Group: Executables  {
+
+      File: sup-pyr  (no auto-title, tools/bin/sup-pyr.pl)
+      File: create-layer  (no auto-title, tools/bin/create-layer.pl)
+      File: tms-toolbox  (no auto-title, tools/bin/tms-toolbox.pl)
+      File: pyrolyse  (no auto-title, tools/bin/pyrolyse.pl)
+      }  # Group: Executables
+
+   }  # Group: Managment tools
+
+Group: Pregeneration tools  {
+
+   Group: Executables  {
+
+      File: 4alamo  (no auto-title, pregeneration/bin/4alamo.pl)
+      File: 4head  (no auto-title, pregeneration/bin/4head.pl)
+      File: be4  (no auto-title, pregeneration/bin/be4.pl)
+      File: joincache  (no auto-title, pregeneration/bin/joincache.pl)
+      File: pyr2pyr  (no auto-title, pregeneration/bin/pyr2pyr.pl)
+      }  # Group: Executables
+
+   Group: Libraries  {
+
+      Group: BE4  {
+
+         File: Node  (no auto-title, pregeneration/lib/ROK4/BE4/Node.pm)
+         File: Shell  (no auto-title, pregeneration/lib/ROK4/BE4/Shell.pm)
+         File: Validator  (no auto-title, pregeneration/lib/ROK4/BE4/Validator.pm)
+         }  # Group: BE4
+
+      Group: FOURALAMO  {
+
+         File: Node  (no auto-title, pregeneration/lib/ROK4/FOURALAMO/Node.pm)
+         File: Shell  (no auto-title, pregeneration/lib/ROK4/FOURALAMO/Shell.pm)
+         File: Validator  (no auto-title, pregeneration/lib/ROK4/FOURALAMO/Validator.pm)
+         }  # Group: FOURALAMO
+
+      Group: FOURHEAD  {
+
+         File: Node  (no auto-title, pregeneration/lib/ROK4/FOURHEAD/Node.pm)
+         File: Shell  (no auto-title, pregeneration/lib/ROK4/FOURHEAD/Shell.pm)
+         }  # Group: FOURHEAD
+
+      Group: JOINCACHE  {
+
+         File: Node  (no auto-title, pregeneration/lib/ROK4/JOINCACHE/Node.pm)
+         File: Shell  (no auto-title, pregeneration/lib/ROK4/JOINCACHE/Shell.pm)
+         File: Validator  (no auto-title, pregeneration/lib/ROK4/JOINCACHE/Validator.pm)
+         }  # Group: JOINCACHE
+
+      Group: PREGENERATION  {
+
+         File: DataSource  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/Source.pm)
+         File: Forest  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/Forest.pm)
+         File: NNGraph  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/NNGraph.pm)
+         File: QTree  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/QTree.pm)
+         File: Script  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/Script.pm)
+         File: SourceDatabase  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/SourceDatabase.pm)
+         File: SourceImage  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/SourceImage.pm)
+         File: SourcePyramid  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/SourcePyramid.pm)
+         File: SourceVector  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/SourceVector.pm)
+         File: SourceWMS  (no auto-title, pregeneration/lib/ROK4/PREGENERATION/SourceWMS.pm)
+         }  # Group: PREGENERATION
+
+      Group: PYR2PYR  {
+
+         File: Shell  (no auto-title, pregeneration/lib/ROK4/PYR2PYR/Shell.pm)
+         File: Validator  (no auto-title, pregeneration/lib/ROK4/PYR2PYR/Validator.pm)
+         }  # Group: PYR2PYR
+
+      }  # Group: Libraries
+
+   }  # Group: Pregeneration tools
+
+Group: Core libraries  {
+
+   File: Array  (no auto-title, core-perl/lib/ROK4/Core/Array.pm)
+   File: Base36  (no auto-title, core-perl/lib/ROK4/Core/Base36.pm)
+   File: Database  (no auto-title, core-perl/lib/ROK4/Core/Database.pm)
+   File: GeoImage  (no auto-title, core-perl/lib/ROK4/Core/GeoImage.pm)
+   File: GeoVector  (no auto-title, core-perl/lib/ROK4/Core/GeoVector.pm)
+   File: LevelRaster  (no auto-title, core-perl/lib/ROK4/Core/LevelRaster.pm)
+   File: LevelVector  (no auto-title, core-perl/lib/ROK4/Core/LevelVector.pm)
+   File: Pixel  (no auto-title, core-perl/lib/ROK4/Core/Pixel.pm)
+   File: ProxyGDAL  (no auto-title, core-perl/lib/ROK4/Core/ProxyGDAL.pm)
+   File: ProxyPyramid  (no auto-title, core-perl/lib/ROK4/Core/ProxyPyramid.pm)
+   File: ProxyStorage  (no auto-title, core-perl/lib/ROK4/Core/ProxyStorage.pm)
+   File: PyramidRaster  (no auto-title, core-perl/lib/ROK4/Core/PyramidRaster.pm)
+   File: PyramidVector  (no auto-title, core-perl/lib/ROK4/Core/PyramidVector.pm)
+   File: Shell  (no auto-title, core-perl/lib/ROK4/Core/Shell.pm)
+   File: TileMatrix  (no auto-title, core-perl/lib/ROK4/Core/TileMatrix.pm)
+   File: TileMatrixSet  (no auto-title, core-perl/lib/ROK4/Core/TileMatrixSet.pm)
+   File: Utils  (no auto-title, core-perl/lib/ROK4/Core/Utils.pm)
+   }  # Group: Core libraries
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   File Index: Files
+   Function Index: Functions
+   Variable Index: Variables
+   Constant Index: Constants
+   }  # Group: Index
+
