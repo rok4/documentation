@@ -1,8 +1,6 @@
 # Le projet ROK4
 
-<figure markdown>
-  ![Logo Rok4](./images/rok4.png){ align=center }
-</figure>
+![Logo Rok4](./images/rok4.png)
 
 
 Le projet ROK4 est un projet open-source (sous licence CeCILL-C) développé par les équipes du projet [Géoportail](https://www.geoportail.gouv.fr) ([@Geoportail](https://twitter.com/Geoportail)) de l’[Institut National de l’Information Géographique et Forestière](https://ign.fr) ([@IGNFrance](https://twitter.com/IGNFrance)).
@@ -11,10 +9,7 @@ Le projet ROK4 est un projet open-source (sous licence CeCILL-C) développé par
 
 Il comprend des outils de [prégénération](https://github.com/rok4/pregeneration) (en Perl) et [génération](https://github.com/rok4/generation) (en C++) de pyramides de données image et vecteur, et un [serveur de diffusion](https://github.com/rok4/server) (en C++) de ces données en WMS, WMTS et TMS. Vous pouvez trouver plus de détails dans ces projets. 
 
-<figure markdown>
-  ![Génération et diffusion](./images/rok4gs-grand-public.png)
-  <figcaption>Génération et diffusion</figcaption>
-</figure>
+![Génération et diffusion](./images/rok4gs-grand-public.png)
 
 Des [outils de gestion](https://github.com/rok4/tools) (écrit en Perl) permettent entre autre l'analyse et la suppression des pyramides.
 

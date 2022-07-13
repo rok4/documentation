@@ -51,4 +51,7 @@ jobs:
 
       - name: Publish on gh-pages branch
         run: |
+          rm .gitignore
+          git add build/target/dist
+          git commit -m "update doc"
           git push origin `git subtree split --prefix build/target/dist`:gh-pages --force
