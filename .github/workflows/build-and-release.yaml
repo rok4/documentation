@@ -1,0 +1,54 @@
+name: Build and release
+
+on:
+  workflow_dispatch:
+    inputs:
+      generation_tag:
+        description: 'generation code tag'
+        required: true
+        default: 'develop'
+      pregeneration_tag:
+        description: 'pregeneration code tag'
+        required: true
+        default: 'develop'
+      coreperl_tag:
+        description: 'core-perl code tag'
+        required: true
+        default: 'develop'
+      corecpp_tag:
+        description: 'core-cpp code tag'
+        required: true
+        default: 'develop'
+      server_tag:
+        description: 'server code tag'
+        required: true
+        default: 'develop'
+      tools_tag:
+        description: 'tools code version'
+        required: true
+        default: 'develop'
+      docker_tag:
+        description: 'docker code version'
+        required: true
+        default: 'develop'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs
+          sudo pip3 install mkdocs-material mkdocs-select-files
+
+      - name: Build documentation
+        run: |
+          bash build.sh --clone --doxygen --naturaldocs --mkdocs --generation ${{ github.event.inputs.generation_tag }} --docker ${{ github.event.inputs.docker_tag }} --pregeneration ${{ github.event.inputs.pregeneration_tag }} --coreperl ${{ github.event.inputs.coreperl_tag }} --corecpp ${{ github.event.inputs.corecpp_tag }} --tools ${{ github.event.inputs.tools_tag }} --server ${{ github.event.inputs.server_tag }}
+
+      - name: Publish on gh-pages branch
+        run: |
+          git push origin `git subtree split --prefix build/target/dist master`:gh-pages --force

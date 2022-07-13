@@ -125,7 +125,7 @@ fi
 
 # Documentation principale et utilisateur Markdown
 if [[ ! -z $mkdocs ]]; then
-    mkdir -p build/target/mkdocs/
+    mkdir -p build/target/dist/
     cp -r compilation/mkdocs/extras specifications images build/sources/
     cp README.md build/sources/index.md
 
@@ -134,12 +134,12 @@ if [[ ! -z $mkdocs ]]; then
     LC_ALL=C.UTF-8 mkdocs build --config-file compilation/mkdocs/mkdocs.yaml
 fi
 
-# if [[ ! -z $doxygen || ! -z $mkdocs ]]; then
-#     cp -r build/target/doxygen build/target/mkdocs/
-# fi
+if [[ ! -z $doxygen || ! -z $mkdocs ]]; then
+    cp -r build/target/doxygen build/target/dist/
+fi
 
-# if [[ ! -z $naturaldocs || ! -z $mkdocs ]]; then
-#     cp -r build/target/naturaldocs build/target/mkdocs/
-# fi
+if [[ ! -z $naturaldocs || ! -z $mkdocs ]]; then
+    cp -r build/target/naturaldocs build/target/dist/
+fi
 
 

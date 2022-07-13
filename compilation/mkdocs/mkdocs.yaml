@@ -51,4 +51,4 @@ extra_javascript:
     - extras/redoc.min.js
 
 docs_dir: "../../build/sources/"
-site_dir: "../../build/target/mkdocs/"
+site_dir: "../../build/target/dist/"
