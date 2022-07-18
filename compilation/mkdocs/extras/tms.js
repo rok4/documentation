@@ -71,7 +71,7 @@ window.onload = function () {
             layer: tms,
             config: {
                 title: "Grille",
-                description: "Tile Matrix Set Web Mercator (PESG:3857)"
+                description: "Tile Matrix Set Web Mercator (EPSG:3857)"
             }
         }],
         options: {
@@ -89,9 +89,7 @@ window.onload = function () {
         var zoom = map.getView().getZoom();
         var level_res = origin_res * (2 ** (21 - zoom));
         document.getElementById('infos1').innerHTML = `
-        <ul>
-            <li>Niveau : ${zoom} (résolution ${level_res} m)</li>
-        </ul>
+        Niveau : ${zoom} (résolution ${level_res} m)
         `;
         document.getElementById('infos2').innerHTML = "";
         var extent = map.getView().calculateExtent(map.getSize());
@@ -120,10 +118,7 @@ window.onload = function () {
         var column = Math.floor((evt.coordinate[0] - origin_x) / (256 * level_res));
         var url = fond.getSource().tileUrlFunction([zoom, column, row]);
         document.getElementById('infos2').innerHTML = `
-        <ul>
-            <li>Coordonnées : ${evt.coordinate[0]}, ${evt.coordinate[1]}</li>
-            <li>Colonne : ${column}, ligne : ${row} (<a target="_blank" href="${url}">GetTile</a>)</li>
-        </ul>
+        X/Y (${evt.coordinate[0]}, ${evt.coordinate[1]}), COL/ROW : (${column}, ${row}), <a target="_blank" href="${url}">GetTile</a>
         `;
     });
 }

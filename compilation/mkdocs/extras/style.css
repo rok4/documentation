@@ -7,8 +7,20 @@
     height: 700px;
 }
 #infos1 {
-    width: 100%;
+    float: left;
+    font-size: smaller;
+    background-color: #ffffffaa;
+    top: -30px;
+    height: 30px;
+    padding: 5px 10px;
+    position: relative;
 }
 #infos2 {
-    width: 100%;
+    float: right;
+    font-size: smaller;
+    background-color: #ffffffaa;
+    top: -30px;
+    height: 30px;
+    padding: 5px 10px;
+    position: relative;
 }

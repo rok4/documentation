@@ -31,6 +31,10 @@ on:
         description: 'docker code version'
         required: true
         default: 'develop'
+      use_cache:
+        description: 'use dependencies cache'
+        required: true
+        default: true
 
 jobs:
   build:
@@ -39,11 +43,31 @@ jobs:
 
       - uses: actions/checkout@v2
 
+      - uses: actions/cache@v2
+        name: Cache dependencies
+        id: cache-deps
+        with:
+            path: "~/deps"
+            key: deps
+
       - name: Install dependencies
+        env:
+          CACHE_HIT: ${{steps.cache-deps.outputs.cache-hit}}
         run: |
-          sudo apt update
-          sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs liblog-log4perl-perl
-          sudo pip3 install mkdocs-material mkdocs-select-files
+            if [[ "$CACHE_HIT" == 'true' && ${{ github.event.inputs.use_cache }} == 'true' ]]; then
+              sudo cp --verbose --force --recursive ~/deps/* /
+            else
+              sudo apt update
+              sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs liblog-log4perl-perl
+              mkdir -p ~/deps
+              sudo dpkg -L gettext | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L doxygen | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L graphviz | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L naturaldocs | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L mkdocs | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L liblog-log4perl-perl | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+            fi
+            sudo pip3 install mkdocs-material mkdocs-select-files
 
       - name: Build documentation
         run: |
