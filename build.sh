@@ -127,7 +127,7 @@ fi
 if [[ ! -z $mkdocs ]]; then
     mkdir -p build/target/dist/
     cp -r compilation/mkdocs/extras specifications images build/sources/
-    cp README.md build/sources/index.md
+    cp index.md build/sources/
 
     envsubst < compilation/mkdocs/devs.md > build/sources/devs.md
 
