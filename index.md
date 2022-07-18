@@ -50,10 +50,10 @@ Exemple du quadrillage Web Mercator, utilisé sur le site Géoportail (cliquer s
 <div id="infos1"></div>
 <div id="infos2"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/css/ol.css" />
-<link rel="stylesheet" href="http://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.css" />
+<link rel="stylesheet" href="https://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.css" />
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/build/ol.js"></script>
 <script 
     data-url="./extras/autoconf.json"
-    src="http://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.js">
+    src="https://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.js">
 </script>
 <script src="./extras/tms.js"></script>
