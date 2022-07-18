@@ -1,0 +1,27 @@
+<map id="build/sources/core&#45;cpp/src/image/file/FileImage.h" name="build/sources/core&#45;cpp/src/image/file/FileImage.h">
+<area shape="rect" id="node1" title="Define classes FileImage and FileImageFactory." alt="" coords="1433,5,1576,61"/>
+<area shape="rect" id="node2" href="$BilzImage_8h.html" title="Define classes BilzImage and BilzImageFactory." alt="" coords="172,109,315,165"/>
+<area shape="rect" id="node4" href="$FileImage_8cpp.html" title="Implement classes FileImage and FileImageFactory." alt="" coords="339,213,481,269"/>
+<area shape="rect" id="node5" href="$LibkakaduImage_8h.html" title="Define classes LibkakaduImage and LibkakaduImageFactory." alt="" coords="1205,109,1399,165"/>
+<area shape="rect" id="node7" href="$LibjpegImage_8h.html" title="Define classes LibjpegImage and LibjpegImageFactory." alt="" coords="339,109,481,165"/>
+<area shape="rect" id="node9" href="$LibpngImage_8h.html" title="Define classes LibpngImage and LibpngImageFactory." alt="" coords="557,109,700,165"/>
+<area shape="rect" id="node11" href="$LibtiffImage_8h.html" title="Define classes LibtiffImage and LibtiffImageFactory." alt="" coords="791,109,933,165"/>
+<area shape="rect" id="node15" href="$LibopenjpegImage_8h.html" title="Define classes LibopenjpegImage and LibopenjpegImageFactory." alt="" coords="957,109,1180,165"/>
+<area shape="rect" id="node17" href="$TiffNodataManager_8h.html" title="Define classe TiffNodataManager, allowing to modify nodata color for byte sample image." alt="" coords="1423,109,1586,165"/>
+<area shape="rect" id="node19" href="$work2cache_8cpp.html" title="Image formatting, according to ROK4 specifications." alt="" coords="1955,221,2137,262"/>
+<area shape="rect" id="node20" href="$cache2work_8cpp.html" title="Convert a ROK4 pyramide&#39;s image (tiled TIFF) to a TIFF image, readable with LibtiffImage." alt="" coords="1661,117,1844,158"/>
+<area shape="rect" id="node21" href="$checkWork_8cpp.html" title="Control image validity." alt="" coords="1868,117,2051,158"/>
+<area shape="rect" id="node22" href="$decimateNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="2075,117,2257,158"/>
+<area shape="rect" id="node23" href="$merge4tiff_8cpp.html" title="Four images subsampling, formed a square, might use a background and data masks." alt="" coords="2281,117,2464,158"/>
+<area shape="rect" id="node24" href="$mergeNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="2488,117,2671,158"/>
+<area shape="rect" id="node25" href="$pbf2cache_8cpp.html" title="Build a vector ROK4 slab from PBD tiles." alt="" coords="2695,117,2877,158"/>
+<area shape="rect" id="node3" href="$BilzImage_8cpp.html" title="Implement classes BilzImage and BilzImageFactory." alt="" coords="5,213,148,269"/>
+<area shape="rect" id="node6" href="$LibkakaduImage_8cpp.html" title="Implement classes LibkakaduImage and LibkakaduImageFactory." alt="" coords="1515,213,1724,269"/>
+<area shape="rect" id="node8" href="$LibjpegImage_8cpp.html" title="Implement classes LibjpegImage and LibjpegImageFactory." alt="" coords="172,213,315,269"/>
+<area shape="rect" id="node10" href="$LibpngImage_8cpp.html" title="Implement classes LibpngImage and LibpngImageFactory." alt="" coords="505,213,648,269"/>
+<area shape="rect" id="node12" href="$LibtiffImage_8cpp.html" title="Implement classes LibtiffImage and LibtiffImageFactory." alt="" coords="672,213,815,269"/>
+<area shape="rect" id="node13" href="$composeNtiff_8cpp.html" title="Monte N TIFF images with same dimensions and attributes." alt="" coords="839,221,1021,262"/>
+<area shape="rect" id="node14" href="$overlayNtiff_8cpp.html" title="Merge N images with same dimensions, according to different merge methods." alt="" coords="1045,221,1228,262"/>
+<area shape="rect" id="node16" href="$LibopenjpegImage_8cpp.html" title="Implement classes LibopenjpegImage and LibopenjpegImageFactory." alt="" coords="1253,213,1490,269"/>
+<area shape="rect" id="node18" href="$manageNodata_8cpp.html" title="Manage nodata pixel color." alt="" coords="1748,221,1931,262"/>
+</map>

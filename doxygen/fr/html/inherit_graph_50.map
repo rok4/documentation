@@ -1,0 +1,6 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$classResourceLocator.html" title="Gestion des éléments des ressources externes des documents de capacités." alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node2" href="$classAttributionURL.html" title="Gestion des éléments d&#39;attribution des documents de capacités." alt="" coords="184,5,301,32"/>
+<area shape="rect" id="node3" href="$classLegendURL.html" title="Gestion des éléments de légendes des documents de capacités." alt="" coords="195,56,290,83"/>
+<area shape="rect" id="node4" href="$classMetadataURL.html" title="Gestion des éléments de métadonnées des documents de capacités." alt="" coords="187,107,298,133"/>
+</map>

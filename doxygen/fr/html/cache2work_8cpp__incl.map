@@ -1,0 +1,45 @@
+<map id="build/sources/generation/src/cache2work.cpp" name="build/sources/generation/src/cache2work.cpp">
+<area shape="rect" id="node1" title="Convertit une image d&#39;une pyramide ROK4 (TIFF tuilé) en une image TIFF, lisible avec LibtiffImage." alt="" coords="672,5,855,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,71,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="610,557,690,584"/>
+<area shape="rect" id="node4" title=" " alt="" coords="2471,632,2541,659"/>
+<area shape="rect" id="node5" title=" " alt="" coords="197,102,340,129"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1027,632,1179,659"/>
+<area shape="rect" id="node7" title=" " alt="" coords="415,95,597,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="621,95,785,136"/>
+<area shape="rect" id="node9" title=" " alt="" coords="161,483,248,509"/>
+<area shape="rect" id="node10" href="$Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="2029,483,2157,509"/>
+<area shape="rect" id="node13" href="$Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="983,408,1090,435"/>
+<area shape="rect" id="node21" title=" " alt="" coords="160,632,233,659"/>
+<area shape="rect" id="node22" href="$FileContext_8h.html" title="Implémentation de la classe FileContext." alt="" coords="528,483,689,509"/>
+<area shape="rect" id="node25" href="$Rok4Image_8h.html" title="Implémentation des classes Rok4Image et Rok4ImageFactory." alt="" coords="1619,102,1796,129"/>
+<area shape="rect" id="node40" href="$FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="2131,102,2297,129"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1894,557,1953,584"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1884,632,1955,659"/>
+<area shape="rect" id="node14" title=" " alt="" coords="806,632,857,659"/>
+<area shape="rect" id="node15" title=" " alt="" coords="917,483,959,509"/>
+<area shape="rect" id="node16" title=" " alt="" coords="984,483,1108,509"/>
+<area shape="rect" id="node17" title=" " alt="" coords="565,632,628,659"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1203,632,1278,659"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1285,483,1343,509"/>
+<area shape="rect" id="node20" href="$Context_8h.html" title="Définition de la classe Context." alt="" coords="815,557,954,584"/>
+<area shape="rect" id="node23" title=" " alt="" coords="450,557,535,584"/>
+<area shape="rect" id="node24" title=" " alt="" coords="352,557,425,584"/>
+<area shape="rect" id="node26" href="$Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="1927,184,2047,211"/>
+<area shape="rect" id="node31" title=" " alt="" coords="1839,184,1903,211"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1525,184,1583,211"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1668,184,1747,211"/>
+<area shape="rect" id="node34" href="$StoreDataSource_8h.html" title="Définition des classes StoreDataSource et StoreDataSourceFactory." alt="" coords="1469,408,1687,435"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1928,259,2004,285"/>
+<area shape="rect" id="node28" href="$BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="1355,333,1507,360"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1712,408,1775,435"/>
+<area shape="rect" id="node30" href="$CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="1760,259,1852,285"/>
+<area shape="rect" id="node35" href="$DataSource_8h_source.html" title=" " alt="" coords="1667,483,1852,509"/>
+<area shape="rect" id="node39" title=" " alt="" coords="1520,483,1591,509"/>
+<area shape="rect" id="node36" title=" " alt="" coords="1627,557,1697,584"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2097,557,2163,584"/>
+<area shape="rect" id="node38" title=" " alt="" coords="1722,557,1807,584"/>
+<area shape="rect" id="node41" href="$PixelConverter_8h.html" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="2181,408,2383,435"/>
+<area shape="rect" id="node42" title=" " alt="" coords="2402,483,2469,509"/>
+<area shape="rect" id="node43" href="$Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="2181,483,2277,509"/>
+</map>

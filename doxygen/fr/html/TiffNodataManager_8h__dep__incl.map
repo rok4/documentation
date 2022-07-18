@@ -1,0 +1,5 @@
+<map id="build/sources/core&#45;cpp/src/image/file/TiffNodataManager.h" name="build/sources/core&#45;cpp/src/image/file/TiffNodataManager.h">
+<area shape="rect" id="node1" title="Définition de la classe TiffNodataManager, permettant de modifier la couleur de nodata des images à c..." alt="" coords="118,5,281,61"/>
+<area shape="rect" id="node2" href="$manageNodata_8cpp.html" title="Gère la couleur des pixels de nodata." alt="" coords="5,109,188,151"/>
+<area shape="rect" id="node3" href="$work2cache_8cpp.html" title="Formattage d&#39;une image, respectant les spécifications d&#39;une pyramide de données ROK4." alt="" coords="212,109,395,151"/>
+</map>

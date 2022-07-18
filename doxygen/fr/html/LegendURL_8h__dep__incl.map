@@ -1,0 +1,22 @@
+<map id="build/sources/core&#45;cpp/src/utils/LegendURL.h" name="build/sources/core&#45;cpp/src/utils/LegendURL.h">
+<area shape="rect" id="node1" title="Définition de la classe LegendURL gérant les éléments de légendes des documents de capacités." alt="" coords="376,5,571,47"/>
+<area shape="rect" id="node2" href="$Style_8h.html" title="Définition de la classe Style modélisant les styles." alt="" coords="394,95,553,136"/>
+<area shape="rect" id="node3" href="$Layer_8h.html" title="Définition de la classe Layer modélisant les couches de données." alt="" coords="282,273,435,315"/>
+<area shape="rect" id="node6" href="$ServerConf_8h_source.html" title=" " alt="" coords="143,541,297,583"/>
+<area shape="rect" id="node7" href="$ConfLoader_8h.html" title="Définition des fonctions de chargement de la configuration." alt="" coords="278,631,431,672"/>
+<area shape="rect" id="node17" href="$Style_8cpp.html" title="Implémentation de la classe Style modélisant les styles." alt="" coords="835,184,1008,225"/>
+<area shape="rect" id="node18" href="$Pyramid_8h_source.html" title=" " alt="" coords="635,184,810,225"/>
+<area shape="rect" id="node20" href="$mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="1033,184,1215,225"/>
+<area shape="rect" id="node4" href="$Request_8h.html" title="Définition de la classe Request, analysant les requêtes HTTP." alt="" coords="558,363,711,404"/>
+<area shape="rect" id="node5" href="$Rok4Server_8h.html" title="Definition de la classe Rok4Server et du programme principal." alt="" coords="642,452,795,493"/>
+<area shape="rect" id="node10" href="$Layer_8cpp.html" title="Implémentation de la classe Layer modélisant les couches de données." alt="" coords="29,720,182,761"/>
+<area shape="rect" id="node12" href="$Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="423,541,577,583"/>
+<area shape="rect" id="node8" href="$ConfLoader_8cpp.html" title="Implémenation des fonctions de chargement de la configuration." alt="" coords="887,720,1041,761"/>
+<area shape="rect" id="node15" href="$Threads_8h_source.html" title=" " alt="" coords="422,452,618,493"/>
+<area shape="rect" id="node16" href="$Request_8cpp.html" title="Implémentation de la classe Request, analysant les requêtes HTTP." alt="" coords="922,452,1075,493"/>
+<area shape="rect" id="node9" href="$ServicesConf_8h_source.html" title=" " alt="" coords="527,720,681,761"/>
+<area shape="rect" id="node11" href="$server_2src_2main_8cpp.html" title="Exécutable du serveur ROK4." alt="" coords="329,720,482,761"/>
+<area shape="rect" id="node13" href="$UtilsAdmin_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="955,541,1109,583"/>
+<area shape="rect" id="node14" href="$UtilsGlobal_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="778,541,931,583"/>
+<area shape="rect" id="node19" href="$Level_8h_source.html" title=" " alt="" coords="787,273,943,315"/>
+</map>

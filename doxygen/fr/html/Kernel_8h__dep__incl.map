@@ -1,0 +1,9 @@
+<map id="build/sources/core&#45;cpp/src/processors/Kernel.h" name="build/sources/core&#45;cpp/src/processors/Kernel.h">
+<area shape="rect" id="node1" title="Définition de la classe Kernel, classe mère des différents noyaux d&#39;interpolation." alt="" coords="293,5,440,61"/>
+<area shape="rect" id="node2" href="$ReprojectedImage_8cpp.html" title="Implémentation de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="5,213,205,269"/>
+<area shape="rect" id="node3" href="$ReprojectedImage_8h.html" title="Définition de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="143,109,343,165"/>
+<area shape="rect" id="node5" href="$ResampledImage_8h.html" title="Définition de la classe ResampledImage, permettant le réechantillonnage d&#39;image." alt="" coords="367,117,615,158"/>
+<area shape="rect" id="node7" href="$Kernel_8cpp.html" title="Implémentation de la classe Kernel, classe mère des différents noyaux d&#39;interpolation." alt="" coords="639,109,785,165"/>
+<area shape="rect" id="node4" href="$mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="230,221,413,262"/>
+<area shape="rect" id="node6" href="$ResampledImage_8cpp.html" title="Implémentation de la classe ResampledImage, permettant le réechantillonnage d&#39;image." alt="" coords="437,221,699,262"/>
+</map>

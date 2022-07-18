@@ -1,0 +1,7 @@
+<map id="build/sources/core&#45;cpp/src/utils/LibcurlStruct.h" name="build/sources/core&#45;cpp/src/utils/LibcurlStruct.h">
+<area shape="rect" id="node1" title="Define strcutures and functions used to get data via cURL library." alt="" coords="148,5,351,47"/>
+<area shape="rect" id="node2" href="$S3Context_8cpp.html" title="Implement classe S3Context." alt="" coords="5,199,176,255"/>
+<area shape="rect" id="node3" href="$S3Context_8h.html" title="Define classe S3Context." alt="" coords="103,95,273,151"/>
+<area shape="rect" id="node4" href="$SwiftContext_8cpp.html" title="Implement classe SwiftContext." alt="" coords="287,199,457,255"/>
+<area shape="rect" id="node5" href="$SwiftContext_8h.html" title="Define classe SwiftContext." alt="" coords="348,95,519,151"/>
+</map>

@@ -1,0 +1,43 @@
+<map id="build/sources/core&#45;cpp/src/utils/Utils.h" name="build/sources/core&#45;cpp/src/utils/Utils.h">
+<area shape="rect" id="node1" title=" " alt="" coords="2164,5,2315,47"/>
+<area shape="rect" id="node2" href="$ConfLoader_8cpp.html" title="Implements configuration loader functions." alt="" coords="5,102,159,143"/>
+<area shape="rect" id="node3" href="$Layer_8cpp.html" title="Implement the Layer Class handling data layer." alt="" coords="183,102,336,143"/>
+<area shape="rect" id="node4" href="$Decoder_8h_source.html" title=" " alt="" coords="361,95,510,151"/>
+<area shape="rect" id="node5" href="$DecimatedImage_8cpp.html" title="Implement classes DecimatedImage, DecimatedMask and DecimatedImageFactory." alt="" coords="526,206,787,247"/>
+<area shape="rect" id="node6" href="$DecimatedImage_8h.html" title="Define classes DecimatedImage and DecimatedImageFactory." alt="" coords="701,102,948,143"/>
+<area shape="rect" id="node8" href="$ExtendedCompoundImage_8cpp.html" title="Implement classes ExtendedCompoundImage, ExtendedCompoundMask and ExtendedCompoundImageFactory." alt="" coords="35,303,289,359"/>
+<area shape="rect" id="node9" href="$ExtendedCompoundImage_8h.html" title="Define classes ExtendedCompoundImage, ExtendedCompoundMask and ExtendedCompoundImageFactory." alt="" coords="862,199,1115,255"/>
+<area shape="rect" id="node11" href="$BilzImage_8cpp.html" title="Implement classes BilzImage and BilzImageFactory." alt="" coords="1711,407,1853,463"/>
+<area shape="rect" id="node12" href="$FileImage_8cpp.html" title="Implement classes FileImage and FileImageFactory." alt="" coords="1369,407,1512,463"/>
+<area shape="rect" id="node13" href="$LibkakaduImage_8cpp.html" title="Implement classes LibkakaduImage and LibkakaduImageFactory." alt="" coords="2975,407,3184,463"/>
+<area shape="rect" id="node14" href="$LibjpegImage_8cpp.html" title="Implement classes LibjpegImage and LibjpegImageFactory." alt="" coords="2124,407,2267,463"/>
+<area shape="rect" id="node15" href="$LibpngImage_8cpp.html" title="Implement classes LibpngImage and LibpngImageFactory." alt="" coords="2413,407,2556,463"/>
+<area shape="rect" id="node16" href="$LibtiffImage_8cpp.html" title="Implement classes LibtiffImage and LibtiffImageFactory." alt="" coords="3281,407,3424,463"/>
+<area shape="rect" id="node17" href="$LibopenjpegImage_8cpp.html" title="Implement classes LibopenjpegImage and LibopenjpegImageFactory." alt="" coords="2674,407,2911,463"/>
+<area shape="rect" id="node18" href="$MergeImage_8cpp.html" title="Implement classes MergeImage, MergeImageFactory and MergeMask and the namespace Merge." alt="" coords="3501,206,3732,247"/>
+<area shape="rect" id="node19" href="$MirrorImage_8cpp.html" title="Implement classes MirrorImage and MirrorImageFactory." alt="" coords="1139,206,1369,247"/>
+<area shape="rect" id="node20" href="$MirrorImage_8h.html" title="Define classes MirrorImage and MirrorImageFactory." alt="" coords="1103,102,1317,143"/>
+<area shape="rect" id="node21" href="$ReprojectedImage_8cpp.html" title="Implement classe ReprojectedImage, allowing image reprojecting." alt="" coords="3714,95,3914,151"/>
+<area shape="rect" id="node22" href="$ResampledImage_8cpp.html" title="Implement classe ResampledImage, allowing image resampling." alt="" coords="3939,102,4201,143"/>
+<area shape="rect" id="node23" href="$Line_8h.html" title="Define the Line class , to manipulate and convert image&#39;s lines." alt="" coords="3543,95,3690,151"/>
+<area shape="rect" id="node24" href="$OneBitConverter_8h_source.html" title=" " alt="" coords="3279,199,3426,255"/>
+<area shape="rect" id="node25" href="$PixelConverter_8h.html" title="Define the PixelConverter class." alt="" coords="1493,95,1639,151"/>
+<area shape="rect" id="node7" href="$decimateNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="313,310,496,351"/>
+<area shape="rect" id="node10" href="$mergeNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="520,310,703,351"/>
+<area shape="rect" id="node26" href="$FileImage_8h.html" title="Define classes FileImage and FileImageFactory." alt="" coords="1495,199,1637,255"/>
+<area shape="rect" id="node27" href="$BilzImage_8h.html" title="Define classes BilzImage and BilzImageFactory." alt="" coords="1235,303,1377,359"/>
+<area shape="rect" id="node28" href="$LibkakaduImage_8h.html" title="Define classes LibkakaduImage and LibkakaduImageFactory." alt="" coords="2909,303,3103,359"/>
+<area shape="rect" id="node29" href="$LibjpegImage_8h.html" title="Define classes LibjpegImage and LibjpegImageFactory." alt="" coords="1401,303,1544,359"/>
+<area shape="rect" id="node30" href="$LibpngImage_8h.html" title="Define classes LibpngImage and LibpngImageFactory." alt="" coords="2395,303,2537,359"/>
+<area shape="rect" id="node31" href="$LibtiffImage_8h.html" title="Define classes LibtiffImage and LibtiffImageFactory." alt="" coords="1016,303,1159,359"/>
+<area shape="rect" id="node34" href="$LibopenjpegImage_8h.html" title="Define classes LibopenjpegImage and LibopenjpegImageFactory." alt="" coords="2561,303,2784,359"/>
+<area shape="rect" id="node35" href="$TiffNodataManager_8h.html" title="Define classe TiffNodataManager, allowing to modify nodata color for byte sample image." alt="" coords="727,303,890,359"/>
+<area shape="rect" id="node37" href="$work2cache_8cpp.html" title="Image formatting, according to ROK4 specifications." alt="" coords="749,414,932,455"/>
+<area shape="rect" id="node38" href="$cache2work_8cpp.html" title="Convert a ROK4 pyramide&#39;s image (tiled TIFF) to a TIFF image, readable with LibtiffImage." alt="" coords="1568,310,1751,351"/>
+<area shape="rect" id="node39" href="$checkWork_8cpp.html" title="Control image validity." alt="" coords="1775,310,1957,351"/>
+<area shape="rect" id="node40" href="$merge4tiff_8cpp.html" title="Four images subsampling, formed a square, might use a background and data masks." alt="" coords="1981,310,2164,351"/>
+<area shape="rect" id="node41" href="$pbf2cache_8cpp.html" title="Build a vector ROK4 slab from PBD tiles." alt="" coords="2188,310,2371,351"/>
+<area shape="rect" id="node32" href="$composeNtiff_8cpp.html" title="Monte N TIFF images with same dimensions and attributes." alt="" coords="1163,414,1345,455"/>
+<area shape="rect" id="node33" href="$overlayNtiff_8cpp.html" title="Merge N images with same dimensions, according to different merge methods." alt="" coords="956,414,1139,455"/>
+<area shape="rect" id="node36" href="$manageNodata_8cpp.html" title="Manage nodata pixel color." alt="" coords="543,414,725,455"/>
+</map>

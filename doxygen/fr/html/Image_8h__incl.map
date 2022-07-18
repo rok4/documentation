@@ -1,0 +1,25 @@
+<map id="build/sources/core&#45;cpp/src/image/Image.h" name="build/sources/core&#45;cpp/src/image/Image.h">
+<area shape="rect" id="node1" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="309,5,483,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="21,468,91,495"/>
+<area shape="rect" id="node3" title=" " alt="" coords="119,468,190,495"/>
+<area shape="rect" id="node4" title=" " alt="" coords="321,95,397,121"/>
+<area shape="rect" id="node5" href="$BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="483,169,635,196"/>
+<area shape="rect" id="node21" title=" " alt="" coords="407,244,470,271"/>
+<area shape="rect" id="node22" href="$CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="523,95,615,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="753,468,905,495"/>
+<area shape="rect" id="node7" title=" " alt="" coords="961,319,1020,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="937,468,1012,495"/>
+<area shape="rect" id="node9" href="$Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="501,244,608,271"/>
+<area shape="rect" id="node10" title=" " alt="" coords="215,468,265,495"/>
+<area shape="rect" id="node11" title=" " alt="" coords="296,319,339,345"/>
+<area shape="rect" id="node12" title=" " alt="" coords="363,319,487,345"/>
+<area shape="rect" id="node13" title=" " alt="" coords="290,468,353,495"/>
+<area shape="rect" id="node14" title=" " alt="" coords="511,319,598,345"/>
+<area shape="rect" id="node15" href="$Context_8h.html" title="Définition de la classe Context." alt="" coords="335,393,473,420"/>
+<area shape="rect" id="node17" href="$FileContext_8h.html" title="Implémentation de la classe FileContext." alt="" coords="674,319,835,345"/>
+<area shape="rect" id="node16" title=" " alt="" coords="377,468,450,495"/>
+<area shape="rect" id="node18" title=" " alt="" coords="596,393,676,420"/>
+<area shape="rect" id="node19" title=" " alt="" coords="700,393,785,420"/>
+<area shape="rect" id="node20" title=" " alt="" coords="498,393,571,420"/>
+<area shape="rect" id="node23" title=" " alt="" coords="659,169,717,196"/>
+</map>

@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence de la classe ConfLoader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
+<a href="classConfLoader-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe ConfLoader</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Chargement des configurations.  
+ <a href="classConfLoader.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ConfLoader_8h_source.html">ConfLoader.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:a25ecf7bcc65e073e3223f216c9ae333e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classServerConf.html">ServerConf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a25ecf7bcc65e073e3223f216c9ae333e">buildServerConf</a> (std::string serverConfigFile)</td></tr>
+<tr class="memdesc:a25ecf7bcc65e073e3223f216c9ae333e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chargement des paramètres du serveur à partir d'un fichier.  <a href="classConfLoader.html#a25ecf7bcc65e073e3223f216c9ae333e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a25ecf7bcc65e073e3223f216c9ae333e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785283b5f8597a85c966706d6a0cfed0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a785283b5f8597a85c966706d6a0cfed0">buildStylesList</a> (<a class="el" href="classServerConf.html">ServerConf</a> *serverConf, <a class="el" href="classServicesConf.html">ServicesConf</a> *servicesConf)</td></tr>
+<tr class="memdesc:a785283b5f8597a85c966706d6a0cfed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charges les différents Styles présent dans le répertoire styleDir.  <a href="classConfLoader.html#a785283b5f8597a85c966706d6a0cfed0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a785283b5f8597a85c966706d6a0cfed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88deea8b87c9e2f6f169839f9c5dfe87"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classStyle.html">Style</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a88deea8b87c9e2f6f169839f9c5dfe87">buildStyle</a> (std::string fileName, <a class="el" href="classServicesConf.html">ServicesConf</a> *servicesConf)</td></tr>
+<tr class="memdesc:a88deea8b87c9e2f6f169839f9c5dfe87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un <a class="el" href="classStyle.html" title="Gestion des styles (affichages et métadonnées)">Style</a> à partir d'un fichier.  <a href="classConfLoader.html#a88deea8b87c9e2f6f169839f9c5dfe87">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88deea8b87c9e2f6f169839f9c5dfe87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc80d3c5c65f44b7807680d440934293"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#adc80d3c5c65f44b7807680d440934293">buildTMSList</a> (<a class="el" href="classServerConf.html">ServerConf</a> *serverConf)</td></tr>
+<tr class="memdesc:adc80d3c5c65f44b7807680d440934293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charges les différents <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> présent dans le répertoire tmsDir.  <a href="classConfLoader.html#adc80d3c5c65f44b7807680d440934293">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc80d3c5c65f44b7807680d440934293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6d66f562cf94c3034a52c85411283d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classTileMatrixSet.html">TileMatrixSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a4c6d66f562cf94c3034a52c85411283d">buildTileMatrixSet</a> (std::string fileName)</td></tr>
+<tr class="memdesc:a4c6d66f562cf94c3034a52c85411283d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> à partir d'un fichier.  <a href="classConfLoader.html#a4c6d66f562cf94c3034a52c85411283d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4c6d66f562cf94c3034a52c85411283d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3771194b89c3c0987006638bcfc7d7fb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a3771194b89c3c0987006638bcfc7d7fb">buildLayersList</a> (<a class="el" href="classServerConf.html">ServerConf</a> *serverConf, <a class="el" href="classServicesConf.html">ServicesConf</a> *servicesConf)</td></tr>
+<tr class="memdesc:a3771194b89c3c0987006638bcfc7d7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charges les différents Layers présent dans le répertoire layerDir.  <a href="classConfLoader.html#a3771194b89c3c0987006638bcfc7d7fb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3771194b89c3c0987006638bcfc7d7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0590e93b37da4375e6eed8210de8d99c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLayer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a0590e93b37da4375e6eed8210de8d99c">buildLayer</a> (std::string fileName, <a class="el" href="classServerConf.html">ServerConf</a> *serverConf, <a class="el" href="classServicesConf.html">ServicesConf</a> *servicesConf)</td></tr>
+<tr class="memdesc:a0590e93b37da4375e6eed8210de8d99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un <a class="el" href="classLayer.html" title="Gestion des couches.">Layer</a> à partir d'un fichier.  <a href="classConfLoader.html#a0590e93b37da4375e6eed8210de8d99c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0590e93b37da4375e6eed8210de8d99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa700cda2f60f25d43037884e33b07060"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classServicesConf.html">ServicesConf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#aa700cda2f60f25d43037884e33b07060">buildServicesConf</a> (std::string servicesConfigFile)</td></tr>
+<tr class="memdesc:aa700cda2f60f25d43037884e33b07060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chargement des paramètres des services à partir d'un fichier.  <a href="classConfLoader.html#aa700cda2f60f25d43037884e33b07060">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa700cda2f60f25d43037884e33b07060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67369931019c55dd0e89bb0a0ea7d969"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPyramid.html">Pyramid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a67369931019c55dd0e89bb0a0ea7d969">buildPyramid</a> (<a class="el" href="classContext.html">Context</a> *context, std::string fileName, <a class="el" href="classServerConf.html">ServerConf</a> *serverConf)</td></tr>
+<tr class="memdesc:a67369931019c55dd0e89bb0a0ea7d969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'une Pyramide à partir d'un descripterur de pyramide.  <a href="classConfLoader.html#a67369931019c55dd0e89bb0a0ea7d969">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a67369931019c55dd0e89bb0a0ea7d969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d0b8bddb16da486d77a3857127af8a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPyramid.html">Pyramid</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfLoader.html#a76d0b8bddb16da486d77a3857127af8a">buildPyramid</a> (std::vector&lt; <a class="el" href="classPyramid.html">Pyramid</a> * &gt; pyramids, std::vector&lt; std::string &gt; bottomLevels, std::vector&lt; std::string &gt; topLevels)</td></tr>
+<tr class="memdesc:a76d0b8bddb16da486d77a3857127af8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'une Pyramide à partir de plusieurs pyramides.  <a href="classConfLoader.html#a76d0b8bddb16da486d77a3857127af8a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a76d0b8bddb16da486d77a3857127af8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Chargement des configurations. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Institut national de l'information géographique et forestière</dd></dl>
+<p>Collection de fonctions gérant le chargement des configurations du serveur </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a0590e93b37da4375e6eed8210de8d99c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0590e93b37da4375e6eed8210de8d99c">&#9670;&nbsp;</a></span>buildLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLayer.html">Layer</a> * ConfLoader::buildLayer </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classServerConf.html">ServerConf</a> *&#160;</td>
+          <td class="paramname"><em>serverConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classServicesConf.html">ServicesConf</a> *&#160;</td>
+          <td class="paramname"><em>servicesConf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Création d'un <a class="el" href="classLayer.html" title="Gestion des couches.">Layer</a> à partir d'un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Nom du fichier d'origine, utilisé comme identifiant </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmsList</td><td>liste des TileMatrixSets connus </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stylesList</td><td>liste des Styles connus </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reprojectionCapability</td><td>définit si le serveur est capable de reprojeter des données </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">servicesConf</td><td>pointeur vers les configurations globales du services </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers le <a class="el" href="classLayer.html" title="Gestion des couches.">Layer</a> nouvellement instancié, NULL en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a3771194b89c3c0987006638bcfc7d7fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3771194b89c3c0987006638bcfc7d7fb">&#9670;&nbsp;</a></span>buildLayersList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConfLoader::buildLayersList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classServerConf.html">ServerConf</a> *&#160;</td>
+          <td class="paramname"><em>serverConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classServicesConf.html">ServicesConf</a> *&#160;</td>
+          <td class="paramname"><em>servicesConf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Charges les différents Layers présent dans le répertoire layerDir. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">layerDir</td><td>chemin du répertoire contenant les fichiers de <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmsList</td><td>ensemble des TileMatrixSets disponibles </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stylesList</td><td>ensemble des Styles disponibles </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">layers</td><td>ensemble des Layers disponibles </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reprojectionCapability</td><td>définit si le serveur est capable de reprojeter des données </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">servicesConf</td><td>pointeur vers les configurations globales des services </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>faux en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a67369931019c55dd0e89bb0a0ea7d969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67369931019c55dd0e89bb0a0ea7d969">&#9670;&nbsp;</a></span>buildPyramid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPyramid.html">Pyramid</a> * ConfLoader::buildPyramid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classContext.html">Context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classServerConf.html">ServerConf</a> *&#160;</td>
+          <td class="paramname"><em>serverConf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Création d'une Pyramide à partir d'un descripterur de pyramide. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Contexte de stockage du descripterur de pyramide </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Nom du descripterur de pyramide </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">serverConf</td><td>configuration serveur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers la <a class="el" href="classPyramid.html" title="Implementation des pyramides Une pyramide est associee a un layer et comporte plusieurs niveaux.">Pyramid</a> nouvellement instanciée, NULL en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a76d0b8bddb16da486d77a3857127af8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d0b8bddb16da486d77a3857127af8a">&#9670;&nbsp;</a></span>buildPyramid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPyramid.html">Pyramid</a> * ConfLoader::buildPyramid </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classPyramid.html">Pyramid</a> * &gt;&#160;</td>
+          <td class="paramname"><em>pyramids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>bottomLevels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>topLevels</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Création d'une Pyramide à partir de plusieurs pyramides. </p>
+<p>Les pyramides en entrée doivent avoir les même caractéristiques, et les niveaux limites ne doivent pas se recouvrir </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pyramids</td><td>Pyramides source </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottomLevels</td><td>niveaux du bas </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">topLevels</td><td>niveaux du haut </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers la <a class="el" href="classPyramid.html" title="Implementation des pyramides Une pyramide est associee a un layer et comporte plusieurs niveaux.">Pyramid</a> nouvellement instanciée, NULL en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a25ecf7bcc65e073e3223f216c9ae333e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ecf7bcc65e073e3223f216c9ae333e">&#9670;&nbsp;</a></span>buildServerConf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classServerConf.html">ServerConf</a> * ConfLoader::buildServerConf </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>serverConfigFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Chargement des paramètres du serveur à partir d'un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">serverConfigFile</td><td>Nom du fichier d'origine, utilisé comme identifiant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un objet <a class="el" href="classServerConf.html">ServerConf</a>, contenant toutes les informations (NULL sinon) </dd></dl>
+
+</div>
+</div>
+<a id="aa700cda2f60f25d43037884e33b07060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa700cda2f60f25d43037884e33b07060">&#9670;&nbsp;</a></span>buildServicesConf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classServicesConf.html">ServicesConf</a> * ConfLoader::buildServicesConf </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>servicesConfigFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Chargement des paramètres des services à partir d'un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Nom du fichier d'origine, utilisé comme identifiant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers le <a class="el" href="classServicesConf.html">ServicesConf</a> nouvellement instanciée, NULL en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a88deea8b87c9e2f6f169839f9c5dfe87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88deea8b87c9e2f6f169839f9c5dfe87">&#9670;&nbsp;</a></span>buildStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStyle.html">Style</a> * ConfLoader::buildStyle </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classServicesConf.html">ServicesConf</a> *&#160;</td>
+          <td class="paramname"><em>servicesConf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Création d'un <a class="el" href="classStyle.html" title="Gestion des styles (affichages et métadonnées)">Style</a> à partir d'un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Nom du fichier, utilisé comme identifiant </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inspire</td><td>définit si les règles de conformité INSPIRE doivent être utilisées </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers le <a class="el" href="classStyle.html" title="Gestion des styles (affichages et métadonnées)">Style</a> nouvellement instancié, NULL en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a785283b5f8597a85c966706d6a0cfed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785283b5f8597a85c966706d6a0cfed0">&#9670;&nbsp;</a></span>buildStylesList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConfLoader::buildStylesList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classServerConf.html">ServerConf</a> *&#160;</td>
+          <td class="paramname"><em>serverConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classServicesConf.html">ServicesConf</a> *&#160;</td>
+          <td class="paramname"><em>servicesConf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Charges les différents Styles présent dans le répertoire styleDir. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">styleDir</td><td>chemin du répertoire contenant les fichiers de <a class="el" href="classStyle.html" title="Gestion des styles (affichages et métadonnées)">Style</a> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">stylesList</td><td>ensemble des Styles disponibles </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inspire</td><td>définit si les règles de conformité INSPIRE doivent être utilisées </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>faux en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a4c6d66f562cf94c3034a52c85411283d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6d66f562cf94c3034a52c85411283d">&#9670;&nbsp;</a></span>buildTileMatrixSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTileMatrixSet.html">TileMatrixSet</a> * ConfLoader::buildTileMatrixSet </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Création d'un <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> à partir d'un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Nom du fichier, utilisé comme identifiant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur vers le <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> nouvellement instancié, NULL en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="adc80d3c5c65f44b7807680d440934293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc80d3c5c65f44b7807680d440934293">&#9670;&nbsp;</a></span>buildTMSList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConfLoader::buildTMSList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classServerConf.html">ServerConf</a> *&#160;</td>
+          <td class="paramname"><em>serverConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Charges les différents <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> présent dans le répertoire tmsDir. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tmsDir</td><td>chemin du répertoire contenant les fichiers de <a class="el" href="classTileMatrixSet.html" title="Gestion d&#39;une pyramid de matrices de tuiles.">TileMatrixSet</a> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tmsList</td><td>ensemble des TileMatrixSets disponibles </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>faux en cas d'erreur </dd></dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>build/sources/server/src/<a class="el" href="ConfLoader_8h_source.html">ConfLoader.h</a></li>
+<li>build/sources/server/src/<a class="el" href="ConfLoader_8cpp.html">ConfLoader.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

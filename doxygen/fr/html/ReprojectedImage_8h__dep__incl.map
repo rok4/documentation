@@ -1,0 +1,5 @@
+<map id="build/sources/core&#45;cpp/src/image/ReprojectedImage.h" name="build/sources/core&#45;cpp/src/image/ReprojectedImage.h">
+<area shape="rect" id="node1" title="Définition de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="113,5,313,61"/>
+<area shape="rect" id="node2" href="$ReprojectedImage_8cpp.html" title="Implémentation de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="5,109,205,165"/>
+<area shape="rect" id="node3" href="$mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="230,117,413,158"/>
+</map>

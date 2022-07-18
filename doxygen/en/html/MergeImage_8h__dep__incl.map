@@ -1,0 +1,6 @@
+<map id="build/sources/core&#45;cpp/src/image/MergeImage.h" name="build/sources/core&#45;cpp/src/image/MergeImage.h">
+<area shape="rect" id="node1" title="Define classes MergeImage, MergeImageFactory and MergeMask and the namespace Merge." alt="" coords="190,5,406,47"/>
+<area shape="rect" id="node2" href="$Rok4Server_8cpp.html" title="Implement the Rok4Server class, handling the event loop." alt="" coords="5,95,159,136"/>
+<area shape="rect" id="node3" href="$MergeImage_8cpp.html" title="Implement classes MergeImage, MergeImageFactory and MergeMask and the namespace Merge." alt="" coords="183,95,413,136"/>
+<area shape="rect" id="node4" href="$overlayNtiff_8cpp.html" title="Merge N images with same dimensions, according to different merge methods." alt="" coords="437,95,620,136"/>
+</map>
