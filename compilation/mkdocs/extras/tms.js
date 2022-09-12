@@ -19,6 +19,22 @@
 var origin_res = 0.0746455354347424;
 var origin_x = -20037508.3427892;
 var origin_y = 20037508.3427892;
+var map;
+
+function go_to_tile() {
+    var level = document.getElementById("level").value;
+    var col = document.getElementById("col").value;
+    var row = document.getElementById("row").value;
+
+    var level_res = origin_res * (2 ** (21 - level));
+
+    map.getView().setCenter([
+        origin_x + level_res * 256 * col + 128 * level_res,
+        origin_y - level_res * 256 * row - 128 * level_res
+    ]);
+    map.getView().setZoom(level);
+
+}
 
 window.onload = function () {
     function style() {
@@ -48,7 +64,7 @@ window.onload = function () {
             layer: "ORTHOIMAGERY.ORTHOPHOTOS"
         }
     );
-    var map = new ol.Map(
+    map = new ol.Map(
         {
             view: new ol.View(
                 {
@@ -102,7 +118,7 @@ window.onload = function () {
             var y_min = origin_y - level_res * 256 * (tileCoord[2] + 1);
 
             var feature = new ol.Feature({
-                geometry: new ol.geom.Polygon([[[x_min, y_min],[x_min, y_max],[x_max, y_max],[x_max, y_min],[x_min, y_min]]]),
+                geometry: new ol.geom.Polygon([[[x_min, y_min], [x_min, y_max], [x_max, y_max], [x_max, y_min], [x_min, y_min]]]),
             });
 
             //on lui applique le style
@@ -121,4 +137,5 @@ window.onload = function () {
         X/Y (${evt.coordinate[0]}, ${evt.coordinate[1]}), COL/ROW : (${column}, ${row}), <a target="_blank" href="${url}">GetTile</a>
         `;
     });
+
 }

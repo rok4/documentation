@@ -49,9 +49,15 @@ Exemple du quadrillage Web Mercator, utilisé sur le site Géoportail (cliquer s
 <div id="map"></div>
 <div id="infos1"></div>
 <div id="infos2"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/css/ol.css" />
+<div id="formulaire">
+    Niveau : <input type="number" value="6" min="0" max="21" placeholder="Niveau" id="level">
+    , colonne : <input type="number" value="32" min="0" placeholder="Colonne" id="col">
+    , ligne : <input type="number" value="22" min="0" placeholder="Ligne" id="row">
+    <button type="button" onclick="go_to_tile()">&rsaquo;&rsaquo; Centrer sur la tuile</button>
+</div>
+<link rel="stylesheet" href="./extras/ol.css" />
 <link rel="stylesheet" href="https://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.css" />
-<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/build/ol.js"></script>
+<script src="./extras/ol.js"></script>
 <script 
     data-url="./extras/autoconf.json"
     src="https://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.js">
