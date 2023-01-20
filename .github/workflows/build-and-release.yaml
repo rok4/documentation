@@ -15,6 +15,10 @@ on:
         description: 'core-perl code tag'
         required: true
         default: 'develop'
+      corepython_tag:
+        description: 'core-python code tag'
+        required: true
+        default: 'develop'
       corecpp_tag:
         description: 'core-cpp code tag'
         required: true
@@ -25,6 +29,10 @@ on:
         default: 'develop'
       tools_tag:
         description: 'tools code version'
+        required: true
+        default: 'develop'
+      pytools_tag:
+        description: 'pytools code version'
         required: true
         default: 'develop'
       docker_tag:
@@ -58,7 +66,7 @@ jobs:
               sudo cp --verbose --force --recursive ~/deps/* /
             else
               sudo apt update
-              sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs liblog-log4perl-perl
+              sudo apt -y install gettext doxygen graphviz naturaldocs mkdocs liblog-log4perl-perl python3-gdal python3-rados
               mkdir -p ~/deps
               sudo dpkg -L gettext | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
               sudo dpkg -L doxygen | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
@@ -66,12 +74,14 @@ jobs:
               sudo dpkg -L naturaldocs | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
               sudo dpkg -L mkdocs | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
               sudo dpkg -L liblog-log4perl-perl | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L python3-gdal | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
+              sudo dpkg -L python3-rados | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/deps/
             fi
-            sudo pip3 install mkdocs-material mkdocs-select-files
+            sudo pip3 install mkdocs-material mkdocs-select-files pdoc3 boto3 gdal
 
       - name: Build documentation
         run: |
-          bash build.sh --clone --doxygen --naturaldocs --mkdocs --generation ${{ github.event.inputs.generation_tag }} --docker ${{ github.event.inputs.docker_tag }} --pregeneration ${{ github.event.inputs.pregeneration_tag }} --coreperl ${{ github.event.inputs.coreperl_tag }} --corecpp ${{ github.event.inputs.corecpp_tag }} --tools ${{ github.event.inputs.tools_tag }} --server ${{ github.event.inputs.server_tag }}
+          bash build.sh --clone --doxygen --naturaldocs --pdoc --mkdocs --generation ${{ github.event.inputs.generation_tag }} --docker ${{ github.event.inputs.docker_tag }} --pregeneration ${{ github.event.inputs.pregeneration_tag }} --coreperl ${{ github.event.inputs.coreperl_tag }} --corepython ${{ github.event.inputs.corepython_tag }} --corecpp ${{ github.event.inputs.corecpp_tag }} --tools ${{ github.event.inputs.tools_tag }} --pytools ${{ github.event.inputs.pytools_tag }} --server ${{ github.event.inputs.server_tag }}
 
       - name: Publish on gh-pages branch
         run: |

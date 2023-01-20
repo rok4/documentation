@@ -12,6 +12,7 @@ nav:
         - Outils de pré-génération: pregeneration/README.md
         - Outils de génération: generation/README.md
         - Outils de gestion: tools/README.md
+        - Outils python: pytools/README.md
     - Utilisation de Docker: 
         - docker/README.md
         - Compilation des images: docker/build/README.md

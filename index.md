@@ -16,9 +16,11 @@ Il comprend des outils de [prégénération](https://github.com/rok4/pregenerati
   <figcaption>Génération et diffusion</figcaption>
 </figure>
 
-Des [outils de gestion](https://github.com/rok4/tools) (écrit en Perl) permettent entre autre l'analyse et la suppression des pyramides.
+Des [outils de gestion](https://github.com/rok4/tools) (écrits en Perl) permettent entre autre l'analyse et la suppression des pyramides.
 
-Les librairies génériques du projet, en [Perl](https://github.com/rok4/core-perl) et en [C++](https://github.com/rok4/core-cpp) sont dans des projets à part afin d'être plus facilement réutilisables.
+Une refonte des [outils](https://github.com/rok4/pytools) écrits en Python est en cours, et remplacera au fur et à mesure ceux en Perl.
+
+Les librairies génériques du projet, en [Perl](https://github.com/rok4/core-perl), en [Python](https://github.com/rok4/core-python) et en [C++](https://github.com/rok4/core-cpp) sont dans des projets à part afin d'être plus facilement réutilisables.
 
 Des [styles](https://github.com/rok4/styles) et des [tile matrix sets](https://github.com/rok4/tilematrixsets), utilisé au niveau des générations et de la diffusion sont dans des projets indépendents.
 
@@ -40,7 +42,7 @@ Les données dans la pyramide sont tuilées selon un quadrillage défini dans le
 
 La pyramide produite par les outils de pré-génération et génération est décrite à travers un fichier, le descripteur de pyramide, qui va préciser le TMS utilisé pour découper les données, les caractéristiques des données images ou vecteur, les différents niveaux de résolutions. Vous pouvez consultez [les spécifications d'une pyramide](specifications/pyramid.md) et le schéma JSON du [descripteur](specifications/pyramid.schema.json).
 
-Pour que cette pyramide soit diffusée par le serveur, on va créer un descripteur de couche, qui va contenir à la fois des informations propres au serveur (nom, titre et résumé de la couche, styles...) mais aussi référencer le descripteur des pyramides à diffuser.
+Pour que cette pyramide soit diffusée par le serveur, on va créer un descripteur de couche (schéma JSON du [descripteur](specifications/layer.schema.json)), qui va contenir à la fois des informations propres au serveur (nom, titre et résumé de la couche, styles...) mais aussi référencer le descripteur des pyramides à diffuser.
 
 ## Visualisation du quadrillage
 

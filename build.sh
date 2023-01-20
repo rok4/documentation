@@ -5,8 +5,10 @@ set -e
 ROK4GENERATION_VERSION=develop
 ROK4PREGENERATION_VERSION=develop
 ROK4COREPERL_VERSION=develop
+ROK4COREPYTHON_VERSION=develop
 ROK4CORECPP_VERSION=develop
 ROK4TOOLS_VERSION=develop
+ROK4PYTOOLS_VERSION=develop
 ROK4SERVER_VERSION=develop
 ROK4DOCKER_VERSION=develop
 
@@ -14,8 +16,9 @@ clone=""
 mkdocs=""
 doxygen=""
 naturaldocs=""
+pdoc=""
 
-ARGUMENTS="generation:,docker:,pregeneration:,coreperl:,corecpp:,tools:,server:,clone,mkdocs,doxygen,naturaldocs"
+ARGUMENTS="generation:,docker:,pregeneration:,coreperl:,corepython:,corecpp:,tools:,pytools:,server:,clone,mkdocs,doxygen,naturaldocs,pdoc"
 # read arguments
 opts=$(getopt \
     --longoptions "${ARGUMENTS}" \
@@ -40,12 +43,20 @@ while [[ $# -gt 0 ]]; do
             ROK4COREPERL_VERSION=$2
             shift 2
             ;;
+        --corepython)
+            ROK4COREPYTHON_VERSION=$2
+            shift 2
+            ;;
         --corecpp)
             ROK4CORECPP_VERSION=$2
             shift 2
             ;;
         --tools)
             ROK4TOOLS_VERSION=$2
+            shift 2
+            ;;
+        --pytools)
+            ROK4PYTOOLS_VERSION=$2
             shift 2
             ;;
         --server)
@@ -73,6 +84,10 @@ while [[ $# -gt 0 ]]; do
             naturaldocs=1
             shift 1
             ;;
+        --pdoc)
+            pdoc=1
+            shift 1
+            ;;
 
         *)
             break
@@ -83,8 +98,10 @@ done
 export ROK4GENERATION_VERSION
 export ROK4PREGENERATION_VERSION
 export ROK4COREPERL_VERSION
+export ROK4COREPYTHON_VERSION
 export ROK4CORECPP_VERSION
 export ROK4TOOLS_VERSION
+export ROK4PYTOOLS_VERSION
 export ROK4SERVER_VERSION
 export ROK4DOCKER_VERSION
 
@@ -97,8 +114,10 @@ if [[ ! -z $clone ]]; then
     git clone --branch $ROK4GENERATION_VERSION --depth 1 https://github.com/rok4/generation build/sources/generation
     git clone --branch $ROK4PREGENERATION_VERSION --depth 1 https://github.com/rok4/pregeneration build/sources/pregeneration
     git clone --branch $ROK4COREPERL_VERSION --depth 1 https://github.com/rok4/core-perl build/sources/core-perl
+    git clone --branch $ROK4COREPYTHON_VERSION --depth 1 https://github.com/rok4/core-python build/sources/core-python
     git clone --branch $ROK4CORECPP_VERSION --depth 1 https://github.com/rok4/core-cpp build/sources/core-cpp
     git clone --branch $ROK4TOOLS_VERSION --depth 1 https://github.com/rok4/tools build/sources/tools
+    git clone --branch $ROK4PYTOOLS_VERSION --depth 1 https://github.com/rok4/pytools build/sources/pytools
     git clone --branch $ROK4SERVER_VERSION --depth 1 https://github.com/rok4/server build/sources/server
     git clone --branch $ROK4DOCKER_VERSION --depth 1 https://github.com/rok4/docker build/sources/docker
 fi
@@ -123,6 +142,14 @@ if [[ ! -z $naturaldocs ]]; then
         --output HTML build/target/naturaldocs/en/html 
 fi
 
+# Documentation développeur Python
+if [[ ! -z $pdoc ]]; then
+    mkdir -p build/target/pdoc/en/html
+    cd build/sources/core-python
+    VERSION=$ROK4COREPYTHON_VERSION pdoc --force --html --output-dir ../../target/pdoc/en/html rok4
+    cd ../../../
+fi
+
 # Documentation principale et utilisateur Markdown
 if [[ ! -z $mkdocs ]]; then
     mkdir -p build/target/dist/
@@ -140,6 +167,10 @@ fi
 
 if [[ ! -z $naturaldocs || ! -z $mkdocs ]]; then
     cp -r build/target/naturaldocs build/target/dist/
+fi
+
+if [[ ! -z $pdoc || ! -z $mkdocs ]]; then
+    cp -r build/target/pdoc build/target/dist/
 fi
 
 

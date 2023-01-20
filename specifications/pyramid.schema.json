@@ -25,7 +25,10 @@
             ]
         },
         "mask_format": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+                "TIFF_ZIP_UINT8"
+            ]
         },
         "raster_specifications": {
             "type": "object",

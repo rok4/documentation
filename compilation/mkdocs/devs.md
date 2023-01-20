@@ -3,6 +3,7 @@
 * [Code c++ (en français)](../doxygen/fr/html/)
 * [Code c++ (en anglais)](../doxygen/en/html/)
 * [Code Perl (en anglais)](../naturaldocs/en/html/)
+* [Code Python (en anglais)](../pdoc/en/html/rok4/)
 
 ## Versions des composants
 
@@ -12,3 +13,4 @@
 * Outils de gestion : ${ROK4TOOLS_VERSION}
 * Librairies Core C++ : ${ROK4CORECPP_VERSION}
 * Librairies Core Perl : ${ROK4COREPERL_VERSION}
+* Librairies Core Python : ${ROK4COREPYTHON_VERSION}

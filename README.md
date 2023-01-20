@@ -12,6 +12,6 @@ Le site est disponible [ici](https://rok4.github.io/documentation).
 
 * Pour la documentation du code source C++ : `sudo apt install doxygen graphviz`
 * Pour la documentation du code source Perl : `sudo apt install naturaldocs`
-* Pour la documentation utilisateur : `sudo apt install mkdocs && pip3 install mkdocs-material mkdocs-select-files`
+* Pour la documentation utilisateur : `sudo apt install mkdocs && pip3 install mkdocs-material mkdocs-select-files pdoc3`
 
-Depuis le dossier racine du projet : `bash build.sh --clone --doxygen --naturaldocs --mkdocs`.
+Depuis le dossier racine du projet : `bash build.sh --clone --doxygen --naturaldocs --mkdocs --pdoc`.
