@@ -1,0 +1,15 @@
+<map id="build/sources/server/src/MetadataURL.h" name="build/sources/server/src/MetadataURL.h">
+<area shape="rect" id="node1" title="Définition de la classe MetadataURL gérant les liens vers les métadonnées dans les documents de capac..." alt="" coords="671,5,824,47"/>
+<area shape="rect" id="node2" href="$ServicesConf_8h_source.html" title=" " alt="" coords="385,95,539,136"/>
+<area shape="rect" id="node5" href="$Layer_8h.html" title="Définition de la classe Layer modélisant les couches de données." alt="" coords="211,363,364,404"/>
+<area shape="rect" id="node3" href="$Rok4Server_8h.html" title="Definition de la classe Rok4Server et du programme principal." alt="" coords="385,184,539,225"/>
+<area shape="rect" id="node6" href="$Request_8h.html" title="Définition de la classe Request, analysant les requêtes HTTP." alt="" coords="37,452,191,493"/>
+<area shape="rect" id="node4" href="$ServerConf_8h_source.html" title=" " alt="" coords="208,273,361,315"/>
+<area shape="rect" id="node8" href="$Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="340,631,493,672"/>
+<area shape="rect" id="node11" href="$server_2src_2main_8cpp.html" title="Exécutable du serveur ROK4." alt="" coords="385,273,539,315"/>
+<area shape="rect" id="node12" href="$UtilsAdmin_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="563,273,716,315"/>
+<area shape="rect" id="node13" href="$UtilsGlobal_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="740,273,893,315"/>
+<area shape="rect" id="node10" href="$Layer_8cpp.html" title="Implémentation de la classe Layer modélisant les couches de données." alt="" coords="215,452,368,493"/>
+<area shape="rect" id="node7" href="$Threads_8h_source.html" title=" " alt="" coords="5,541,201,583"/>
+<area shape="rect" id="node9" href="$Request_8cpp.html" title="Implémentation de la classe Request, analysant les requêtes HTTP." alt="" coords="225,541,379,583"/>
+</map>

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/image/file/LibpngImage.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_3806e1b72a3d84c77d8b67f55e796c89.html">image</a></li><li class="navelem"><a class="el" href="dir_2a97e5f667447b390c0f82a9f2b54563.html">file</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier LibpngImage.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémentation des classes <a class="el" href="classLibpngImage.html" title="Manipulation d&#39;une image PNG.">LibpngImage</a> et <a class="el" href="classLibpngImageFactory.html" title="Usine de création d&#39;une image PNG.">LibpngImageFactory</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="LibpngImage_8h_source.html">image/file/LibpngImage.h</a>&quot;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="Utils_8h_source.html">utils/Utils.h</a>&quot;</code><br />
+<code>#include &quot;datastream/DataStream.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de LibpngImage.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="LibpngImage_8cpp__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2file_2LibpngImage_8cpp" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2file_2LibpngImage_8cpp" id="build_2sources_2core-cpp_2src_2image_2file_2LibpngImage_8cpp">
+<area shape="rect" title="Implémentation des classes LibpngImage et LibpngImageFactory." alt="" coords="899,5,1041,61"/>
+<area shape="rect" href="LibpngImage_8h.html" title="Définition des classes LibpngImage et LibpngImageFactory." alt="" coords="425,109,611,136"/>
+<area shape="rect" title=" " alt="" coords="1041,483,1193,509"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="877,333,973,360"/>
+<area shape="rect" href="DataStream_8h_source.html" title=" " alt="" coords="1004,259,1195,285"/>
+<area shape="rect" title=" " alt="" coords="626,184,685,211"/>
+<area shape="rect" title=" " alt="" coords="709,184,783,211"/>
+<area shape="rect" title=" " alt="" coords="187,184,257,211"/>
+<area shape="rect" title=" " alt="" coords="482,333,549,360"/>
+<area shape="rect" title=" " alt="" coords="387,333,457,360"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="623,333,751,360"/>
+<area shape="rect" href="FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="435,184,601,211"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="189,259,309,285"/>
+<area shape="rect" title=" " alt="" coords="682,408,741,435"/>
+<area shape="rect" title=" " alt="" coords="789,408,860,435"/>
+<area shape="rect" href="PixelConverter_8h.html" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="485,259,687,285"/>
+<area shape="rect" title=" " alt="" coords="287,333,363,360"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="82,408,234,435"/>
+<area shape="rect" title=" " alt="" coords="5,483,68,509"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="119,333,211,360"/>
+<area shape="rect" title=" " alt="" coords="105,483,163,509"/>
+<area shape="rect" title=" " alt="" coords="187,483,262,509"/>
+<area shape="rect" title=" " alt="" coords="989,408,1055,435"/>
+<area shape="rect" title=" " alt="" coords="885,408,965,435"/>
+<area shape="rect" title=" " alt="" coords="1264,408,1335,435"/>
+<area shape="rect" title=" " alt="" coords="1154,408,1239,435"/>
+<area shape="rect" href="DataSource_8h_source.html" title=" " alt="" coords="1048,333,1233,360"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a94dabd15dd2bca7ceb5315c1d1ab9c75"><td class="memItemLeft" align="right" valign="top"><a id="a94dabd15dd2bca7ceb5315c1d1ab9c75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReadDataFromInputStream</b> (png_structp png_ptr, png_bytep outBytes, png_size_t byteCountToRead)</td></tr>
+<tr class="separator:a94dabd15dd2bca7ceb5315c1d1ab9c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentation des classes <a class="el" href="classLibpngImage.html" title="Manipulation d&#39;une image PNG.">LibpngImage</a> et <a class="el" href="classLibpngImageFactory.html" title="Usine de création d&#39;une image PNG.">LibpngImageFactory</a>. </p>
+<ul>
+<li><a class="el" href="classLibpngImage.html" title="Manipulation d&#39;une image PNG.">LibpngImage</a> : gestion d'une image au format PNG, en lecture, utilisant la librairie libpng </li>
+<li><a class="el" href="classLibpngImageFactory.html" title="Usine de création d&#39;une image PNG.">LibpngImageFactory</a> : usine de création d'objet <a class="el" href="classLibpngImage.html" title="Manipulation d&#39;une image PNG.">LibpngImage</a> </li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

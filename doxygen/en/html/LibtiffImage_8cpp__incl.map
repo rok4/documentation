@@ -1,0 +1,24 @@
+<map id="build/sources/core&#45;cpp/src/image/file/LibtiffImage.cpp" name="build/sources/core&#45;cpp/src/image/file/LibtiffImage.cpp">
+<area shape="rect" id="node1" title="Implement classes LibtiffImage and LibtiffImageFactory." alt="" coords="664,5,807,61"/>
+<area shape="rect" id="node2" href="$LibtiffImage_8h.html" title="Define classes LibtiffImage and LibtiffImageFactory." alt="" coords="494,109,675,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="274,483,426,509"/>
+<area shape="rect" id="node19" href="$Utils_8h.html" title=" " alt="" coords="942,333,1038,360"/>
+<area shape="rect" id="node22" href="$OneBitConverter_8h_source.html" title=" " alt="" coords="720,109,935,136"/>
+<area shape="rect" id="node3" href="$Image_8h.html" title="Define the Image abstract class , to abstract all kind of images." alt="" coords="325,259,445,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="553,333,624,360"/>
+<area shape="rect" id="node14" title=" " alt="" coords="533,184,597,211"/>
+<area shape="rect" id="node15" href="$Format_8h.html" title="Define and the namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="649,333,777,360"/>
+<area shape="rect" id="node16" href="$FileImage_8h.html" title="Define classes FileImage and FileImageFactory." alt="" coords="341,184,508,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="677,408,748,435"/>
+<area shape="rect" id="node6" title=" " alt="" coords="285,333,361,360"/>
+<area shape="rect" id="node7" href="$BoundingBox_8h.html" title="Implement template class BoundingBox." alt="" coords="74,408,226,435"/>
+<area shape="rect" id="node11" title=" " alt="" coords="5,483,68,509"/>
+<area shape="rect" id="node12" href="$CRS_8h.html" title="Define the reference systems handler." alt="" coords="385,333,477,360"/>
+<area shape="rect" id="node9" title=" " alt="" coords="93,483,151,509"/>
+<area shape="rect" id="node10" title=" " alt="" coords="175,483,250,509"/>
+<area shape="rect" id="node13" title=" " alt="" coords="498,408,557,435"/>
+<area shape="rect" id="node17" href="$PixelConverter_8h.html" title="Define the PixelConverter class." alt="" coords="722,259,925,285"/>
+<area shape="rect" id="node18" title=" " alt="" coords="851,333,918,360"/>
+<area shape="rect" id="node20" title=" " alt="" coords="907,408,974,435"/>
+<area shape="rect" id="node21" title=" " alt="" coords="998,408,1078,435"/>
+</map>

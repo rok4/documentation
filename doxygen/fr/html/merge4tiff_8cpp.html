@@ -1,0 +1,850 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/generation/src/merge4tiff.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_57bbb0f0e43c6d9101717093723c909a.html">generation</a></li><li class="navelem"><a class="el" href="dir_37d94dac7f7914d8cc8c25707f466aaf.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier merge4tiff.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques de données.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;tiffio.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="Image_8h_source.html">image/Image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Format_8h_source.html">enums/Format.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Cache_8h_source.html">utils/Cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FileImage_8h_source.html">image/file/FileImage.h</a>&quot;</code><br />
+<code>#include &lt;boost/log/core.hpp&gt;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &lt;boost/log/utility/setup/common_attributes.hpp&gt;</code><br />
+<code>#include &lt;boost/log/utility/setup/console.hpp&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de merge4tiff.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="merge4tiff_8cpp__incl.png" border="0" usemap="#build_2sources_2generation_2src_2merge4tiff_8cpp" alt=""/></div>
+<map name="build_2sources_2generation_2src_2merge4tiff_8cpp" id="build_2sources_2generation_2src_2merge4tiff_8cpp">
+<area shape="rect" title="Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques d..." alt="" coords="1169,5,1351,47"/>
+<area shape="rect" title=" " alt="" coords="5,102,69,129"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="867,184,987,211"/>
+<area shape="rect" title=" " alt="" coords="1093,333,1163,360"/>
+<area shape="rect" title=" " alt="" coords="313,333,383,360"/>
+<area shape="rect" title=" " alt="" coords="1191,483,1343,509"/>
+<area shape="rect" title=" " alt="" coords="1005,408,1067,435"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="1467,259,1595,285"/>
+<area shape="rect" href="Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="1467,102,1573,129"/>
+<area shape="rect" title=" " alt="" coords="695,333,775,360"/>
+<area shape="rect" title=" " alt="" coords="2802,333,2875,360"/>
+<area shape="rect" href="FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="771,102,938,129"/>
+<area shape="rect" title=" " alt="" coords="2011,102,2154,129"/>
+<area shape="rect" title=" " alt="" coords="2179,95,2360,136"/>
+<area shape="rect" title=" " alt="" coords="2385,95,2549,136"/>
+<area shape="rect" title=" " alt="" coords="2573,102,2638,129"/>
+<area shape="rect" title=" " alt="" coords="2663,102,2748,129"/>
+<area shape="rect" title=" " alt="" coords="811,259,887,285"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="1405,333,1557,360"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="1883,259,1975,285"/>
+<area shape="rect" title=" " alt="" coords="1453,408,1512,435"/>
+<area shape="rect" title=" " alt="" coords="1304,408,1379,435"/>
+<area shape="rect" title=" " alt="" coords="2413,483,2472,509"/>
+<area shape="rect" title=" " alt="" coords="2480,333,2531,360"/>
+<area shape="rect" title=" " alt="" coords="1583,184,1625,211"/>
+<area shape="rect" title=" " alt="" coords="1650,184,1774,211"/>
+<area shape="rect" title=" " alt="" coords="2150,333,2213,360"/>
+<area shape="rect" title=" " alt="" coords="1798,184,1885,211"/>
+<area shape="rect" href="TileMatrixSet_8h_source.html" title=" " alt="" coords="2590,184,2743,211"/>
+<area shape="rect" href="Style_8h.html" title="Définition de la classe Style modélisant les styles." alt="" coords="2206,184,2309,211"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="691,259,787,285"/>
+<area shape="rect" href="Context_8h.html" title="Définition de la classe Context." alt="" coords="1619,259,1757,285"/>
+<area shape="rect" href="FileContext_8h.html" title="Implémentation de la classe FileContext." alt="" coords="1245,184,1406,211"/>
+<area shape="rect" title=" " alt="" coords="3051,259,3093,285"/>
+<area shape="rect" title=" " alt="" coords="3118,259,3205,285"/>
+<area shape="rect" href="TileMatrix_8h.html" title="Définition de la classe TileMatrix gérant une matrice de tuiles représentant un niveau d&#39;une pyramide..." alt="" coords="2646,259,2778,285"/>
+<area shape="rect" href="Configuration_8h_source.html" title=" " alt="" coords="2086,408,2239,435"/>
+<area shape="rect" href="Keyword_8h.html" title="Définition de la classe Keyword gérant les mots&#45;clés des documents de capacités." alt="" coords="2904,259,3027,285"/>
+<area shape="rect" href="TileMatrixLimits_8h.html" title="Définition de la classe TileMatrixLimits gérant les indices extrêmes de tuiles pour un niveau." alt="" coords="2606,333,2778,360"/>
+<area shape="rect" title=" " alt="" coords="1839,483,1924,509"/>
+<area shape="rect" href="LegendURL_8h.html" title="Définition de la classe LegendURL gérant les éléments de légendes des documents de capacités." alt="" coords="2267,408,2405,435"/>
+<area shape="rect" href="Palette_8h_source.html" title=" " alt="" coords="2253,259,2368,285"/>
+<area shape="rect" href="Pente_8h.html" title="D�finition de la classe Pente." alt="" coords="1968,333,2075,360"/>
+<area shape="rect" href="Estompage_8h.html" title="Définition de la classe Estompage modélisant l&#39;estompage." alt="" coords="2899,333,3042,360"/>
+<area shape="rect" href="Interpolation_8h.html" title="Définition de l&#39;énumération des interpolations disponibles et des conversions." alt="" coords="2984,408,3149,435"/>
+<area shape="rect" href="Aspect_8h.html" title="Définition de la classe Aspect." alt="" coords="1728,333,1843,360"/>
+<area shape="rect" title=" " alt="" coords="799,333,865,360"/>
+<area shape="rect" title=" " alt="" coords="1318,259,1391,285"/>
+<area shape="rect" href="PixelConverter_8h.html" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="413,184,616,211"/>
+<area shape="rect" title=" " alt="" coords="499,259,565,285"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0">usage</a> ()</td></tr>
+<tr class="memdesc:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'utilisation et les différentes options de la commande merge4tiff # help.  <a href="merge4tiff_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3743d1ffdcedd6d873578928ca0b690a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a3743d1ffdcedd6d873578928ca0b690a">error</a> (std::string message, int errorCode)</td></tr>
+<tr class="memdesc:a3743d1ffdcedd6d873578928ca0b690a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message d'erreur, l'utilisation de la commande et sort en erreur.  <a href="merge4tiff_8cpp.html#a3743d1ffdcedd6d873578928ca0b690a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3743d1ffdcedd6d873578928ca0b690a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb63d69a8279fb16bc37f98695379a03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#acb63d69a8279fb16bc37f98695379a03">parseCommandLine</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:acb63d69a8279fb16bc37f98695379a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère les valeurs passées en paramètres de la commande, et les stocke dans les variables globales.  <a href="merge4tiff_8cpp.html#acb63d69a8279fb16bc37f98695379a03">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acb63d69a8279fb16bc37f98695379a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6123fccc7ef67e418866ad47d62984cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a6123fccc7ef67e418866ad47d62984cb">checkComponents</a> (<a class="el" href="classFileImage.html">FileImage</a> *image, <a class="el" href="classFileImage.html">FileImage</a> *mask)</td></tr>
+<tr class="memdesc:a6123fccc7ef67e418866ad47d62984cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contrôle les caractéristiques d'une image (format des canaux, tailles) et de son éventuel masque.  <a href="merge4tiff_8cpp.html#a6123fccc7ef67e418866ad47d62984cb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6123fccc7ef67e418866ad47d62984cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c3fc792d724fbe930811a843b06969"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#ad8c3fc792d724fbe930811a843b06969">checkImages</a> (<a class="el" href="classFileImage.html">FileImage</a> *INPUTI[2][2], <a class="el" href="classFileImage.html">FileImage</a> *&amp;BGI, <a class="el" href="classFileImage.html">FileImage</a> *&amp;OUTPUTI, <a class="el" href="classFileImage.html">FileImage</a> *&amp;OUTPUTM)</td></tr>
+<tr class="memdesc:ad8c3fc792d724fbe930811a843b06969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contrôle l'ensemble des images et masques, en entrée et sortie.  <a href="merge4tiff_8cpp.html#ad8c3fc792d724fbe930811a843b06969">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad8c3fc792d724fbe930811a843b06969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778411f3fab46a7f1e80a589c95d9b97"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a778411f3fab46a7f1e80a589c95d9b97"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a778411f3fab46a7f1e80a589c95d9b97">fillBgLine</a> (<a class="el" href="classFileImage.html">FileImage</a> *BGI, T *image, uint8_t *mask, int line, T *nodata)</td></tr>
+<tr class="memdesc:a778411f3fab46a7f1e80a589c95d9b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remplit un buffer à partir d'une ligne d'une image et d'un potentiel masque associé  <a href="merge4tiff_8cpp.html#a778411f3fab46a7f1e80a589c95d9b97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a778411f3fab46a7f1e80a589c95d9b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec15d29235181a7b65974fd5262496e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2ec15d29235181a7b65974fd5262496e"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a2ec15d29235181a7b65974fd5262496e">merge</a> (<a class="el" href="classFileImage.html">FileImage</a> *BGI, <a class="el" href="classFileImage.html">FileImage</a> *INPUTI[2][2], <a class="el" href="classFileImage.html">FileImage</a> *OUTPUTI, <a class="el" href="classFileImage.html">FileImage</a> *OUTPUTM, T *nodata)</td></tr>
+<tr class="memdesc:a2ec15d29235181a7b65974fd5262496e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fusionne les 4 images en entrée et le masque de fond dans l'image de sortie.  <a href="merge4tiff_8cpp.html#a2ec15d29235181a7b65974fd5262496e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ec15d29235181a7b65974fd5262496e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale de l'outil merge4tiff.  <a href="merge4tiff_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab1a544f4fcc4a7e2890dd79e7a14c938"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#ab1a544f4fcc4a7e2890dd79e7a14c938">strnodata</a></td></tr>
+<tr class="separator:ab1a544f4fcc4a7e2890dd79e7a14c938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7488379fb027b617590d8f4c7be6a2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#aba7488379fb027b617590d8f4c7be6a2">backgroundImage</a></td></tr>
+<tr class="separator:aba7488379fb027b617590d8f4c7be6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d916190e527580df2fbb83db6d273e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#ac3d916190e527580df2fbb83db6d273e">backgroundMask</a></td></tr>
+<tr class="separator:ac3d916190e527580df2fbb83db6d273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb481078afd0c340d905920bbbef9da2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#aeb481078afd0c340d905920bbbef9da2">inputImages</a> [4]</td></tr>
+<tr class="separator:aeb481078afd0c340d905920bbbef9da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75922bf01318ef7ac611894e4783ec96"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a75922bf01318ef7ac611894e4783ec96">inputMasks</a> [4]</td></tr>
+<tr class="separator:a75922bf01318ef7ac611894e4783ec96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83e540503fbf0062650fb1bb5a06034"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#aa83e540503fbf0062650fb1bb5a06034">outputImage</a></td></tr>
+<tr class="separator:aa83e540503fbf0062650fb1bb5a06034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f2defdc8f94b829317bff37159227f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a95f2defdc8f94b829317bff37159227f">outputMask</a></td></tr>
+<tr class="separator:a95f2defdc8f94b829317bff37159227f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1678fa5916b49d2a41e92f8d2d7cca1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a1678fa5916b49d2a41e92f8d2d7cca1c">gammaM4t</a></td></tr>
+<tr class="separator:a1678fa5916b49d2a41e92f8d2d7cca1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325272ddd9a962f05deb905101d25cbd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a325272ddd9a962f05deb905101d25cbd">width</a></td></tr>
+<tr class="separator:a325272ddd9a962f05deb905101d25cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad4f820ce4e75cda0686fcaad5168be"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a6ad4f820ce4e75cda0686fcaad5168be">height</a></td></tr>
+<tr class="separator:a6ad4f820ce4e75cda0686fcaad5168be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527676d008d5ab68518a5cb08bdea98f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceCompression.html#ab59ae0c9640db55b2cbed59310434030">Compression::eCompression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a527676d008d5ab68518a5cb08bdea98f">compression</a> = Compression::NONE</td></tr>
+<tr class="separator:a527676d008d5ab68518a5cb08bdea98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d9299c8104ae139b5748c2f328e4a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a76d9299c8104ae139b5748c2f328e4a0">outputProvided</a> = false</td></tr>
+<tr class="separator:a76d9299c8104ae139b5748c2f328e4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a69b73601b508dd6658c226f42cb1b4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a9a69b73601b508dd6658c226f42cb1b4">samplesperpixel</a> = 0</td></tr>
+<tr class="separator:a9a69b73601b508dd6658c226f42cb1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b312f6164a2698d26519cbf955f4c0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a16b312f6164a2698d26519cbf955f4c0">bitspersample</a> = 0</td></tr>
+<tr class="separator:a16b312f6164a2698d26519cbf955f4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1953f88f170fc37a3149ec6a40db2a98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSampleFormat.html#ad788f42d581e9caded3e9b0f46c3ce1b">SampleFormat::eSampleFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a1953f88f170fc37a3149ec6a40db2a98">sampleformat</a> = SampleFormat::UNKNOWN</td></tr>
+<tr class="separator:a1953f88f170fc37a3149ec6a40db2a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359c6187cecc9f7ec9abc9c638eff616"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePhotometric.html#a2400cfa91cf2e98ca0cca9024b029203">Photometric::ePhotometric</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#a359c6187cecc9f7ec9abc9c638eff616">photometric</a></td></tr>
+<tr class="separator:a359c6187cecc9f7ec9abc9c638eff616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1a0a045ba3ce38295c06136a4508a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#aaf1a0a045ba3ce38295c06136a4508a9">debugLogger</a> =false</td></tr>
+<tr class="separator:aaf1a0a045ba3ce38295c06136a4508a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfcd8d5595d8ba1a38ef3c624d1186a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="merge4tiff_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a></td></tr>
+<tr class="separator:aecfcd8d5595d8ba1a38ef3c624d1186a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques de données. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Institut national de l'information géographique et forestière <div class="image">
+<img src="merge4tiff.png" alt=""/>
+</div>
+ </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a6123fccc7ef67e418866ad47d62984cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6123fccc7ef67e418866ad47d62984cb">&#9670;&nbsp;</a></span>checkComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int checkComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contrôle les caractéristiques d'une image (format des canaux, tailles) et de son éventuel masque. </p>
+<p>Si les composantes sont bonnes, le masque est attaché à l'image. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>image à contrôler </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>précise éventuellement un masque de donnée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="ad8c3fc792d724fbe930811a843b06969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c3fc792d724fbe930811a843b06969">&#9670;&nbsp;</a></span>checkImages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int checkImages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>INPUTI</em>[2][2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&amp;&#160;</td>
+          <td class="paramname"><em>BGI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&amp;&#160;</td>
+          <td class="paramname"><em>OUTPUTI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&amp;&#160;</td>
+          <td class="paramname"><em>OUTPUTM</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contrôle l'ensemble des images et masques, en entrée et sortie. </p>
+<p>Crée les objets TIFF, contrôle la cohérence des caractéristiques des images en entrée, ouvre les flux de lecture et écriture. Les éventuels masques associés sont ajoutés aux objets <a class="el" href="classFileImage.html" title="Manipulation d&#39;une image associée à un fichier.">FileImage</a>. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">INPUTI</td><td>images en entrée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">BGI</td><td>image de fond en entrée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">OUTPUTI</td><td>image en sortie </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a3743d1ffdcedd6d873578928ca0b690a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3743d1ffdcedd6d873578928ca0b690a">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void error </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>errorCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message d'erreur, l'utilisation de la commande et sort en erreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>message d'erreur </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorCode</td><td>code de retour </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a778411f3fab46a7f1e80a589c95d9b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778411f3fab46a7f1e80a589c95d9b97">&#9670;&nbsp;</a></span>fillBgLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int fillBgLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>BGI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>nodata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remplit un buffer à partir d'une ligne d'une image et d'un potentiel masque associé </p>
+<p>les pixels qui ne contiennent pas de donnée sont remplis avec la valeur de nodata </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">BGI</td><td>image de fond à lire </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>ligne de l'image en sortie </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mask</td><td>ligne du masque en sortie </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>indice de la ligne source dans l'image (et son masque) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nodata</td><td>valeur de nodata </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale de l'outil merge4tiff. </p>
+<p>Différencie le cas de canaux flottants sur 32 bits des canaux entier non signés sur 8 bits. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>nombre de paramètres </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>tableau des paramètres </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 en cas de succès, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a2ec15d29235181a7b65974fd5262496e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec15d29235181a7b65974fd5262496e">&#9670;&nbsp;</a></span>merge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int merge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>BGI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>INPUTI</em>[2][2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>OUTPUTI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> *&#160;</td>
+          <td class="paramname"><em>OUTPUTM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>nodata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fusionne les 4 images en entrée et le masque de fond dans l'image de sortie. </p>
+<p>Dans le cas entier, lors de la moyenne des 4 pixels, on utilise une valeur de gamma qui éclaircit (si supérieure à 1.0) ou fonce (si inférieure à 1.0) le résultat. Si gamma vaut 1, le résultat est une moyenne classique. Les masques sont déjà associé aux objets <a class="el" href="classFileImage.html" title="Manipulation d&#39;une image associée à un fichier.">FileImage</a>, sauf pour l'image de sortie. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">BGI</td><td>image de fond en entrée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">INPUTI</td><td>images en entrée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">OUTPUTI</td><td>image en sortie </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">OUTPUTI</td><td>éventuel masque en sortie </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="acb63d69a8279fb16bc37f98695379a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb63d69a8279fb16bc37f98695379a03">&#9670;&nbsp;</a></span>parseCommandLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseCommandLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère les valeurs passées en paramètres de la commande, et les stocke dans les variables globales. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>nombre de paramètres </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>tableau des paramètres </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a2ef30c42cbc289d899a8be5d2d8f77d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef30c42cbc289d899a8be5d2d8f77d0">&#9670;&nbsp;</a></span>usage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche l'utilisation et les différentes options de la commande merge4tiff # help. </p>
+<p>L'affichage se fait dans le niveau de logger INFO </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="aba7488379fb027b617590d8f4c7be6a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7488379fb027b617590d8f4c7be6a2">&#9670;&nbsp;</a></span>backgroundImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* backgroundImage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemin de l'image de fond </p>
+
+</div>
+</div>
+<a id="ac3d916190e527580df2fbb83db6d273e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d916190e527580df2fbb83db6d273e">&#9670;&nbsp;</a></span>backgroundMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* backgroundMask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemin du masque associé à l'image de fond </p>
+
+</div>
+</div>
+<a id="a16b312f6164a2698d26519cbf955f4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b312f6164a2698d26519cbf955f4c0">&#9670;&nbsp;</a></span>bitspersample</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t bitspersample = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nombre de bits occupé par un canal, pour l'image en sortie </p>
+
+</div>
+</div>
+<a id="a527676d008d5ab68518a5cb08bdea98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527676d008d5ab68518a5cb08bdea98f">&#9670;&nbsp;</a></span>compression</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceCompression.html#ab59ae0c9640db55b2cbed59310434030">Compression::eCompression</a> compression = Compression::NONE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="namespaceCompression.html" title="Gestion des informations liées à la compression.">Compression</a> de l'image de sortie </p>
+
+</div>
+</div>
+<a id="aaf1a0a045ba3ce38295c06136a4508a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1a0a045ba3ce38295c06136a4508a9">&#9670;&nbsp;</a></span>debugLogger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool debugLogger =false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Activation du niveau de log debug. Faux par défaut </p>
+
+</div>
+</div>
+<a id="a1678fa5916b49d2a41e92f8d2d7cca1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1678fa5916b49d2a41e92f8d2d7cca1c">&#9670;&nbsp;</a></span>gammaM4t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double gammaM4t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valeur de gamma, pour foncer ou éclaircir des images en entier </p>
+
+</div>
+</div>
+<a id="a6ad4f820ce4e75cda0686fcaad5168be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad4f820ce4e75cda0686fcaad5168be">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Hauteur des images </p>
+
+</div>
+</div>
+<a id="aecfcd8d5595d8ba1a38ef3c624d1186a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfcd8d5595d8ba1a38ef3c624d1186a">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string help</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Message d'usage de la commande merge4tiff </p>
+
+</div>
+</div>
+<a id="aeb481078afd0c340d905920bbbef9da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb481078afd0c340d905920bbbef9da2">&#9670;&nbsp;</a></span>inputImages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* inputImages[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemins des images en entrée </p>
+
+</div>
+</div>
+<a id="a75922bf01318ef7ac611894e4783ec96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75922bf01318ef7ac611894e4783ec96">&#9670;&nbsp;</a></span>inputMasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* inputMasks[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemins des masques associés aux images en entrée </p>
+
+</div>
+</div>
+<a id="aa83e540503fbf0062650fb1bb5a06034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83e540503fbf0062650fb1bb5a06034">&#9670;&nbsp;</a></span>outputImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* outputImage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemin de l'image en sortie </p>
+
+</div>
+</div>
+<a id="a95f2defdc8f94b829317bff37159227f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f2defdc8f94b829317bff37159227f">&#9670;&nbsp;</a></span>outputMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* outputMask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemin du masque associé à l'image en sortie </p>
+
+</div>
+</div>
+<a id="a76d9299c8104ae139b5748c2f328e4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d9299c8104ae139b5748c2f328e4a0">&#9670;&nbsp;</a></span>outputProvided</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool outputProvided = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A-t-on précisé le format en sortie, c'est à dire les 3 informations samplesperpixel, bitspersample et sampleformat </p>
+
+</div>
+</div>
+<a id="a359c6187cecc9f7ec9abc9c638eff616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359c6187cecc9f7ec9abc9c638eff616">&#9670;&nbsp;</a></span>photometric</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacePhotometric.html#a2400cfa91cf2e98ca0cca9024b029203">Photometric::ePhotometric</a> photometric</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Photométrie (rgb, gray), déduit du nombre de canaux </p>
+
+</div>
+</div>
+<a id="a1953f88f170fc37a3149ec6a40db2a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1953f88f170fc37a3149ec6a40db2a98">&#9670;&nbsp;</a></span>sampleformat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSampleFormat.html#ad788f42d581e9caded3e9b0f46c3ce1b">SampleFormat::eSampleFormat</a> sampleformat = SampleFormat::UNKNOWN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Format du canal (entier, flottant, signé ou non...), pour l'image en sortie </p>
+
+</div>
+</div>
+<a id="a9a69b73601b508dd6658c226f42cb1b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a69b73601b508dd6658c226f42cb1b4">&#9670;&nbsp;</a></span>samplesperpixel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t samplesperpixel = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nombre de canaux par pixel, pour l'image en sortie </p>
+
+</div>
+</div>
+<a id="ab1a544f4fcc4a7e2890dd79e7a14c938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a544f4fcc4a7e2890dd79e7a14c938">&#9670;&nbsp;</a></span>strnodata</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* strnodata</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valeur de nodata sour forme de chaîne de caractère (passée en paramètre de la commande) </p>
+
+</div>
+</div>
+<a id="a325272ddd9a962f05deb905101d25cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325272ddd9a962f05deb905101d25cbd">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Largeur des images </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

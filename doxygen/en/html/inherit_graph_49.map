@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classResourceLocator.html" title="External ressources handler for the capabilities documents." alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node2" href="$classAttributionURL.html" title="Attribution handler for the capabilities documents." alt="" coords="184,5,301,32"/>
+<area shape="rect" id="node3" href="$classLegendURL.html" title="Legends handler for the capabilities documents." alt="" coords="195,56,290,83"/>
+<area shape="rect" id="node4" href="$classMetadataURL.html" title="Metadata handler for the capabilities documents." alt="" coords="187,107,298,133"/>
+</map>

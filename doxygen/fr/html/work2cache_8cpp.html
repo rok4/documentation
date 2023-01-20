@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/generation/src/work2cache.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_57bbb0f0e43c6d9101717093723c909a.html">generation</a></li><li class="navelem"><a class="el" href="dir_37d94dac7f7914d8cc8c25707f466aaf.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier work2cache.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Formattage d'une image, respectant les spécifications d'une pyramide de données ROK4.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;tiffio.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="Format_8h_source.html">enums/Format.h</a>&quot;</code><br />
+<code>#include &lt;boost/log/core.hpp&gt;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &lt;boost/log/utility/setup/common_attributes.hpp&gt;</code><br />
+<code>#include &lt;boost/log/utility/setup/console.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="FileContext_8h_source.html">storage/FileContext.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FileImage_8h_source.html">image/file/FileImage.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Cache_8h_source.html">utils/Cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Rok4Image_8h_source.html">image/file/Rok4Image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="TiffNodataManager_8h_source.html">image/file/TiffNodataManager.h</a>&quot;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de work2cache.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="work2cache_8cpp__incl.png" border="0" usemap="#build_2sources_2generation_2src_2work2cache_8cpp" alt=""/></div>
+<map name="build_2sources_2generation_2src_2work2cache_8cpp" id="build_2sources_2generation_2src_2work2cache_8cpp">
+<area shape="rect" title="Formattage d&#39;une image, respectant les spécifications d&#39;une pyramide de données ROK4." alt="" coords="851,5,1034,47"/>
+<area shape="rect" title=" " alt="" coords="205,184,270,211"/>
+<area shape="rect" title=" " alt="" coords="332,408,412,435"/>
+<area shape="rect" title=" " alt="" coords="978,333,1051,360"/>
+<area shape="rect" title=" " alt="" coords="642,408,713,435"/>
+<area shape="rect" title=" " alt="" coords="296,259,360,285"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="1532,333,1660,360"/>
+<area shape="rect" title=" " alt="" coords="2102,102,2245,129"/>
+<area shape="rect" title=" " alt="" coords="1339,483,1491,509"/>
+<area shape="rect" title=" " alt="" coords="2269,95,2451,136"/>
+<area shape="rect" title=" " alt="" coords="2475,95,2639,136"/>
+<area shape="rect" href="FileContext_8h.html" title="Implémentation de la classe FileContext." alt="" coords="1101,259,1262,285"/>
+<area shape="rect" title=" " alt="" coords="3345,408,3418,435"/>
+<area shape="rect" href="FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="713,184,879,211"/>
+<area shape="rect" href="Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="2068,184,2175,211"/>
+<area shape="rect" href="Rok4Image_8h.html" title="Implémentation des classes Rok4Image et Rok4ImageFactory." alt="" coords="1006,184,1183,211"/>
+<area shape="rect" href="TiffNodataManager_8h.html" title="Définition de la classe TiffNodataManager, permettant de modifier la couleur de nodata des images à c..." alt="" coords="411,102,637,129"/>
+<area shape="rect" title=" " alt="" coords="2536,483,2595,509"/>
+<area shape="rect" title=" " alt="" coords="1561,408,1631,435"/>
+<area shape="rect" href="Context_8h.html" title="Définition de la classe Context." alt="" coords="1785,333,1924,360"/>
+<area shape="rect" title=" " alt="" coords="1980,483,2065,509"/>
+<area shape="rect" title=" " alt="" coords="2736,408,2787,435"/>
+<area shape="rect" title=" " alt="" coords="2945,408,3007,435"/>
+<area shape="rect" title=" " alt="" coords="1877,483,1952,509"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="1287,259,1407,285"/>
+<area shape="rect" href="PixelConverter_8h.html" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="435,259,637,285"/>
+<area shape="rect" title=" " alt="" coords="1279,333,1355,360"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="1839,408,1991,435"/>
+<area shape="rect" title=" " alt="" coords="1575,483,1638,509"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="1949,333,2041,360"/>
+<area shape="rect" title=" " alt="" coords="2093,483,2152,509"/>
+<area shape="rect" title=" " alt="" coords="503,333,569,360"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="756,333,852,360"/>
+<area shape="rect" title=" " alt="" coords="2129,259,2172,285"/>
+<area shape="rect" title=" " alt="" coords="2197,259,2321,285"/>
+<area shape="rect" title=" " alt="" coords="2397,259,2483,285"/>
+<area shape="rect" href="TileMatrixSet_8h_source.html" title=" " alt="" coords="2507,259,2661,285"/>
+<area shape="rect" href="Style_8h.html" title="Définition de la classe Style modélisant les styles." alt="" coords="2950,259,3053,285"/>
+<area shape="rect" title=" " alt="" coords="2217,333,2260,360"/>
+<area shape="rect" title=" " alt="" coords="2285,333,2371,360"/>
+<area shape="rect" href="TileMatrix_8h.html" title="Définition de la classe TileMatrix gérant une matrice de tuiles représentant un niveau d&#39;une pyramide..." alt="" coords="2395,333,2527,360"/>
+<area shape="rect" href="Keyword_8h.html" title="Définition de la classe Keyword gérant les mots&#45;clés des documents de capacités." alt="" coords="2995,333,3117,360"/>
+<area shape="rect" href="Configuration_8h_source.html" title=" " alt="" coords="2245,408,2398,435"/>
+<area shape="rect" href="LegendURL_8h.html" title="Définition de la classe LegendURL gérant les éléments de légendes des documents de capacités." alt="" coords="3109,408,3248,435"/>
+<area shape="rect" href="Palette_8h_source.html" title=" " alt="" coords="2704,333,2819,360"/>
+<area shape="rect" title=" " alt="" coords="917,259,974,285"/>
+<area shape="rect" title=" " alt="" coords="814,259,893,285"/>
+<area shape="rect" href="StoreDataSource_8h.html" title="Définition des classes StoreDataSource et StoreDataSourceFactory." alt="" coords="1785,259,2004,285"/>
+<area shape="rect" title=" " alt="" coords="498,184,550,211"/>
+<area shape="rect" title=" " alt="" coords="574,184,637,211"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work2cache_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0">usage</a> ()</td></tr>
+<tr class="memdesc:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'utilisation et les différentes options de la commande work2cache <a class="el" href="work2cache_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a>.  <a href="work2cache_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3743d1ffdcedd6d873578928ca0b690a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work2cache_8cpp.html#a3743d1ffdcedd6d873578928ca0b690a">error</a> (std::string message, int errorCode)</td></tr>
+<tr class="memdesc:a3743d1ffdcedd6d873578928ca0b690a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message d'erreur, l'utilisation de la commande et sort en erreur.  <a href="work2cache_8cpp.html#a3743d1ffdcedd6d873578928ca0b690a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3743d1ffdcedd6d873578928ca0b690a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work2cache_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale de l'outil work2cache.  <a href="work2cache_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a21e0503775cae95b81dd59f1849f7ee4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work2cache_8cpp.html#a21e0503775cae95b81dd59f1849f7ee4">fastWhite</a> [4] = {254,254,254,255}</td></tr>
+<tr class="separator:a21e0503775cae95b81dd59f1849f7ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960fc8ad992d7c46bb6756ea37bbac0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work2cache_8cpp.html#a960fc8ad992d7c46bb6756ea37bbac0f">white</a> [4] = {255,255,255,255}</td></tr>
+<tr class="separator:a960fc8ad992d7c46bb6756ea37bbac0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfcd8d5595d8ba1a38ef3c624d1186a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work2cache_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a></td></tr>
+<tr class="separator:aecfcd8d5595d8ba1a38ef3c624d1186a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Formattage d'une image, respectant les spécifications d'une pyramide de données ROK4. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Institut national de l'information géographique et forestière</dd></dl>
+<p>Le serveur ROK4 s'attend à trouver dans une pyramide d'images des images au format TIFF, tuilées, potentiellement compressées, avec une en-tête de taille fixe (2048 octets). C'est cet outil, via l'utilisation de la classe TiledTiffWriter, qui va "mettre au normes" les images.</p>
+<p>Vision libimage : <a class="el" href="classFileImage.html" title="Manipulation d&#39;une image associée à un fichier.">FileImage</a> -&gt; <a class="el" href="classRok4Image.html" title="Manipulation d&#39;une image ROK4 Server.">Rok4Image</a> </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a3743d1ffdcedd6d873578928ca0b690a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3743d1ffdcedd6d873578928ca0b690a">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void error </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>errorCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message d'erreur, l'utilisation de la commande et sort en erreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>message d'erreur </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorCode</td><td>code de retour </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale de l'outil work2cache. </p>
+<p>Tout est contenu dans cette fonction. Le "cropage" se fait grâce à la classe <a class="el" href="classTiffNodataManager.html" title="Manipulation de la couleur de nodata.">TiffNodataManager</a>, et le tuilage / compression est géré <a class="el" href="classRok4Image.html" title="Manipulation d&#39;une image ROK4 Server.">Rok4Image</a> </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>nombre de paramètres </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>tableau des paramètres </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 en cas de succès, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a2ef30c42cbc289d899a8be5d2d8f77d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef30c42cbc289d899a8be5d2d8f77d0">&#9670;&nbsp;</a></span>usage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche l'utilisation et les différentes options de la commande work2cache <a class="el" href="work2cache_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a>. </p>
+<p>L'affichage se fait dans le niveau de logger INFO </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a21e0503775cae95b81dd59f1849f7ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e0503775cae95b81dd59f1849f7ee4">&#9670;&nbsp;</a></span>fastWhite</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fastWhite[4] = {254,254,254,255}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Presque blanc, en RGBA. Utilisé pour supprimer le blanc pur des données quand l'option "crop" est active </p>
+
+</div>
+</div>
+<a id="aecfcd8d5595d8ba1a38ef3c624d1186a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfcd8d5595d8ba1a38ef3c624d1186a">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string help</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Message d'usage de la commande work2cache </p>
+
+</div>
+</div>
+<a id="a960fc8ad992d7c46bb6756ea37bbac0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960fc8ad992d7c46bb6756ea37bbac0f">&#9670;&nbsp;</a></span>white</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int white[4] = {255,255,255,255}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Blanc, en RGBA. Utilisé pour supprimer le blanc pur des données quand l'option "crop" est active </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

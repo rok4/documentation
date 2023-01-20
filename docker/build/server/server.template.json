@@ -1,0 +1,20 @@
+{
+    "logger": {
+        "output": "${SERVER_LOGOUTPUT}",
+        "level": "${SERVER_LOGLEVEL}"
+    },
+    "threads": ${SERVER_NBTHREAD},
+    "port": ":9000",
+    "backlog": ${SERVER_BACKLOG},
+    "api": true,
+    "cache": {
+        "size": ${SERVER_CACHE_SIZE},
+        "validity": ${SERVER_CACHE_VALIDITY}
+    },
+    "configurations": {
+        "services": "/etc/rok4/services.json",
+        "layers": "${SERVER_LAYERS}",
+        "styles": "${SERVER_STYLES}",
+        "tile_matrix_sets": "${SERVER_TMS}"
+    }
+}

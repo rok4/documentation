@@ -1,0 +1,52 @@
+<map id="build/sources/core&#45;cpp/src/utils/Utils.h" name="build/sources/core&#45;cpp/src/utils/Utils.h">
+<area shape="rect" id="node1" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="901,5,1052,47"/>
+<area shape="rect" id="node2" href="$Layer_8cpp.html" title="Implémentation de la classe Layer modélisant les couches de données." alt="" coords="4519,511,4672,552"/>
+<area shape="rect" id="node3" href="$Decoder_8h_source.html" title=" " alt="" coords="47,95,197,151"/>
+<area shape="rect" id="node4" href="$DecimatedImage_8cpp.html" title="Implémentation des classes DecimatedImage, DecimatedMask et DecimatedImageFactory." alt="" coords="695,206,957,247"/>
+<area shape="rect" id="node5" href="$DecimatedImage_8h.html" title="Définition des classes DecimatedImage et DecimatedImageFactory." alt="" coords="773,102,1020,143"/>
+<area shape="rect" id="node7" href="$ExtendedCompoundImage_8cpp.html" title="Implémentation des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactor..." alt="" coords="625,303,878,359"/>
+<area shape="rect" id="node8" href="$ExtendedCompoundImage_8h.html" title="Définition des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactory." alt="" coords="1031,199,1285,255"/>
+<area shape="rect" id="node10" href="$BilzImage_8cpp.html" title="Implémentation des classes BilzImage et BilzImageFactory." alt="" coords="163,407,305,463"/>
+<area shape="rect" id="node11" href="$FileImage_8cpp.html" title="Implémentation des classes FileImage et FileImageFactory." alt="" coords="2057,407,2200,463"/>
+<area shape="rect" id="node12" href="$LibkakaduImage_8cpp.html" title="Implémentation des classes LibkakaduImage et LibkakaduImageFactory." alt="" coords="987,407,1196,463"/>
+<area shape="rect" id="node13" href="$LibjpegImage_8cpp.html" title="Implémentation des classes LibjpegImage et LibjpegImageFactory." alt="" coords="2773,407,2916,463"/>
+<area shape="rect" id="node14" href="$LibpngImage_8cpp.html" title="Implémentation des classes LibpngImage et LibpngImageFactory." alt="" coords="329,407,472,463"/>
+<area shape="rect" id="node15" href="$LibtiffImage_8cpp.html" title="Implémentation des classes LibtiffImage et LibtiffImageFactory." alt="" coords="496,407,639,463"/>
+<area shape="rect" id="node16" href="$LibopenjpegImage_8cpp.html" title="Implémentation des classes LibopenjpegImage et LibopenjpegImageFactory." alt="" coords="1670,407,1907,463"/>
+<area shape="rect" id="node17" href="$MergeImage_8cpp.html" title="Implémentation des classes MergeImage, MergeImageFactory et MergeMask et du namespace Merge." alt="" coords="2076,206,2307,247"/>
+<area shape="rect" id="node18" href="$MirrorImage_8cpp.html" title="Implémentation des classe MirrorImage et MirrorImageFactory." alt="" coords="1309,206,1538,247"/>
+<area shape="rect" id="node19" href="$MirrorImage_8h.html" title="Définition des classes MirrorImage et MirrorImageFactory." alt="" coords="1095,102,1309,143"/>
+<area shape="rect" id="node20" href="$ReprojectedImage_8cpp.html" title="Implémentation de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="1606,95,1806,151"/>
+<area shape="rect" id="node21" href="$ResampledImage_8cpp.html" title="Implémentation de la classe ResampledImage, permettant le réechantillonnage d&#39;image." alt="" coords="1831,102,2093,143"/>
+<area shape="rect" id="node22" href="$Line_8h.html" title="Définition de la classe Line, permettant la manipulation et la conversion de lignes d&#39;image." alt="" coords="2118,95,2265,151"/>
+<area shape="rect" id="node23" href="$OneBitConverter_8h_source.html" title=" " alt="" coords="373,199,519,255"/>
+<area shape="rect" id="node24" href="$PixelConverter_8h.html" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="1385,95,1531,151"/>
+<area shape="rect" id="node38" href="$Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="4081,206,4243,247"/>
+<area shape="rect" id="node6" href="$decimateNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="903,310,1085,351"/>
+<area shape="rect" id="node9" href="$mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="1109,310,1292,351"/>
+<area shape="rect" id="node25" href="$FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="1909,199,2052,255"/>
+<area shape="rect" id="node26" href="$BilzImage_8h.html" title="Définition des classes BilzImage et BilzImageFactory." alt="" coords="1536,303,1679,359"/>
+<area shape="rect" id="node27" href="$LibkakaduImage_8h.html" title="Définition des classes LibkakaduImage et LibkakaduImageFactory." alt="" coords="1317,303,1511,359"/>
+<area shape="rect" id="node28" href="$LibjpegImage_8h.html" title="Définition des classes LibjpegImage et LibjpegImageFactory." alt="" coords="2167,303,2309,359"/>
+<area shape="rect" id="node29" href="$LibpngImage_8h.html" title="Définition des classes LibpngImage et LibpngImageFactory." alt="" coords="1703,303,1845,359"/>
+<area shape="rect" id="node30" href="$LibtiffImage_8h.html" title="Définition des classes LibtiffImage et LibtiffImageFactory." alt="" coords="2333,303,2476,359"/>
+<area shape="rect" id="node33" href="$LibopenjpegImage_8h.html" title="Définition des classes LibopenjpegImage et LibopenjpegImageFactory." alt="" coords="1869,303,2092,359"/>
+<area shape="rect" id="node34" href="$cache2work_8cpp.html" title="Convertit une image d&#39;une pyramide ROK4 (TIFF tuilé) en une image TIFF, lisible avec LibtiffImage." alt="" coords="2707,310,2889,351"/>
+<area shape="rect" id="node35" href="$merge4tiff_8cpp.html" title="Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques d..." alt="" coords="2913,310,3096,351"/>
+<area shape="rect" id="node36" href="$pbf2cache_8cpp.html" title="Consitution d&#39;une dalle vecteur ROK4 à partir des tuiles PBF." alt="" coords="3172,310,3355,351"/>
+<area shape="rect" id="node37" href="$work2cache_8cpp.html" title="Formattage d&#39;une image, respectant les spécifications d&#39;une pyramide de données ROK4." alt="" coords="2500,310,2683,351"/>
+<area shape="rect" id="node31" href="$composeNtiff_8cpp.html" title="Montage de N images TIFF aux mêmes dimensions et caractéristiques." alt="" coords="3199,414,3381,455"/>
+<area shape="rect" id="node32" href="$overlayNtiff_8cpp.html" title="Fusion de N images aux mêmes dimensions, selon différentes méthodes." alt="" coords="3664,414,3847,455"/>
+<area shape="rect" id="node39" href="$server_2src_2main_8cpp.html" title="Exécutable du serveur ROK4." alt="" coords="4824,310,4977,351"/>
+<area shape="rect" id="node40" href="$Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="5001,310,5155,351"/>
+<area shape="rect" id="node41" href="$StoreDataSource_8cpp.html" title="Implémentation des classes StoreDataSource et StoreDataSourceFactory." alt="" coords="5179,303,5342,359"/>
+<area shape="rect" id="node42" href="$Grid_8cpp.html" title="Implémentation de la classe Grid." alt="" coords="5366,303,5513,359"/>
+<area shape="rect" id="node43" href="$S3Context_8cpp.html" title="Implémentation de la classe S3Context." alt="" coords="5537,303,5707,359"/>
+<area shape="rect" id="node44" href="$SwiftContext_8cpp.html" title="Implémentation de la classe SwiftContext." alt="" coords="3430,303,3601,359"/>
+<area shape="rect" id="node45" href="$Style_8cpp.html" title="Implémentation de la classe Style modélisant les styles." alt="" coords="3625,310,3798,351"/>
+<area shape="rect" id="node46" href="$Cache_8cpp.html" title="Implémentation des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="3822,310,3998,351"/>
+<area shape="rect" id="node47" href="$CRS_8cpp.html" title="Implémente de la gestion des systèmes de référence." alt="" coords="4022,310,4185,351"/>
+<area shape="rect" id="node48" href="$Level_8h_source.html" title=" " alt="" coords="4517,310,4673,351"/>
+<area shape="rect" id="node49" href="$Pyramid_8h_source.html" title=" " alt="" coords="4508,414,4683,455"/>
+<area shape="rect" id="node50" href="$manageNodata_8cpp.html" title="Gère la couleur des pixels de nodata." alt="" coords="4311,310,4493,351"/>
+</map>

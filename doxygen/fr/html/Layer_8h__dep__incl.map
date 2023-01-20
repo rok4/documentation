@@ -1,0 +1,14 @@
+<map id="build/sources/server/src/Layer.h" name="build/sources/server/src/Layer.h">
+<area shape="rect" id="node1" title="Définition de la classe Layer modélisant les couches de données." alt="" coords="516,5,669,47"/>
+<area shape="rect" id="node2" href="$Request_8h.html" title="Définition de la classe Request, analysant les requêtes HTTP." alt="" coords="516,95,669,136"/>
+<area shape="rect" id="node4" href="$Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="5,273,159,315"/>
+<area shape="rect" id="node5" href="$Rok4Server_8h.html" title="Definition de la classe Rok4Server et du programme principal." alt="" coords="677,184,831,225"/>
+<area shape="rect" id="node6" href="$ServerConf_8h_source.html" title=" " alt="" coords="183,273,336,315"/>
+<area shape="rect" id="node12" href="$Layer_8cpp.html" title="Implémentation de la classe Layer modélisant les couches de données." alt="" coords="957,95,1111,136"/>
+<area shape="rect" id="node3" href="$Threads_8h_source.html" title=" " alt="" coords="280,184,476,225"/>
+<area shape="rect" id="node11" href="$Request_8cpp.html" title="Implémentation de la classe Request, analysant les requêtes HTTP." alt="" coords="500,184,653,225"/>
+<area shape="rect" id="node7" href="$ServicesConf_8h_source.html" title=" " alt="" coords="892,273,1045,315"/>
+<area shape="rect" id="node8" href="$server_2src_2main_8cpp.html" title="Exécutable du serveur ROK4." alt="" coords="537,273,691,315"/>
+<area shape="rect" id="node9" href="$UtilsAdmin_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="715,273,868,315"/>
+<area shape="rect" id="node10" href="$UtilsGlobal_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="360,273,513,315"/>
+</map>

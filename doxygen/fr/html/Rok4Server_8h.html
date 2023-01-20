@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/server/src/Rok4Server.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_e328db8ccb89a0e94e93e6ffa9056bbb.html">server</a></li><li class="navelem"><a class="el" href="dir_3b1fa386e4e443b3f562b9c1cdd8a25c.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Rok4Server.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Definition de la classe <a class="el" href="classRok4Server.html" title="Gestion du programme principal, lien entre les modules.">Rok4Server</a> et du programme principal.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;config.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="ResponseSender_8h_source.html">ResponseSender.h</a>&quot;</code><br />
+<code>#include &quot;datasource/DataSource.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="Request_8h_source.html">Request.h</a>&quot;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="Layer_8h_source.html">Layer.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;utils/TileMatrixSet.h&quot;</code><br />
+<code>#include &quot;fcgiapp.h&quot;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
+<code>#include &quot;ServerConf.h&quot;</code><br />
+<code>#include &quot;ServicesConf.h&quot;</code><br />
+<code>#include &quot;GetFeatureInfoEncoder.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="BoundingBox_8h_source.html">utils/BoundingBox.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Rok4Server.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="Rok4Server_8h__incl.png" border="0" usemap="#build_2sources_2server_2src_2Rok4Server_8h" alt=""/></div>
+<map name="build_2sources_2server_2src_2Rok4Server_8h" id="build_2sources_2server_2src_2Rok4Server_8h">
+<area shape="rect" title="Definition de la classe Rok4Server et du programme principal." alt="" coords="3458,5,3611,47"/>
+<area shape="rect" title=" " alt="" coords="3717,468,3790,495"/>
+<area shape="rect" href="ResponseSender_8h.html" title="Définition des fonctions d&#39;envoie de réponse sur le flux FCGI." alt="" coords="136,95,277,121"/>
+<area shape="rect" href="DataSource_8h_source.html" title=" " alt="" coords="150,543,335,569"/>
+<area shape="rect" title=" " alt="" coords="339,169,421,196"/>
+<area shape="rect" href="Request_8h.html" title="Définition de la classe Request, analysant les requêtes HTTP." alt="" coords="2629,95,2715,121"/>
+<area shape="rect" title=" " alt="" coords="2652,617,2703,644"/>
+<area shape="rect" title=" " alt="" coords="2950,617,3013,644"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="652,617,804,644"/>
+<area shape="rect" href="Layer_8h.html" title="Définition de la classe Layer modélisant les couches de données." alt="" coords="3308,169,3377,196"/>
+<area shape="rect" href="TileMatrixSet_8h_source.html" title=" " alt="" coords="1482,468,1635,495"/>
+<area shape="rect" href="ServerConf_8h_source.html" title=" " alt="" coords="3287,393,3393,420"/>
+<area shape="rect" href="ServicesConf_8h_source.html" title=" " alt="" coords="3765,393,3883,420"/>
+<area shape="rect" title=" " alt="" coords="3765,95,3849,121"/>
+<area shape="rect" title=" " alt="" coords="3873,95,3940,121"/>
+<area shape="rect" title=" " alt="" coords="3965,95,4033,121"/>
+<area shape="rect" href="GetFeatureInfoEncoder_8h_source.html" title=" " alt="" coords="2462,319,2645,345"/>
+<area shape="rect" href="DataStream_8h_source.html" title=" " alt="" coords="347,468,538,495"/>
+<area shape="rect" title=" " alt="" coords="1638,617,1709,644"/>
+<area shape="rect" title=" " alt="" coords="251,617,322,644"/>
+<area shape="rect" title=" " alt="" coords="2281,692,2340,719"/>
+<area shape="rect" title=" " alt="" coords="347,617,413,644"/>
+<area shape="rect" title=" " alt="" coords="437,617,523,644"/>
+<area shape="rect" title=" " alt="" coords="1077,692,1229,719"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="867,543,959,569"/>
+<area shape="rect" title=" " alt="" coords="291,692,349,719"/>
+<area shape="rect" title=" " alt="" coords="589,692,664,719"/>
+<area shape="rect" title=" " alt="" coords="797,692,859,719"/>
+<area shape="rect" href="Pyramid_8h_source.html" title=" " alt="" coords="1667,244,1787,271"/>
+<area shape="rect" href="Interpolation_8h.html" title="Définition de l&#39;énumération des interpolations disponibles et des conversions." alt="" coords="3279,617,3444,644"/>
+<area shape="rect" href="Configuration_8h_source.html" title=" " alt="" coords="1901,617,2054,644"/>
+<area shape="rect" href="Keyword_8h.html" title="Définition de la classe Keyword gérant les mots&#45;clés des documents de capacités." alt="" coords="3617,543,3740,569"/>
+<area shape="rect" href="Style_8h.html" title="Définition de la classe Style modélisant les styles." alt="" coords="2994,468,3097,495"/>
+<area shape="rect" href="MetadataURL_8h.html" title="Définition de la classe MetadataURL gérant les liens vers les métadonnées dans les documents de capac..." alt="" coords="4220,468,4343,495"/>
+<area shape="rect" href="AttributionURL_8h.html" title="Définition de la classe AttributionURL gérant les liens vers les métadonnées dans les documents de ca..." alt="" coords="4010,393,4139,420"/>
+<area shape="rect" title=" " alt="" coords="1241,543,1284,569"/>
+<area shape="rect" title=" " alt="" coords="1309,543,1395,569"/>
+<area shape="rect" href="Level_8h_source.html" title=" " alt="" coords="1143,319,1244,345"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="1812,543,1940,569"/>
+<area shape="rect" href="Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="1580,393,1687,420"/>
+<area shape="rect" href="TileMatrix_8h.html" title="Définition de la classe TileMatrix gérant une matrice de tuiles représentant un niveau d&#39;une pyramide..." alt="" coords="983,543,1115,569"/>
+<area shape="rect" title=" " alt="" coords="1941,692,2013,719"/>
+<area shape="rect" href="LegendURL_8h.html" title="Définition de la classe LegendURL gérant les éléments de légendes des documents de capacités." alt="" coords="3967,543,4105,569"/>
+<area shape="rect" href="Palette_8h_source.html" title=" " alt="" coords="2348,543,2463,569"/>
+<area shape="rect" href="Pente_8h.html" title="D�finition de la classe Pente." alt="" coords="2116,543,2223,569"/>
+<area shape="rect" href="Estompage_8h.html" title="Définition de la classe Estompage modélisant l&#39;estompage." alt="" coords="3045,543,3187,569"/>
+<area shape="rect" href="Aspect_8h.html" title="Définition de la classe Aspect." alt="" coords="1420,543,1535,569"/>
+<area shape="rect" href="ResourceLocator_8h.html" title="Définition de la classe RessourceLocator gérant les liens vers les ressources externe dans les docume..." alt="" coords="4281,617,4455,644"/>
+<area shape="rect" href="UtilsXML_8h_source.html" title=" " alt="" coords="3998,468,4090,495"/>
+<area shape="rect" href="Message_8h.html" title="Définition des classes gérant les messages utilisateurs." alt="" coords="497,393,589,420"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="Rok4Server_8h__dep__incl.png" border="0" usemap="#build_2sources_2server_2src_2Rok4Server_8hdep" alt=""/></div>
+<map name="build_2sources_2server_2src_2Rok4Server_8hdep" id="build_2sources_2server_2src_2Rok4Server_8hdep">
+<area shape="rect" title="Definition de la classe Rok4Server et du programme principal." alt="" coords="299,5,452,47"/>
+<area shape="rect" href="ServerConf_8h_source.html" title=" " alt="" coords="69,95,223,136"/>
+<area shape="rect" href="Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="5,452,159,493"/>
+<area shape="rect" href="ServicesConf_8h_source.html" title=" " alt="" coords="299,95,452,136"/>
+<area shape="rect" href="server_2src_2main_8cpp.html" title="Exécutable du serveur ROK4." alt="" coords="528,95,681,136"/>
+<area shape="rect" href="UtilsAdmin_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="705,95,859,136"/>
+<area shape="rect" href="UtilsGlobal_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="883,95,1036,136"/>
+<area shape="rect" href="Layer_8h.html" title="Définition de la classe Layer modélisant les couches de données." alt="" coords="121,184,275,225"/>
+<area shape="rect" href="Request_8h.html" title="Définition de la classe Request, analysant les requêtes HTTP." alt="" coords="299,273,452,315"/>
+<area shape="rect" href="Layer_8cpp.html" title="Implémentation de la classe Layer modélisant les couches de données." alt="" coords="121,273,275,315"/>
+<area shape="rect" href="Threads_8h_source.html" title=" " alt="" coords="120,363,316,404"/>
+<area shape="rect" href="Request_8cpp.html" title="Implémentation de la classe Request, analysant les requêtes HTTP." alt="" coords="340,363,493,404"/>
+</map>
+</div>
+</div>
+<p><a href="Rok4Server_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRok4Server.html">Rok4Server</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion du programme principal, lien entre les modules.  <a href="classRok4Server.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Definition de la classe <a class="el" href="classRok4Server.html" title="Gestion du programme principal, lien entre les modules.">Rok4Server</a> et du programme principal. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

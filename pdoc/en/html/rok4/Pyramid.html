@@ -1,0 +1,2492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>rok4.Pyramid API documentation</title>
+<meta name="description" content="Provide classes to use pyramid&#39;s data …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>rok4.Pyramid</code></h1>
+</header>
+<section id="section-intro">
+<p>Provide classes to use pyramid's data.</p>
+<p>The module contains the following classes:</p>
+<ul>
+<li><code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code> - Data container</li>
+<li><code><a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></code> - Level of a pyramid</li>
+</ul>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;Provide classes to use pyramid&#39;s data.
+
+The module contains the following classes:
+
+- `Pyramid` - Data container
+- `Level` - Level of a pyramid
+&#34;&#34;&#34;
+
+from typing import Dict, List, Tuple, Union
+import json
+from json.decoder import JSONDecodeError
+import os
+import re
+
+from rok4.Exceptions import *
+from rok4.TileMatrixSet import TileMatrixSet
+from rok4.Storage import *
+
+class PyramidType(Enum):
+    RASTER = &#34;RASTER&#34;
+    VECTOR = &#34;VECTOR&#34;
+
+class SlabType(Enum):
+    DATA = &#34;DATA&#34;
+    MASK = &#34;MASK&#34;
+
+def b36_number_encode(number: int) -&gt; str:
+    &#34;&#34;&#34;Convert base-10 number to base-36
+
+    Used alphabet is &#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
+
+    Args:
+        number (int): base-10 number
+
+    Returns:
+        str: base-36 number
+    &#34;&#34;&#34;
+
+    alphabet=&#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
+
+    base36 = &#39;&#39;
+
+    if 0 &lt;= number &lt; len(alphabet):
+        return alphabet[number]
+
+    while number != 0:
+        number, i = divmod(number, len(alphabet))
+        base36 = alphabet[i] + base36
+
+    return base36
+
+def b36_number_decode(number: str) -&gt; int:
+    &#34;&#34;&#34;Convert base-36 number to base-10
+
+    Args:
+        number (str): base-36 number
+
+    Returns:
+        int: base-10 number
+    &#34;&#34;&#34;
+    return int(number, 36)
+
+def b36_path_decode(path: str) -&gt; Tuple[int, int]:
+    &#34;&#34;&#34;Get slab&#39;s column and row from a base-36 based path
+
+    Args:
+        path (str): slab&#39;s path
+
+    Returns:
+        Tuple[int, int]: slab&#39;s column and row
+    &#34;&#34;&#34;    
+
+    path = path.replace(&#39;/&#39;, &#39;&#39;)
+    path = re.sub(r&#39;(\.TIFF?)&#39;, &#34;&#34;, path.upper())
+
+    b36_column = &#34;&#34;
+    b36_row = &#34;&#34;
+
+    while len(path) &gt; 0:
+        b36_column += path[0]
+        b36_row += path[1]
+        path = path[2:]
+
+    return b36_number_decode(b36_column), b36_number_decode(b36_row)
+
+
+def b36_path_encode(column: int, row: int, slashs: int) -&gt; str:
+    &#34;&#34;&#34;Convert slab indices to base-36 based path, with .tif extension
+
+    Args:
+        column (int): slab&#39;s column
+        row (int): slab&#39;s row
+        slashs (int): slashs&#39; number (to split path)
+
+    Returns:
+        str: base-36 based path
+    &#34;&#34;&#34;    
+
+    b36_column = b36_number_encode(column)
+    b36_row = b36_number_encode(row)
+
+    max_len = max(slashs + 1, len(b36_column), len(b36_row))
+
+    b36_column = b36_column.rjust(max_len, &#34;0&#34;)
+    b36_row = b36_row.rjust(max_len, &#34;0&#34;)
+
+    b36_path = &#34;&#34;
+
+    while len(b36_column) &gt; 0:
+        b36_path = b36_row[-1] + b36_path
+        b36_path = b36_column[-1] + b36_path
+
+        b36_column = b36_column[:-1]
+        b36_row = b36_row[:-1]
+
+        if slashs &gt; 0:
+            b36_path = &#34;/&#34; + b36_path
+            slashs -= 1
+
+    return f&#34;{b36_path}.tif&#34;
+
+class Level:
+    &#34;&#34;&#34;A pyramid&#39;s level, raster or vector
+
+    Attributes:
+        __id (str): level&#39;s identifier. have to exist in the pyramid&#39;s used TMS
+        __tile_limits (Dict[str, int]): minimum and maximum tiles&#39; columns and rows of pyramid&#39;s content
+        __slab_size (Tuple[int, int]): number of tile in a slab, widthwise and heightwise
+        __tables (List[Dict]): for a VECTOR pyramid, description of vector content, tables and attributes
+    &#34;&#34;&#34;
+
+    @classmethod
+    def from_descriptor(cls, data: Dict, pyramid: &#39;Pyramid&#39;) -&gt; &#39;Level&#39;:
+        &#34;&#34;&#34;Create a pyramid&#39;s level from the pyramid&#39;s descriptor levels element
+
+        Args:
+            data (Dict): level&#39;s information from the pyramid&#39;s descriptor
+            pyramid (Pyramid): pyramid containing the level to create
+
+        Raises:
+            Exception: different storage or masks presence between the level and the pyramid
+            MissingAttributeError: Attribute is missing in the content
+
+        Returns:
+            Pyramid: a Level instance
+        &#34;&#34;&#34;    
+        level = cls()
+
+        level.__pyramid = pyramid
+
+        # Attributs communs
+        try:
+            level.__id = data[&#34;id&#34;]
+            level.__tile_limits = data[&#34;tile_limits&#34;]
+            level.__slab_size = (data[&#34;tiles_per_width&#34;], data[&#34;tiles_per_height&#34;],)
+
+            # Informations sur le stockage : on les valide et stocke dans la pyramide
+            if pyramid.storage_type.name != data[&#34;storage&#34;][&#34;type&#34;]:
+                raise Exception(f&#34;Pyramid {pyramid.descriptor} owns levels using different storage types ({ data[&#39;storage&#39;][&#39;type&#39;] }) than its one ({pyramid.storage_type.name})&#34;)
+
+            if pyramid.storage_type == StorageType.FILE:                    
+                pyramid.storage_depth = data[&#34;storage&#34;][&#34;path_depth&#34;]   
+            
+            if &#34;mask_directory&#34; in data[&#34;storage&#34;] or &#34;mask_prefix&#34; in data[&#34;storage&#34;]:
+                if not pyramid.own_masks:
+                    raise Exception(f&#34;Pyramid {pyramid.__descriptor} does not define a mask format but level {level.__id} define mask storage informations&#34;)
+            else:
+                if pyramid.own_masks:
+                    raise Exception(f&#34;Pyramid {pyramid.__descriptor} define a mask format but level {level.__id} does not define mask storage informations&#34;)
+
+        except KeyError as e:
+            raise MissingAttributeError(pyramid.descriptor, f&#34;levels[].{e}&#34;)
+
+        # Attributs dans le cas d&#39;un niveau vecteur
+        if level.__pyramid.type == PyramidType.VECTOR :
+            try:
+                level.__tables = data[&#34;tables&#34;]
+
+            except KeyError as e:
+                raise MissingAttributeError(pyramid.descriptor, f&#34;levels[].{e}&#34;)
+
+        return level
+
+    @classmethod
+    def from_other(cls, other: &#39;Level&#39;, pyramid: &#39;Pyramid&#39;) -&gt; &#39;Level&#39;:
+        &#34;&#34;&#34;Create a pyramid&#39;s level from another one
+
+        Args:
+            other (Level): level to clone
+            pyramid (Pyramid): new pyramid containing the new level
+
+        Raises:
+            Exception: different storage or masks presence between the level and the pyramid
+            MissingAttributeError: Attribute is missing in the content
+
+        Returns:
+            Pyramid: a Level instance
+        &#34;&#34;&#34;
+
+        level = cls()
+
+        # Attributs communs
+        level.__id = other.__id
+        level.__pyramid = pyramid
+        level.__tile_limits = other.__tile_limits
+        level.__slab_size = other.__slab_size
+
+        # Attributs dans le cas d&#39;un niveau vecteur
+        if level.__pyramid.type == PyramidType.VECTOR :
+            level.__tables = other.__tables
+
+        return level
+
+    def __str__(self) -&gt; str:
+        return f&#34;{self.__pyramid.type.name} pyramid&#39;s level &#39;{self.__id}&#39; ({self.__pyramid.storage_type.name} storage)&#34;
+
+
+    @property
+    def serializable(self) -&gt; Dict: 
+        &#34;&#34;&#34;Get the dict version of the pyramid object, pyramid&#39;s descriptor compliant
+
+        Returns:
+            Dict: pyramid&#39;s descriptor structured object description
+        &#34;&#34;&#34;   
+        serialization = {
+            &#34;id&#34;: self.__id,
+            &#34;tiles_per_width&#34;: self.__slab_size[0],
+            &#34;tiles_per_height&#34;: self.__slab_size[1],
+            &#34;tile_limits&#34;: self.__tile_limits
+        }
+
+        if self.__pyramid.type == PyramidType.VECTOR:
+            serialization[&#34;tables&#34;] = self.__tables
+
+        if self.__pyramid.storage_type == StorageType.FILE:
+            serialization[&#34;storage&#34;] = {
+                &#34;type&#34;: &#34;FILE&#34;,
+                &#34;image_directory&#34;: f&#34;{self.__pyramid.name}/DATA/{self.__id}&#34;,
+                &#34;path_depth&#34;: self.__pyramid.storage_depth
+            }
+            if self.__pyramid.own_masks:
+                serialization[&#34;storage&#34;][&#34;mask_directory&#34;] = f&#34;{self.__pyramid.name}/MASK/{self.__id}&#34;
+
+        elif self.__pyramid.storage_type == StorageType.CEPH:
+            serialization[&#34;storage&#34;] = {
+                &#34;type&#34;: &#34;CEPH&#34;,
+                &#34;image_prefix&#34;: f&#34;{self.__pyramid.name}/DATA_{self.__id}&#34;,
+                &#34;pool_name&#34;: self.__pyramid.storage_root
+            }
+            if self.__pyramid.own_masks:
+                serialization[&#34;storage&#34;][&#34;mask_prefix&#34;] = f&#34;{self.__pyramid.name}/MASK_{self.__id}&#34;
+
+        elif self.__pyramid.storage_type == StorageType.S3:
+            serialization[&#34;storage&#34;] = {
+                &#34;type&#34;: &#34;S3&#34;,
+                &#34;image_prefix&#34;: f&#34;{self.__pyramid.name}/DATA_{self.__id}&#34;,
+                &#34;bucket_name&#34;: self.__pyramid.storage_root
+            }
+            if self.__pyramid.own_masks:
+                serialization[&#34;storage&#34;][&#34;mask_prefix&#34;] = f&#34;{self.__pyramid.name}/MASK_{self.__id}&#34;
+
+        return serialization
+
+    @property
+    def id(self) -&gt; str: 
+        return self.__id
+
+    @property
+    def bbox(self) -&gt; Tuple[float, float, float, float]: 
+        &#34;&#34;&#34;Return level extent, based on tile limits
+
+        Returns:
+            Tuple[float, float, float, float]: level terrain extent (xmin, ymin, xmax, ymax)
+        &#34;&#34;&#34;        
+        min_bbox = self.__pyramid.tms.get_level(self.__id).tile_to_bbox(self.__tile_limits[&#34;min_col&#34;], self.__tile_limits[&#34;max_row&#34;])
+        max_bbox = self.__pyramid.tms.get_level(self.__id).tile_to_bbox(self.__tile_limits[&#34;max_col&#34;], self.__tile_limits[&#34;min_row&#34;])
+
+        return (min_bbox[0], min_bbox[1], max_bbox[2], max_bbox[3])
+
+    @property
+    def resolution(self) -&gt; str: 
+        return self.__pyramid.tms.get_level(self.__id).resolution
+
+    def update_limits(self, bbox: Tuple[float, float, float, float]) -&gt; None:
+        &#34;&#34;&#34;Update tile limits, based on provided bounding box
+
+        Args:
+            bbox (Tuple[float, float, float, float]): terrain extent (xmin, ymin, xmax, ymax), in TMS coordinates system
+
+        &#34;&#34;&#34;
+        print(self.id)
+        print(self.__tile_limits)
+        col_min, row_min, col_max, row_max = self.__pyramid.tms.get_level(self.__id).bbox_to_tiles(bbox)
+        self.__tile_limits = {
+            &#34;min_row&#34;: row_min,
+            &#34;max_col&#34;: col_max,
+            &#34;max_row&#34;: row_max,
+            &#34;min_col&#34;: col_min
+        }
+        print(self.__tile_limits)
+
+
+class Pyramid:
+    &#34;&#34;&#34;A data pyramid, raster or vector
+
+    Attributes:
+        __name (str): pyramid&#39;s name
+        __descriptor (str): pyramid&#39;s descriptor path
+        __list (str): pyramid&#39;s list path
+        __tms (rok4.TileMatrixSet.TileMatrixSet): Used grid
+        __levels (Dict[str, Level]): Pyramid&#39;s levels
+        __format (str): Data format
+        __storage (Dict[str, Union[rok4.Storage.StorageType,str,int]]): Pyramid&#39;s storage informations (type, root and depth if FILE storage)
+        __raster_specifications (Dict): If raster pyramid, raster specifications
+    &#34;&#34;&#34;
+
+    @classmethod
+    def from_descriptor(cls, descriptor: str) -&gt; &#39;Pyramid&#39;:
+        &#34;&#34;&#34;Create a pyramid from its descriptor
+
+        Args:
+            descriptor (str): pyramid&#39;s descriptor path
+
+        Raises:
+            FormatError: Provided path or the TMS is not a well formed JSON
+            Exception: Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS
+            MissingAttributeError: Attribute is missing in the content
+            StorageError: Storage read issue (pyramid descriptor or TMS)
+            MissingEnvironmentError: Missing object storage informations or TMS root directory
+
+        Returns:
+            Pyramid: a Pyramid instance
+        &#34;&#34;&#34;        
+        try:
+            data = json.loads(get_data_str(descriptor))
+
+        except JSONDecodeError as e:
+            raise FormatError(&#34;JSON&#34;, descriptor, e)
+
+
+        pyramid = cls()
+
+        pyramid.__storage[&#34;type&#34;], path, pyramid.__storage[&#34;root&#34;], base_name = get_infos_from_path(descriptor)
+        pyramid.__name = base_name[:-5] # on supprime l&#39;extension.json
+        pyramid.__descriptor = descriptor
+        pyramid.__list = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.list&#34;)
+
+        try:
+            # Attributs communs
+            pyramid.__tms = TileMatrixSet(data[&#34;tile_matrix_set&#34;])
+            pyramid.__format = data[&#34;format&#34;]
+
+            # Attributs d&#39;une pyramide raster
+            if pyramid.type == PyramidType.RASTER :
+                pyramid.__raster_specifications = data[&#34;raster_specifications&#34;]
+
+                if &#34;mask_format&#34; in data:
+                    pyramid.__masks = True
+                else:
+                    pyramid.__masks = False
+
+            # Niveaux
+            for l in data[&#34;levels&#34;]:
+                lev = Level.from_descriptor(l, pyramid)
+                pyramid.__levels[lev.id] = lev
+
+                if pyramid.__tms.get_level(lev.id) is None:
+                    raise Exception(f&#34;Pyramid {descriptor} owns a level with the ID &#39;{lev.id}&#39;, not defined in the TMS &#39;{pyramid.tms.name}&#39;&#34;)
+
+        except KeyError as e:
+            raise MissingAttributeError(descriptor, e)
+
+        if len(pyramid.__levels.keys()) == 0:
+            raise Exception(f&#34;Pyramid &#39;{descriptor}&#39; has no level&#34;)
+
+        return pyramid
+
+    @classmethod
+    def from_other(cls, other: &#39;Pyramid&#39;, name: str, storage: Dict) -&gt; &#39;Pyramid&#39;:
+        &#34;&#34;&#34;Create a pyramid from another one
+
+        Args:
+            other (Pyramid): pyramid to clone
+            name (str): new pyramid&#39;s name
+            storage (Dict[str, Union[str, int]]): new pyramid&#39;s storage informations
+
+        Raises:
+            FormatError: Provided path or the TMS is not a well formed JSON
+            Exception: Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS
+            MissingAttributeError: Attribute is missing in the content
+
+        Returns:
+            Pyramid: a Pyramid instance
+        &#34;&#34;&#34;
+        try:
+            # On convertit le type de stockage selon l&#39;énumération
+            storage[&#34;type&#34;] = StorageType[storage[&#34;type&#34;]]
+
+            if storage[&#34;type&#34;] == StorageType.FILE and name.find(&#34;/&#34;) != -1:
+                raise Exception(f&#34;A FILE stored pyramid&#39;s name cannot contain &#39;/&#39; : &#39;{name}&#39;&#34;)
+
+            pyramid = cls()
+
+            # Attributs communs
+            pyramid.__name = name 
+            pyramid.__storage = storage
+            pyramid.__masks = other.__masks
+
+            pyramid.__descriptor = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.json&#34;)
+            pyramid.__list = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.list&#34;)
+            pyramid.__tms = other.__tms
+            pyramid.__format = other.__format
+
+            # Attributs d&#39;une pyramide raster
+            if pyramid.type == PyramidType.RASTER :
+                if other.own_masks:
+                    pyramid.__masks = True
+                else:
+                    pyramid.__masks = False
+                pyramid.__raster_specifications = other.__raster_specifications
+
+            # Niveaux
+            for l in other.__levels.values():
+                lev = Level.from_other(l, pyramid)
+                pyramid.__levels[lev.id] = lev
+
+
+        except KeyError as e:
+            raise MissingAttributeError(descriptor, e)
+
+        return pyramid
+
+    def __init__(self) -&gt; None:
+        self.__storage = dict()
+        self.__levels = dict()
+        self.__masks = None
+
+    def __str__(self) -&gt; str:
+        return f&#34;{self.type.name} pyramid &#39;{self.__name}&#39; ({self.__storage[&#39;type&#39;].name} storage)&#34;
+
+    @property
+    def serializable(self) -&gt; Dict: 
+        &#34;&#34;&#34;Get the dict version of the pyramid object, descriptor compliant
+
+        Returns:
+            Dict: descriptor structured object description
+        &#34;&#34;&#34;        
+        serialization = {
+            &#34;tile_matrix_set&#34;: self.__tms.name,
+            &#34;format&#34;: self.__format
+        }
+
+        serialization[&#34;levels&#34;] = []
+        sorted_levels = sorted(self.__levels.values(), key=lambda l: l.resolution, reverse=True)
+
+        for l in sorted_levels:
+            serialization[&#34;levels&#34;].append(l.serializable)
+
+        if self.type == PyramidType.RASTER:
+            serialization[&#34;raster_specifications&#34;] = self.__raster_specifications
+
+        if self.__masks:
+            serialization[&#34;mask_format&#34;] = &#34;TIFF_ZIP_UINT8&#34;
+
+        return serialization
+
+    @property
+    def list(self) -&gt; str:
+        return self.__list
+
+    @property
+    def descriptor(self) -&gt; str:
+        return self.__descriptor
+
+    @property
+    def name(self) -&gt; str:
+        return self.__name
+
+    @property
+    def tms(self) -&gt; TileMatrixSet:
+        return self.__tms
+        
+    @property
+    def raster_specifications(self) -&gt; Dict:
+        return self.__raster_specifications
+
+    @property
+    def storage_type(self) -&gt; StorageType: 
+        return self.__storage[&#34;type&#34;]
+
+    @property
+    def storage_root(self) -&gt; StorageType: 
+        return self.__storage[&#34;root&#34;].split(&#34;@&#34;, 1)[0] # Suppression de l&#39;éventuel hôte de spécification du cluster S3
+
+    @property
+    def storage_depth(self) -&gt; int: 
+        return self.__storage.get(&#34;depth&#34;, None)
+
+
+    @property
+    def storage_s3_cluster(self) -&gt; str: 
+        if self.__storage[&#34;type&#34;] == StorageType.S3:
+            try:
+                return self.__storage[&#34;root&#34;].split(&#34;@&#34;)[1]
+            except IndexError:
+                return None
+        else:
+            return None
+
+
+    @storage_depth.setter
+    def storage_depth(self, d) -&gt; None:
+        if &#34;depth&#34; in self.__storage and self.__storage[&#34;depth&#34;] != d:
+            raise Exception(f&#34;Pyramid {pyramid.__descriptor} owns levels with different path depths&#34;)
+        self.__storage[&#34;depth&#34;] = d
+
+    @property
+    def own_masks(self) -&gt; int: 
+        return self.__masks
+
+    @property
+    def format(self) -&gt; str: 
+        return self.__format
+
+    @property
+    def bottom_level(self) -&gt; &#39;Level&#39;: 
+        return sorted(self.__levels.values(), key=lambda l: l.resolution)[0]
+
+    @property
+    def top_level(self) -&gt; &#39;Level&#39;: 
+        return sorted(self.__levels.values(), key=lambda l: l.resolution)[-1]
+
+    @property
+    def type(self) -&gt; PyramidType:
+        if self.__format == &#34;TIFF_PBF_MVT&#34;:
+            return PyramidType.VECTOR
+        else:
+            return PyramidType.RASTER
+
+    def get_level(self, level_id: str) -&gt; &#39;Level&#39;:
+        &#34;&#34;&#34;Get one level according to its identifier
+
+        Args:
+            level_id: Level identifier
+
+        Returns:
+            The corresponding pyramid&#39;s level, None if not present
+        &#34;&#34;&#34;
+      
+        return self.__levels.get(level_id, None)
+
+
+    def get_levels(self, bottom_id: str = None, top_id: str = None) -&gt; List[Level]:
+        &#34;&#34;&#34;Get sorted levels from bottom and top provided
+
+        Args:
+            bottom_id (str): optionnal specific bottom level id. Defaults to None.
+            top_id (str): optionnal specific top level id. Defaults to None.
+
+        Raises:
+            Exception: Provided levels are not consistent (bottom &gt; top or not in the pyramid)
+
+        Returns:
+            List[Level]: asked sorted levels
+        &#34;&#34;&#34;
+
+        sorted_levels = sorted(self.__levels.values(), key=lambda l: l.resolution)
+        
+        levels = []
+
+        begin = False
+        if bottom_id is None:
+            # Pas de niveau du bas fourni, on commence tout en bas
+            begin = True
+        else:
+            if self.get_level(bottom_id) is None:
+                raise Exception(f&#34;Pyramid {self.name} does not contain the provided bottom level {bottom_id}&#34;)
+
+        if top_id is not None and self.get_level(top_id) is None:
+            raise Exception(f&#34;Pyramid {self.name} does not contain the provided top level {top_id}&#34;)
+
+        end = False
+
+        for l in sorted_levels:
+            if not begin and l.id == bottom_id:
+                begin = True
+
+            if begin:
+                levels.append(l)
+                if top_id is not None and l.id == top_id:
+                    end = True
+                    break
+                else:
+                    continue
+        
+        if top_id is None:
+            # Pas de niveau du haut fourni, on a été jusqu&#39;en haut et c&#39;est normal
+            end = True
+
+        if not begin or not end:
+            raise Exception(f&#34;Provided levels ids are not consistent to extract levels from the pyramid {self.name}&#34;)
+      
+        return levels
+
+    def write_descriptor(self) -&gt; None:
+        content = json.dumps(self.serializable)
+        put_data_str(content, self.__descriptor)
+
+    def get_infos_from_slab_path(self, path: str) -&gt; Tuple[SlabType, str, int, int]:
+        if self.__storage[&#34;type&#34;] == StorageType.FILE:
+            parts = path.split(&#34;/&#34;)
+
+            # Le partie du chemin qui contient la colonne et ligne de la dalle est à la fin, en fonction de la profondeur choisie
+            # depth = 2 -&gt; on doit utiliser les 3 dernières parties pour la conversion
+            column, row = b36_path_decode(&#39;/&#39;.join(parts[-(self.__storage[&#34;depth&#34;]+1):]))
+            level = parts[-(self.__storage[&#34;depth&#34;]+2)]
+            raw_slab_type = parts[-(self.__storage[&#34;depth&#34;]+3)]
+
+            # Pour être retro compatible avec l&#39;ancien nommage
+            if raw_slab_type == &#34;IMAGE&#34;:
+                raw_slab_type = &#34;DATA&#34;
+
+            slab_type = SlabType[raw_slab_type]
+
+            return slab_type, level, column, row
+        else:
+            parts = re.split(r&#39;[/_]&#39;, path)
+            column = parts[-2]
+            row = parts[-1]
+            level = parts[-3]
+            raw_slab_type = parts[-4]
+
+            # Pour être retro compatible avec l&#39;ancien nommage
+            if raw_slab_type == &#34;IMG&#34;:
+                raw_slab_type = &#34;DATA&#34;
+            elif raw_slab_type == &#34;MSK&#34;:
+                raw_slab_type = &#34;MASK&#34;
+
+            slab_type = SlabType[raw_slab_type]
+
+            return slab_type, level, int(column), int(row)
+
+    def get_slab_path_from_infos(self, slab_type: SlabType, level: str, column: int, row: int, full: bool = True) -&gt; str:
+        if self.__storage[&#34;type&#34;] == StorageType.FILE:
+            slab_path = os.path.join(slab_type.value, level, b36_path_encode(column, row, self.__storage[&#34;depth&#34;]))
+        else:
+            slab_path = f&#34;{slab_type.value}_{level}_{column}_{row}&#34;
+        
+        if full:
+            return get_path_from_infos(self.__storage[&#34;type&#34;], self.__storage[&#34;root&#34;], self.__name, slab_path )
+        else:
+            return slab_path
+        </code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="rok4.Pyramid.b36_number_decode"><code class="name flex">
+<span>def <span class="ident">b36_number_decode</span></span>(<span>number: str) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert base-36 number to base-10</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>number</code></strong> :&ensp;<code>str</code></dt>
+<dd>base-36 number</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>base-10 number</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def b36_number_decode(number: str) -&gt; int:
+    &#34;&#34;&#34;Convert base-36 number to base-10
+
+    Args:
+        number (str): base-36 number
+
+    Returns:
+        int: base-10 number
+    &#34;&#34;&#34;
+    return int(number, 36)</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.b36_number_encode"><code class="name flex">
+<span>def <span class="ident">b36_number_encode</span></span>(<span>number: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert base-10 number to base-36</p>
+<p>Used alphabet is '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>number</code></strong> :&ensp;<code>int</code></dt>
+<dd>base-10 number</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>base-36 number</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def b36_number_encode(number: int) -&gt; str:
+    &#34;&#34;&#34;Convert base-10 number to base-36
+
+    Used alphabet is &#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
+
+    Args:
+        number (int): base-10 number
+
+    Returns:
+        str: base-36 number
+    &#34;&#34;&#34;
+
+    alphabet=&#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;
+
+    base36 = &#39;&#39;
+
+    if 0 &lt;= number &lt; len(alphabet):
+        return alphabet[number]
+
+    while number != 0:
+        number, i = divmod(number, len(alphabet))
+        base36 = alphabet[i] + base36
+
+    return base36</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.b36_path_decode"><code class="name flex">
+<span>def <span class="ident">b36_path_decode</span></span>(<span>path: str) ‑> Tuple[int, int]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get slab's column and row from a base-36 based path</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>path</code></strong> :&ensp;<code>str</code></dt>
+<dd>slab's path</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[int, int]</code></dt>
+<dd>slab's column and row</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def b36_path_decode(path: str) -&gt; Tuple[int, int]:
+    &#34;&#34;&#34;Get slab&#39;s column and row from a base-36 based path
+
+    Args:
+        path (str): slab&#39;s path
+
+    Returns:
+        Tuple[int, int]: slab&#39;s column and row
+    &#34;&#34;&#34;    
+
+    path = path.replace(&#39;/&#39;, &#39;&#39;)
+    path = re.sub(r&#39;(\.TIFF?)&#39;, &#34;&#34;, path.upper())
+
+    b36_column = &#34;&#34;
+    b36_row = &#34;&#34;
+
+    while len(path) &gt; 0:
+        b36_column += path[0]
+        b36_row += path[1]
+        path = path[2:]
+
+    return b36_number_decode(b36_column), b36_number_decode(b36_row)</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.b36_path_encode"><code class="name flex">
+<span>def <span class="ident">b36_path_encode</span></span>(<span>column: int, row: int, slashs: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert slab indices to base-36 based path, with .tif extension</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>column</code></strong> :&ensp;<code>int</code></dt>
+<dd>slab's column</dd>
+<dt><strong><code>row</code></strong> :&ensp;<code>int</code></dt>
+<dd>slab's row</dd>
+<dt><strong><code>slashs</code></strong> :&ensp;<code>int</code></dt>
+<dd>slashs' number (to split path)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>base-36 based path</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def b36_path_encode(column: int, row: int, slashs: int) -&gt; str:
+    &#34;&#34;&#34;Convert slab indices to base-36 based path, with .tif extension
+
+    Args:
+        column (int): slab&#39;s column
+        row (int): slab&#39;s row
+        slashs (int): slashs&#39; number (to split path)
+
+    Returns:
+        str: base-36 based path
+    &#34;&#34;&#34;    
+
+    b36_column = b36_number_encode(column)
+    b36_row = b36_number_encode(row)
+
+    max_len = max(slashs + 1, len(b36_column), len(b36_row))
+
+    b36_column = b36_column.rjust(max_len, &#34;0&#34;)
+    b36_row = b36_row.rjust(max_len, &#34;0&#34;)
+
+    b36_path = &#34;&#34;
+
+    while len(b36_column) &gt; 0:
+        b36_path = b36_row[-1] + b36_path
+        b36_path = b36_column[-1] + b36_path
+
+        b36_column = b36_column[:-1]
+        b36_row = b36_row[:-1]
+
+        if slashs &gt; 0:
+            b36_path = &#34;/&#34; + b36_path
+            slashs -= 1
+
+    return f&#34;{b36_path}.tif&#34;</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="rok4.Pyramid.Level"><code class="flex name class">
+<span>class <span class="ident">Level</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>A pyramid's level, raster or vector</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>__id</code></strong> :&ensp;<code>str</code></dt>
+<dd>level's identifier. have to exist in the pyramid's used TMS</dd>
+<dt><strong><code>__tile_limits</code></strong> :&ensp;<code>Dict[str, int]</code></dt>
+<dd>minimum and maximum tiles' columns and rows of pyramid's content</dd>
+<dt><strong><code>__slab_size</code></strong> :&ensp;<code>Tuple[int, int]</code></dt>
+<dd>number of tile in a slab, widthwise and heightwise</dd>
+<dt><strong><code>__tables</code></strong> :&ensp;<code>List[Dict]</code></dt>
+<dd>for a VECTOR pyramid, description of vector content, tables and attributes</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Level:
+    &#34;&#34;&#34;A pyramid&#39;s level, raster or vector
+
+    Attributes:
+        __id (str): level&#39;s identifier. have to exist in the pyramid&#39;s used TMS
+        __tile_limits (Dict[str, int]): minimum and maximum tiles&#39; columns and rows of pyramid&#39;s content
+        __slab_size (Tuple[int, int]): number of tile in a slab, widthwise and heightwise
+        __tables (List[Dict]): for a VECTOR pyramid, description of vector content, tables and attributes
+    &#34;&#34;&#34;
+
+    @classmethod
+    def from_descriptor(cls, data: Dict, pyramid: &#39;Pyramid&#39;) -&gt; &#39;Level&#39;:
+        &#34;&#34;&#34;Create a pyramid&#39;s level from the pyramid&#39;s descriptor levels element
+
+        Args:
+            data (Dict): level&#39;s information from the pyramid&#39;s descriptor
+            pyramid (Pyramid): pyramid containing the level to create
+
+        Raises:
+            Exception: different storage or masks presence between the level and the pyramid
+            MissingAttributeError: Attribute is missing in the content
+
+        Returns:
+            Pyramid: a Level instance
+        &#34;&#34;&#34;    
+        level = cls()
+
+        level.__pyramid = pyramid
+
+        # Attributs communs
+        try:
+            level.__id = data[&#34;id&#34;]
+            level.__tile_limits = data[&#34;tile_limits&#34;]
+            level.__slab_size = (data[&#34;tiles_per_width&#34;], data[&#34;tiles_per_height&#34;],)
+
+            # Informations sur le stockage : on les valide et stocke dans la pyramide
+            if pyramid.storage_type.name != data[&#34;storage&#34;][&#34;type&#34;]:
+                raise Exception(f&#34;Pyramid {pyramid.descriptor} owns levels using different storage types ({ data[&#39;storage&#39;][&#39;type&#39;] }) than its one ({pyramid.storage_type.name})&#34;)
+
+            if pyramid.storage_type == StorageType.FILE:                    
+                pyramid.storage_depth = data[&#34;storage&#34;][&#34;path_depth&#34;]   
+            
+            if &#34;mask_directory&#34; in data[&#34;storage&#34;] or &#34;mask_prefix&#34; in data[&#34;storage&#34;]:
+                if not pyramid.own_masks:
+                    raise Exception(f&#34;Pyramid {pyramid.__descriptor} does not define a mask format but level {level.__id} define mask storage informations&#34;)
+            else:
+                if pyramid.own_masks:
+                    raise Exception(f&#34;Pyramid {pyramid.__descriptor} define a mask format but level {level.__id} does not define mask storage informations&#34;)
+
+        except KeyError as e:
+            raise MissingAttributeError(pyramid.descriptor, f&#34;levels[].{e}&#34;)
+
+        # Attributs dans le cas d&#39;un niveau vecteur
+        if level.__pyramid.type == PyramidType.VECTOR :
+            try:
+                level.__tables = data[&#34;tables&#34;]
+
+            except KeyError as e:
+                raise MissingAttributeError(pyramid.descriptor, f&#34;levels[].{e}&#34;)
+
+        return level
+
+    @classmethod
+    def from_other(cls, other: &#39;Level&#39;, pyramid: &#39;Pyramid&#39;) -&gt; &#39;Level&#39;:
+        &#34;&#34;&#34;Create a pyramid&#39;s level from another one
+
+        Args:
+            other (Level): level to clone
+            pyramid (Pyramid): new pyramid containing the new level
+
+        Raises:
+            Exception: different storage or masks presence between the level and the pyramid
+            MissingAttributeError: Attribute is missing in the content
+
+        Returns:
+            Pyramid: a Level instance
+        &#34;&#34;&#34;
+
+        level = cls()
+
+        # Attributs communs
+        level.__id = other.__id
+        level.__pyramid = pyramid
+        level.__tile_limits = other.__tile_limits
+        level.__slab_size = other.__slab_size
+
+        # Attributs dans le cas d&#39;un niveau vecteur
+        if level.__pyramid.type == PyramidType.VECTOR :
+            level.__tables = other.__tables
+
+        return level
+
+    def __str__(self) -&gt; str:
+        return f&#34;{self.__pyramid.type.name} pyramid&#39;s level &#39;{self.__id}&#39; ({self.__pyramid.storage_type.name} storage)&#34;
+
+
+    @property
+    def serializable(self) -&gt; Dict: 
+        &#34;&#34;&#34;Get the dict version of the pyramid object, pyramid&#39;s descriptor compliant
+
+        Returns:
+            Dict: pyramid&#39;s descriptor structured object description
+        &#34;&#34;&#34;   
+        serialization = {
+            &#34;id&#34;: self.__id,
+            &#34;tiles_per_width&#34;: self.__slab_size[0],
+            &#34;tiles_per_height&#34;: self.__slab_size[1],
+            &#34;tile_limits&#34;: self.__tile_limits
+        }
+
+        if self.__pyramid.type == PyramidType.VECTOR:
+            serialization[&#34;tables&#34;] = self.__tables
+
+        if self.__pyramid.storage_type == StorageType.FILE:
+            serialization[&#34;storage&#34;] = {
+                &#34;type&#34;: &#34;FILE&#34;,
+                &#34;image_directory&#34;: f&#34;{self.__pyramid.name}/DATA/{self.__id}&#34;,
+                &#34;path_depth&#34;: self.__pyramid.storage_depth
+            }
+            if self.__pyramid.own_masks:
+                serialization[&#34;storage&#34;][&#34;mask_directory&#34;] = f&#34;{self.__pyramid.name}/MASK/{self.__id}&#34;
+
+        elif self.__pyramid.storage_type == StorageType.CEPH:
+            serialization[&#34;storage&#34;] = {
+                &#34;type&#34;: &#34;CEPH&#34;,
+                &#34;image_prefix&#34;: f&#34;{self.__pyramid.name}/DATA_{self.__id}&#34;,
+                &#34;pool_name&#34;: self.__pyramid.storage_root
+            }
+            if self.__pyramid.own_masks:
+                serialization[&#34;storage&#34;][&#34;mask_prefix&#34;] = f&#34;{self.__pyramid.name}/MASK_{self.__id}&#34;
+
+        elif self.__pyramid.storage_type == StorageType.S3:
+            serialization[&#34;storage&#34;] = {
+                &#34;type&#34;: &#34;S3&#34;,
+                &#34;image_prefix&#34;: f&#34;{self.__pyramid.name}/DATA_{self.__id}&#34;,
+                &#34;bucket_name&#34;: self.__pyramid.storage_root
+            }
+            if self.__pyramid.own_masks:
+                serialization[&#34;storage&#34;][&#34;mask_prefix&#34;] = f&#34;{self.__pyramid.name}/MASK_{self.__id}&#34;
+
+        return serialization
+
+    @property
+    def id(self) -&gt; str: 
+        return self.__id
+
+    @property
+    def bbox(self) -&gt; Tuple[float, float, float, float]: 
+        &#34;&#34;&#34;Return level extent, based on tile limits
+
+        Returns:
+            Tuple[float, float, float, float]: level terrain extent (xmin, ymin, xmax, ymax)
+        &#34;&#34;&#34;        
+        min_bbox = self.__pyramid.tms.get_level(self.__id).tile_to_bbox(self.__tile_limits[&#34;min_col&#34;], self.__tile_limits[&#34;max_row&#34;])
+        max_bbox = self.__pyramid.tms.get_level(self.__id).tile_to_bbox(self.__tile_limits[&#34;max_col&#34;], self.__tile_limits[&#34;min_row&#34;])
+
+        return (min_bbox[0], min_bbox[1], max_bbox[2], max_bbox[3])
+
+    @property
+    def resolution(self) -&gt; str: 
+        return self.__pyramid.tms.get_level(self.__id).resolution
+
+    def update_limits(self, bbox: Tuple[float, float, float, float]) -&gt; None:
+        &#34;&#34;&#34;Update tile limits, based on provided bounding box
+
+        Args:
+            bbox (Tuple[float, float, float, float]): terrain extent (xmin, ymin, xmax, ymax), in TMS coordinates system
+
+        &#34;&#34;&#34;
+        print(self.id)
+        print(self.__tile_limits)
+        col_min, row_min, col_max, row_max = self.__pyramid.tms.get_level(self.__id).bbox_to_tiles(bbox)
+        self.__tile_limits = {
+            &#34;min_row&#34;: row_min,
+            &#34;max_col&#34;: col_max,
+            &#34;max_row&#34;: row_max,
+            &#34;min_col&#34;: col_min
+        }
+        print(self.__tile_limits)</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="rok4.Pyramid.Level.from_descriptor"><code class="name flex">
+<span>def <span class="ident">from_descriptor</span></span>(<span>data: Dict[~KT, ~VT], pyramid: <a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a>) ‑> <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a pyramid's level from the pyramid's descriptor levels element</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data</code></strong> :&ensp;<code>Dict</code></dt>
+<dd>level's information from the pyramid's descriptor</dd>
+<dt><strong><code>pyramid</code></strong> :&ensp;<code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>pyramid containing the level to create</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>Exception</code></dt>
+<dd>different storage or masks presence between the level and the pyramid</dd>
+<dt><code>MissingAttributeError</code></dt>
+<dd>Attribute is missing in the content</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>a Level instance</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def from_descriptor(cls, data: Dict, pyramid: &#39;Pyramid&#39;) -&gt; &#39;Level&#39;:
+    &#34;&#34;&#34;Create a pyramid&#39;s level from the pyramid&#39;s descriptor levels element
+
+    Args:
+        data (Dict): level&#39;s information from the pyramid&#39;s descriptor
+        pyramid (Pyramid): pyramid containing the level to create
+
+    Raises:
+        Exception: different storage or masks presence between the level and the pyramid
+        MissingAttributeError: Attribute is missing in the content
+
+    Returns:
+        Pyramid: a Level instance
+    &#34;&#34;&#34;    
+    level = cls()
+
+    level.__pyramid = pyramid
+
+    # Attributs communs
+    try:
+        level.__id = data[&#34;id&#34;]
+        level.__tile_limits = data[&#34;tile_limits&#34;]
+        level.__slab_size = (data[&#34;tiles_per_width&#34;], data[&#34;tiles_per_height&#34;],)
+
+        # Informations sur le stockage : on les valide et stocke dans la pyramide
+        if pyramid.storage_type.name != data[&#34;storage&#34;][&#34;type&#34;]:
+            raise Exception(f&#34;Pyramid {pyramid.descriptor} owns levels using different storage types ({ data[&#39;storage&#39;][&#39;type&#39;] }) than its one ({pyramid.storage_type.name})&#34;)
+
+        if pyramid.storage_type == StorageType.FILE:                    
+            pyramid.storage_depth = data[&#34;storage&#34;][&#34;path_depth&#34;]   
+        
+        if &#34;mask_directory&#34; in data[&#34;storage&#34;] or &#34;mask_prefix&#34; in data[&#34;storage&#34;]:
+            if not pyramid.own_masks:
+                raise Exception(f&#34;Pyramid {pyramid.__descriptor} does not define a mask format but level {level.__id} define mask storage informations&#34;)
+        else:
+            if pyramid.own_masks:
+                raise Exception(f&#34;Pyramid {pyramid.__descriptor} define a mask format but level {level.__id} does not define mask storage informations&#34;)
+
+    except KeyError as e:
+        raise MissingAttributeError(pyramid.descriptor, f&#34;levels[].{e}&#34;)
+
+    # Attributs dans le cas d&#39;un niveau vecteur
+    if level.__pyramid.type == PyramidType.VECTOR :
+        try:
+            level.__tables = data[&#34;tables&#34;]
+
+        except KeyError as e:
+            raise MissingAttributeError(pyramid.descriptor, f&#34;levels[].{e}&#34;)
+
+    return level</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Level.from_other"><code class="name flex">
+<span>def <span class="ident">from_other</span></span>(<span>other: <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a>, pyramid: <a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a>) ‑> <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a pyramid's level from another one</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong> :&ensp;<code><a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></code></dt>
+<dd>level to clone</dd>
+<dt><strong><code>pyramid</code></strong> :&ensp;<code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>new pyramid containing the new level</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>Exception</code></dt>
+<dd>different storage or masks presence between the level and the pyramid</dd>
+<dt><code>MissingAttributeError</code></dt>
+<dd>Attribute is missing in the content</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>a Level instance</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def from_other(cls, other: &#39;Level&#39;, pyramid: &#39;Pyramid&#39;) -&gt; &#39;Level&#39;:
+    &#34;&#34;&#34;Create a pyramid&#39;s level from another one
+
+    Args:
+        other (Level): level to clone
+        pyramid (Pyramid): new pyramid containing the new level
+
+    Raises:
+        Exception: different storage or masks presence between the level and the pyramid
+        MissingAttributeError: Attribute is missing in the content
+
+    Returns:
+        Pyramid: a Level instance
+    &#34;&#34;&#34;
+
+    level = cls()
+
+    # Attributs communs
+    level.__id = other.__id
+    level.__pyramid = pyramid
+    level.__tile_limits = other.__tile_limits
+    level.__slab_size = other.__slab_size
+
+    # Attributs dans le cas d&#39;un niveau vecteur
+    if level.__pyramid.type == PyramidType.VECTOR :
+        level.__tables = other.__tables
+
+    return level</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="rok4.Pyramid.Level.bbox"><code class="name">var <span class="ident">bbox</span> : Tuple[float, float, float, float]</code></dt>
+<dd>
+<div class="desc"><p>Return level extent, based on tile limits</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[float, float, float, float]</code></dt>
+<dd>level terrain extent (xmin, ymin, xmax, ymax)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def bbox(self) -&gt; Tuple[float, float, float, float]: 
+    &#34;&#34;&#34;Return level extent, based on tile limits
+
+    Returns:
+        Tuple[float, float, float, float]: level terrain extent (xmin, ymin, xmax, ymax)
+    &#34;&#34;&#34;        
+    min_bbox = self.__pyramid.tms.get_level(self.__id).tile_to_bbox(self.__tile_limits[&#34;min_col&#34;], self.__tile_limits[&#34;max_row&#34;])
+    max_bbox = self.__pyramid.tms.get_level(self.__id).tile_to_bbox(self.__tile_limits[&#34;max_col&#34;], self.__tile_limits[&#34;min_row&#34;])
+
+    return (min_bbox[0], min_bbox[1], max_bbox[2], max_bbox[3])</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Level.id"><code class="name">var <span class="ident">id</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def id(self) -&gt; str: 
+    return self.__id</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Level.resolution"><code class="name">var <span class="ident">resolution</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def resolution(self) -&gt; str: 
+    return self.__pyramid.tms.get_level(self.__id).resolution</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Level.serializable"><code class="name">var <span class="ident">serializable</span> : Dict[~KT, ~VT]</code></dt>
+<dd>
+<div class="desc"><p>Get the dict version of the pyramid object, pyramid's descriptor compliant</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict</code></dt>
+<dd>pyramid's descriptor structured object description</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def serializable(self) -&gt; Dict: 
+    &#34;&#34;&#34;Get the dict version of the pyramid object, pyramid&#39;s descriptor compliant
+
+    Returns:
+        Dict: pyramid&#39;s descriptor structured object description
+    &#34;&#34;&#34;   
+    serialization = {
+        &#34;id&#34;: self.__id,
+        &#34;tiles_per_width&#34;: self.__slab_size[0],
+        &#34;tiles_per_height&#34;: self.__slab_size[1],
+        &#34;tile_limits&#34;: self.__tile_limits
+    }
+
+    if self.__pyramid.type == PyramidType.VECTOR:
+        serialization[&#34;tables&#34;] = self.__tables
+
+    if self.__pyramid.storage_type == StorageType.FILE:
+        serialization[&#34;storage&#34;] = {
+            &#34;type&#34;: &#34;FILE&#34;,
+            &#34;image_directory&#34;: f&#34;{self.__pyramid.name}/DATA/{self.__id}&#34;,
+            &#34;path_depth&#34;: self.__pyramid.storage_depth
+        }
+        if self.__pyramid.own_masks:
+            serialization[&#34;storage&#34;][&#34;mask_directory&#34;] = f&#34;{self.__pyramid.name}/MASK/{self.__id}&#34;
+
+    elif self.__pyramid.storage_type == StorageType.CEPH:
+        serialization[&#34;storage&#34;] = {
+            &#34;type&#34;: &#34;CEPH&#34;,
+            &#34;image_prefix&#34;: f&#34;{self.__pyramid.name}/DATA_{self.__id}&#34;,
+            &#34;pool_name&#34;: self.__pyramid.storage_root
+        }
+        if self.__pyramid.own_masks:
+            serialization[&#34;storage&#34;][&#34;mask_prefix&#34;] = f&#34;{self.__pyramid.name}/MASK_{self.__id}&#34;
+
+    elif self.__pyramid.storage_type == StorageType.S3:
+        serialization[&#34;storage&#34;] = {
+            &#34;type&#34;: &#34;S3&#34;,
+            &#34;image_prefix&#34;: f&#34;{self.__pyramid.name}/DATA_{self.__id}&#34;,
+            &#34;bucket_name&#34;: self.__pyramid.storage_root
+        }
+        if self.__pyramid.own_masks:
+            serialization[&#34;storage&#34;][&#34;mask_prefix&#34;] = f&#34;{self.__pyramid.name}/MASK_{self.__id}&#34;
+
+    return serialization</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="rok4.Pyramid.Level.update_limits"><code class="name flex">
+<span>def <span class="ident">update_limits</span></span>(<span>self, bbox: Tuple[float, float, float, float]) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update tile limits, based on provided bounding box</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bbox</code></strong> :&ensp;<code>Tuple[float, float, float, float]</code></dt>
+<dd>terrain extent (xmin, ymin, xmax, ymax), in TMS coordinates system</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_limits(self, bbox: Tuple[float, float, float, float]) -&gt; None:
+    &#34;&#34;&#34;Update tile limits, based on provided bounding box
+
+    Args:
+        bbox (Tuple[float, float, float, float]): terrain extent (xmin, ymin, xmax, ymax), in TMS coordinates system
+
+    &#34;&#34;&#34;
+    print(self.id)
+    print(self.__tile_limits)
+    col_min, row_min, col_max, row_max = self.__pyramid.tms.get_level(self.__id).bbox_to_tiles(bbox)
+    self.__tile_limits = {
+        &#34;min_row&#34;: row_min,
+        &#34;max_col&#34;: col_max,
+        &#34;max_row&#34;: row_max,
+        &#34;min_col&#34;: col_min
+    }
+    print(self.__tile_limits)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="rok4.Pyramid.Pyramid"><code class="flex name class">
+<span>class <span class="ident">Pyramid</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>A data pyramid, raster or vector</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>__name</code></strong> :&ensp;<code>str</code></dt>
+<dd>pyramid's name</dd>
+<dt><strong><code>__descriptor</code></strong> :&ensp;<code>str</code></dt>
+<dd>pyramid's descriptor path</dd>
+<dt><strong><code>__list</code></strong> :&ensp;<code>str</code></dt>
+<dd>pyramid's list path</dd>
+<dt><strong><code>__tms</code></strong> :&ensp;<code><a title="rok4.TileMatrixSet.TileMatrixSet" href="TileMatrixSet.html#rok4.TileMatrixSet.TileMatrixSet">TileMatrixSet</a></code></dt>
+<dd>Used grid</dd>
+<dt><strong><code>__levels</code></strong> :&ensp;<code>Dict[str, <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a>]</code></dt>
+<dd>Pyramid's levels</dd>
+<dt><strong><code>__format</code></strong> :&ensp;<code>str</code></dt>
+<dd>Data format</dd>
+<dt><strong><code>__storage</code></strong> :&ensp;<code>Dict[str, Union[<a title="rok4.Storage.StorageType" href="Storage.html#rok4.Storage.StorageType">StorageType</a>,str,int]]</code></dt>
+<dd>Pyramid's storage informations (type, root and depth if FILE storage)</dd>
+<dt><strong><code>__raster_specifications</code></strong> :&ensp;<code>Dict</code></dt>
+<dd>If raster pyramid, raster specifications</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Pyramid:
+    &#34;&#34;&#34;A data pyramid, raster or vector
+
+    Attributes:
+        __name (str): pyramid&#39;s name
+        __descriptor (str): pyramid&#39;s descriptor path
+        __list (str): pyramid&#39;s list path
+        __tms (rok4.TileMatrixSet.TileMatrixSet): Used grid
+        __levels (Dict[str, Level]): Pyramid&#39;s levels
+        __format (str): Data format
+        __storage (Dict[str, Union[rok4.Storage.StorageType,str,int]]): Pyramid&#39;s storage informations (type, root and depth if FILE storage)
+        __raster_specifications (Dict): If raster pyramid, raster specifications
+    &#34;&#34;&#34;
+
+    @classmethod
+    def from_descriptor(cls, descriptor: str) -&gt; &#39;Pyramid&#39;:
+        &#34;&#34;&#34;Create a pyramid from its descriptor
+
+        Args:
+            descriptor (str): pyramid&#39;s descriptor path
+
+        Raises:
+            FormatError: Provided path or the TMS is not a well formed JSON
+            Exception: Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS
+            MissingAttributeError: Attribute is missing in the content
+            StorageError: Storage read issue (pyramid descriptor or TMS)
+            MissingEnvironmentError: Missing object storage informations or TMS root directory
+
+        Returns:
+            Pyramid: a Pyramid instance
+        &#34;&#34;&#34;        
+        try:
+            data = json.loads(get_data_str(descriptor))
+
+        except JSONDecodeError as e:
+            raise FormatError(&#34;JSON&#34;, descriptor, e)
+
+
+        pyramid = cls()
+
+        pyramid.__storage[&#34;type&#34;], path, pyramid.__storage[&#34;root&#34;], base_name = get_infos_from_path(descriptor)
+        pyramid.__name = base_name[:-5] # on supprime l&#39;extension.json
+        pyramid.__descriptor = descriptor
+        pyramid.__list = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.list&#34;)
+
+        try:
+            # Attributs communs
+            pyramid.__tms = TileMatrixSet(data[&#34;tile_matrix_set&#34;])
+            pyramid.__format = data[&#34;format&#34;]
+
+            # Attributs d&#39;une pyramide raster
+            if pyramid.type == PyramidType.RASTER :
+                pyramid.__raster_specifications = data[&#34;raster_specifications&#34;]
+
+                if &#34;mask_format&#34; in data:
+                    pyramid.__masks = True
+                else:
+                    pyramid.__masks = False
+
+            # Niveaux
+            for l in data[&#34;levels&#34;]:
+                lev = Level.from_descriptor(l, pyramid)
+                pyramid.__levels[lev.id] = lev
+
+                if pyramid.__tms.get_level(lev.id) is None:
+                    raise Exception(f&#34;Pyramid {descriptor} owns a level with the ID &#39;{lev.id}&#39;, not defined in the TMS &#39;{pyramid.tms.name}&#39;&#34;)
+
+        except KeyError as e:
+            raise MissingAttributeError(descriptor, e)
+
+        if len(pyramid.__levels.keys()) == 0:
+            raise Exception(f&#34;Pyramid &#39;{descriptor}&#39; has no level&#34;)
+
+        return pyramid
+
+    @classmethod
+    def from_other(cls, other: &#39;Pyramid&#39;, name: str, storage: Dict) -&gt; &#39;Pyramid&#39;:
+        &#34;&#34;&#34;Create a pyramid from another one
+
+        Args:
+            other (Pyramid): pyramid to clone
+            name (str): new pyramid&#39;s name
+            storage (Dict[str, Union[str, int]]): new pyramid&#39;s storage informations
+
+        Raises:
+            FormatError: Provided path or the TMS is not a well formed JSON
+            Exception: Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS
+            MissingAttributeError: Attribute is missing in the content
+
+        Returns:
+            Pyramid: a Pyramid instance
+        &#34;&#34;&#34;
+        try:
+            # On convertit le type de stockage selon l&#39;énumération
+            storage[&#34;type&#34;] = StorageType[storage[&#34;type&#34;]]
+
+            if storage[&#34;type&#34;] == StorageType.FILE and name.find(&#34;/&#34;) != -1:
+                raise Exception(f&#34;A FILE stored pyramid&#39;s name cannot contain &#39;/&#39; : &#39;{name}&#39;&#34;)
+
+            pyramid = cls()
+
+            # Attributs communs
+            pyramid.__name = name 
+            pyramid.__storage = storage
+            pyramid.__masks = other.__masks
+
+            pyramid.__descriptor = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.json&#34;)
+            pyramid.__list = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.list&#34;)
+            pyramid.__tms = other.__tms
+            pyramid.__format = other.__format
+
+            # Attributs d&#39;une pyramide raster
+            if pyramid.type == PyramidType.RASTER :
+                if other.own_masks:
+                    pyramid.__masks = True
+                else:
+                    pyramid.__masks = False
+                pyramid.__raster_specifications = other.__raster_specifications
+
+            # Niveaux
+            for l in other.__levels.values():
+                lev = Level.from_other(l, pyramid)
+                pyramid.__levels[lev.id] = lev
+
+
+        except KeyError as e:
+            raise MissingAttributeError(descriptor, e)
+
+        return pyramid
+
+    def __init__(self) -&gt; None:
+        self.__storage = dict()
+        self.__levels = dict()
+        self.__masks = None
+
+    def __str__(self) -&gt; str:
+        return f&#34;{self.type.name} pyramid &#39;{self.__name}&#39; ({self.__storage[&#39;type&#39;].name} storage)&#34;
+
+    @property
+    def serializable(self) -&gt; Dict: 
+        &#34;&#34;&#34;Get the dict version of the pyramid object, descriptor compliant
+
+        Returns:
+            Dict: descriptor structured object description
+        &#34;&#34;&#34;        
+        serialization = {
+            &#34;tile_matrix_set&#34;: self.__tms.name,
+            &#34;format&#34;: self.__format
+        }
+
+        serialization[&#34;levels&#34;] = []
+        sorted_levels = sorted(self.__levels.values(), key=lambda l: l.resolution, reverse=True)
+
+        for l in sorted_levels:
+            serialization[&#34;levels&#34;].append(l.serializable)
+
+        if self.type == PyramidType.RASTER:
+            serialization[&#34;raster_specifications&#34;] = self.__raster_specifications
+
+        if self.__masks:
+            serialization[&#34;mask_format&#34;] = &#34;TIFF_ZIP_UINT8&#34;
+
+        return serialization
+
+    @property
+    def list(self) -&gt; str:
+        return self.__list
+
+    @property
+    def descriptor(self) -&gt; str:
+        return self.__descriptor
+
+    @property
+    def name(self) -&gt; str:
+        return self.__name
+
+    @property
+    def tms(self) -&gt; TileMatrixSet:
+        return self.__tms
+        
+    @property
+    def raster_specifications(self) -&gt; Dict:
+        return self.__raster_specifications
+
+    @property
+    def storage_type(self) -&gt; StorageType: 
+        return self.__storage[&#34;type&#34;]
+
+    @property
+    def storage_root(self) -&gt; StorageType: 
+        return self.__storage[&#34;root&#34;].split(&#34;@&#34;, 1)[0] # Suppression de l&#39;éventuel hôte de spécification du cluster S3
+
+    @property
+    def storage_depth(self) -&gt; int: 
+        return self.__storage.get(&#34;depth&#34;, None)
+
+
+    @property
+    def storage_s3_cluster(self) -&gt; str: 
+        if self.__storage[&#34;type&#34;] == StorageType.S3:
+            try:
+                return self.__storage[&#34;root&#34;].split(&#34;@&#34;)[1]
+            except IndexError:
+                return None
+        else:
+            return None
+
+
+    @storage_depth.setter
+    def storage_depth(self, d) -&gt; None:
+        if &#34;depth&#34; in self.__storage and self.__storage[&#34;depth&#34;] != d:
+            raise Exception(f&#34;Pyramid {pyramid.__descriptor} owns levels with different path depths&#34;)
+        self.__storage[&#34;depth&#34;] = d
+
+    @property
+    def own_masks(self) -&gt; int: 
+        return self.__masks
+
+    @property
+    def format(self) -&gt; str: 
+        return self.__format
+
+    @property
+    def bottom_level(self) -&gt; &#39;Level&#39;: 
+        return sorted(self.__levels.values(), key=lambda l: l.resolution)[0]
+
+    @property
+    def top_level(self) -&gt; &#39;Level&#39;: 
+        return sorted(self.__levels.values(), key=lambda l: l.resolution)[-1]
+
+    @property
+    def type(self) -&gt; PyramidType:
+        if self.__format == &#34;TIFF_PBF_MVT&#34;:
+            return PyramidType.VECTOR
+        else:
+            return PyramidType.RASTER
+
+    def get_level(self, level_id: str) -&gt; &#39;Level&#39;:
+        &#34;&#34;&#34;Get one level according to its identifier
+
+        Args:
+            level_id: Level identifier
+
+        Returns:
+            The corresponding pyramid&#39;s level, None if not present
+        &#34;&#34;&#34;
+      
+        return self.__levels.get(level_id, None)
+
+
+    def get_levels(self, bottom_id: str = None, top_id: str = None) -&gt; List[Level]:
+        &#34;&#34;&#34;Get sorted levels from bottom and top provided
+
+        Args:
+            bottom_id (str): optionnal specific bottom level id. Defaults to None.
+            top_id (str): optionnal specific top level id. Defaults to None.
+
+        Raises:
+            Exception: Provided levels are not consistent (bottom &gt; top or not in the pyramid)
+
+        Returns:
+            List[Level]: asked sorted levels
+        &#34;&#34;&#34;
+
+        sorted_levels = sorted(self.__levels.values(), key=lambda l: l.resolution)
+        
+        levels = []
+
+        begin = False
+        if bottom_id is None:
+            # Pas de niveau du bas fourni, on commence tout en bas
+            begin = True
+        else:
+            if self.get_level(bottom_id) is None:
+                raise Exception(f&#34;Pyramid {self.name} does not contain the provided bottom level {bottom_id}&#34;)
+
+        if top_id is not None and self.get_level(top_id) is None:
+            raise Exception(f&#34;Pyramid {self.name} does not contain the provided top level {top_id}&#34;)
+
+        end = False
+
+        for l in sorted_levels:
+            if not begin and l.id == bottom_id:
+                begin = True
+
+            if begin:
+                levels.append(l)
+                if top_id is not None and l.id == top_id:
+                    end = True
+                    break
+                else:
+                    continue
+        
+        if top_id is None:
+            # Pas de niveau du haut fourni, on a été jusqu&#39;en haut et c&#39;est normal
+            end = True
+
+        if not begin or not end:
+            raise Exception(f&#34;Provided levels ids are not consistent to extract levels from the pyramid {self.name}&#34;)
+      
+        return levels
+
+    def write_descriptor(self) -&gt; None:
+        content = json.dumps(self.serializable)
+        put_data_str(content, self.__descriptor)
+
+    def get_infos_from_slab_path(self, path: str) -&gt; Tuple[SlabType, str, int, int]:
+        if self.__storage[&#34;type&#34;] == StorageType.FILE:
+            parts = path.split(&#34;/&#34;)
+
+            # Le partie du chemin qui contient la colonne et ligne de la dalle est à la fin, en fonction de la profondeur choisie
+            # depth = 2 -&gt; on doit utiliser les 3 dernières parties pour la conversion
+            column, row = b36_path_decode(&#39;/&#39;.join(parts[-(self.__storage[&#34;depth&#34;]+1):]))
+            level = parts[-(self.__storage[&#34;depth&#34;]+2)]
+            raw_slab_type = parts[-(self.__storage[&#34;depth&#34;]+3)]
+
+            # Pour être retro compatible avec l&#39;ancien nommage
+            if raw_slab_type == &#34;IMAGE&#34;:
+                raw_slab_type = &#34;DATA&#34;
+
+            slab_type = SlabType[raw_slab_type]
+
+            return slab_type, level, column, row
+        else:
+            parts = re.split(r&#39;[/_]&#39;, path)
+            column = parts[-2]
+            row = parts[-1]
+            level = parts[-3]
+            raw_slab_type = parts[-4]
+
+            # Pour être retro compatible avec l&#39;ancien nommage
+            if raw_slab_type == &#34;IMG&#34;:
+                raw_slab_type = &#34;DATA&#34;
+            elif raw_slab_type == &#34;MSK&#34;:
+                raw_slab_type = &#34;MASK&#34;
+
+            slab_type = SlabType[raw_slab_type]
+
+            return slab_type, level, int(column), int(row)
+
+    def get_slab_path_from_infos(self, slab_type: SlabType, level: str, column: int, row: int, full: bool = True) -&gt; str:
+        if self.__storage[&#34;type&#34;] == StorageType.FILE:
+            slab_path = os.path.join(slab_type.value, level, b36_path_encode(column, row, self.__storage[&#34;depth&#34;]))
+        else:
+            slab_path = f&#34;{slab_type.value}_{level}_{column}_{row}&#34;
+        
+        if full:
+            return get_path_from_infos(self.__storage[&#34;type&#34;], self.__storage[&#34;root&#34;], self.__name, slab_path )
+        else:
+            return slab_path</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="rok4.Pyramid.Pyramid.from_descriptor"><code class="name flex">
+<span>def <span class="ident">from_descriptor</span></span>(<span>descriptor: str) ‑> <a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a pyramid from its descriptor</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>descriptor</code></strong> :&ensp;<code>str</code></dt>
+<dd>pyramid's descriptor path</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>FormatError</code></dt>
+<dd>Provided path or the TMS is not a well formed JSON</dd>
+<dt><code>Exception</code></dt>
+<dd>Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS</dd>
+<dt><code>MissingAttributeError</code></dt>
+<dd>Attribute is missing in the content</dd>
+<dt><code>StorageError</code></dt>
+<dd>Storage read issue (pyramid descriptor or TMS)</dd>
+<dt><code>MissingEnvironmentError</code></dt>
+<dd>Missing object storage informations or TMS root directory</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>a Pyramid instance</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def from_descriptor(cls, descriptor: str) -&gt; &#39;Pyramid&#39;:
+    &#34;&#34;&#34;Create a pyramid from its descriptor
+
+    Args:
+        descriptor (str): pyramid&#39;s descriptor path
+
+    Raises:
+        FormatError: Provided path or the TMS is not a well formed JSON
+        Exception: Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS
+        MissingAttributeError: Attribute is missing in the content
+        StorageError: Storage read issue (pyramid descriptor or TMS)
+        MissingEnvironmentError: Missing object storage informations or TMS root directory
+
+    Returns:
+        Pyramid: a Pyramid instance
+    &#34;&#34;&#34;        
+    try:
+        data = json.loads(get_data_str(descriptor))
+
+    except JSONDecodeError as e:
+        raise FormatError(&#34;JSON&#34;, descriptor, e)
+
+
+    pyramid = cls()
+
+    pyramid.__storage[&#34;type&#34;], path, pyramid.__storage[&#34;root&#34;], base_name = get_infos_from_path(descriptor)
+    pyramid.__name = base_name[:-5] # on supprime l&#39;extension.json
+    pyramid.__descriptor = descriptor
+    pyramid.__list = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.list&#34;)
+
+    try:
+        # Attributs communs
+        pyramid.__tms = TileMatrixSet(data[&#34;tile_matrix_set&#34;])
+        pyramid.__format = data[&#34;format&#34;]
+
+        # Attributs d&#39;une pyramide raster
+        if pyramid.type == PyramidType.RASTER :
+            pyramid.__raster_specifications = data[&#34;raster_specifications&#34;]
+
+            if &#34;mask_format&#34; in data:
+                pyramid.__masks = True
+            else:
+                pyramid.__masks = False
+
+        # Niveaux
+        for l in data[&#34;levels&#34;]:
+            lev = Level.from_descriptor(l, pyramid)
+            pyramid.__levels[lev.id] = lev
+
+            if pyramid.__tms.get_level(lev.id) is None:
+                raise Exception(f&#34;Pyramid {descriptor} owns a level with the ID &#39;{lev.id}&#39;, not defined in the TMS &#39;{pyramid.tms.name}&#39;&#34;)
+
+    except KeyError as e:
+        raise MissingAttributeError(descriptor, e)
+
+    if len(pyramid.__levels.keys()) == 0:
+        raise Exception(f&#34;Pyramid &#39;{descriptor}&#39; has no level&#34;)
+
+    return pyramid</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.from_other"><code class="name flex">
+<span>def <span class="ident">from_other</span></span>(<span>other: <a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a>, name: str, storage: Dict[~KT, ~VT]) ‑> <a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a pyramid from another one</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>other</code></strong> :&ensp;<code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>pyramid to clone</dd>
+<dt><strong><code>name</code></strong> :&ensp;<code>str</code></dt>
+<dd>new pyramid's name</dd>
+<dt><strong><code>storage</code></strong> :&ensp;<code>Dict[str, Union[str, int]]</code></dt>
+<dd>new pyramid's storage informations</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>FormatError</code></dt>
+<dd>Provided path or the TMS is not a well formed JSON</dd>
+<dt><code>Exception</code></dt>
+<dd>Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS</dd>
+<dt><code>MissingAttributeError</code></dt>
+<dd>Attribute is missing in the content</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></dt>
+<dd>a Pyramid instance</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def from_other(cls, other: &#39;Pyramid&#39;, name: str, storage: Dict) -&gt; &#39;Pyramid&#39;:
+    &#34;&#34;&#34;Create a pyramid from another one
+
+    Args:
+        other (Pyramid): pyramid to clone
+        name (str): new pyramid&#39;s name
+        storage (Dict[str, Union[str, int]]): new pyramid&#39;s storage informations
+
+    Raises:
+        FormatError: Provided path or the TMS is not a well formed JSON
+        Exception: Level issue : no one in the pyramid or the used TMS, or level ID not defined in the TMS
+        MissingAttributeError: Attribute is missing in the content
+
+    Returns:
+        Pyramid: a Pyramid instance
+    &#34;&#34;&#34;
+    try:
+        # On convertit le type de stockage selon l&#39;énumération
+        storage[&#34;type&#34;] = StorageType[storage[&#34;type&#34;]]
+
+        if storage[&#34;type&#34;] == StorageType.FILE and name.find(&#34;/&#34;) != -1:
+            raise Exception(f&#34;A FILE stored pyramid&#39;s name cannot contain &#39;/&#39; : &#39;{name}&#39;&#34;)
+
+        pyramid = cls()
+
+        # Attributs communs
+        pyramid.__name = name 
+        pyramid.__storage = storage
+        pyramid.__masks = other.__masks
+
+        pyramid.__descriptor = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.json&#34;)
+        pyramid.__list = get_path_from_infos(pyramid.__storage[&#34;type&#34;], pyramid.__storage[&#34;root&#34;], f&#34;{pyramid.__name}.list&#34;)
+        pyramid.__tms = other.__tms
+        pyramid.__format = other.__format
+
+        # Attributs d&#39;une pyramide raster
+        if pyramid.type == PyramidType.RASTER :
+            if other.own_masks:
+                pyramid.__masks = True
+            else:
+                pyramid.__masks = False
+            pyramid.__raster_specifications = other.__raster_specifications
+
+        # Niveaux
+        for l in other.__levels.values():
+            lev = Level.from_other(l, pyramid)
+            pyramid.__levels[lev.id] = lev
+
+
+    except KeyError as e:
+        raise MissingAttributeError(descriptor, e)
+
+    return pyramid</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="rok4.Pyramid.Pyramid.bottom_level"><code class="name">var <span class="ident">bottom_level</span> : <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def bottom_level(self) -&gt; &#39;Level&#39;: 
+    return sorted(self.__levels.values(), key=lambda l: l.resolution)[0]</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.descriptor"><code class="name">var <span class="ident">descriptor</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def descriptor(self) -&gt; str:
+    return self.__descriptor</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.format"><code class="name">var <span class="ident">format</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def format(self) -&gt; str: 
+    return self.__format</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.list"><code class="name">var <span class="ident">list</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def list(self) -&gt; str:
+    return self.__list</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.name"><code class="name">var <span class="ident">name</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self) -&gt; str:
+    return self.__name</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.own_masks"><code class="name">var <span class="ident">own_masks</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def own_masks(self) -&gt; int: 
+    return self.__masks</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.raster_specifications"><code class="name">var <span class="ident">raster_specifications</span> : Dict[~KT, ~VT]</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def raster_specifications(self) -&gt; Dict:
+    return self.__raster_specifications</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.serializable"><code class="name">var <span class="ident">serializable</span> : Dict[~KT, ~VT]</code></dt>
+<dd>
+<div class="desc"><p>Get the dict version of the pyramid object, descriptor compliant</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dict</code></dt>
+<dd>descriptor structured object description</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def serializable(self) -&gt; Dict: 
+    &#34;&#34;&#34;Get the dict version of the pyramid object, descriptor compliant
+
+    Returns:
+        Dict: descriptor structured object description
+    &#34;&#34;&#34;        
+    serialization = {
+        &#34;tile_matrix_set&#34;: self.__tms.name,
+        &#34;format&#34;: self.__format
+    }
+
+    serialization[&#34;levels&#34;] = []
+    sorted_levels = sorted(self.__levels.values(), key=lambda l: l.resolution, reverse=True)
+
+    for l in sorted_levels:
+        serialization[&#34;levels&#34;].append(l.serializable)
+
+    if self.type == PyramidType.RASTER:
+        serialization[&#34;raster_specifications&#34;] = self.__raster_specifications
+
+    if self.__masks:
+        serialization[&#34;mask_format&#34;] = &#34;TIFF_ZIP_UINT8&#34;
+
+    return serialization</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.storage_depth"><code class="name">var <span class="ident">storage_depth</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def storage_depth(self) -&gt; int: 
+    return self.__storage.get(&#34;depth&#34;, None)</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.storage_root"><code class="name">var <span class="ident">storage_root</span> : <a title="rok4.Storage.StorageType" href="Storage.html#rok4.Storage.StorageType">StorageType</a></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def storage_root(self) -&gt; StorageType: 
+    return self.__storage[&#34;root&#34;].split(&#34;@&#34;, 1)[0] # Suppression de l&#39;éventuel hôte de spécification du cluster S3</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.storage_s3_cluster"><code class="name">var <span class="ident">storage_s3_cluster</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def storage_s3_cluster(self) -&gt; str: 
+    if self.__storage[&#34;type&#34;] == StorageType.S3:
+        try:
+            return self.__storage[&#34;root&#34;].split(&#34;@&#34;)[1]
+        except IndexError:
+            return None
+    else:
+        return None</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.storage_type"><code class="name">var <span class="ident">storage_type</span> : <a title="rok4.Storage.StorageType" href="Storage.html#rok4.Storage.StorageType">StorageType</a></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def storage_type(self) -&gt; StorageType: 
+    return self.__storage[&#34;type&#34;]</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.tms"><code class="name">var <span class="ident">tms</span> : <a title="rok4.TileMatrixSet.TileMatrixSet" href="TileMatrixSet.html#rok4.TileMatrixSet.TileMatrixSet">TileMatrixSet</a></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tms(self) -&gt; TileMatrixSet:
+    return self.__tms</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.top_level"><code class="name">var <span class="ident">top_level</span> : <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def top_level(self) -&gt; &#39;Level&#39;: 
+    return sorted(self.__levels.values(), key=lambda l: l.resolution)[-1]</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.type"><code class="name">var <span class="ident">type</span> : <a title="rok4.Pyramid.PyramidType" href="#rok4.Pyramid.PyramidType">PyramidType</a></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def type(self) -&gt; PyramidType:
+    if self.__format == &#34;TIFF_PBF_MVT&#34;:
+        return PyramidType.VECTOR
+    else:
+        return PyramidType.RASTER</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="rok4.Pyramid.Pyramid.get_infos_from_slab_path"><code class="name flex">
+<span>def <span class="ident">get_infos_from_slab_path</span></span>(<span>self, path: str) ‑> Tuple[<a title="rok4.Pyramid.SlabType" href="#rok4.Pyramid.SlabType">SlabType</a>, str, int, int]</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_infos_from_slab_path(self, path: str) -&gt; Tuple[SlabType, str, int, int]:
+    if self.__storage[&#34;type&#34;] == StorageType.FILE:
+        parts = path.split(&#34;/&#34;)
+
+        # Le partie du chemin qui contient la colonne et ligne de la dalle est à la fin, en fonction de la profondeur choisie
+        # depth = 2 -&gt; on doit utiliser les 3 dernières parties pour la conversion
+        column, row = b36_path_decode(&#39;/&#39;.join(parts[-(self.__storage[&#34;depth&#34;]+1):]))
+        level = parts[-(self.__storage[&#34;depth&#34;]+2)]
+        raw_slab_type = parts[-(self.__storage[&#34;depth&#34;]+3)]
+
+        # Pour être retro compatible avec l&#39;ancien nommage
+        if raw_slab_type == &#34;IMAGE&#34;:
+            raw_slab_type = &#34;DATA&#34;
+
+        slab_type = SlabType[raw_slab_type]
+
+        return slab_type, level, column, row
+    else:
+        parts = re.split(r&#39;[/_]&#39;, path)
+        column = parts[-2]
+        row = parts[-1]
+        level = parts[-3]
+        raw_slab_type = parts[-4]
+
+        # Pour être retro compatible avec l&#39;ancien nommage
+        if raw_slab_type == &#34;IMG&#34;:
+            raw_slab_type = &#34;DATA&#34;
+        elif raw_slab_type == &#34;MSK&#34;:
+            raw_slab_type = &#34;MASK&#34;
+
+        slab_type = SlabType[raw_slab_type]
+
+        return slab_type, level, int(column), int(row)</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.get_level"><code class="name flex">
+<span>def <span class="ident">get_level</span></span>(<span>self, level_id: str) ‑> <a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get one level according to its identifier</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>level_id</code></strong></dt>
+<dd>Level identifier</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>The corresponding pyramid's level, None if not present</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_level(self, level_id: str) -&gt; &#39;Level&#39;:
+    &#34;&#34;&#34;Get one level according to its identifier
+
+    Args:
+        level_id: Level identifier
+
+    Returns:
+        The corresponding pyramid&#39;s level, None if not present
+    &#34;&#34;&#34;
+  
+    return self.__levels.get(level_id, None)</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.get_levels"><code class="name flex">
+<span>def <span class="ident">get_levels</span></span>(<span>self, bottom_id: str = None, top_id: str = None) ‑> List[<a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a>]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get sorted levels from bottom and top provided</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bottom_id</code></strong> :&ensp;<code>str</code></dt>
+<dd>optionnal specific bottom level id. Defaults to None.</dd>
+<dt><strong><code>top_id</code></strong> :&ensp;<code>str</code></dt>
+<dd>optionnal specific top level id. Defaults to None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>Exception</code></dt>
+<dd>Provided levels are not consistent (bottom &gt; top or not in the pyramid)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>List[<a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a>]</code></dt>
+<dd>asked sorted levels</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_levels(self, bottom_id: str = None, top_id: str = None) -&gt; List[Level]:
+    &#34;&#34;&#34;Get sorted levels from bottom and top provided
+
+    Args:
+        bottom_id (str): optionnal specific bottom level id. Defaults to None.
+        top_id (str): optionnal specific top level id. Defaults to None.
+
+    Raises:
+        Exception: Provided levels are not consistent (bottom &gt; top or not in the pyramid)
+
+    Returns:
+        List[Level]: asked sorted levels
+    &#34;&#34;&#34;
+
+    sorted_levels = sorted(self.__levels.values(), key=lambda l: l.resolution)
+    
+    levels = []
+
+    begin = False
+    if bottom_id is None:
+        # Pas de niveau du bas fourni, on commence tout en bas
+        begin = True
+    else:
+        if self.get_level(bottom_id) is None:
+            raise Exception(f&#34;Pyramid {self.name} does not contain the provided bottom level {bottom_id}&#34;)
+
+    if top_id is not None and self.get_level(top_id) is None:
+        raise Exception(f&#34;Pyramid {self.name} does not contain the provided top level {top_id}&#34;)
+
+    end = False
+
+    for l in sorted_levels:
+        if not begin and l.id == bottom_id:
+            begin = True
+
+        if begin:
+            levels.append(l)
+            if top_id is not None and l.id == top_id:
+                end = True
+                break
+            else:
+                continue
+    
+    if top_id is None:
+        # Pas de niveau du haut fourni, on a été jusqu&#39;en haut et c&#39;est normal
+        end = True
+
+    if not begin or not end:
+        raise Exception(f&#34;Provided levels ids are not consistent to extract levels from the pyramid {self.name}&#34;)
+  
+    return levels</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.get_slab_path_from_infos"><code class="name flex">
+<span>def <span class="ident">get_slab_path_from_infos</span></span>(<span>self, slab_type: <a title="rok4.Pyramid.SlabType" href="#rok4.Pyramid.SlabType">SlabType</a>, level: str, column: int, row: int, full: bool = True) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_slab_path_from_infos(self, slab_type: SlabType, level: str, column: int, row: int, full: bool = True) -&gt; str:
+    if self.__storage[&#34;type&#34;] == StorageType.FILE:
+        slab_path = os.path.join(slab_type.value, level, b36_path_encode(column, row, self.__storage[&#34;depth&#34;]))
+    else:
+        slab_path = f&#34;{slab_type.value}_{level}_{column}_{row}&#34;
+    
+    if full:
+        return get_path_from_infos(self.__storage[&#34;type&#34;], self.__storage[&#34;root&#34;], self.__name, slab_path )
+    else:
+        return slab_path</code></pre>
+</details>
+</dd>
+<dt id="rok4.Pyramid.Pyramid.write_descriptor"><code class="name flex">
+<span>def <span class="ident">write_descriptor</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_descriptor(self) -&gt; None:
+    content = json.dumps(self.serializable)
+    put_data_str(content, self.__descriptor)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="rok4.Pyramid.PyramidType"><code class="flex name class">
+<span>class <span class="ident">PyramidType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PyramidType(Enum):
+    RASTER = &#34;RASTER&#34;
+    VECTOR = &#34;VECTOR&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="rok4.Pyramid.PyramidType.RASTER"><code class="name">var <span class="ident">RASTER</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="rok4.Pyramid.PyramidType.VECTOR"><code class="name">var <span class="ident">VECTOR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="rok4.Pyramid.SlabType"><code class="flex name class">
+<span>class <span class="ident">SlabType</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SlabType(Enum):
+    DATA = &#34;DATA&#34;
+    MASK = &#34;MASK&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="rok4.Pyramid.SlabType.DATA"><code class="name">var <span class="ident">DATA</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="rok4.Pyramid.SlabType.MASK"><code class="name">var <span class="ident">MASK</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="rok4" href="index.html">rok4</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="rok4.Pyramid.b36_number_decode" href="#rok4.Pyramid.b36_number_decode">b36_number_decode</a></code></li>
+<li><code><a title="rok4.Pyramid.b36_number_encode" href="#rok4.Pyramid.b36_number_encode">b36_number_encode</a></code></li>
+<li><code><a title="rok4.Pyramid.b36_path_decode" href="#rok4.Pyramid.b36_path_decode">b36_path_decode</a></code></li>
+<li><code><a title="rok4.Pyramid.b36_path_encode" href="#rok4.Pyramid.b36_path_encode">b36_path_encode</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="rok4.Pyramid.Level" href="#rok4.Pyramid.Level">Level</a></code></h4>
+<ul class="two-column">
+<li><code><a title="rok4.Pyramid.Level.bbox" href="#rok4.Pyramid.Level.bbox">bbox</a></code></li>
+<li><code><a title="rok4.Pyramid.Level.from_descriptor" href="#rok4.Pyramid.Level.from_descriptor">from_descriptor</a></code></li>
+<li><code><a title="rok4.Pyramid.Level.from_other" href="#rok4.Pyramid.Level.from_other">from_other</a></code></li>
+<li><code><a title="rok4.Pyramid.Level.id" href="#rok4.Pyramid.Level.id">id</a></code></li>
+<li><code><a title="rok4.Pyramid.Level.resolution" href="#rok4.Pyramid.Level.resolution">resolution</a></code></li>
+<li><code><a title="rok4.Pyramid.Level.serializable" href="#rok4.Pyramid.Level.serializable">serializable</a></code></li>
+<li><code><a title="rok4.Pyramid.Level.update_limits" href="#rok4.Pyramid.Level.update_limits">update_limits</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="rok4.Pyramid.Pyramid" href="#rok4.Pyramid.Pyramid">Pyramid</a></code></h4>
+<ul class="">
+<li><code><a title="rok4.Pyramid.Pyramid.bottom_level" href="#rok4.Pyramid.Pyramid.bottom_level">bottom_level</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.descriptor" href="#rok4.Pyramid.Pyramid.descriptor">descriptor</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.format" href="#rok4.Pyramid.Pyramid.format">format</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.from_descriptor" href="#rok4.Pyramid.Pyramid.from_descriptor">from_descriptor</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.from_other" href="#rok4.Pyramid.Pyramid.from_other">from_other</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.get_infos_from_slab_path" href="#rok4.Pyramid.Pyramid.get_infos_from_slab_path">get_infos_from_slab_path</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.get_level" href="#rok4.Pyramid.Pyramid.get_level">get_level</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.get_levels" href="#rok4.Pyramid.Pyramid.get_levels">get_levels</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.get_slab_path_from_infos" href="#rok4.Pyramid.Pyramid.get_slab_path_from_infos">get_slab_path_from_infos</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.list" href="#rok4.Pyramid.Pyramid.list">list</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.name" href="#rok4.Pyramid.Pyramid.name">name</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.own_masks" href="#rok4.Pyramid.Pyramid.own_masks">own_masks</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.raster_specifications" href="#rok4.Pyramid.Pyramid.raster_specifications">raster_specifications</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.serializable" href="#rok4.Pyramid.Pyramid.serializable">serializable</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.storage_depth" href="#rok4.Pyramid.Pyramid.storage_depth">storage_depth</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.storage_root" href="#rok4.Pyramid.Pyramid.storage_root">storage_root</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.storage_s3_cluster" href="#rok4.Pyramid.Pyramid.storage_s3_cluster">storage_s3_cluster</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.storage_type" href="#rok4.Pyramid.Pyramid.storage_type">storage_type</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.tms" href="#rok4.Pyramid.Pyramid.tms">tms</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.top_level" href="#rok4.Pyramid.Pyramid.top_level">top_level</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.type" href="#rok4.Pyramid.Pyramid.type">type</a></code></li>
+<li><code><a title="rok4.Pyramid.Pyramid.write_descriptor" href="#rok4.Pyramid.Pyramid.write_descriptor">write_descriptor</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="rok4.Pyramid.PyramidType" href="#rok4.Pyramid.PyramidType">PyramidType</a></code></h4>
+<ul class="">
+<li><code><a title="rok4.Pyramid.PyramidType.RASTER" href="#rok4.Pyramid.PyramidType.RASTER">RASTER</a></code></li>
+<li><code><a title="rok4.Pyramid.PyramidType.VECTOR" href="#rok4.Pyramid.PyramidType.VECTOR">VECTOR</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="rok4.Pyramid.SlabType" href="#rok4.Pyramid.SlabType">SlabType</a></code></h4>
+<ul class="">
+<li><code><a title="rok4.Pyramid.SlabType.DATA" href="#rok4.Pyramid.SlabType.DATA">DATA</a></code></li>
+<li><code><a title="rok4.Pyramid.SlabType.MASK" href="#rok4.Pyramid.SlabType.MASK">MASK</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="build/sources/core&#45;cpp/src/image/DecimatedImage.h" name="build/sources/core&#45;cpp/src/image/DecimatedImage.h">
+<area shape="rect" id="node1" title="Define classes DecimatedImage and DecimatedImageFactory." alt="" coords="135,5,382,47"/>
+<area shape="rect" id="node2" href="$DecimatedImage_8cpp.html" title="Implement classes DecimatedImage, DecimatedMask and DecimatedImageFactory." alt="" coords="5,95,267,136"/>
+<area shape="rect" id="node3" href="$decimateNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="291,95,474,136"/>
+</map>

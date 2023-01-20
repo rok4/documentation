@@ -1,0 +1,6 @@
+<map id="build/sources/core&#45;cpp/src/image/file/Rok4Image.h" name="build/sources/core&#45;cpp/src/image/file/Rok4Image.h">
+<area shape="rect" id="node1" title="Implement classes Rok4Image and Rok4ImageFactory." alt="" coords="232,5,375,61"/>
+<area shape="rect" id="node2" href="$cache2work_8cpp.html" title="Convert a ROK4 pyramide&#39;s image (tiled TIFF) to a TIFF image, readable with LibtiffImage." alt="" coords="5,109,188,151"/>
+<area shape="rect" id="node3" href="$pbf2cache_8cpp.html" title="Build a vector ROK4 slab from PBD tiles." alt="" coords="212,109,395,151"/>
+<area shape="rect" id="node4" href="$work2cache_8cpp.html" title="Image formatting, according to ROK4 specifications." alt="" coords="419,109,601,151"/>
+</map>

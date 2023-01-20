@@ -1,0 +1,1630 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="IGN">
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../api_server_swaggerui/">
+      
+      <link rel="icon" href="../../images/rok4-carre.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Pyramide - Projet ROK4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extras/style.css">
+    
+      <link rel="stylesheet" href="../../extras/swagger-ui.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#specification-dune-pyramide-rok4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Projet ROK4" class="md-header__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../../images/rok4-carre.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projet ROK4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pyramide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Spécifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../server/" class="md-tabs__link">
+        Documentation utilisateur
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docker/" class="md-tabs__link">
+        Utilisation de Docker
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../devs/" class="md-tabs__link">
+      Documentation développeur
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Projet ROK4" class="md-nav__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../../images/rok4-carre.png" alt="logo">
+
+    </a>
+    Projet ROK4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
+          Spécifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spécifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Spécifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Pyramide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Pyramide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glossaire" class="md-nav__link">
+    Glossaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-tile-matrix-set" class="md-nav__link">
+    Le Tile Matrix Set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-pyramide" class="md-nav__link">
+    La pyramide
+  </a>
+  
+    <nav class="md-nav" aria-label="La pyramide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-des-donnees" class="md-nav__link">
+    Caractéristiques des données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-tables" class="md-nav__link">
+    Les tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-masques" class="md-nav__link">
+    Les masques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-descripteur-de-pyramide" class="md-nav__link">
+    Le descripteur de pyramide
+  </a>
+  
+    <nav class="md-nav" aria-label="Le descripteur de pyramide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informations-globales" class="md-nav__link">
+    Informations globales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informations-par-niveau" class="md-nav__link">
+    Informations par niveau
+  </a>
+  
+    <nav class="md-nav" aria-label="Informations par niveau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pyramide-raster" class="md-nav__link">
+    Pyramide raster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyramide-vecteur" class="md-nav__link">
+    Pyramide vecteur
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larchitecture-de-stockage" class="md-nav__link">
+    L'architecture de stockage
+  </a>
+  
+    <nav class="md-nav" aria-label="L'architecture de stockage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-mode-fichier" class="md-nav__link">
+    En mode fichier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-mode-objet" class="md-nav__link">
+    En mode objet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-structure-dune-dalle" class="md-nav__link">
+    La structure d'une dalle
+  </a>
+  
+    <nav class="md-nav" aria-label="La structure d'une dalle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#len-tete" class="md-nav__link">
+    L'en-tête
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-donnees" class="md-nav__link">
+    Les données
+  </a>
+  
+    <nav class="md-nav" aria-label="Les données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-tuilage" class="md-nav__link">
+    Le tuilage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-compression-cas-raster" class="md-nav__link">
+    La compression (cas raster)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-vecteur" class="md-nav__link">
+    Cas vecteur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recapitulatif" class="md-nav__link">
+    Récapitulatif
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-references" class="md-nav__link">
+    Les références
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-fichier-liste" class="md-nav__link">
+    Le fichier liste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_server_swaggerui/" class="md-nav__link">
+        API du serveur (SwaggerUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_server_redoc/" class="md-nav__link">
+        API du serveur (Redoc)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Documentation utilisateur
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation utilisateur" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation utilisateur
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../server/" class="md-nav__link">
+        Serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pregeneration/" class="md-nav__link">
+        Outils de pré-génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generation/" class="md-nav__link">
+        Outils de génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/" class="md-nav__link">
+        Outils de gestion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytools/" class="md-nav__link">
+        Outils python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Utilisation de Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utilisation de Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilisation de Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/" class="md-nav__link">
+        ROK4 & Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/build/" class="md-nav__link">
+        Compilation des images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/run/datasets/" class="md-nav__link">
+        Génération de pyramides
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/run/server/" class="md-nav__link">
+        Exécution d'une stack avec le serveur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devs/" class="md-nav__link">
+        Documentation développeur
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glossaire" class="md-nav__link">
+    Glossaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-tile-matrix-set" class="md-nav__link">
+    Le Tile Matrix Set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-pyramide" class="md-nav__link">
+    La pyramide
+  </a>
+  
+    <nav class="md-nav" aria-label="La pyramide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristiques-des-donnees" class="md-nav__link">
+    Caractéristiques des données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-tables" class="md-nav__link">
+    Les tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-masques" class="md-nav__link">
+    Les masques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-descripteur-de-pyramide" class="md-nav__link">
+    Le descripteur de pyramide
+  </a>
+  
+    <nav class="md-nav" aria-label="Le descripteur de pyramide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informations-globales" class="md-nav__link">
+    Informations globales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informations-par-niveau" class="md-nav__link">
+    Informations par niveau
+  </a>
+  
+    <nav class="md-nav" aria-label="Informations par niveau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pyramide-raster" class="md-nav__link">
+    Pyramide raster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyramide-vecteur" class="md-nav__link">
+    Pyramide vecteur
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#larchitecture-de-stockage" class="md-nav__link">
+    L'architecture de stockage
+  </a>
+  
+    <nav class="md-nav" aria-label="L'architecture de stockage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-mode-fichier" class="md-nav__link">
+    En mode fichier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-mode-objet" class="md-nav__link">
+    En mode objet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-structure-dune-dalle" class="md-nav__link">
+    La structure d'une dalle
+  </a>
+  
+    <nav class="md-nav" aria-label="La structure d'une dalle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#len-tete" class="md-nav__link">
+    L'en-tête
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-donnees" class="md-nav__link">
+    Les données
+  </a>
+  
+    <nav class="md-nav" aria-label="Les données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-tuilage" class="md-nav__link">
+    Le tuilage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-compression-cas-raster" class="md-nav__link">
+    La compression (cas raster)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-vecteur" class="md-nav__link">
+    Cas vecteur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recapitulatif" class="md-nav__link">
+    Récapitulatif
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-references" class="md-nav__link">
+    Les références
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-fichier-liste" class="md-nav__link">
+    Le fichier liste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="specification-dune-pyramide-rok4">Spécification d'une pyramide ROK4</h1>
+<h2 id="glossaire">Glossaire</h2>
+<table>
+<thead>
+<tr>
+<th>Vocabulaire</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fichier</td>
+<td>Élément de stockage de la donnée dans un système de fichier. Un fichier est indentifié par son chemin complet dans une arborescence</td>
+</tr>
+<tr>
+<td>Objet</td>
+<td>Élément de stockage de la donnée dans un système de stockage objet : CEPH, S3 ou SWIFT. Un objet est identifié par son nom et le nom du conteneur (pool CEPH, bucket S3 ou container SWIFT) dans lequel il est stocké</td>
+</tr>
+<tr>
+<td>SRS</td>
+<td>Système à Référence Spatiale, système de coordonnées</td>
+</tr>
+<tr>
+<td>TM</td>
+<td>Tile Matrix, définition d'un quadrillage : une origine + une résolution + deux dimensions en pixels</td>
+</tr>
+<tr>
+<td>TMS</td>
+<td>Tile Matrix Set, ensembles de Tile Matrix, dans un même système de coordonnées</td>
+</tr>
+<tr>
+<td>Pyramide</td>
+<td>Donnée raster ou vecteur prédécoupée et précalculée, dans une projection, à différentes résolutions (niveaux), utilisée par une couche ROK4SERVER</td>
+</tr>
+<tr>
+<td>Niveau</td>
+<td>Partie d’une pyramide, contenant des dalles homogènes en résolution (l'identifiant et la résolution du niveau sont définis dans le Tile Matrix Set)</td>
+</tr>
+<tr>
+<td>Tuile</td>
+<td>Unité de donnée élementaire manipulé par ROK4SERVER, appartenant à un niveau de pyramide dont les dimensions pixels sont définis dans le Tile Matrix (la tuile est la donnée demandée lors d'un GetTile en WMTS ou en Tile Map Service)</td>
+</tr>
+<tr>
+<td>Dalle</td>
+<td>Un fichier ou objet constituant une pyramide de donnée, contenant une ou plusieurs tuiles contiguës d'un niveau</td>
+</tr>
+<tr>
+<td>Résolution</td>
+<td>Dimensions de l'emprise au sol (dans l'unité du SRS) d'un pixel</td>
+</tr>
+<tr>
+<td>WMS</td>
+<td>Web Map Service : <a href="http://www.opengeospatial.org/standards/wms">référence OGC</a></td>
+</tr>
+<tr>
+<td>WMTS</td>
+<td>Web Map Tiling Standard : <a href="http://www.opengeospatial.org/standards/wmts">référence OGC</a></td>
+</tr>
+<tr>
+<td>TMS</td>
+<td>Tile Map Service : <a href="https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification">référence OSGEO</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="le-tile-matrix-set">Le Tile Matrix Set</h2>
+<p>Un TMS est un ensemble de Tile Matrix, définissant le quadrillage d'autant de niveaux dans un fichier JSON. Le SRS du TMS est indiqué avec la même convention que pour les utilitaires basés sur la librairie PROJ, c’est-à-dire avec une chaîne de caractères formée du registre dans lequel est défini le SRS et de l’identifiant du SRS dans ce registre, par exemple : IGNF:LAMB93 ou EPSG:4326. EPSG peut être indiqué en minuscules ou en majuscule.  Toutes les informations sont définies en fonction du SRS (unité du SRS pour les coordonnées et les résolutions).
+Un TM possède un identifiant (chaîne de caractères) unique dans le TMS. Les résolutions d'un niveau à l'autre ne vont pas nécessairement de deux en deux (bien que ce soit le cas le plus courant).</p>
+<pre><code class="language-json">{
+   &quot;crs&quot; : &quot;EPSG:2154&quot;,
+   &quot;id&quot; : &quot;LAMB93&quot;,
+   &quot;orderedAxes&quot; : [
+      &quot;X&quot;,
+      &quot;Y&quot;
+   ],
+   &quot;tileMatrices&quot; : [
+      {
+         &quot;matrixWidth&quot; : 2,
+         &quot;scaleDenominator&quot; : 373497230.535336,
+         &quot;tileWidth&quot; : 256,
+         &quot;tileHeight&quot; : 256,
+         &quot;pointOfOrigin&quot; : [
+            0,
+            12000000
+         ],
+         &quot;matrixHeight&quot; : 2,
+         &quot;cellSize&quot; : 104579.224549894,
+         &quot;id&quot; : &quot;0&quot;
+      }
+   ]
+}
+</code></pre>
+<p><img alt="Tile Matrix" src="../../images/TileMatrix.png" /></p>
+<p>Ce découpage de l'espace en tuile permet de se localiser grâce à des indices (principe du WMTS et du Tile Map Service). Ainsi, une tuile peut être identifiée avec :</p>
+<ul>
+<li>son niveau</li>
+<li>son indice de colonne (0 pour la première en partant de la gauche)</li>
+<li>son indice de ligne (0 pour la première en partant du haut)</li>
+</ul>
+<p>On peut passer des coordonnées aux indices facilement. Cette conversion est utilisée pour identifier les tuiles nécessaires à la construction d'une image à partir de son emprise.</p>
+<h2 id="la-pyramide">La pyramide</h2>
+<p>Une pyramide est constituée d’un ensemble de niveaux. Chaque niveau de la pyramide correspond à un Tile Matrix, une résolution.</p>
+<p>Une pyramide peut être de trois types :</p>
+<ul>
+<li>Les pyramides raster : pyramide contenant de la donnée image. Utilisée par ROK4SERVER, elle peut être diffusée en WMS, WMTS et TMS. ROK4SERVER sait interpréter la donnée contenue dans cette pyramide et peut la réechantillonner, la reprojeter, y appliquer un style.</li>
+<li>Les pyramides vecteur : pyramide contenant de la donnée vecteur. Utilisée par ROK4SERVER, elle ne peut être diffusée qu'en TMS. ROK4SERVER ne sait pas interpréter la donnée contenue dans les tuiles et ne peut alors que les retourner telles qu'elles sont stockées.</li>
+</ul>
+<p>Schéma JSON d'un <a href="../pyramid.schema.json">descripteur de pyramide</a></p>
+<p>Quand la pyramide contient des tuiles, elles sont regroupées par contiguïté en dalles, stockées en tant que fichier ou objet (Ceph, S3 ou Swift).</p>
+<p><img alt="Dalle" src="../../images/Dalle.png" title="Dalle de 3 tuiles sur 2" /></p>
+<h3 id="caracteristiques-des-donnees">Caractéristiques des données</h3>
+<p>Les caractéristiques globales d'une pyramide raster sont :</p>
+<ul>
+<li>le nombre de canaux par pixel</li>
+<li>le nombre de bits par canal</li>
+<li>la photométrie (rgb, gray...)</li>
+<li>le format des canaux</li>
+<li>la compression des images (aucun, jpeg, lzw, packbit...)</li>
+</ul>
+<p>Les caractéristiques globales d'une pyramide vecteur sont :</p>
+<ul>
+<li>le format de la donnée : Mapbox Vector Tile conditionné en PBF.</li>
+</ul>
+<p>Ces caractéristiques sont valables pour l'ensemble de la pyramide.</p>
+<h3 id="les-tables">Les tables</h3>
+<p>Pour une pyramide vecteur, on va préciser les tables et leurs attributs présentes dans les données, et ce par niveau. On aura également des informations sur les valeurs prises par les attributs.</p>
+<h3 id="les-masques">Les masques</h3>
+<p>Il est possible de stocker les masques en parallèle de la donnée dans le cas d'une pyramide raster. Les masques sont des images aux même dimensions que les images de données et permettent de distinguer précisément les pixels de données de ceux de nodata. Les masques sont des images à 1 canal sur 8 bits, compressé en deflate (zip). La valeur 0 signifie que le pixel correspondant dans l'image de données est du nodata, les valeurs de 1 à 255 signifient qu'il s'agit de donnée.</p>
+<h3 id="le-descripteur-de-pyramide">Le descripteur de pyramide</h3>
+<p>Le descripteur de pyramide est un document JSON (extension .json), au nom de la pyramide et contenant toutes les informations nécessaires à ROK4SERVER pour exploiter la pyramide (présentées au dessus). Elles sont également utilisées lorsque l'on utilise les outils ROK4GENERATION pour manipuler une pyramide : on récupère ainsi les caractéristiques de la pyramide pour utiliser les mêmes.</p>
+<p>Selon le type de la pyramide, les informations présentes dans le descripteur sont différentes</p>
+<h4 id="informations-globales">Informations globales</h4>
+<table>
+<thead>
+<tr>
+<th>Type de pyramide</th>
+<th>Raster</th>
+<th>Vecteur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom du TMS associé</td>
+<td>Présent</td>
+<td>Présent</td>
+</tr>
+<tr>
+<td>Format<br>(contient la compression et le format des données)</td>
+<td>TIFF_RAW_UINT8<br>TIFF_RAW_FLOAT32<br>TIFF_LZW_UINT8<br>TIFF_LZW_FLOAT32<br>TIFF_ZIP_UINT8<br>TIFF_ZIP_FLOAT32<br>TIFF_PKB_UINT8<br>TIFF_PKB_FLOAT32<br>TIFF_PNG_UINT8<br>TIFF_JPG_UINT8</td>
+<td>TIFF_PBF_MVT</td>
+</tr>
+<tr>
+<td>Le nombre de canaux des données</td>
+<td>Présent</td>
+<td>Absent</td>
+</tr>
+<tr>
+<td>La valeur du nodata</td>
+<td>Présent</td>
+<td>Absent</td>
+</tr>
+<tr>
+<td>L'interpolation utilisée à la génération</td>
+<td>Présent</td>
+<td>Absent</td>
+</tr>
+<tr>
+<td>La photométrie des données</td>
+<td>Présent</td>
+<td>Absent</td>
+</tr>
+</tbody>
+</table>
+<p>Extrait d'un descripteur de pyramide raster, pour du MNT :</p>
+<pre><code class="language-json">{
+    &quot;format&quot;: &quot;TIFF_LZW_FLOAT32&quot;,
+    &quot;mask_format&quot;: &quot;TIFF_ZIP_UINT8&quot;,
+    &quot;tile_matrix_set&quot;: &quot;RGM04UTM38S_10cm&quot;,
+    &quot;raster_specifications&quot;: {
+        &quot;channels&quot;: 1,
+        &quot;nodata&quot;: &quot;-99999&quot;,
+        &quot;photometric&quot;: &quot;gray&quot;,
+        &quot;interpolation&quot;: &quot;nn&quot;
+    }
+}
+</code></pre>
+<p>On notera que le SRS n'est pas renseigné, il l'est indirectement via le TMS.</p>
+<h4 id="informations-par-niveau">Informations par niveau</h4>
+<p>Les niveaux sont renseignés dans l'ordre, du plus haut (moins résolu) au plus bas (meilleure résolution). Les informations suivantes sont présentes pour les 3 types de pyramides :</p>
+<ul>
+<li>L'identifiant du Tile Matrix : code unique du niveau, identique à celui dans le TMS.</li>
+<li>Le nombre de tuiles, dans la hauteur et dans la largeur, dans une dalle.</li>
+<li>Les indices des tuiles extrêmes pour ce niveau : au-delà, on sait d'avance qu'il n'y aura pas de données</li>
+</ul>
+<h5 id="pyramide-raster">Pyramide raster</h5>
+<ul>
+<li>Les informations sur le stockage des données et éventuellement des masques :<ul>
+<li>En mode "fichier" : les dossiers "racine" pour ce niveau, en relatif par rapport à l'emplacement du descripteur et la profondeur de l'arborescence (nombre de sous dossier) à partir de la racine du niveau.</li>
+<li>En mode "objet" : les préfixes utilisés pour le nommage des dalles, le conteneur objet et dans le cas Swift, le type d'authentification. Les informations générale sur le cluster (URL, user...) sont stockées dans des variables d'environnement ou dans la configuration de ROK4SERVER.</li>
+</ul>
+</li>
+</ul>
+<p>Exemple de niveau d'une pyramide raster avec masques stocké dans un pool Ceph :</p>
+<pre><code class="language-json">{
+    &quot;levels&quot;: [
+        {
+            &quot;tile_limits&quot;: {
+                &quot;min_row&quot;: 0,
+                &quot;min_col&quot;: 0,
+                &quot;max_col&quot;: 0,
+                &quot;max_row&quot;: 0
+            },
+            &quot;storage&quot;: {
+                &quot;mask_prefix&quot;: &quot;IGN/SCAN1000/MASK_0&quot;,
+                &quot;type&quot;: &quot;CEPH&quot;,
+                &quot;image_prefix&quot;: &quot;IGN/SCAN1000/DATA_0&quot;
+            },
+            &quot;tiles_per_height&quot;: 16,
+            &quot;id&quot;: &quot;0&quot;,
+            &quot;tiles_per_width&quot;: 16
+        },
+        {
+            &quot;tiles_per_width&quot;: 16,
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;storage&quot;: {
+                &quot;mask_prefix&quot;: &quot;IGN/SCAN1000/MASK_1&quot;,
+                &quot;type&quot;: &quot;CEPH&quot;,
+                &quot;image_prefix&quot;: &quot;IGN/SCAN1000/DATA_1&quot;
+            },
+            &quot;tiles_per_height&quot;: 16,
+            &quot;tile_limits&quot;: {
+                &quot;min_col&quot;: 0,
+                &quot;min_row&quot;: 0,
+                &quot;max_row&quot;: 0,
+                &quot;max_col&quot;: 0
+            }
+        }
+    ]
+}
+</code></pre>
+<h5 id="pyramide-vecteur">Pyramide vecteur</h5>
+<ul>
+<li>Les informations sur le stockage des données :<ul>
+<li>En mode "fichier" : les dossiers "racine" pour ce niveau, en relatif par rapport à l'emplacement du descripteur et la profondeur de l'arborescence (nombre de sous dossier) à partir de la racine du niveau.</li>
+<li>En mode "objet" : les préfixes utilisés pour le nommage des dalles, le conteneur objet et dans le cas Swift, le type d'authentification. Les informations générale sur le cluster (URL, user...) sont stockées dans des variables d'environnement ou dans la configuration de ROK4SERVER.</li>
+</ul>
+</li>
+<li>Les informations sur les tables et leurs attributs dans les données de ce niveau : on va potentiellement détailler les valeurs distinctes prises si il y en a moins de 50, et donner le minimum et le maximum pour les attributs numériques.</li>
+</ul>
+<p>Exemple de niveau d'une pyramide vecteur stocké dans un dossier :</p>
+<pre><code class="language-json">{
+    &quot;levels&quot;: [
+                {
+            &quot;tiles_per_height&quot;: 8,
+            &quot;tables&quot;: [
+                {
+                    &quot;attributes&quot;: [
+                        {
+                            &quot;count&quot;: 101,
+                            &quot;name&quot;: &quot;insee_dep&quot;,
+                            &quot;type&quot;: &quot;character varying(3)&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;character varying(5)&quot;,
+                            &quot;count&quot;: 34968,
+                            &quot;name&quot;: &quot;insee_com&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;character varying(24)&quot;,
+                            &quot;name&quot;: &quot;id&quot;,
+                            &quot;count&quot;: 34968
+                        },
+                        {
+                            &quot;type&quot;: &quot;character varying(50)&quot;,
+                            &quot;count&quot;: 32485,
+                            &quot;name&quot;: &quot;nom_com_m&quot;
+                        },
+                        {
+                            &quot;name&quot;: &quot;population&quot;,
+                            &quot;count&quot;: 5817,
+                            &quot;type&quot;: &quot;numeric(11,0)&quot;
+                        },
+                        {
+                            &quot;min&quot;: 1,
+                            &quot;name&quot;: &quot;ogc_fid&quot;,
+                            &quot;count&quot;: 34968,
+                            &quot;max&quot;: 34968,
+                            &quot;type&quot;: &quot;integer&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;character varying(2)&quot;,
+                            &quot;count&quot;: 61,
+                            &quot;name&quot;: &quot;insee_can&quot;
+                        },
+                        {
+                            &quot;values&quot;: [
+                                &quot;75&quot;,
+                                &quot;06&quot;,
+                                &quot;24&quot;,
+                                &quot;03&quot;,
+                                &quot;01&quot;,
+                                &quot;28&quot;,
+                                &quot;52&quot;,
+                                &quot;93&quot;,
+                                &quot;04&quot;,
+                                &quot;94&quot;,
+                                &quot;02&quot;,
+                                &quot;44&quot;,
+                                &quot;53&quot;,
+                                &quot;27&quot;,
+                                &quot;32&quot;,
+                                &quot;11&quot;,
+                                &quot;76&quot;,
+                                &quot;84&quot;
+                            ],
+                            &quot;type&quot;: &quot;character varying(2)&quot;,
+                            &quot;count&quot;: 18,
+                            &quot;name&quot;: &quot;insee_reg&quot;
+                        },
+                        {
+                            &quot;name&quot;: &quot;statut&quot;,
+                            &quot;count&quot;: 5,
+                            &quot;values&quot;: [
+                                &quot;Préfecture&quot;,
+                                &quot;Sous-préfecture&quot;,
+                                &quot;Capitale d'état&quot;,
+                                &quot;Préfecture de région&quot;,
+                                &quot;Commune simple&quot;
+                            ],
+                            &quot;type&quot;: &quot;character varying(24)&quot;
+                        },
+                        {
+                            &quot;count&quot;: 10,
+                            &quot;name&quot;: &quot;insee_arr&quot;,
+                            &quot;values&quot;: [
+                                &quot;NC&quot;,
+                                &quot;1&quot;,
+                                &quot;4&quot;,
+                                &quot;9&quot;,
+                                &quot;8&quot;,
+                                &quot;6&quot;,
+                                &quot;3&quot;,
+                                &quot;2&quot;,
+                                &quot;7&quot;,
+                                &quot;5&quot;
+                            ],
+                            &quot;type&quot;: &quot;character varying(2)&quot;
+                        },
+                        {
+                            &quot;name&quot;: &quot;nom_com&quot;,
+                            &quot;count&quot;: 32704,
+                            &quot;type&quot;: &quot;character varying(50)&quot;
+                        },
+                        {
+                            &quot;name&quot;: &quot;code_epci&quot;,
+                            &quot;count&quot;: 1256,
+                            &quot;type&quot;: &quot;character varying(21)&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;character varying(3)&quot;,
+                            &quot;values&quot;: [
+                                &quot;COM&quot;
+                            ],
+                            &quot;count&quot;: 1,
+                            &quot;name&quot;: &quot;type&quot;
+                        }
+                    ],
+                    &quot;geometry&quot;: &quot;MULTIPOLYGON&quot;,
+                    &quot;name&quot;: &quot;commune&quot;
+                }
+            ],
+            &quot;storage&quot;: {
+                &quot;image_directory&quot;: &quot;COMMUNES/DATA/18&quot;,
+                &quot;path_depth&quot;: 2,
+                &quot;type&quot;: &quot;FILE&quot;
+            },
+            &quot;tile_limits&quot;: {
+                &quot;min_col&quot;: 132753,
+                &quot;max_row&quot;: 91738,
+                &quot;max_col&quot;: 136273,
+                &quot;min_row&quot;: 90179
+            },
+            &quot;id&quot;: &quot;18&quot;,
+            &quot;tiles_per_width&quot;: 8
+        }
+    ]
+}
+</code></pre>
+<h3 id="larchitecture-de-stockage">L'architecture de stockage</h3>
+<p>Le serveur ROK4 accède toujours aux données par tuile (via ses indices) :
+* en WMTS et TMS, dans la grille native, on ne demande qu'une tuile
+* en WMTS, dans une grille additionnelle, on liste les tuiles sources nécessaires à la constitution de la tuile à retourner
+* en WMS, à partir de la zone demandée, on liste les tuiles sources nécessaires à la constitution de l'image à retourner</p>
+<p>ROK4GENERATION et ROK4SERVER se mettent donc d'accord sur la façon d'agencer les données :</p>
+<ul>
+<li>Le découpage en tuile est défini par le TMS (comme vu plus haut)</li>
+<li>Le regroupement en dalle est défini dans le descripteur de pyramide : des indices de la tuile, par division euclidienne, on obtient les indices de la dalle, en partant du coin supérieur gauche définit dans le TMS.</li>
+<li>Reste l'emplacement de stockage de la dalle, que nous allons décrire maintenant</li>
+<li>Et quelle partie de la dalle correspond à notre tuile, ce que nous verrons après dans la partie "La structure d'une dalle"</li>
+</ul>
+<p>On note les indices avec la colonne en premier : (<em>colonne</em>, <em>ligne</em>)</p>
+<h4 id="en-mode-fichier">En mode fichier</h4>
+<p>Toutes les dalles, que ce soit les données ou les masques, sont dans un dossier portant le même nom que le descripteur. Le nom de la pyramide ne peut pas contenir de <code>/</code> dans le cas d'un stockage objet. Elles sont cependant séparées dans des sous arborescences parallèles :</p>
+<ul>
+<li>/pyramid/directory/<Pyramid's name>/DATA/<level>/...</li>
+<li>/pyramid/directory/<Pyramid's name>/DATA/<level>/...</li>
+</ul>
+<p>Repartons des indices de la tuile voulue (414, 3134) avec des dalles de 16 tuiles par 16 tuiles : on veut donc accéder à la dalle (25,195). Ces indices sont ensuite convertis en base 36 (avec les chiffres dans cet ordre : 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ) : (24,195) donne ('P', '5F')</p>
+<p>On peut être amené à ajouter des 0 pour forcer la longueur de l'écriture en base 36, pour s'adapter à la profondeur d'arborescence voulue ou avoir la même longueur pour les 2 indices. Avec une profondeur d'arborescence de 2, les indices vont être découpés en 3 parties (les deux niveaux de dossier + le nom du fichier). On a donc besoin d'avoir des indices en base 36 sur au moins 3 chiffre : ('00P', '05F'). On obtient le chemin suivant, en relatif à partir de la racine du niveau (que ce soit la donnée ou le masque) : <code>00/05/PF.tif</code>. Soit un chemin complet :</p>
+<ul>
+<li>pour la dalle de donnée : <code>/pyramid/directory/&lt;Pyramid's name&gt;/DATA/&lt;level&gt;/00/05/PF.tif</code></li>
+<li>pour la dalle de masque : <code>/pyramid/directory/&lt;Pyramid's name&gt;/MASK/&lt;level&gt;/00/05/PF.tif</code></li>
+</ul>
+<p>Dans un cas où l'écriture en base 36 nécessite plus de chiffres qu'il n'y a de parties dans le chemin, c'est le premier dossier qui contiendra plus de chiffres : ('C4C3C2C1C0','L4L3L2L1L0') donnera C4L4C3L3C2L2/C1L1/C0L0.tif.</p>
+<p>Avec cette manière de ranger les données, un dossier de l'arborescence contiendra des dalles contiguës.</p>
+<h4 id="en-mode-objet">En mode objet</h4>
+<p>En mode objet, le nommage est beaucoup plus simple car on utilise directement les indices de dalle en base 10. De plus,l e nom de la pyramide peut contenir des <code>/</code>. Si on reprend la dalle précédente (24,195), on aura les objets suivants :</p>
+<ul>
+<li>pour la dalle de donnée : <code>&lt;Pyramid's name&gt;/DATA_&lt;level&gt;_24_195</code></li>
+<li>pour la dalle de masque : <code>&lt;Pyramid's name&gt;/MASK_&lt;level&gt;_24_195</code></li>
+</ul>
+<h3 id="la-structure-dune-dalle">La structure d'une dalle</h3>
+<p>Les dalles sont utilise le conteneur TIFF (<a href="http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf">Tagged Image File Format</a>). Ce dernier offre de nombreuse possibilité de stockage des données. Le concept principal est de renseigner les différentes informations via des « tags », des champs (<a href="http://www.awaresystems.be/imaging/tiff/tifftags/search.html">liste des tags</a>).</p>
+<p>Dans le cas d'une dalle vecteur, TIFF sert uniquement de conteneur et aucune information propre aux données raster n'est donnée. On a alors une dalle uniquement utilisable par les outils ROK4. Seule la possibilité de tuilage des données qu'offre le TIFF est utilisée.</p>
+<p>Dans le cas d'une dalle raster, on peut préciser les nombres de canaux, leur format et taille, la photométrie, la structure des données, toute sorte de métadonnées, rendant possible l'interprétation de l'image par les programmes.</p>
+<p>Ce document n'a par pour but de reprendre les spécifications du format TIFF, mais de voir globalement les possibilités et préciser celles exploitées.</p>
+<h4 id="len-tete">L'en-tête</h4>
+<p>On retrouve dans cette partie toutes les informations sur le fichier que les logiciels vont utiliser pour afficher la dalle dans le cas du raster.</p>
+<p><img alt="En-tête TIFF" src="../../images/TiffEnTete.png" /></p>
+<p>Par exemple, l'étiquette <em>imageWidth</em> (256), de type <em>Long</em> (4), une seule valeur sur 32 bits, elle tient donc sans passer par une adresse : 4096. Ce qui donne en héxadécimal, little endian : <code>00 01   04 00   01 00 00 00   00 10 00 00</code></p>
+<p>Cependant, ROK4SERVER a déjà connaissance de ces métadonnées car stockées dans le descripteur de pyramide et le TMS. On peut donc gagner du temps en ignorant cet en-tête. C'est pourquoi celle-ci fait toujours 2048 octets, dont la majorité n'est pas exploitée.</p>
+<p>On va enfin trouver dans cet en-tête les informations sur le tuilage, ou plutôt sur l'endroit où ces informations sont stockées (adresses et tailles).</p>
+<h4 id="les-donnees">Les données</h4>
+<h5 id="le-tuilage">Le tuilage</h5>
+<p>Le format TIFF permet de stocker les données par bloc, ceci dans le but d’accéder efficacement à toutes les parties de la dalle. On peut ainsi accéder à chaque tuile contenue dans la dalle directement, sans lire depuis le début. On conserve bien dans la structure de la dalle le découpage en tuile. Chaque tuile est indépendante des autres, formant un fichier à part entière, moins l'en-tête. Elles sont enregistrées de gauche à droite puis de haut en bas.</p>
+<p>Pour ce faire, on renseigne l'adresse de début (<em>TileOffsets</em>) sur 4 octets et la taille en octet (<em>TileByteCounts</em>) sur 4 octets de chaque tuile. Ces valeurs sont stockées à partir de 2048 octets, ce sont les premières valeurs lues par ROK4SERVER.</p>
+<p><img alt="Index des tuiles" src="../../images/TiffDonnees.png" /></p>
+<p>L'en-tête contient les étiquettes :</p>
+<ul>
+<li>TileOffsets : tag 324, type Long, on aura N valeurs, et celles-ci ne tenant pas toutes sur 4 octets, on donne l'adresse à laquelle ces valeurs commencent (ici 2048)</li>
+<li>TileByteCounts : tag 325, type Long, on aura N valeurs, et celles-ci ne tenant pas toutes sur 4 octets, on donne l'adresse à laquelle ces valeurs commencent (ici 2048 + 4*N)</li>
+</ul>
+<p>De cette manière, que ce soit ROK4 en étêtant de 2048 octets, ou les autres programmes, le tuilage est compris.</p>
+<h5 id="la-compression-cas-raster">La compression (cas raster)</h5>
+<p>Le format TIFF permet officiellement de nombreuses compressions pour des données raster. Cette compression est effectuée sur chaque tuile. ROK4SERVER, pour des données raster, va comprendre l'absence de compression et les compressions :</p>
+<ul>
+<li>sans pertes : LZW, PNG, PackBits, Deflate</li>
+<li>avec pertes : JPEG</li>
+</ul>
+<p>Le PNG a une particularité : la compression correspond à du Deflate, mais on veut que ROK4SERVER puisse retourner facilement des tuiles de PNG, avec l'en-tête. Dans ce cas, les dalles ne sont pas lisible par d'autres applications que ROK4. Les tuiles stockées contiennent chacune leur en-tête afin de pouvoir être renvoyées directement.</p>
+<p><img alt="Dalle PNG" src="../../images/TiffPNG.png" /></p>
+<h5 id="cas-vecteur">Cas vecteur</h5>
+<p>Le stockage de données vecteur dans des dalles TIFF est un fonctionnement propre au projet ROK4. Cette façon de faire permet d'exploiter tout le fonctionnement mis en place pour le raster afin de diffuser des tuiles vecteur. ROK4SERVER ne sait pas interpréter les tuiles, et se contente de les lires dans les dalles et de les renvoyer lorsqu'elles sont requêtées en TMS.</p>
+<p>Concrètement, ce sont les tuiles au format Mapbox Vector Tile empaquetées en PBF, générées par l'outil <a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a>, qui sont regroupées et encapsulées dans une dalle TIFF. Ce fonctionnement rejoint celui du PNG pour les données raster.</p>
+<h5 id="recapitulatif">Récapitulatif</h5>
+<p>Voici la structure globale d'une dalle de la pyramide ROK4, dalle contenant N tuiles.</p>
+<p><img alt="Récapitulatif d'une dalle" src="../../images/TiffRecapitulatif.png" /></p>
+<h4 id="les-references">Les références</h4>
+<p>Lors de la création d'une pyramide de mise à jour, on ne va potentiellement pas recopier toutes les données de la version précédente, mais simplement les référencer à l'aide de liens symbolique en stockage fichier ou d'objets symboliques (objet contenant simplement le nom du contenant et de l'objet cible précédé de la signature <code>SYMLINK#</code> : <code>SYMLINK#&lt;contenant&gt;/&lt;nom de l'objet&gt;</code>) en stockage objet. Cela est mis en place par les outils de prégénération mais est transparent pour le serveur qui se contente de lire UNE pyramide.</p>
+<h3 id="le-fichier-liste">Le fichier liste</h3>
+<p>Le fichier liste est un fichier texte (extension .list) au nom de la pyramide et situé à côté du descripteur de pyramide. Il contient la liste de toutes les dalles de données et masques que contient la pyramide. Si certaines dalles ne sont que des références dans la pyramide (liens/objets symboliques), c'est le nom du fichier/objet cible qui est listé (appartenant à la structure d'une autre pyramide).</p>
+<p>Ce fichier est uniquement utilisé par les outils de prégénération, pour connaître sans avoir à parcourir la pyramide son contenu exact (indispensable lors d'une mise à jour). Dans le cas du stockage objet, où aucun parcours n'est possible, ce fichier est particulièrement précieux.</p>
+<p>Le fichier liste est en deux parties, séparées par un dièse :</p>
+<ul>
+<li>L'en-tête permet de lister et d'indexer les pyramides référencées, c'est-à-dire contenant au moins une des dalles listées. L'index 0 sera pour la pyramide elle même. Ces index sont utilisés dans la liste des dalles pour "factoriser" les racines des pyramides (conteneur + nom dans le cas objet, dossier racine des données de la pyramide dans le cas fichier).</li>
+<li>La liste des dalles (données et masques)</li>
+</ul>
+<p>Exemple de liste pour un stockage fichier</p>
+<pre><code>0=/home/ign/PYRAMIDS/PYRAMID_V2
+1=/home/ign/PYRAMIDS/PYRAMID_V1
+\#
+1/DATA/19/04/RR/R2.tif
+1/DATA/19/04/RR/R3.tif
+1/DATA/19/04/RR/S1.tif
+1/DATA/19/04/RR/T1.tif
+1/DATA/19/04/RR/U0.tif
+1/DATA/19/04/RR/U1.tif
+1/DATA/19/04/RR/S2.tif
+1/DATA/19/04/RR/T2.tif
+1/DATA/19/04/RR/S3.tif
+1/DATA/19/04/RR/T3.tif
+1/DATA/19/04/RR/U2.tif
+1/DATA/18/02/DD/VJ.tif
+1/DATA/17/01/66/XR.tif
+1/DATA/16/00/3L/GD.tif
+1/DATA/18/02/DD/WI.tif
+1/DATA/18/02/DD/XI.tif
+0/DATA/19/04/VZ/JV.tif
+0/DATA/19/04/VZ/FY.tif
+0/DATA/19/04/VZ/FZ.tif
+0/DATA/19/04/VZ/GX.tif
+0/DATA/19/04/VZ/HX.tif
+0/DATA/19/04/VZ/IW.tif
+0/DATA/19/04/VZ/JW.tif
+0/DATA/19/04/VZ/IX.tif
+0/DATA/19/04/VZ/JX.tif
+0/DATA/19/04/VZ/GY.tif
+0/DATA/19/04/VZ/HY.tif
+0/DATA/19/04/VZ/GZ.tif
+0/DATA/19/04/VZ/HZ.tif
+0/DATA/19/04/VZ/IY.tif
+0/DATA/19/04/VZ/JY.tif
+0/DATA/19/04/VZ/IZ.tif
+0/DATA/19/04/VZ/JZ.tif
+</code></pre>
+<p>Exemple de liste pour un stockage objet</p>
+<pre><code>0=PYRAMIDS/PYRAMID_V2
+1=PYRAMIDS/PYRAMID_V1
+\#
+0/DATA_11_65_42
+0/MASK_11_65_42
+0/DATA_11_65_43
+0/MASK_11_65_43
+0/DATA_11_66_42
+0/MASK_11_66_42
+0/DATA_11_67_42
+0/MASK_11_67_42
+0/DATA_11_66_43
+0/MASK_11_66_43
+0/DATA_11_67_43
+0/MASK_11_67_43
+0/DATA_11_65_44
+0/MASK_11_65_44
+1/DATA_11_61_42
+1/MASK_11_61_42
+1/DATA_11_61_43
+1/MASK_11_61_43
+1/DATA_11_62_42
+1/MASK_11_62_42
+1/DATA_11_63_42
+1/MASK_11_63_42
+1/DATA_11_62_43
+1/MASK_11_62_43
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../../extras/swagger-ui-bundle.js"></script>
+      
+        <script src="../../extras/swagger-ui-standalone-preset.js"></script>
+      
+        <script src="../../extras/redoc.min.js"></script>
+      
+    
+  </body>
+</html>

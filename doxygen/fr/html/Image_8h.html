@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/image/Image.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_3806e1b72a3d84c77d8b67f55e796c89.html">image</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Image.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition de la classe abstraite <a class="el" href="classImage.html" title="Interface de manipulation d&#39;images.">Image</a>, abstrayant les différents types d'images.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;typeinfo&gt;</code><br />
+<code>#include &quot;<a class="el" href="BoundingBox_8h_source.html">utils/BoundingBox.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CRS_8h_source.html">utils/CRS.h</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Image.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="Image_8h__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2Image_8h" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2Image_8h" id="build_2sources_2core-cpp_2src_2image_2Image_8h">
+<area shape="rect" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="183,5,357,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,76,121"/>
+<area shape="rect" title=" " alt="" coords="100,95,171,121"/>
+<area shape="rect" title=" " alt="" coords="195,95,271,121"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="346,169,498,196"/>
+<area shape="rect" title=" " alt="" coords="277,244,340,271"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="397,95,489,121"/>
+<area shape="rect" title=" " alt="" coords="546,244,698,271"/>
+<area shape="rect" title=" " alt="" coords="365,244,423,271"/>
+<area shape="rect" title=" " alt="" coords="447,244,522,271"/>
+<area shape="rect" title=" " alt="" coords="522,169,581,196"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="Image_8h__dep__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2Image_8hdep" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2Image_8hdep" id="build_2sources_2core-cpp_2src_2image_2Image_8hdep">
+<area shape="rect" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="2610,5,2785,47"/>
+<area shape="rect" href="Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="838,310,991,351"/>
+<area shape="rect" href="Decoder_8h_source.html" title=" " alt="" coords="5111,95,5260,151"/>
+<area shape="rect" href="AscEncoder_8h_source.html" title=" " alt="" coords="857,95,1009,151"/>
+<area shape="rect" href="BilEncoder_8h_source.html" title=" " alt="" coords="5,95,157,151"/>
+<area shape="rect" href="JPEGEncoder_8h_source.html" title=" " alt="" coords="181,95,333,151"/>
+<area shape="rect" href="PNGEncoder_8h_source.html" title=" " alt="" coords="357,95,509,151"/>
+<area shape="rect" href="TiffDeflateEncoder_8h_source.html" title=" " alt="" coords="1600,199,1757,255"/>
+<area shape="rect" href="TiffHeader_8h_source.html" title=" " alt="" coords="1895,95,2047,151"/>
+<area shape="rect" href="TiffLZWEncoder_8h_source.html" title=" " alt="" coords="1781,199,1933,255"/>
+<area shape="rect" href="TiffPackBitsEncoder_8h_source.html" title=" " alt="" coords="2133,199,2299,255"/>
+<area shape="rect" href="TiffRawEncoder_8h_source.html" title=" " alt="" coords="1957,199,2109,255"/>
+<area shape="rect" href="TiffEncoder_8h_source.html" title=" " alt="" coords="1668,95,1820,151"/>
+<area shape="rect" href="AspectImage_8h_source.html" title=" " alt="" coords="3007,102,3225,143"/>
+<area shape="rect" href="CompoundImage_8h_source.html" title=" " alt="" coords="4841,102,5087,143"/>
+<area shape="rect" href="ConvertedChannelsImage_8h_source.html" title=" " alt="" coords="534,95,783,151"/>
+<area shape="rect" href="DecimatedImage_8h.html" title="Définition des classes DecimatedImage et DecimatedImageFactory." alt="" coords="3759,102,4006,143"/>
+<area shape="rect" href="EmptyImage_8h.html" title="Définition de la classe EmptyImage." alt="" coords="1325,102,1542,143"/>
+<area shape="rect" href="Level_8h_source.html" title=" " alt="" coords="1003,206,1159,247"/>
+<area shape="rect" href="EstompageImage_8h_source.html" title=" " alt="" coords="2172,102,2420,143"/>
+<area shape="rect" href="ExtendedCompoundImage_8h.html" title="Définition des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactory." alt="" coords="2552,199,2805,255"/>
+<area shape="rect" href="BilzImage_8h.html" title="Définition des classes BilzImage et BilzImageFactory." alt="" coords="3694,199,3837,255"/>
+<area shape="rect" href="FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="4303,95,4446,151"/>
+<area shape="rect" href="LibkakaduImage_8h.html" title="Définition des classes LibkakaduImage et LibkakaduImageFactory." alt="" coords="5053,199,5248,255"/>
+<area shape="rect" href="LibjpegImage_8h.html" title="Définition des classes LibjpegImage et LibjpegImageFactory." alt="" coords="3861,199,4003,255"/>
+<area shape="rect" href="LibpngImage_8h.html" title="Définition des classes LibpngImage et LibpngImageFactory." alt="" coords="4027,199,4170,255"/>
+<area shape="rect" href="LibtiffImage_8h.html" title="Définition des classes LibtiffImage et LibtiffImageFactory." alt="" coords="4886,199,5029,255"/>
+<area shape="rect" href="LibopenjpegImage_8h.html" title="Définition des classes LibopenjpegImage et LibopenjpegImageFactory." alt="" coords="4639,199,4862,255"/>
+<area shape="rect" href="merge4tiff_8cpp.html" title="Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques d..." alt="" coords="5686,206,5869,247"/>
+<area shape="rect" href="Rok4Image_8h.html" title="Implémentation des classes Rok4Image et Rok4ImageFactory." alt="" coords="4623,95,4766,151"/>
+<area shape="rect" href="MergeImage_8h.html" title="Définition des classes MergeImage, MergeImageFactory et MergeMask et du namespace Merge." alt="" coords="1033,102,1249,143"/>
+<area shape="rect" href="MirrorImage_8h.html" title="Définition des classes MirrorImage et MirrorImageFactory." alt="" coords="2445,102,2659,143"/>
+<area shape="rect" href="PenteImage_8h_source.html" title=" " alt="" coords="3250,102,3462,143"/>
+<area shape="rect" href="RawImage_8h_source.html" title=" " alt="" coords="5284,102,5487,143"/>
+<area shape="rect" href="ReprojectedImage_8cpp.html" title="Implémentation de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="3032,199,3232,255"/>
+<area shape="rect" href="ReprojectedImage_8h.html" title="Définition de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="3485,95,3685,151"/>
+<area shape="rect" href="ResampledImage_8h.html" title="Définition de la classe ResampledImage, permettant le réechantillonnage d&#39;image." alt="" coords="2735,102,2983,143"/>
+<area shape="rect" href="StyledImage_8h_source.html" title=" " alt="" coords="1360,206,1576,247"/>
+<area shape="rect" href="mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="2777,310,2959,351"/>
+<area shape="rect" href="composeNtiff_8cpp.html" title="Montage de N images TIFF aux mêmes dimensions et caractéristiques." alt="" coords="5341,310,5523,351"/>
+<area shape="rect" href="DecimatedImage_8cpp.html" title="Implémentation des classes DecimatedImage, DecimatedMask et DecimatedImageFactory." alt="" coords="3256,206,3517,247"/>
+<area shape="rect" href="decimateNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="3501,310,3683,351"/>
+<area shape="rect" href="ExtendedCompoundImage_8cpp.html" title="Implémentation des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactor..." alt="" coords="1809,303,2063,359"/>
+<area shape="rect" href="WebService_8h_source.html" title=" " alt="" coords="2323,206,2477,247"/>
+<area shape="rect" href="BilzImage_8cpp.html" title="Implémentation des classes BilzImage et BilzImageFactory." alt="" coords="3707,303,3850,359"/>
+<area shape="rect" href="FileImage_8cpp.html" title="Implémentation des classes FileImage et FileImageFactory." alt="" coords="4279,303,4422,359"/>
+<area shape="rect" href="TiffNodataManager_8h.html" title="Définition de la classe TiffNodataManager, permettant de modifier la couleur de nodata des images à c..." alt="" coords="4195,199,4357,255"/>
+<area shape="rect" href="cache2work_8cpp.html" title="Convertit une image d&#39;une pyramide ROK4 (TIFF tuilé) en une image TIFF, lisible avec LibtiffImage." alt="" coords="5273,206,5455,247"/>
+<area shape="rect" href="checkWork_8cpp.html" title="Contrôle la validité d&#39;une image." alt="" coords="4382,206,4565,247"/>
+<area shape="rect" href="pbf2cache_8cpp.html" title="Consitution d&#39;une dalle vecteur ROK4 à partir des tuiles PBF." alt="" coords="5479,206,5662,247"/>
+</map>
+</div>
+</div>
+<p><a href="Image_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html">Image</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface de manipulation d'images.  <a href="classImage.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a1e393cc64b739c257240579d793880ee"><td class="memItemLeft" align="right" valign="top"><a id="a1e393cc64b739c257240579d793880ee"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>METER_PER_DEG</b>&#160;&#160;&#160;111319.492</td></tr>
+<tr class="separator:a1e393cc64b739c257240579d793880ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition de la classe abstraite <a class="el" href="classImage.html" title="Interface de manipulation d&#39;images.">Image</a>, abstrayant les différents types d'images. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

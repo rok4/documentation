@@ -1,0 +1,25 @@
+<map id="build/sources/core&#45;cpp/src/image/file/BilzImage.h" name="build/sources/core&#45;cpp/src/image/file/BilzImage.h">
+<area shape="rect" id="node1" title="Define classes BilzImage and BilzImageFactory." alt="" coords="497,5,639,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,80,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="105,109,175,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="180,259,247,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="442,259,513,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="778,109,851,136"/>
+<area shape="rect" id="node7" href="$Format_8h.html" title="Define and the namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="537,259,665,285"/>
+<area shape="rect" id="node10" href="$FileImage_8h.html" title="Define classes FileImage and FileImageFactory." alt="" coords="485,109,651,136"/>
+<area shape="rect" id="node11" href="$Image_8h.html" title="Define the Image abstract class , to abstract all kind of images." alt="" coords="727,184,847,211"/>
+<area shape="rect" id="node23" title=" " alt="" coords="875,109,933,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="649,333,708,360"/>
+<area shape="rect" id="node9" title=" " alt="" coords="554,333,625,360"/>
+<area shape="rect" id="node19" href="$PixelConverter_8h.html" title="Define the PixelConverter class." alt="" coords="251,184,453,211"/>
+<area shape="rect" id="node12" title=" " alt="" coords="959,259,1035,285"/>
+<area shape="rect" id="node13" href="$BoundingBox_8h.html" title="Implement template class BoundingBox." alt="" coords="732,333,884,360"/>
+<area shape="rect" id="node17" title=" " alt="" coords="885,408,947,435"/>
+<area shape="rect" id="node18" href="$CRS_8h.html" title="Define the reference systems handler." alt="" coords="741,259,833,285"/>
+<area shape="rect" id="node14" title=" " alt="" coords="365,408,517,435"/>
+<area shape="rect" id="node15" title=" " alt="" coords="693,408,752,435"/>
+<area shape="rect" id="node16" title=" " alt="" coords="776,408,851,435"/>
+<area shape="rect" id="node20" href="$Utils_8h.html" title=" " alt="" coords="321,259,417,285"/>
+<area shape="rect" id="node21" title=" " alt="" coords="329,333,396,360"/>
+<area shape="rect" id="node22" title=" " alt="" coords="420,333,500,360"/>
+</map>

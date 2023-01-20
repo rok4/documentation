@@ -1,0 +1,6 @@
+<map id="build/sources/core&#45;cpp/src/image/ExtendedCompoundImage.h" name="build/sources/core&#45;cpp/src/image/ExtendedCompoundImage.h">
+<area shape="rect" id="node1" title="Définition des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactory." alt="" coords="248,5,501,61"/>
+<area shape="rect" id="node2" href="$ExtendedCompoundImage_8cpp.html" title="Implémentation des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactor..." alt="" coords="5,109,259,165"/>
+<area shape="rect" id="node3" href="$decimateNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="283,117,466,158"/>
+<area shape="rect" id="node4" href="$mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="490,117,673,158"/>
+</map>

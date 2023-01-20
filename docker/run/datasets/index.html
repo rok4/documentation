@@ -1,0 +1,1254 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="IGN">
+      
+      
+      
+        <link rel="prev" href="../../build/">
+      
+      
+        <link rel="next" href="../server/">
+      
+      <link rel="icon" href="../../../images/rok4-carre.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Génération de pyramides - Projet ROK4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extras/style.css">
+    
+      <link rel="stylesheet" href="../../../extras/swagger-ui.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stacks-de-generation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Projet ROK4" class="md-header__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../../../images/rok4-carre.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projet ROK4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Génération de pyramides
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../specifications/pyramid/" class="md-tabs__link">
+        Spécifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../server/" class="md-tabs__link">
+        Documentation utilisateur
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Utilisation de Docker
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../devs/" class="md-tabs__link">
+      Documentation développeur
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Projet ROK4" class="md-nav__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../../../images/rok4-carre.png" alt="logo">
+
+    </a>
+    Projet ROK4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Spécifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spécifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Spécifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/pyramid/" class="md-nav__link">
+        Pyramide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/api_server_swaggerui/" class="md-nav__link">
+        API du serveur (SwaggerUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specifications/api_server_redoc/" class="md-nav__link">
+        API du serveur (Redoc)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Documentation utilisateur
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation utilisateur" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation utilisateur
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/" class="md-nav__link">
+        Serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pregeneration/" class="md-nav__link">
+        Outils de pré-génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generation/" class="md-nav__link">
+        Outils de génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/" class="md-nav__link">
+        Outils de gestion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pytools/" class="md-nav__link">
+        Outils python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="true">
+          Utilisation de Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utilisation de Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilisation de Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        ROK4 & Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/" class="md-nav__link">
+        Compilation des images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Génération de pyramides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Génération de pyramides
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#be4" class="md-nav__link">
+    BE4
+  </a>
+  
+    <nav class="md-nav" aria-label="BE4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outil" class="md-nav__link">
+    Outil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jeux-de-donnees" class="md-nav__link">
+    Jeux de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4alamo" class="md-nav__link">
+    4ALAMO
+  </a>
+  
+    <nav class="md-nav" aria-label="4ALAMO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outil_1" class="md-nav__link">
+    Outil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jeux-de-donnees_1" class="md-nav__link">
+    Jeux de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tile-matrix-sets-utilise" class="md-nav__link">
+    Tile Matrix Sets utilisé
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details-sur-les-jeux-de-donnees" class="md-nav__link">
+    Détails sur les jeux de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Détails sur les jeux de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetbdalti-martinique" class="md-nav__link">
+    rok4/dataset:bdalti-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetpente-martinique" class="md-nav__link">
+    rok4/dataset:pente-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetbdortho5m-martinique" class="md-nav__link">
+    rok4/dataset:bdortho5m-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetgeofla-martinique" class="md-nav__link">
+    rok4/dataset:geofla-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetminio" class="md-nav__link">
+    rok4/dataset:minio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        Exécution d'une stack avec le serveur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../devs/" class="md-nav__link">
+        Documentation développeur
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#be4" class="md-nav__link">
+    BE4
+  </a>
+  
+    <nav class="md-nav" aria-label="BE4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outil" class="md-nav__link">
+    Outil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jeux-de-donnees" class="md-nav__link">
+    Jeux de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4alamo" class="md-nav__link">
+    4ALAMO
+  </a>
+  
+    <nav class="md-nav" aria-label="4ALAMO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outil_1" class="md-nav__link">
+    Outil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jeux-de-donnees_1" class="md-nav__link">
+    Jeux de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tile-matrix-sets-utilise" class="md-nav__link">
+    Tile Matrix Sets utilisé
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details-sur-les-jeux-de-donnees" class="md-nav__link">
+    Détails sur les jeux de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Détails sur les jeux de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetbdalti-martinique" class="md-nav__link">
+    rok4/dataset:bdalti-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetpente-martinique" class="md-nav__link">
+    rok4/dataset:pente-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetbdortho5m-martinique" class="md-nav__link">
+    rok4/dataset:bdortho5m-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetgeofla-martinique" class="md-nav__link">
+    rok4/dataset:geofla-martinique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rok4datasetminio" class="md-nav__link">
+    rok4/dataset:minio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stacks-de-generation">Stacks de génération</h1>
+<p>La génération complète se fait en utilisant les images <code>rok4/pregeneration</code>, <code>rok4/generation</code> et <code>rok4/tools</code>, disponibles sur <a href="https://hub.docker.com/r/rok4/">Docker Hub</a></p>
+<h2 id="be4">BE4</h2>
+<h3 id="outil">Outil</h3>
+<ul>
+<li>
+<p>Options pour le choix des étapes de génération</p>
+<ul>
+<li><code>--pregeneration</code> : étape de génération des scripts</li>
+<li><code>--generation</code> : étape d'exécution des scripts</li>
+<li><code>--layer</code> : étape de génération du descripteur de couche</li>
+<li><code>--image</code> : étape de compilation de l'image de la pyramide</li>
+<li><code>--all</code> : les 4 étapes</li>
+</ul>
+</li>
+<li>
+<p>Options pour le choix du jeu de données</p>
+<ul>
+<li><code>--ortho</code></li>
+<li><code>--alti</code></li>
+<li><code>--pente</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="jeux-de-donnees">Jeux de données</h3>
+<table>
+<thead>
+<tr>
+<th>Image de données</th>
+<th>Commande à lancer</th>
+<th>Dossier de pyramide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rok4/dataset:bdortho5m-martinique</code></td>
+<td><code>bash be4-generation.sh --all --ortho</code></td>
+<td><code>pyramids/BDORTHO</code></td>
+</tr>
+<tr>
+<td><code>rok4/dataset:pente-martinique</code></td>
+<td><code>bash be4-generation.sh --all --alti</code></td>
+<td><code>pyramids/ALTI</code></td>
+</tr>
+<tr>
+<td><code>rok4/dataset:bdalti-martinique</code></td>
+<td><code>bash be4-generation.sh --all --pente</code></td>
+<td><code>pyramids/PENTE</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4alamo">4ALAMO</h2>
+<h3 id="outil_1">Outil</h3>
+<ul>
+<li>
+<p>Options pour le choix des étapes de génération</p>
+<ul>
+<li><code>--pregeneration</code> : étape de génération des scripts</li>
+<li><code>--generation</code> : étape d'exécution des scripts</li>
+<li><code>--layer</code> : étape de génération du descripteur de couche</li>
+<li><code>--image</code> : étape de compilation de l'image de la pyramide</li>
+<li><code>--all</code> : les 4 étapes</li>
+</ul>
+</li>
+<li>
+<p>Options pour le choix du jeu de données</p>
+<ul>
+<li><code>--limadm</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="jeux-de-donnees_1">Jeux de données</h3>
+<table>
+<thead>
+<tr>
+<th>Image de données</th>
+<th>Commande à lancer</th>
+<th>Dossier de pyramide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rok4/dataset:geofla-martinique</code></td>
+<td><code>bash 4alamo-generation.sh --all --limadm</code></td>
+<td><code>pyramids/LIMADM</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tile-matrix-sets-utilise">Tile Matrix Sets utilisé</h2>
+<ul>
+<li><a href="https://github.com/rok4/tilematrixsets/blob/master/PM.json">PM</a></li>
+<li><a href="https://github.com/rok4/tilematrixsets/blob/master/UTM20W84MART_1M_MNT.json">UTM20W84MART_1M_MNT</a></li>
+</ul>
+<h2 id="details-sur-les-jeux-de-donnees">Détails sur les jeux de données</h2>
+<p>Jeux disponibles sous forme d'images Docker sur <a href="https://hub.docker.com/r/rok4/dataset">Docker Hub</a></p>
+<h3 id="rok4datasetbdalti-martinique">rok4/dataset:bdalti-martinique</h3>
+<p>1 pyramide, 1 couche</p>
+<ul>
+<li>Type : pyramide raster<ul>
+<li>Zone : Martinique</li>
+<li>Tile Matrix Set : UTM20W84MART_1M_MNT</li>
+<li>Niveau du bas : 6 (25m)</li>
+<li>Source des données : <a href="https://geoservices.ign.fr/ressource/154713">Alti (25m)</a>. Les données (format ASC) doivent être transformées en TIF pour être prise en charge par les outils de génération. Dans le dossier dézippé :</li>
+</ul>
+</li>
+</ul>
+<pre><code>cd BDALTIV2/1_DONNEES_LIVRAISON_2020-06-00407/BDALTIV2_MNT_25M_ASC_WGS84UTM20_MART87_D972
+gdalbuildvrt BDALTIV2_2-0_25M_ASC_WGS84UTM20-MART87_D972_2015-10-21.vrt BDALTIV2_25M_MTQ_0675_1625_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0675_1650_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0700_1600_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0700_1625_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0700_1650_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0725_1600_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0725_1625_MNT_WGS84UTM20_MART87.asc BDALTIV2_25M_MTQ_0725_1650_MNT_WGS84UTM20_MART87.asc
+gdalwarp BDALTIV2_2-0_25M_ASC_WGS84UTM20-MART87_D972_2015-10-21.vrt BDALTIV2_2-0_25M_ASC_WGS84UTM20-MART87_D972_2015-10-21.tif
+</code></pre>
+<ul>
+<li>
+<p>Volume à monter : /pyramids/ALTI</p>
+</li>
+<li>
+<p>Exemple de requête à jouer pour ajouter la couche (avec Get Feature Info activé sur la valeur du pixel)</p>
+</li>
+</ul>
+<pre><code class="language-bash">curl -X POST $ROK4SERVER_ENDPOINT/admin/layers/ALTI \
+-H 'Content-Type: application/json; charset=utf-8' \
+--data-binary @- &lt;&lt; EOF
+{
+   &quot;wms&quot; : {
+      &quot;authorized&quot; : true,
+      &quot;crs&quot; : [
+         &quot;IGNF:UTM20W84MART&quot;,
+         &quot;CRS:84&quot;,
+         &quot;IGNF:WGS84G&quot;,
+         &quot;EPSG:3857&quot;,
+         &quot;EPSG:4258&quot;,
+         &quot;EPSG:4326&quot;
+      ]
+   },
+   &quot;tms&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;keywords&quot; : [
+      &quot;UTM20W84MART_1M_MNT&quot;,
+      &quot;RASTER&quot;
+   ],
+   &quot;wmts&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;pyramids&quot; : [
+      {
+         &quot;top_level&quot; : &quot;0&quot;,
+         &quot;path&quot; : &quot;/pyramids/ALTI/ALTI.json&quot;,
+         &quot;bottom_level&quot; : &quot;6&quot;
+      }
+   ],
+   &quot;title&quot; : &quot;ALTI&quot;,
+   &quot;resampling&quot; : &quot;nn&quot;,
+   &quot;abstract&quot; : &quot;Diffusion de la donnée ALTI.json&quot;,
+   &quot;styles&quot; : [
+      &quot;normal&quot;,
+      &quot;hypso&quot;
+   ],
+   &quot;get_feature_info&quot;: {
+      &quot;type&quot;: &quot;PYRAMID&quot;
+   }
+}
+EOF
+</code></pre>
+<h3 id="rok4datasetpente-martinique">rok4/dataset:pente-martinique</h3>
+<p>1 pyramide, 1 couche</p>
+<ul>
+<li>
+<p>Type : pyramide raster</p>
+<ul>
+<li>Zone : Martinique</li>
+<li>Tile Matrix Set : PM</li>
+<li>Niveau du bas : 13 (20m)</li>
+<li>Source des données : <a href="https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html#bd-alti">Alti (250m)</a></li>
+</ul>
+</li>
+<li>
+<p>Volume à monter : /pyramids/PENTE</p>
+</li>
+<li>
+<p>Exemple de requête à jouer pour ajouter la couche</p>
+</li>
+</ul>
+<pre><code class="language-bash">curl -X POST $ROK4SERVER_ENDPOINT/admin/layers/PENTE \
+-H 'Content-Type: application/json; charset=utf-8' \
+--data-binary @- &lt;&lt; EOF
+{
+   &quot;wms&quot; : {
+      &quot;authorized&quot; : true,
+      &quot;crs&quot; : [
+         &quot;EPSG:3857&quot;,
+         &quot;CRS:84&quot;,
+         &quot;IGNF:WGS84G&quot;,
+         &quot;EPSG:3857&quot;,
+         &quot;EPSG:4258&quot;,
+         &quot;EPSG:4326&quot;
+      ]
+   },
+   &quot;abstract&quot; : &quot;Diffusion de la donnée PENTE.json&quot;,
+   &quot;title&quot; : &quot;PENTE&quot;,
+   &quot;pyramids&quot; : [
+      {
+         &quot;bottom_level&quot; : &quot;13&quot;,
+         &quot;path&quot; : &quot;/pyramids/PENTE/PENTE.json&quot;,
+         &quot;top_level&quot; : &quot;0&quot;
+      }
+   ],
+   &quot;styles&quot; : [
+      &quot;normal&quot;
+   ],
+   &quot;tms&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;wmts&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;keywords&quot; : [
+      &quot;PM&quot;,
+      &quot;RASTER&quot;
+   ]
+}
+EOF
+</code></pre>
+<h3 id="rok4datasetbdortho5m-martinique">rok4/dataset:bdortho5m-martinique</h3>
+<p>1 pyramides, 1 couches</p>
+<ul>
+<li>
+<p>Type : pyramide raster</p>
+<ul>
+<li>Zone : Martinique</li>
+<li>Tile Matrix Set : PM</li>
+<li>Niveau du bas : 15 (7m)</li>
+<li>Source des données : <a href="https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html#bd-ortho-5-m">BDOrtho (5m)</a></li>
+</ul>
+</li>
+<li>
+<p>Volume à monter : /pyramids/BDORTHO</p>
+</li>
+<li>
+<p>Exemple de requête à jouer pour ajouter la couche</p>
+</li>
+</ul>
+<pre><code class="language-bash">curl -X POST $ROK4SERVER_ENDPOINT/admin/layers/BDORTHO \
+-H 'Content-Type: application/json; charset=utf-8' \
+--data-binary @- &lt;&lt; EOF
+{
+   &quot;title&quot; : &quot;BDORTHO&quot;,
+   &quot;abstract&quot; : &quot;Diffusion de la donnée BDORTHO.json&quot;,
+   &quot;wmts&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;keywords&quot; : [
+      &quot;PM&quot;,
+      &quot;RASTER&quot;
+   ],
+   &quot;tms&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;styles&quot; : [
+      &quot;normal&quot;
+   ],
+   &quot;pyramids&quot; : [
+      {
+         &quot;path&quot; : &quot;/pyramids/BDORTHO/BDORTHO.json&quot;,
+         &quot;top_level&quot; : &quot;0&quot;,
+         &quot;bottom_level&quot; : &quot;15&quot;
+      }
+   ],
+   &quot;wms&quot; : {
+      &quot;crs&quot; : [
+         &quot;EPSG:3857&quot;,
+         &quot;CRS:84&quot;,
+         &quot;IGNF:WGS84G&quot;,
+         &quot;EPSG:3857&quot;,
+         &quot;EPSG:4258&quot;,
+         &quot;EPSG:4326&quot;
+      ],
+      &quot;authorized&quot; : true
+   }
+}
+EOF
+</code></pre>
+<h3 id="rok4datasetgeofla-martinique">rok4/dataset:geofla-martinique</h3>
+<p>1 pyramide, 1 couche</p>
+<ul>
+<li>
+<p>Type : pyramide vecteur</p>
+<ul>
+<li>Zone : Martinique</li>
+<li>Tile Matrix Set : PM</li>
+<li>Niveau du bas : 18</li>
+<li>Source des données : <a href="https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html#geofla">GEOFLA</a></li>
+</ul>
+</li>
+<li>
+<p>Volume à monter : /pyramids/LIMADM</p>
+</li>
+<li>
+<p>Exemple de requête à jouer pour ajouter la couche</p>
+</li>
+</ul>
+<pre><code class="language-bash">curl -X POST $ROK4SERVER_ENDPOINT/admin/layers/LIMADM \
+-H 'Content-Type: application/json; charset=utf-8' \
+--data-binary @- &lt;&lt; EOF
+{
+   &quot;tms&quot; : {
+      &quot;authorized&quot; : true
+   },
+   &quot;keywords&quot; : [
+      &quot;PM&quot;,
+      &quot;RASTER&quot;
+   ],
+   &quot;abstract&quot; : &quot;Diffusion de la donnée LIMADM.json&quot;,
+   &quot;title&quot; : &quot;LIMADM&quot;,
+   &quot;pyramids&quot; : [
+      {
+         &quot;top_level&quot; : &quot;0&quot;,
+         &quot;path&quot; : &quot;/pyramids/LIMADM/LIMADM.json&quot;,
+         &quot;bottom_level&quot; : &quot;18&quot;
+      }
+   ]
+}
+EOF
+</code></pre>
+<h3 id="rok4datasetminio">rok4/dataset:minio</h3>
+<p>Cette image, ayant pour base <code>minio/minio</code>, est un styockage S3 contenant les styles, les tile matrix sets, les pyramides et les descripteurs de couche. Ce stockage centralisé permet d'exploiter le fonctionnement du serveur ROK4 5.0.0.</p>
+<p>Ce stockage se lance via la commande <code>docker run -p 9000:9000 -p 9001:9001 rok4/dataset:minio</code> et une interface graphique de gestion est disponible à l'URL <code>http://localhost:9001/buckets</code> (accès : rok4 / rok4S3storage)</p>
+<p>Ce stockage contient les buckets suivants :</p>
+<ul>
+<li><code>styles</code> : tous les styles du projet ROK4</li>
+<li><code>tilematrixsets</code> : tous les tile matrix sets du projet ROK4</li>
+<li><code>pyramids</code> : les pyramides BDORTHO, ALTI, PENTE et LIMADM</li>
+<li><code>layers</code> : l'objet liste <code>list.txt</code> et les descripteurs de couche BDORTHO, ALTI, PENTE et LIMADM</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../../../extras/swagger-ui-bundle.js"></script>
+      
+        <script src="../../../extras/swagger-ui-standalone-preset.js"></script>
+      
+        <script src="../../../extras/redoc.min.js"></script>
+      
+    
+  </body>
+</html>

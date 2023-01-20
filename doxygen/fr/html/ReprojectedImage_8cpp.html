@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/image/ReprojectedImage.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_3806e1b72a3d84c77d8b67f55e796c89.html">image</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Référence du fichier ReprojectedImage.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémentation de la classe <a class="el" href="classReprojectedImage.html" title="Manipulation d&#39;image reprojetée.">ReprojectedImage</a>, permettant la reprojection d'image.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="ReprojectedImage_8h_source.html">image/ReprojectedImage.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="Image_8h_source.html">image/Image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Grid_8h_source.html">processors/Grid.h</a>&quot;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="Kernel_8h_source.html">processors/Kernel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Utils_8h_source.html">utils/Utils.h</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ReprojectedImage.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ReprojectedImage_8cpp__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2ReprojectedImage_8cpp" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2ReprojectedImage_8cpp" id="build_2sources_2core-cpp_2src_2image_2ReprojectedImage_8cpp">
+<area shape="rect" title="Implémentation de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="479,5,679,61"/>
+<area shape="rect" href="ReprojectedImage_8h.html" title="Définition de la classe ReprojectedImage, permettant la reprojection d&#39;image." alt="" coords="412,109,611,136"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="725,184,845,211"/>
+<area shape="rect" title=" " alt="" coords="810,408,962,435"/>
+<area shape="rect" title=" " alt="" coords="1000,408,1063,435"/>
+<area shape="rect" title=" " alt="" coords="330,333,389,360"/>
+<area shape="rect" href="Grid_8h.html" title="Définition de la classe Grid." alt="" coords="565,184,700,211"/>
+<area shape="rect" href="Kernel_8h.html" title="Définition de la classe Kernel, classe mère des différents noyaux d&#39;interpolation." alt="" coords="205,184,354,211"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="85,184,181,211"/>
+<area shape="rect" href="Interpolation_8h.html" title="Définition de l&#39;énumération des interpolations disponibles et des conversions." alt="" coords="217,259,382,285"/>
+<area shape="rect" title=" " alt="" coords="379,184,489,211"/>
+<area shape="rect" title=" " alt="" coords="457,259,528,285"/>
+<area shape="rect" title=" " alt="" coords="823,259,893,285"/>
+<area shape="rect" title=" " alt="" coords="917,259,993,285"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="646,333,798,360"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="655,259,747,285"/>
+<area shape="rect" title=" " alt="" coords="550,408,609,435"/>
+<area shape="rect" title=" " alt="" coords="685,408,759,435"/>
+<area shape="rect" title=" " alt="" coords="113,259,193,285"/>
+<area shape="rect" title=" " alt="" coords="22,259,89,285"/>
+</map>
+</div>
+</div><a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentation de la classe <a class="el" href="classReprojectedImage.html" title="Manipulation d&#39;image reprojetée.">ReprojectedImage</a>, permettant la reprojection d'image. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

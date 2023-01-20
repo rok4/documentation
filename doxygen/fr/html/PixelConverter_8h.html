@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/processors/PixelConverter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_b5ea233ea026704e6759bae58bade1cb.html">processors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier PixelConverter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition de la classe <a class="el" href="classPixelConverter.html" title="Outil de conversion des images à la volée.">PixelConverter</a>, permettant de convertir à la volée les pixels.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="Utils_8h_source.html">utils/Utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Format_8h_source.html">enums/Format.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de PixelConverter.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="PixelConverter_8h__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2processors_2PixelConverter_8h" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2processors_2PixelConverter_8h" id="build_2sources_2core-cpp_2src_2processors_2PixelConverter_8h">
+<area shape="rect" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="194,5,341,61"/>
+<area shape="rect" title=" " alt="" coords="5,109,76,136"/>
+<area shape="rect" title=" " alt="" coords="101,109,167,136"/>
+<area shape="rect" title=" " alt="" coords="191,109,343,136"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="367,109,463,136"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="487,109,615,136"/>
+<area shape="rect" title=" " alt="" coords="285,184,351,211"/>
+<area shape="rect" title=" " alt="" coords="375,184,455,211"/>
+<area shape="rect" title=" " alt="" coords="480,184,551,211"/>
+<area shape="rect" title=" " alt="" coords="575,184,634,211"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="PixelConverter_8h__dep__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2processors_2PixelConverter_8hdep" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2processors_2PixelConverter_8hdep" id="build_2sources_2core-cpp_2src_2processors_2PixelConverter_8hdep">
+<area shape="rect" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="1821,5,1967,61"/>
+<area shape="rect" href="FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="1768,109,1911,165"/>
+<area shape="rect" href="mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="2917,221,3100,262"/>
+<area shape="rect" href="BilzImage_8h.html" title="Définition des classes BilzImage et BilzImageFactory." alt="" coords="1092,213,1235,269"/>
+<area shape="rect" href="FileImage_8cpp.html" title="Implémentation des classes FileImage et FileImageFactory." alt="" coords="752,317,895,373"/>
+<area shape="rect" href="LibkakaduImage_8h.html" title="Définition des classes LibkakaduImage et LibkakaduImageFactory." alt="" coords="1426,213,1621,269"/>
+<area shape="rect" href="LibjpegImage_8h.html" title="Définition des classes LibjpegImage et LibjpegImageFactory." alt="" coords="1259,213,1401,269"/>
+<area shape="rect" href="LibpngImage_8h.html" title="Définition des classes LibpngImage et LibpngImageFactory." alt="" coords="433,213,576,269"/>
+<area shape="rect" href="LibtiffImage_8h.html" title="Définition des classes LibtiffImage et LibtiffImageFactory." alt="" coords="600,213,743,269"/>
+<area shape="rect" href="LibopenjpegImage_8h.html" title="Définition des classes LibopenjpegImage et LibopenjpegImageFactory." alt="" coords="845,213,1068,269"/>
+<area shape="rect" href="TiffNodataManager_8h.html" title="Définition de la classe TiffNodataManager, permettant de modifier la couleur de nodata des images à c..." alt="" coords="2679,213,2842,269"/>
+<area shape="rect" href="work2cache_8cpp.html" title="Formattage d&#39;une image, respectant les spécifications d&#39;une pyramide de données ROK4." alt="" coords="2788,325,2971,366"/>
+<area shape="rect" href="cache2work_8cpp.html" title="Convertit une image d&#39;une pyramide ROK4 (TIFF tuilé) en une image TIFF, lisible avec LibtiffImage." alt="" coords="1645,221,1828,262"/>
+<area shape="rect" href="checkWork_8cpp.html" title="Contrôle la validité d&#39;une image." alt="" coords="1852,221,2035,262"/>
+<area shape="rect" href="decimateNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="2059,221,2241,262"/>
+<area shape="rect" href="merge4tiff_8cpp.html" title="Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques d..." alt="" coords="2265,221,2448,262"/>
+<area shape="rect" href="pbf2cache_8cpp.html" title="Consitution d&#39;une dalle vecteur ROK4 à partir des tuiles PBF." alt="" coords="2472,221,2655,262"/>
+<area shape="rect" href="BilzImage_8cpp.html" title="Implémentation des classes BilzImage et BilzImageFactory." alt="" coords="1180,317,1323,373"/>
+<area shape="rect" href="LibkakaduImage_8cpp.html" title="Implémentation des classes LibkakaduImage et LibkakaduImageFactory." alt="" coords="1513,317,1723,373"/>
+<area shape="rect" href="LibjpegImage_8cpp.html" title="Implémentation des classes LibjpegImage et LibjpegImageFactory." alt="" coords="1347,317,1489,373"/>
+<area shape="rect" href="LibpngImage_8cpp.html" title="Implémentation des classes LibpngImage et LibpngImageFactory." alt="" coords="5,317,148,373"/>
+<area shape="rect" href="LibtiffImage_8cpp.html" title="Implémentation des classes LibtiffImage et LibtiffImageFactory." alt="" coords="585,317,728,373"/>
+<area shape="rect" href="composeNtiff_8cpp.html" title="Montage de N images TIFF aux mêmes dimensions et caractéristiques." alt="" coords="172,325,355,366"/>
+<area shape="rect" href="overlayNtiff_8cpp.html" title="Fusion de N images aux mêmes dimensions, selon différentes méthodes." alt="" coords="379,325,561,366"/>
+<area shape="rect" href="LibopenjpegImage_8cpp.html" title="Implémentation des classes LibopenjpegImage et LibopenjpegImageFactory." alt="" coords="919,317,1157,373"/>
+<area shape="rect" href="manageNodata_8cpp.html" title="Gère la couleur des pixels de nodata." alt="" coords="2581,325,2764,366"/>
+</map>
+</div>
+</div>
+<p><a href="PixelConverter_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixelConverter.html">PixelConverter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outil de conversion des images à la volée.  <a href="classPixelConverter.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition de la classe <a class="el" href="classPixelConverter.html" title="Outil de conversion des images à la volée.">PixelConverter</a>, permettant de convertir à la volée les pixels. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

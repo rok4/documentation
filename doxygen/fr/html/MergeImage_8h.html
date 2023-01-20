@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/image/MergeImage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_3806e1b72a3d84c77d8b67f55e796c89.html">image</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Espaces de nommage</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier MergeImage.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition des classes <a class="el" href="classMergeImage.html" title="Fusion d&#39;images de mêmes dimensions.">MergeImage</a>, <a class="el" href="classMergeImageFactory.html" title="Usine de création d&#39;une image fusionnée.">MergeImageFactory</a> et <a class="el" href="classMergeMask.html" title="Manipulation d&#39;un masque fusionné, s&#39;appuyant sur une image fusionné">MergeMask</a> et du namespace <a class="el" href="namespaceMerge.html" title="Gestion des informations liées à la méthode de fusion.">Merge</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Image_8h_source.html">image/Image.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="Format_8h_source.html">enums/Format.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de MergeImage.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="MergeImage_8h__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2MergeImage_8h" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2MergeImage_8h" id="build_2sources_2core-cpp_2src_2image_2MergeImage_8h">
+<area shape="rect" title="Définition des classes MergeImage, MergeImageFactory et MergeMask et du namespace Merge." alt="" coords="309,5,525,47"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="309,95,429,121"/>
+<area shape="rect" title=" " alt="" coords="533,169,603,196"/>
+<area shape="rect" title=" " alt="" coords="505,95,567,121"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="91,95,219,121"/>
+<area shape="rect" title=" " alt="" coords="119,169,190,196"/>
+<area shape="rect" title=" " alt="" coords="433,169,509,196"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="195,244,347,271"/>
+<area shape="rect" title=" " alt="" coords="363,319,426,345"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="214,169,306,196"/>
+<area shape="rect" title=" " alt="" coords="5,319,157,345"/>
+<area shape="rect" title=" " alt="" coords="181,319,240,345"/>
+<area shape="rect" title=" " alt="" coords="264,319,339,345"/>
+<area shape="rect" title=" " alt="" coords="88,244,147,271"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="MergeImage_8h__dep__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2MergeImage_8hdep" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2MergeImage_8hdep" id="build_2sources_2core-cpp_2src_2image_2MergeImage_8hdep">
+<area shape="rect" title="Définition des classes MergeImage, MergeImageFactory et MergeMask et du namespace Merge." alt="" coords="190,5,406,47"/>
+<area shape="rect" href="Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="5,95,159,136"/>
+<area shape="rect" href="MergeImage_8cpp.html" title="Implémentation des classes MergeImage, MergeImageFactory et MergeMask et du namespace Merge." alt="" coords="183,95,413,136"/>
+<area shape="rect" href="overlayNtiff_8cpp.html" title="Fusion de N images aux mêmes dimensions, selon différentes méthodes." alt="" coords="437,95,620,136"/>
+</map>
+</div>
+</div>
+<p><a href="MergeImage_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMergeImage.html">MergeImage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fusion d'images de mêmes dimensions.  <a href="classMergeImage.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMergeImageFactory.html">MergeImageFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usine de création d'une image fusionnée.  <a href="classMergeImageFactory.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMergeMask.html">MergeMask</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manipulation d'un masque fusionné, s'appuyant sur une image fusionné  <a href="classMergeMask.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Espaces de nommage</h2></td></tr>
+<tr class="memitem:namespaceMerge"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMerge.html">Merge</a></td></tr>
+<tr class="memdesc:namespaceMerge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion des informations liées à la méthode de fusion. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:afb369901290981aaabe51f39e2c32936"><td class="memItemLeft" align="right" valign="top"><a id="afb369901290981aaabe51f39e2c32936"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMerge.html#afb369901290981aaabe51f39e2c32936">Merge::eMergeType</a> { <br />
+&#160;&#160;<b>UNKNOWN</b> = 0, 
+<b>NORMAL</b> = 1, 
+<b>LIGHTEN</b> = 2, 
+<b>DARKEN</b> = 3, 
+<br />
+&#160;&#160;<b>MULTIPLY</b> = 4, 
+<b>ALPHATOP</b> = 5, 
+<b>TOP</b> = 6
+<br />
+ }</td></tr>
+<tr class="memdesc:afb369901290981aaabe51f39e2c32936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Énumération des méthodes de fusion disponibles. <br /></td></tr>
+<tr class="separator:afb369901290981aaabe51f39e2c32936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae78b7f0cff00bef23e046e069a6b8b29"><td class="memItemLeft" align="right" valign="top">eMergeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMerge.html#ae78b7f0cff00bef23e046e069a6b8b29">Merge::fromString</a> (std::string strMergeMethod)</td></tr>
+<tr class="memdesc:ae78b7f0cff00bef23e046e069a6b8b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion d'une chaîne de caractères vers une méthode de fusion de l'énumération.  <a href="namespaceMerge.html#ae78b7f0cff00bef23e046e069a6b8b29">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae78b7f0cff00bef23e046e069a6b8b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15cbc951ad8aac4fe923ea619046cef9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMerge.html#a15cbc951ad8aac4fe923ea619046cef9">Merge::toString</a> (eMergeType <a class="el" href="overlayNtiff_8cpp.html#adb28a07dccafd4d9f1fc972f31049247">mergeMethod</a>)</td></tr>
+<tr class="memdesc:a15cbc951ad8aac4fe923ea619046cef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion d'une méthode de fusion vers une chaîne de caractères.  <a href="namespaceMerge.html#a15cbc951ad8aac4fe923ea619046cef9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a15cbc951ad8aac4fe923ea619046cef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab023fb24614333810307974e8f67964c"><td class="memItemLeft" align="right" valign="top"><a id="ab023fb24614333810307974e8f67964c"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMerge.html#ab023fb24614333810307974e8f67964c">Merge::mergeType_size</a> = 6</td></tr>
+<tr class="memdesc:ab023fb24614333810307974e8f67964c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de méthodes disponibles. <br /></td></tr>
+<tr class="separator:ab023fb24614333810307974e8f67964c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition des classes <a class="el" href="classMergeImage.html" title="Fusion d&#39;images de mêmes dimensions.">MergeImage</a>, <a class="el" href="classMergeImageFactory.html" title="Usine de création d&#39;une image fusionnée.">MergeImageFactory</a> et <a class="el" href="classMergeMask.html" title="Manipulation d&#39;un masque fusionné, s&#39;appuyant sur une image fusionné">MergeMask</a> et du namespace <a class="el" href="namespaceMerge.html" title="Gestion des informations liées à la méthode de fusion.">Merge</a>. </p>
+<ul>
+<li><a class="el" href="classMergeImage.html" title="Fusion d&#39;images de mêmes dimensions.">MergeImage</a> : image résultant de la fusion d'images semblables, selon différents modes de composition </li>
+<li><a class="el" href="classMergeImageFactory.html" title="Usine de création d&#39;une image fusionnée.">MergeImageFactory</a> : usine de création d'objet <a class="el" href="classMergeImage.html" title="Fusion d&#39;images de mêmes dimensions.">MergeImage</a> </li>
+<li><a class="el" href="classMergeMask.html" title="Manipulation d&#39;un masque fusionné, s&#39;appuyant sur une image fusionné">MergeMask</a> : masque fusionné, associé à une image fusionnée </li>
+<li><a class="el" href="namespaceMerge.html" title="Gestion des informations liées à la méthode de fusion.">Merge</a> : énumère et manipule les différentes méthodes de fusion </li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

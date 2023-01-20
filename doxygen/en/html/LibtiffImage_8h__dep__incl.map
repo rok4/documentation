@@ -1,0 +1,7 @@
+<map id="build/sources/core&#45;cpp/src/image/file/LibtiffImage.h" name="build/sources/core&#45;cpp/src/image/file/LibtiffImage.h">
+<area shape="rect" id="node1" title="Define classes LibtiffImage and LibtiffImageFactory." alt="" coords="265,5,408,61"/>
+<area shape="rect" id="node2" href="$FileImage_8cpp.html" title="Implement classes FileImage and FileImageFactory." alt="" coords="5,109,148,165"/>
+<area shape="rect" id="node3" href="$LibtiffImage_8cpp.html" title="Implement classes LibtiffImage and LibtiffImageFactory." alt="" coords="172,109,315,165"/>
+<area shape="rect" id="node4" href="$composeNtiff_8cpp.html" title="Monte N TIFF images with same dimensions and attributes." alt="" coords="339,117,521,158"/>
+<area shape="rect" id="node5" href="$overlayNtiff_8cpp.html" title="Merge N images with same dimensions, according to different merge methods." alt="" coords="545,117,728,158"/>
+</map>

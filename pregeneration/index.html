@@ -1,0 +1,1545 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="IGN">
+      
+      
+      
+        <link rel="prev" href="../server/">
+      
+      
+        <link rel="next" href="../generation/">
+      
+      <link rel="icon" href="../images/rok4-carre.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Outils de pré-génération - Projet ROK4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extras/style.css">
+    
+      <link rel="stylesheet" href="../extras/swagger-ui.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#outils-de-pre-generation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Projet ROK4" class="md-header__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../images/rok4-carre.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projet ROK4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Outils de pré-génération
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../specifications/pyramid/" class="md-tabs__link">
+        Spécifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../server/" class="md-tabs__link md-tabs__link--active">
+        Documentation utilisateur
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker/" class="md-tabs__link">
+        Utilisation de Docker
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../devs/" class="md-tabs__link">
+      Documentation développeur
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projet ROK4" class="md-nav__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../images/rok4-carre.png" alt="logo">
+
+    </a>
+    Projet ROK4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Spécifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spécifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Spécifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/pyramid/" class="md-nav__link">
+        Pyramide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/api_server_swaggerui/" class="md-nav__link">
+        API du serveur (SwaggerUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/api_server_redoc/" class="md-nav__link">
+        API du serveur (Redoc)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Documentation utilisateur
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation utilisateur" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation utilisateur
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        Serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Outils de pré-génération
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Outils de pré-génération
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-depuis-le-paquet-debian" class="md-nav__link">
+    Installation depuis le paquet debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-depuis-les-sources" class="md-nav__link">
+    Installation depuis les sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-denvironnement-utilisees-dans-les-librairies-rok4core" class="md-nav__link">
+    Variables d'environnement utilisées dans les librairies ROK4::Core
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-des-outils" class="md-nav__link">
+    Présentation des outils
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation des outils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#be4" class="md-nav__link">
+    BE4
+  </a>
+  
+    <nav class="md-nav" aria-label="BE4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joincache" class="md-nav__link">
+    JOINCACHE
+  </a>
+  
+    <nav class="md-nav" aria-label="JOINCACHE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_1" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration_1" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4alamo" class="md-nav__link">
+    4ALAMO
+  </a>
+  
+    <nav class="md-nav" aria-label="4ALAMO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_2" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration_2" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4head" class="md-nav__link">
+    4HEAD
+  </a>
+  
+    <nav class="md-nav" aria-label="4HEAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commande" class="md-nav__link">
+    Commande
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyr2pyr" class="md-nav__link">
+    PYR2PYR
+  </a>
+  
+    <nav class="md-nav" aria-label="PYR2PYR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_3" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_3" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration_3" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generation/" class="md-nav__link">
+        Outils de génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        Outils de gestion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytools/" class="md-nav__link">
+        Outils python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Utilisation de Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utilisation de Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilisation de Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        ROK4 & Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/build/" class="md-nav__link">
+        Compilation des images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/run/datasets/" class="md-nav__link">
+        Génération de pyramides
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/run/server/" class="md-nav__link">
+        Exécution d'une stack avec le serveur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devs/" class="md-nav__link">
+        Documentation développeur
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-depuis-le-paquet-debian" class="md-nav__link">
+    Installation depuis le paquet debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-depuis-les-sources" class="md-nav__link">
+    Installation depuis les sources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-denvironnement-utilisees-dans-les-librairies-rok4core" class="md-nav__link">
+    Variables d'environnement utilisées dans les librairies ROK4::Core
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-des-outils" class="md-nav__link">
+    Présentation des outils
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation des outils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#be4" class="md-nav__link">
+    BE4
+  </a>
+  
+    <nav class="md-nav" aria-label="BE4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joincache" class="md-nav__link">
+    JOINCACHE
+  </a>
+  
+    <nav class="md-nav" aria-label="JOINCACHE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_1" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration_1" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4alamo" class="md-nav__link">
+    4ALAMO
+  </a>
+  
+    <nav class="md-nav" aria-label="4ALAMO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_2" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_2" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration_2" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4head" class="md-nav__link">
+    4HEAD
+  </a>
+  
+    <nav class="md-nav" aria-label="4HEAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commande" class="md-nav__link">
+    Commande
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyr2pyr" class="md-nav__link">
+    PYR2PYR
+  </a>
+  
+    <nav class="md-nav" aria-label="PYR2PYR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_3" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_3" class="md-nav__link">
+    Détails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-configuration_3" class="md-nav__link">
+    Exemples de configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="outils-de-pre-generation">Outils de pré-génération</h1>
+<p>Les outils de pré-génération font partie du projet open-source ROK4 (sous licence CeCILL-C) développé par les équipes du projet <a href="https://www.geoportail.gouv.fr">Géoportail</a>(<a href="https://twitter.com/Geoportail">@Geoportail</a>) de l’<a href="https://ign.fr">Institut National de l’Information Géographique et Forestière</a> (<a href="https://twitter.com/IGNFrance">@IGNFrance</a>). Ils sont écrits en perl et travaillent en amont lors de la génération d'une pyramide raster (<a href="#be4">BE4</a>, <a href="#joincache">JOINCACHE</a>) ou vecteur (<a href="#4alamo">4ALAMO</a>), d'une recopie de pyramide (<a href="#pyr2pyr">PYR2PYR</a>) ou du recalcul de tête d'une pyramide raster (<a href="#4head">4HEAD</a>)</p>
+<p>Ces outils identifient le travail à réaliser et le répartissent dans des scripts BASH, selon un niveau de parallélisation choisi. C'est l'exécution de ces derniers qui écrit les dalles des pyramides.</p>
+<p>Ces scripts utilisent les outils de <a href="https://github.com/rok4/generation">génération du projet</a>, ainsi que des commandes externes.</p>
+<p>Il est possible que les scripts BASH sachent faire de la reprise sur erreur. Dans chaque dossier temporaire individuel, un fichier liste contient le travail déjà réalisé. Au lancement du script, si ce fichier liste existe déjà, il identifie la dernière dalle générée et ignorera toutes les instructions jusqu'à retomber sur cette dalle. On peut donc en cas d'erreur relancer le script sans paramétrage et reprendre où il en était à l'exécution précédente.</p>
+<p>De même, un fichier .prog à côté du script peut être mis à jour avec le pourcentage de progression (calculé à partir des lignes du script).</p>
+<h2 id="installation-depuis-le-paquet-debian">Installation depuis le paquet debian</h2>
+<p>Télécharger les paquets sur GitHub : </p>
+<ul>
+<li><a href="https://github.com/rok4/core-perl/releases/">Les librairies Core</a></li>
+<li><a href="https://github.com/rok4/pregeneration/releases/">Les outils</a></li>
+</ul>
+<pre><code>apt install ./librok4-core-perl-&lt;version&gt;-linux-all.deb
+apt install ./rok4-pregeneration-&lt;version&gt;-linux-all.deb
+</code></pre>
+<h2 id="installation-depuis-les-sources">Installation depuis les sources</h2>
+<p>Dépendances (paquets debian) :</p>
+<ul>
+<li>perl-base</li>
+<li><a href="https://github.com/rok4/core-perl/releases/">librok4-core-perl</a></li>
+<li>libfindbin-libs-perl</li>
+<li>libmath-bigint-perl</li>
+<li>liblog-log4perl-perl</li>
+<li>libjson-parse-perl</li>
+<li>libjson-perl</li>
+</ul>
+<pre><code>perl Makefile.PL INSTALL_BASE=/usr VERSION=0.0.1 PREREQ_FATAL=1
+make
+make injectversion
+make install
+</code></pre>
+<h2 id="variables-denvironnement-utilisees-dans-les-librairies-rok4core">Variables d'environnement utilisées dans les librairies ROK4::Core</h2>
+<p>Leur définition est contrôlée à l'usage.</p>
+<ul>
+<li><code>ROK4_TMS_DIRECTORY</code> pour y chercher les Tile Matrix Sets. Ces derniers peuvent être téléchargés sur <a href="https://github.com/rok4/tilematrixsets/releases/">GitHub</a>, installés depuis le paquet debian et seront alors dans le dossier <code>/etc/rok4/tilematrixsets</code>.</li>
+<li>Pour le stockage CEPH<ul>
+<li><code>ROK4_CEPH_CONFFILE</code></li>
+<li><code>ROK4_CEPH_USERNAME</code></li>
+<li><code>ROK4_CEPH_CLUSTERNAME</code></li>
+</ul>
+</li>
+<li>Pour le stockage S3<ul>
+<li><code>ROK4_S3_URL</code></li>
+<li><code>ROK4_S3_KEY</code></li>
+<li><code>ROK4_S3_SECRETKEY</code></li>
+</ul>
+</li>
+<li>Pour le stockage SWIFT<ul>
+<li><code>ROK4_SWIFT_AUTHURL</code></li>
+<li><code>ROK4_SWIFT_USER</code></li>
+<li><code>ROK4_SWIFT_PASSWD</code></li>
+<li><code>ROK4_SWIFT_PUBLICURL</code></li>
+<li>Si authentification via Swift<ul>
+<li><code>ROK4_SWIFT_ACCOUNT</code></li>
+</ul>
+</li>
+<li>Si connection via keystone (présence de <code>ROK4_KEYSTONE_DOMAINID</code>)<ul>
+<li><code>ROK4_KEYSTONE_DOMAINID</code></li>
+<li><code>ROK4_KEYSTONE_PROJECTID</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pour configurer l'agent de requête (intéraction SWIFT et S3)<ul>
+<li><code>ROK4_SSL_NO_VERIFY</code></li>
+<li><code>HTTP_PROXY</code></li>
+<li><code>HTTPS_PROXY</code></li>
+<li><code>NO_PROXY</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="presentation-des-outils">Présentation des outils</h2>
+<h3 id="be4">BE4</h3>
+<p>L'outil BE4 génère une pyramide raster à partir d'images géoréférencées ou d'un service WMS. Il permet de mettre à jour une pyramide raster existante. Si des images sont en entrée, elles peuvent être converties à la volée dans le format de la pyramide en sortie. Il est également possible d'appliquer aux images en entrée un style, comme le calcul de pente à partir de données MNT.</p>
+<p>Stockages gérés : FICHIER, CEPH, S3, SWIFT</p>
+<p>Parallélisable, reprise sur erreur, progression.</p>
+<p>Outils de génération utilisés :</p>
+<ul>
+<li>cache2work</li>
+<li>checkWork</li>
+<li>composeNtiff</li>
+<li>decimateNtiff</li>
+<li>merge4tiff</li>
+<li>mergeNtiff</li>
+<li>work2cache</li>
+</ul>
+<p>Outils externes utilisés :</p>
+<ul>
+<li>wget</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<p><code>be4.pl --conf /home/IGN/conf.json [--help|--usage|--version]</code></p>
+<ul>
+<li><code>--help</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--usage</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--version</code> Affiche la version de l'outil et quitte</li>
+<li><code>--conf &lt;file path&gt;</code> Execute l'outil en prenant en compte ce fichier de configuration</li>
+</ul>
+<h4 id="details">Détails</h4>
+<p><em>Étape 1</em>
+<img alt="BE4 étape 1" src="docs/images/be4_part1.png" /></p>
+<p><em>Étape 2 (QTree)</em>
+<img alt="BE4 étape 2 QTree" src="docs/images/be4_part2_qtree.png" /></p>
+<p><em>Étape 2 (NNGraph)</em>
+<img alt="BE4 étape 2 NNGraph" src="docs/images/be4_part2_nngraph.png" /></p>
+<h4 id="exemples-de-configuration">Exemples de configuration</h4>
+<p>Génération d'une nouvelle pyramide depuis des images géoréférencées type MNT, avec application d'un style de pente. Les styles peuvent être téléchargés sur <a href="https://github.com/rok4/styles/releases/">GitHub</a>, installés depuis le paquet debian et seront alors dans le dossier <code>/etc/rok4/styles</code>.</p>
+<pre><code class="language-json">{
+    &quot;logger&quot;: {
+        &quot;level&quot;: &quot;INFO&quot;,
+        &quot;layout&quot;: &quot;%5p : %m (%M) %n&quot;
+    },
+    &quot;datasources&quot;: [
+        {
+            &quot;top&quot;: &quot;0&quot;,
+            &quot;bottom&quot;: &quot;&lt;AUTO&gt;&quot;,
+            &quot;source&quot;: {
+                &quot;type&quot;: &quot;IMAGES&quot;,
+                &quot;directory&quot;: &quot;/data/RGEALTI5M&quot;,
+                &quot;srs&quot;: &quot;IGNF:LAMB93&quot;
+            }
+        }
+    ],
+    &quot;pyramid&quot;: {
+        &quot;type&quot;: &quot;GENERATION&quot;,
+        &quot;name&quot;: &quot;RGEALTI&quot;,
+        &quot;compression&quot;: &quot;zip&quot;,
+        &quot;tms&quot;: &quot;LAMB93_1M_MNT.json&quot;,
+        &quot;storage&quot;: {
+            &quot;type&quot;: &quot;FILE&quot;,
+            &quot;root&quot;: &quot;/data/tsatabin/PYRAMIDS&quot;
+        },
+        &quot;nodata&quot;: [0,0,0,0],
+        &quot;pixel&quot;: {
+            &quot;sampleformat&quot;: &quot;UINT8&quot;,
+            &quot;samplesperpixel&quot;: 4
+        }
+    },
+    &quot;process&quot;: {
+        &quot;directories&quot;: {
+            &quot;scripts&quot;: &quot;/scripts&quot;,
+            &quot;local_tmp&quot;: &quot;/tmp&quot;,
+            &quot;shared_tmp&quot;: &quot;/share&quot;
+        },
+        &quot;parallelization&quot;: 1,
+        &quot;style&quot;: &quot;/etc/rok4/styles/montagne.json&quot;,
+        &quot;nodata&quot;: [-99999]
+    }
+}
+</code></pre>
+<p>Mise à jour par référence d'une pyramide S3 par moissonnage d'un service WMS</p>
+<pre><code class="language-json">{
+    &quot;logger&quot;: {
+        &quot;level&quot;: &quot;INFO&quot;,
+        &quot;layout&quot;: &quot;%5p : %m (%M) %n&quot;
+    },
+    &quot;datasources&quot;: [
+        {
+            &quot;top&quot;: &quot;0&quot;,
+            &quot;bottom&quot;: &quot;8&quot;,
+            &quot;source&quot;: {
+                &quot;type&quot;: &quot;WMS&quot;,
+                &quot;area&quot;: {
+                    &quot;bbox&quot;: [5,45,6,46],
+                    &quot;srs&quot;: &quot;EPSG:4326&quot;
+                },
+                &quot;layers&quot;: &quot;GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&quot;,
+                &quot;url&quot;: &quot;https://wxs.ign.fr/essentiels/geoportail/r/wms&quot;
+            }
+        },
+        {
+            &quot;top&quot;: &quot;9&quot;,
+            &quot;bottom&quot;: &quot;12&quot;,
+            &quot;source&quot;: {
+                &quot;type&quot;: &quot;WMS&quot;,
+                &quot;area&quot;: {
+                    &quot;bbox&quot;: [5,45,6,46],
+                    &quot;srs&quot;: &quot;EPSG:4326&quot;
+                },
+                &quot;layers&quot;: &quot;GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&quot;,
+                &quot;url&quot;: &quot;https://wxs.ign.fr/essentiels/geoportail/r/wms&quot;
+            }
+        }
+    ],
+    &quot;pyramid&quot;: {
+        &quot;type&quot;: &quot;UPDATE&quot;,
+        &quot;name&quot;: &quot;PLANIGNV2_UPDATED&quot;,
+        &quot;pyramid_to_update&quot;: &quot;s3://bucket/pyramides/PLANIGNV2.json&quot;,
+    },
+    &quot;process&quot;: {
+        &quot;directories&quot;: {
+            &quot;scripts&quot;: &quot;/scripts&quot;,
+            &quot;local_tmp&quot;: &quot;/tmp&quot;,
+            &quot;shared_tmp&quot;: &quot;/share&quot;
+        },
+        &quot;parallelization&quot;: 1
+    }
+}
+</code></pre>
+<h3 id="joincache">JOINCACHE</h3>
+<p>L'outil JOINCACHE génèrent une pyramide raster à partir d'autres pyramide raster compatibles (même TMS, dalles de même dimensions, canaux au même format). La composition se fait verticalement (choix des pyramides sources par niveau) et horizontalement (choix des pyramides source par zone au sein d'un niveau). La fusion de plusieurs dalles sources peut se faire selon plusieurs méthodes (masque, alpha top, multiplication)</p>
+<p>Stockages gérés : FICHIER, CEPH, S3, SWIFT</p>
+<p>Parallélisable, reprise sur erreur, progression.</p>
+<p>Outils de génération utilisés :</p>
+<ul>
+<li>cache2work</li>
+<li>overlayNtiff</li>
+<li>work2cache</li>
+</ul>
+<h4 id="usage_1">Usage</h4>
+<p><code>joincache.pl --conf /home/IGN/conf.json [--help|--usage|--version]</code></p>
+<ul>
+<li><code>--help</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--usage</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--version</code> Affiche la version de l'outil et quitte</li>
+<li><code>--conf &lt;file path&gt;</code> Execute l'outil en prenant en compte ce fichier de configuration principal</li>
+</ul>
+<h4 id="details_1">Détails</h4>
+<p><em>Étape 1</em>
+<img alt="JOINCACHE étape 1" src="docs/images/joinCache_part1.png" /></p>
+<p><em>Étape 2</em>
+<img alt="JOINCACHE étape 2" src="docs/images/joinCache_part2.png" /></p>
+<h4 id="exemples-de-configuration_1">Exemples de configuration</h4>
+<p>Génération d'une pyramide par fusion de 2 pyramides CEPH, avec conversion des canaux</p>
+<pre><code class="language-json">{
+    &quot;logger&quot;: {
+        &quot;level&quot;: &quot;WARN&quot;,
+        &quot;layout&quot;: &quot;%5p : %m (%M) %n&quot;,
+        &quot;file&quot;: &quot;/var/log/joincache.log&quot;
+    },
+    &quot;datasources&quot;: [
+        {
+            &quot;top&quot;: &quot;0&quot;,
+            &quot;bottom&quot;: &quot;10&quot;,
+            &quot;source&quot;: {
+                &quot;type&quot;: &quot;PYRAMIDS&quot;,
+                &quot;area&quot;: {
+                    &quot;bbox&quot;: [
+                        -572324.2901945519,
+                        5061666.243846581,
+                        1064224.752260841,
+                        6637050.045897862
+                    ]
+                },
+                &quot;descriptors&quot;: [
+                    &quot;ceph:///pool/pyramids/NORD.json&quot;,
+                    &quot;ceph:///pool/pyramids/SUD.json&quot;
+                ]
+            }
+        }
+    ],
+    &quot;pyramid&quot;: {
+        &quot;name&quot;: &quot;ENTIER&quot;,
+        &quot;root&quot;: &quot;pool&quot;,
+        &quot;pixel&quot;: {
+            &quot;samplesperpixel&quot;: 1,
+            &quot;sampleformat&quot;: &quot;UINT8&quot;
+        },
+        &quot;nodata&quot;: [255],
+        &quot;compression&quot;: &quot;png&quot;
+    },
+    &quot;process&quot;: {
+        &quot;directories&quot;: {
+            &quot;scripts&quot;: &quot;/scripts&quot;,
+            &quot;local_tmp&quot;: &quot;/tmp&quot;,
+            &quot;shared_tmp&quot;: &quot;/share&quot;
+        },
+        &quot;parallelization&quot;: 1,
+        &quot;merge_method&quot;: &quot;TOP&quot;,
+        &quot;mask&quot;: true
+    }
+}
+</code></pre>
+<h3 id="4alamo">4ALAMO</h3>
+<p>L'outil 4ALAMO génèrent une pyramide vecteur à partir d'une base de données PostgreSQL ou de fichiers vecteurs. Ils permettent de mettre à jour une pyramide vecteur existante.</p>
+<p>Stockages gérés : FICHIER, CEPH, S3, SWIFT</p>
+<p>Parallélisable, reprise sur erreur, progression.</p>
+<p>Outils de génération utilisés :</p>
+<ul>
+<li>pbf2cache</li>
+</ul>
+<p>Outils externes utilisés :</p>
+<ul>
+<li>ogr2ogr</li>
+<li>tippecanoe</li>
+</ul>
+<h4 id="usage_2">Usage</h4>
+<p><code>4alamo.pl --conf /home/IGN/conf.json [--help|--usage|--version]</code></p>
+<ul>
+<li><code>--help</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--usage</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--version</code> Affiche la version de l'outil et quitte</li>
+<li><code>--conf &lt;file path&gt;</code> Execute l'outil en prenant en compte ce fichier de configuration</li>
+</ul>
+<h4 id="details_2">Détails</h4>
+<p><em>Étape 1</em>
+<img alt="4ALAMO étape 1" src="docs/images/4alamo_part1.png" /></p>
+<p><em>Étape 2</em>
+<img alt="4ALAMO étape 2" src="docs/images/4alamo_part2.png" /></p>
+<h4 id="exemples-de-configuration_2">Exemples de configuration</h4>
+<p>Mise à jour par injection d'une pyramide SWIFT à partir de tables PostgreSQL</p>
+<pre><code class="language-json">{
+   &quot;logger&quot;: {
+      &quot;level&quot;: &quot;ERROR&quot;,
+      &quot;layout&quot;: &quot;%5p : %m (%M) %n&quot;
+   },
+   &quot;datasources&quot;: [
+      {
+         &quot;top&quot;: &quot;4&quot;,
+         &quot;bottom&quot;: &quot;9&quot;,
+         &quot;source&quot;: {
+            &quot;type&quot;: &quot;POSTGRESQL&quot;,
+            &quot;area&quot;: {
+               &quot;bbox&quot;: [10,45,15,50]
+            },
+            &quot;srs&quot;: &quot;EPSG:4326&quot;,
+            &quot;db&quot; : {
+               &quot;user&quot; : &quot;reader&quot;,
+               &quot;password&quot; : &quot;reader&quot;,
+               &quot;database&quot; : &quot;geodata&quot;,
+               &quot;host&quot; : &quot;postgresql.internal&quot;
+            },
+            &quot;tables&quot; : [
+               {
+                  &quot;schema&quot; : &quot;essentiels&quot;,
+                  &quot;native_name&quot; : &quot;region&quot;,
+                  &quot;attributes&quot; : [&quot;*&quot;]
+               }
+            ]
+         }
+      },
+      {
+         &quot;top&quot;: &quot;10&quot;,
+         &quot;bottom&quot;: &quot;12&quot;,
+         &quot;source&quot;: {
+            &quot;type&quot;: &quot;POSTGRESQL&quot;,
+            &quot;area&quot;: {
+               &quot;bbox&quot;: [10,45,15,50]
+            },
+            &quot;srs&quot;: &quot;EPSG:4326&quot;,
+            &quot;db&quot; : {
+               &quot;user&quot; : &quot;reader&quot;,
+               &quot;password&quot; : &quot;reader&quot;,
+               &quot;database&quot; : &quot;geodata&quot;,
+               &quot;host&quot; : &quot;postgresql.internal&quot;
+            },
+            &quot;tables&quot; : [
+               {
+                  &quot;schema&quot; : &quot;essentiels&quot;,
+                  &quot;native_name&quot; : &quot;departement&quot;,
+                  &quot;attributes&quot; : [&quot;*&quot;]
+               },
+               {
+                  &quot;schema&quot; : &quot;essentiels&quot;,
+                  &quot;native_name&quot; : &quot;region&quot;,
+                  &quot;attributes&quot; : [&quot;*&quot;]
+               }
+            ]
+         }
+      }
+   ],
+   &quot;pyramid&quot;: {
+      &quot;type&quot;: &quot;INJECTION&quot;,
+      &quot;pyramid_to_inject&quot;: &quot;swift:///container/pyramids/LIMADM.json&quot;
+   },
+    &quot;process&quot;: {
+        &quot;directories&quot;: {
+            &quot;scripts&quot;: &quot;/scripts&quot;,
+            &quot;local_tmp&quot;: &quot;/tmp&quot;,
+            &quot;shared_tmp&quot;: &quot;/share&quot;
+        },
+        &quot;parallelization&quot;: 10
+    }
+}
+</code></pre>
+<h3 id="4head">4HEAD</h3>
+<p>Cet outil permet de regénérer des niveaux de la pyramide en partant d'un de ses niveaux. La pyramide est modifiée et sa liste, qui fait foi en terme de contenu de la pyramide, est mise à jour pour toujours correspondre au contenu final de la pyramide. L'outil perl modifie la liste et le descripteur et génère des script shell dont l'exécution modifiera les dalles de la pyramide. Seuls les niveaux entre celui de référence (non inclus) et le niveau du haut fournis (inclus) sont modifiés. Potentiellement des nouveaux niveaux sont ajoutés (lorsque l'outil est utilisé pour construire la tête de la pyramide qui n'existait pas).</p>
+<p>Par défaut, l'outil génère deux scripts (<code>SCRIPT_1.sh</code> et <code>SCRIPT_FINISHER.sh</code>). Si on précise un niveau de parallélisation (via l'option <code>--parallel</code>) de N, on aura alors N scripts <code>SCRIPT_X.sh</code> et toujours <code>SCRIPT_FINISHER.sh</code> pour regénérer l'ensemble des dalles. Tous les scripts <code>SCRIPT_X.sh</code> peuvent être exécuter en parallèle, mais il faut attendre la fin de tous ces scripts pour lancer <code>SCRIPT_FINISHER.sh</code>.</p>
+<p>Le script <code>main.sh</code> permet de lancer proprement tous ces scripts sur la même machine. Il ne permet donc pas de répartir les exécutions sur un pool de machine. L'appel à faire est loggé en fin d'exécution de <code>4head.pl</code>.</p>
+<p>Stockages gérés : FICHIER, CEPH, S3, SWIFT</p>
+<p>Parallélisable.</p>
+<p>Types de pyramides gérés : RASTER QTREE</p>
+<h5 id="commande">Commande</h5>
+<p><code>4head.pl --pyr file:///home/ign/PYRAMID.pyr --tmsdir /home/ign/TMS/ --reference-level 19 --top-level 4 --tmp /home/ign/tmp/ --scripts /home/ign/scripts/ [--parallel 10] [--help|--usage|--version]</code></p>
+<h5 id="options">Options</h5>
+<ul>
+<li><code>--help</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--usage</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--version</code> Affiche la version de l'outil et quitte</li>
+<li><code>--pyr</code> Précise le chemin vers le descripteur de la pyramide à modifier. Ce chemin est préfixé par le type de stockage du descripteur : <code>file://</code>, <code>s3://</code>, <code>ceph://</code> ou <code>swift://</code></li>
+<li><code>--tmsdir</code> Précise le dossier contenant au moins le TMS utilisé par la pyramide à modifier</li>
+<li><code>--reference-level</code> Précise le niveau de la pyramide d'où partir pour regénérer les niveaux supérieurs</li>
+<li><code>--top-level</code> Précise le niveau jusqu'auquel regénérer les dalles</li>
+<li><code>--tmp</code> Précise un dossier à utiliser comme espace temporaire de génération. Il doit être partagé entre tous les scripts</li>
+<li><code>--script</code> Précise un dossier où écrire les scripts</li>
+<li><code>--parallel</code> Précise le nombre de scripts pour modifier les dalles du niveau au dessus du niveau de référence (Optionnel, 1 par défaut)</li>
+</ul>
+<h3 id="pyr2pyr">PYR2PYR</h3>
+<p>Outil : <code>pyr2pyr.pl</code></p>
+<p>Cet outil copie une pyramide d'un stockage à un autre.</p>
+<p>Conversions possibles :</p>
+<ul>
+<li>FICHIER -&gt; FICHIER, CEPH, S3, SWIFT</li>
+<li>CEPH -&gt; FICHIER, CEPH, S3, SWIFT</li>
+<li>S3 -&gt; FICHIER</li>
+</ul>
+<p>Parallélisable, reprise sur erreur, progression.</p>
+<h4 id="usage_3">Usage</h4>
+<p><code>pyr2pyr.pl --conf /home/IGN/conf.json [--help|--usage|--version]</code></p>
+<ul>
+<li><code>--help</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--usage</code> Affiche le lien vers la documentation utilisateur de l'outil et quitte</li>
+<li><code>--version</code> Affiche la version de l'outil et quitte</li>
+<li><code>--conf &lt;file path&gt;</code> Execute l'outil en prenant en compte ce fichier de configuration</li>
+</ul>
+<h4 id="details_3">Détails</h4>
+<p><em>Étape 1</em>
+<img alt="PYR2PYR étape 1" src="docs/images/pyr2pyr_part1.png" /></p>
+<p><em>Étape 2</em>
+<img alt="PYR2PYR étape 2" src="docs/images/pyr2pyr_part2.png" /></p>
+<h4 id="exemples-de-configuration_3">Exemples de configuration</h4>
+<p>Recopie d'une pyramide CEPH -&gt; SWIFT</p>
+<pre><code class="language-json">{
+    &quot;logger&quot;: {
+        &quot;level&quot;: &quot;DEBUG&quot;,
+        &quot;layout&quot;: &quot;%5p : %m (%M) %n&quot;
+    },
+    &quot;from&quot;: {
+        &quot;descriptor&quot;: &quot;ceph:///pool/pyramids/SCAN1000.json&quot;
+    },
+    &quot;to&quot;: {
+        &quot;name&quot;: &quot;pyramids/SCAN1000&quot;,
+        &quot;storage&quot;: {
+            &quot;type&quot;: &quot;SWIFT&quot;,
+            &quot;root&quot;: &quot;container&quot;
+        }
+    },
+    &quot;process&quot;: {
+        &quot;directories&quot;: {
+            &quot;scripts&quot;: &quot;/scripts&quot;,
+            &quot;local_tmp&quot;: &quot;/tmp&quot;,
+            &quot;shared_tmp&quot;: &quot;/share&quot;
+        },
+        &quot;parallelization&quot;: 32,
+        &quot;follow_links&quot;: true
+    }
+}
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../extras/swagger-ui-bundle.js"></script>
+      
+        <script src="../extras/swagger-ui-standalone-preset.js"></script>
+      
+        <script src="../extras/redoc.min.js"></script>
+      
+    
+  </body>
+</html>

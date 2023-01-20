@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/utils/Cache.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_bfaae617748457751d20d56f3cac85f2.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Cache.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définition des classes <a class="el" href="classIndexCache.html" title="Création d&#39;un cache des index de dalle.">IndexCache</a>, <a class="el" href="classCurlPool.html" title="Création d&#39;un pool d&#39;environnement Curl.">CurlPool</a>, <a class="el" href="classStoragePool.html" title="Création d&#39;un pool de contextes de stockage.">StoragePool</a> et <a class="el" href="classProjPool.html" title="Création d&#39;un pool de contextes Proj.">ProjPool</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;curl/curl.h&gt;</code><br />
+<code>#include &lt;proj.h&gt;</code><br />
+<code>#include &quot;utils/TileMatrixSet.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="Style_8h_source.html">style/Style.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Utils_8h_source.html">utils/Utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Context_8h_source.html">storage/Context.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FileContext_8h_source.html">storage/FileContext.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Cache.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="Cache_8h__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2utils_2Cache_8h" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2utils_2Cache_8h" id="build_2sources_2core-cpp_2src_2utils_2Cache_8h">
+<area shape="rect" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="1887,5,2049,47"/>
+<area shape="rect" title=" " alt="" coords="2135,319,2206,345"/>
+<area shape="rect" title=" " alt="" coords="1707,393,1859,420"/>
+<area shape="rect" title=" " alt="" coords="803,319,853,345"/>
+<area shape="rect" title=" " alt="" coords="895,95,937,121"/>
+<area shape="rect" title=" " alt="" coords="962,95,1086,121"/>
+<area shape="rect" title=" " alt="" coords="1897,319,1959,345"/>
+<area shape="rect" title=" " alt="" coords="2571,319,2642,345"/>
+<area shape="rect" title=" " alt="" coords="228,319,303,345"/>
+<area shape="rect" title=" " alt="" coords="2006,95,2093,121"/>
+<area shape="rect" title=" " alt="" coords="5,319,64,345"/>
+<area shape="rect" href="TileMatrixSet_8h_source.html" title=" " alt="" coords="1110,95,1263,121"/>
+<area shape="rect" href="Style_8h.html" title="Définition de la classe Style modélisant les styles." alt="" coords="1410,169,1513,196"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="2225,169,2321,196"/>
+<area shape="rect" href="Context_8h.html" title="Définition de la classe Context." alt="" coords="2453,244,2592,271"/>
+<area shape="rect" href="FileContext_8h.html" title="Implémentation de la classe FileContext." alt="" coords="2718,169,2879,196"/>
+<area shape="rect" title=" " alt="" coords="937,393,996,420"/>
+<area shape="rect" title=" " alt="" coords="1035,169,1077,196"/>
+<area shape="rect" title=" " alt="" coords="1102,169,1189,196"/>
+<area shape="rect" href="TileMatrix_8h.html" title="Définition de la classe TileMatrix gérant une matrice de tuiles représentant un niveau d&#39;une pyramide..." alt="" coords="386,169,518,196"/>
+<area shape="rect" href="Configuration_8h_source.html" title=" " alt="" coords="1569,319,1722,345"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="219,169,311,196"/>
+<area shape="rect" href="Keyword_8h.html" title="Définition de la classe Keyword gérant les mots&#45;clés des documents de capacités." alt="" coords="765,244,888,271"/>
+<area shape="rect" href="TileMatrixLimits_8h.html" title="Définition de la classe TileMatrixLimits gérant les indices extrêmes de tuiles pour un niveau." alt="" coords="417,244,589,271"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="189,244,341,271"/>
+<area shape="rect" title=" " alt="" coords="1512,393,1584,420"/>
+<area shape="rect" title=" " alt="" coords="1608,393,1683,420"/>
+<area shape="rect" title=" " alt="" coords="1232,393,1325,420"/>
+<area shape="rect" title=" " alt="" coords="2311,393,2396,420"/>
+<area shape="rect" title=" " alt="" coords="665,319,727,345"/>
+<area shape="rect" href="LegendURL_8h.html" title="Définition de la classe LegendURL gérant les éléments de légendes des documents de capacités." alt="" coords="963,244,1101,271"/>
+<area shape="rect" href="Palette_8h_source.html" title=" " alt="" coords="1715,244,1829,271"/>
+<area shape="rect" href="Pente_8h.html" title="D�finition de la classe Pente." alt="" coords="1483,244,1589,271"/>
+<area shape="rect" href="Estompage_8h.html" title="Définition de la classe Estompage modélisant l&#39;estompage." alt="" coords="1315,244,1458,271"/>
+<area shape="rect" href="Interpolation_8h.html" title="Définition de l&#39;énumération des interpolations disponibles et des conversions." alt="" coords="1277,319,1443,345"/>
+<area shape="rect" href="Aspect_8h.html" title="Définition de la classe Aspect." alt="" coords="1125,244,1240,271"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="2005,244,2133,271"/>
+<area shape="rect" href="ResourceLocator_8h.html" title="Définition de la classe RessourceLocator gérant les liens vers les ressources externe dans les docume..." alt="" coords="1029,319,1203,345"/>
+<area shape="rect" title=" " alt="" coords="1797,319,1872,345"/>
+<area shape="rect" title=" " alt="" coords="2259,244,2325,271"/>
+<area shape="rect" title=" " alt="" coords="2349,244,2429,271"/>
+<area shape="rect" title=" " alt="" coords="2474,319,2547,345"/>
+<area shape="rect" title=" " alt="" coords="2819,244,2893,271"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="Cache_8h__dep__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2utils_2Cache_8hdep" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2utils_2Cache_8hdep" id="build_2sources_2core-cpp_2src_2utils_2Cache_8hdep">
+<area shape="rect" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="1473,5,1634,47"/>
+<area shape="rect" href="Layer_8cpp.html" title="Implémentation de la classe Layer modélisant les couches de données." alt="" coords="451,377,605,419"/>
+<area shape="rect" href="server_2src_2main_8cpp.html" title="Exécutable du serveur ROK4." alt="" coords="405,556,558,597"/>
+<area shape="rect" href="Rok4Server_8cpp.html" title="Implémentation de la classe Rok4Server et du programme principal." alt="" coords="658,556,811,597"/>
+<area shape="rect" href="StoreDataSource_8cpp.html" title="Implémentation des classes StoreDataSource et StoreDataSourceFactory." alt="" coords="144,95,307,151"/>
+<area shape="rect" href="Grid_8cpp.html" title="Implémentation de la classe Grid." alt="" coords="331,95,477,151"/>
+<area shape="rect" href="S3Context_8cpp.html" title="Implémentation de la classe S3Context." alt="" coords="501,95,672,151"/>
+<area shape="rect" href="SwiftContext_8cpp.html" title="Implémentation de la classe SwiftContext." alt="" coords="696,95,867,151"/>
+<area shape="rect" href="Style_8cpp.html" title="Implémentation de la classe Style modélisant les styles." alt="" coords="891,102,1064,143"/>
+<area shape="rect" href="Cache_8cpp.html" title="Implémentation des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="1088,102,1264,143"/>
+<area shape="rect" href="CRS_8cpp.html" title="Implémente de la gestion des systèmes de référence." alt="" coords="1288,102,1451,143"/>
+<area shape="rect" href="Level_8h_source.html" title=" " alt="" coords="1475,102,1631,143"/>
+<area shape="rect" href="Pyramid_8h_source.html" title=" " alt="" coords="1249,199,1423,240"/>
+<area shape="rect" href="cache2work_8cpp.html" title="Convertit une image d&#39;une pyramide ROK4 (TIFF tuilé) en une image TIFF, lisible avec LibtiffImage." alt="" coords="1731,102,1914,143"/>
+<area shape="rect" href="composeNtiff_8cpp.html" title="Montage de N images TIFF aux mêmes dimensions et caractéristiques." alt="" coords="1938,102,2121,143"/>
+<area shape="rect" href="decimateNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="2145,102,2327,143"/>
+<area shape="rect" href="manageNodata_8cpp.html" title="Gère la couleur des pixels de nodata." alt="" coords="2351,102,2534,143"/>
+<area shape="rect" href="merge4tiff_8cpp.html" title="Sous echantillonage de 4 images disposées en carré, avec utilisation possible de fond et de masques d..." alt="" coords="2558,102,2741,143"/>
+<area shape="rect" href="mergeNtiff_8cpp.html" title="Création d&#39;une image TIFF géoréférencée à partir de n images sources géoréférencées." alt="" coords="2765,102,2947,143"/>
+<area shape="rect" href="overlayNtiff_8cpp.html" title="Fusion de N images aux mêmes dimensions, selon différentes méthodes." alt="" coords="2971,102,3154,143"/>
+<area shape="rect" href="pbf2cache_8cpp.html" title="Consitution d&#39;une dalle vecteur ROK4 à partir des tuiles PBF." alt="" coords="3178,102,3361,143"/>
+<area shape="rect" href="work2cache_8cpp.html" title="Formattage d&#39;une image, respectant les spécifications d&#39;une pyramide de données ROK4." alt="" coords="3385,102,3567,143"/>
+<area shape="rect" href="Layer_8h.html" title="Définition de la classe Layer modélisant les couches de données." alt="" coords="1143,288,1297,329"/>
+<area shape="rect" href="UtilsAdmin_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="877,556,1030,597"/>
+<area shape="rect" href="UtilsGlobal_8cpp.html" title="Implémentation des fonctions de générations des GetCapabilities." alt="" coords="1409,556,1562,597"/>
+<area shape="rect" href="Request_8cpp.html" title="Implémentation de la classe Request, analysant les requêtes HTTP." alt="" coords="502,467,655,508"/>
+<area shape="rect" href="Request_8h.html" title="Définition de la classe Request, analysant les requêtes HTTP." alt="" coords="1003,377,1157,419"/>
+<area shape="rect" href="Rok4Server_8h.html" title="Definition de la classe Rok4Server et du programme principal." alt="" coords="1054,467,1207,508"/>
+<area shape="rect" href="ServerConf_8h_source.html" title=" " alt="" coords="1231,556,1385,597"/>
+<area shape="rect" href="Threads_8h_source.html" title=" " alt="" coords="731,467,927,508"/>
+<area shape="rect" href="ServicesConf_8h_source.html" title=" " alt="" coords="1054,556,1207,597"/>
+</map>
+</div>
+</div>
+<p><a href="Cache_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCurlPool.html">CurlPool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un pool d'environnement Curl.  <a href="classCurlPool.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjPool.html">ProjPool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un pool de contextes Proj.  <a href="classProjPool.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoragePool.html">StoragePool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un pool de contextes de stockage.  <a href="classStoragePool.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIndexElement.html">IndexElement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Élément du cache des index de dalle.  <a href="classIndexElement.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIndexCache.html">IndexCache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un cache des index de dalle.  <a href="classIndexCache.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTmsBook.html">TmsBook</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un annuaire de Tile Matrix Sets.  <a href="classTmsBook.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStyleBook.html">StyleBook</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un annuaire de styles.  <a href="classStyleBook.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définition des classes <a class="el" href="classIndexCache.html" title="Création d&#39;un cache des index de dalle.">IndexCache</a>, <a class="el" href="classCurlPool.html" title="Création d&#39;un pool d&#39;environnement Curl.">CurlPool</a>, <a class="el" href="classStoragePool.html" title="Création d&#39;un pool de contextes de stockage.">StoragePool</a> et <a class="el" href="classProjPool.html" title="Création d&#39;un pool de contextes Proj.">ProjPool</a>. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,938 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="IGN">
+      
+      
+      
+        <link rel="prev" href="../tools/">
+      
+      
+        <link rel="next" href="../docker/">
+      
+      <link rel="icon" href="../images/rok4-carre.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Outils python - Projet ROK4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extras/style.css">
+    
+      <link rel="stylesheet" href="../extras/swagger-ui.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#outils-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Projet ROK4" class="md-header__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../images/rok4-carre.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projet ROK4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Outils python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../specifications/pyramid/" class="md-tabs__link">
+        Spécifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../server/" class="md-tabs__link md-tabs__link--active">
+        Documentation utilisateur
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker/" class="md-tabs__link">
+        Utilisation de Docker
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../devs/" class="md-tabs__link">
+      Documentation développeur
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projet ROK4" class="md-nav__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../images/rok4-carre.png" alt="logo">
+
+    </a>
+    Projet ROK4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Spécifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spécifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Spécifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/pyramid/" class="md-nav__link">
+        Pyramide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/api_server_swaggerui/" class="md-nav__link">
+        API du serveur (SwaggerUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/api_server_redoc/" class="md-nav__link">
+        API du serveur (Redoc)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Documentation utilisateur
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation utilisateur" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation utilisateur
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        Serveur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pregeneration/" class="md-nav__link">
+        Outils de pré-génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generation/" class="md-nav__link">
+        Outils de génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        Outils de gestion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Outils python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Outils python
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compilations" class="md-nav__link">
+    Compilations
+  </a>
+  
+    <nav class="md-nav" aria-label="Compilations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outils" class="md-nav__link">
+    Outils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyr2pyr" class="md-nav__link">
+    PYR2PYR
+  </a>
+  
+    <nav class="md-nav" aria-label="PYR2PYR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    Fonctionnement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-layer" class="md-nav__link">
+    MAKE-LAYER
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Utilisation de Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utilisation de Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilisation de Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        ROK4 & Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/build/" class="md-nav__link">
+        Compilation des images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/run/datasets/" class="md-nav__link">
+        Génération de pyramides
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/run/server/" class="md-nav__link">
+        Exécution d'une stack avec le serveur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devs/" class="md-nav__link">
+        Documentation développeur
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compilations" class="md-nav__link">
+    Compilations
+  </a>
+  
+    <nav class="md-nav" aria-label="Compilations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outils" class="md-nav__link">
+    Outils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyr2pyr" class="md-nav__link">
+    PYR2PYR
+  </a>
+  
+    <nav class="md-nav" aria-label="PYR2PYR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    Fonctionnement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-layer" class="md-nav__link">
+    MAKE-LAYER
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="outils-python">Outils Python</h1>
+<p>Ce projet contient des outils de gestion des pyramides de données, écrits en Python.</p>
+<ul>
+<li><a href="#compilations">Compilations</a><ul>
+<li><a href="#outils">Outils</a></li>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+</li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#pyr2pyr">PYR2PYR</a><ul>
+<li><a href="#fonctionnement">Fonctionnement</a></li>
+<li><a href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#make-layer">MAKE-LAYER</a></li>
+</ul>
+<h2 id="compilations">Compilations</h2>
+<h3 id="outils">Outils</h3>
+<p><code>VERSION=1.0.0 python setup.py bdist_wheel</code></p>
+<h3 id="documentation">Documentation</h3>
+<pre><code class="language-sh">pip install json-schema-for-humans pdoc3 jsonschema2md
+mkdir html
+generate-schema-doc bin/*.schema.json ./html/
+</code></pre>
+<h2 id="installation">Installation</h2>
+<p>Récupération des artefacts sur GitHub :</p>
+<ul>
+<li><a href="https://github.com/rok4/core-python/releases">Fichier Wheel des librairies</a></li>
+<li><a href="https://github.com/rok4/pytools/releases">Fichier Wheel des outils</a></li>
+</ul>
+<p>Installation dans un environnement :</p>
+<pre><code class="language-sh">sudo apt install python3-rados
+python -m venv --system-site-packages venv
+source venv/bin/activate
+pip install rok4lib-&lt;VERSION&gt;-py3-none-any.whl
+pip install rok4tools-&lt;VERSION&gt;-py3-none-any.whl
+</code></pre>
+<p>Installation système :</p>
+<pre><code class="language-sh">sudo apt install python3-rados
+sudo pip install rok4lib-&lt;VERSION&gt;-py3-none-any.whl
+sudo pip install rok4tools-&lt;VERSION&gt;-py3-none-any.whl
+</code></pre>
+<h2 id="pyr2pyr">PYR2PYR</h2>
+<p>PYR2PYR est un outil de copie d'une pyramide d'un stockage à un autre. Il est possible de filtrer les dalles transférée en précisant une taille limite sous laquelle les données ne sont pas recopiées. La copie des dalles est parallélisable. Si des signatures MD5 sont présente dans le fichier liste, elles sont contrôlées après recopie.</p>
+<p>Un exemple de configuration est affichable avec la commande <code>pyr2pyr.py --role example</code> et l'appel <code>pyr2pyr.py --role check --conf conf.json</code> permet de valider un fichier de configuration. Le fichier de configuration peut être un objet, auquel cas le chemin doit être préfixé par le type de stockage (exemple : <code>s3://bucket/configuration.json</code>)</p>
+<h3 id="fonctionnement">Fonctionnement</h3>
+<p>Une copie complète d'une pyramide implique l'utilisation de l'outil avec les 3 modes suivants, dans cet ordre (tous les modes utilisent le fichier de configuration) :</p>
+<ol>
+<li>Rôle <code>master</code><ul>
+<li>Actions : génération des N TODO lists, déposé dans un dossier précisé dans la configuration (peut être un stockage objet).</li>
+<li>Appel : <code>pyr2pyr.py --role master --conf conf.json</code></li>
+</ul>
+</li>
+<li>Rôle <code>agent</code> : <ul>
+<li>Actions : lecture de la TODO list depuis le dossier de traitement et recopie des dalles</li>
+<li>Appel (un appel par TODO list) : <code>pyr2pyr.py --role agent --conf conf.json --split X</code></li>
+</ul>
+</li>
+<li>Rôle <code>finisher</code> : <ul>
+<li>Actions : lecture des TODO lists pour écrire le fichier liste final et écriture du descripteur de la pyramide en sortie.</li>
+<li>Appel : <code>pyr2pyr.py --role finisher --conf conf.json</code></li>
+</ul>
+</li>
+</ol>
+<p><img alt="Enchaînement PYR2PYR" src="docs/pyr2pyr.png" /></p>
+<h3 id="configuration">Configuration</h3>
+<p>Possibilités de contenu du fichier JSON (généré à partir du schéma JSON avec <code>jsonschema2md bin/pyr2pyr.schema.json /dev/stdout</code>)</p>
+<ul>
+<li><strong><code>logger</code></strong> <em>(object)</em>: Logger configuration.<ul>
+<li><strong><code>layout</code></strong> <em>(string)</em>: Log format, according to logging python library. Default: <code>%(asctime)s %(levelname)s: %(message)s</code>.</li>
+<li><strong><code>file</code></strong> <em>(string)</em>: Path to log file. Standard output is used if not provided.</li>
+<li><strong><code>level</code></strong> <em>(string)</em>: Log level. Must be one of: <code>['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL', 'NOTSET']</code>. Default: <code>WARNING</code>.</li>
+</ul>
+</li>
+<li><strong><code>from</code></strong> <em>(object)</em>: Pyramid to copy.<ul>
+<li><strong><code>descriptor</code></strong> <em>(string)</em>: Path to pyramid's descriptor to copy.</li>
+</ul>
+</li>
+<li><strong><code>to</code></strong> <em>(object)</em>: Pyramid to write.<ul>
+<li><strong><code>name</code></strong> <em>(string)</em>: Output pyramid's name.</li>
+<li><strong><code>storage</code></strong> <em>(object)</em><ul>
+<li><strong><code>type</code></strong> <em>(string)</em>: Storage type. Must be one of: <code>['FILE', 'S3', 'CEPH']</code>.</li>
+<li><strong><code>root</code></strong> <em>(string)</em>: Storage root : a directory for FILE storage, pool name for CEPH storage, bucket name for S3 storage.</li>
+<li><strong><code>depth</code></strong> <em>(integer)</em>: Tree depth, only for FILE storage. Minimum: <code>1</code>. Default: <code>2</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><code>process</code></strong> <em>(object)</em>: Processing parameters.<ul>
+<li><strong><code>directory</code></strong> <em>(string)</em>: Directory to write copies to process, FILE directory or S3/CEPH prefix.</li>
+<li><strong><code>parallelization</code></strong> <em>(integer)</em>: Parallelization level, number of todo lists and agents working at the same time. Minimum: <code>1</code>. Default: <code>1</code>.</li>
+<li><strong><code>follow_links</code></strong> <em>(boolean)</em>: Do we follow links (data slabs in others pyramids than the 'from' one). Default: <code>False</code>.</li>
+<li><strong><code>slab_limit</code></strong> <em>(integer)</em>: Minimum slab size (if under, we do not copy). Minimum: <code>0</code>. Default: <code>0</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="make-layer">MAKE-LAYER</h2>
+<p>MAKE-LAYER est un outil générant un descripteur de couche compatible avec le serveur à partir des pyramides de données à utiliser</p>
+<p>Utilisation : <code>make-layer [-h] --pyramids storage://path/to/pyr.json[&gt;BOTTOM&gt;TOP] [storage://path/to/pyr.json[&gt;BOTTOM&gt;TOP] ...] --name my data [--styles normal [normal ...]] [--title my data]</code></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../extras/swagger-ui-bundle.js"></script>
+      
+        <script src="../extras/swagger-ui-standalone-preset.js"></script>
+      
+        <script src="../extras/redoc.min.js"></script>
+      
+    
+  </body>
+</html>

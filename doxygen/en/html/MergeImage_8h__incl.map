@@ -1,0 +1,16 @@
+<map id="build/sources/core&#45;cpp/src/image/MergeImage.h" name="build/sources/core&#45;cpp/src/image/MergeImage.h">
+<area shape="rect" id="node1" title="Define classes MergeImage, MergeImageFactory and MergeMask and the namespace Merge." alt="" coords="309,5,525,47"/>
+<area shape="rect" id="node2" href="$Image_8h.html" title="Define the Image abstract class , to abstract all kind of images." alt="" coords="309,95,429,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="533,169,603,196"/>
+<area shape="rect" id="node13" title=" " alt="" coords="505,95,567,121"/>
+<area shape="rect" id="node14" href="$Format_8h.html" title="Define and the namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="91,95,219,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="119,169,190,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="433,169,509,196"/>
+<area shape="rect" id="node6" href="$BoundingBox_8h.html" title="Implement template class BoundingBox." alt="" coords="195,244,347,271"/>
+<area shape="rect" id="node10" title=" " alt="" coords="363,319,426,345"/>
+<area shape="rect" id="node11" href="$CRS_8h.html" title="Define the reference systems handler." alt="" coords="214,169,306,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,319,157,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="181,319,240,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="264,319,339,345"/>
+<area shape="rect" id="node12" title=" " alt="" coords="88,244,147,271"/>
+</map>

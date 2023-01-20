@@ -1,0 +1,8 @@
+<map id="LibkakaduImage" name="LibkakaduImage">
+<area shape="rect" id="node1" title=" " alt="" coords="124,260,252,287"/>
+<area shape="rect" id="node2" href="$classFileImage.html" title=" " alt="" coords="145,184,231,211"/>
+<area shape="rect" id="node3" href="$classImage.html" title=" " alt="" coords="67,95,130,121"/>
+<area shape="rect" id="node4" href="$classCRS.html" title="Reference systems handler." alt="" coords="5,5,53,32"/>
+<area shape="rect" id="node5" href="$classBoundingBox.html" title=" " alt="" coords="78,5,261,32"/>
+<area shape="rect" id="node6" href="$classPixelConverter.html" title="Converter for FileImage." alt="" coords="220,95,337,121"/>
+</map>

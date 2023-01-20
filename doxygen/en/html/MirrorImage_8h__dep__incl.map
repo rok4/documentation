@@ -1,0 +1,8 @@
+<map id="build/sources/core&#45;cpp/src/image/MirrorImage.h" name="build/sources/core&#45;cpp/src/image/MirrorImage.h">
+<area shape="rect" id="node1" title="Define classes MirrorImage and MirrorImageFactory." alt="" coords="399,5,614,47"/>
+<area shape="rect" id="node2" href="$ExtendedCompoundImage_8h.html" title="Define classes ExtendedCompoundImage, ExtendedCompoundMask and ExtendedCompoundImageFactory." alt="" coords="248,95,501,151"/>
+<area shape="rect" id="node6" href="$MirrorImage_8cpp.html" title="Implement classes MirrorImage and MirrorImageFactory." alt="" coords="525,102,755,143"/>
+<area shape="rect" id="node3" href="$ExtendedCompoundImage_8cpp.html" title="Implement classes ExtendedCompoundImage, ExtendedCompoundMask and ExtendedCompoundImageFactory." alt="" coords="5,199,259,255"/>
+<area shape="rect" id="node4" href="$decimateNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="283,206,466,247"/>
+<area shape="rect" id="node5" href="$mergeNtiff_8cpp.html" title="Create one georeferenced TIFF image from several georeferenced images." alt="" coords="490,206,673,247"/>
+</map>

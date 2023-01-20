@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDataSource.html" title=" " alt="" coords="5,173,103,200"/>
+<area shape="rect" id="node2" href="$classBufferedDataSource.html" title=" " alt="" coords="157,5,309,32"/>
+<area shape="rect" id="node3" href="$classDataSourceDecoder.html" title=" " alt="" coords="152,57,315,98"/>
+<area shape="rect" id="node4" href="$classMessageDataSource.html" title="File messages handler." alt="" coords="156,123,311,149"/>
+<area shape="rect" id="node6" href="$classPaletteDataSource.html" title=" " alt="" coords="162,173,305,200"/>
+<area shape="rect" id="node7" href="$classRawDataSource.html" title=" " alt="" coords="171,224,296,251"/>
+<area shape="rect" id="node8" href="$classStoreDataSource.html" title=" " alt="" coords="168,275,299,301"/>
+<area shape="rect" id="node9" href="$classTiffHeaderDataSource.html" title=" " alt="" coords="151,325,316,352"/>
+<area shape="rect" id="node5" href="$classSERDataSource.html" title=" " alt="" coords="364,123,487,149"/>
+</map>

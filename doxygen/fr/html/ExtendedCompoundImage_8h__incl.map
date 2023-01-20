@@ -1,0 +1,21 @@
+<map id="build/sources/core&#45;cpp/src/image/ExtendedCompoundImage.h" name="build/sources/core&#45;cpp/src/image/ExtendedCompoundImage.h">
+<area shape="rect" id="node1" title="Définition des classes ExtendedCompoundImage, ExtendedCompoundMask et ExtendedCompoundImageFactory." alt="" coords="197,5,451,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="70,184,133,211"/>
+<area shape="rect" id="node3" title=" " alt="" coords="172,259,239,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,259,85,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="633,109,701,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="425,408,577,435"/>
+<area shape="rect" id="node7" href="$Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="157,184,253,211"/>
+<area shape="rect" id="node9" href="$Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="379,184,507,211"/>
+<area shape="rect" id="node11" href="$Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="632,184,752,211"/>
+<area shape="rect" id="node19" href="$MirrorImage_8h.html" title="Définition des classes MirrorImage et MirrorImageFactory." alt="" coords="245,109,403,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="393,259,463,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="573,333,632,360"/>
+<area shape="rect" id="node12" title=" " alt="" coords="706,259,777,285"/>
+<area shape="rect" id="node13" title=" " alt="" coords="801,259,877,285"/>
+<area shape="rect" id="node14" href="$BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="716,333,868,360"/>
+<area shape="rect" id="node17" title=" " alt="" coords="898,408,961,435"/>
+<area shape="rect" id="node18" href="$CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="590,259,682,285"/>
+<area shape="rect" id="node15" title=" " alt="" coords="707,408,765,435"/>
+<area shape="rect" id="node16" title=" " alt="" coords="789,408,864,435"/>
+</map>

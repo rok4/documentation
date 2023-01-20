@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>rok4.Utils API documentation</title>
+<meta name="description" content="Provide functions to manipulate OGR / OSR entities" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>rok4.Utils</code></h1>
+</header>
+<section id="section-intro">
+<p>Provide functions to manipulate OGR / OSR entities</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;Provide functions to manipulate OGR / OSR entities
+&#34;&#34;&#34;
+
+import os
+
+from typing import Dict, List, Tuple, Union
+from osgeo import ogr, osr
+ogr.UseExceptions()
+osr.UseExceptions()
+
+def srs_to_spatialreference(srs: str) -&gt; &#39;osgeo.osr.SpatialReference&#39;:
+    &#34;&#34;&#34;Convert coordinates system as string to OSR spatial reference
+
+    Args:
+        srs (str): coordinates system PROJ4 compliant, with authority and code, like EPSG:3857 or IGNF:LAMB93
+
+    Returns:
+        osgeo.osr.SpatialReference: Corresponding OSR spatial reference
+    &#34;&#34;&#34;
+
+    authority, code = srs.split(&#39;:&#39;, 1)
+
+    sr = osr.SpatialReference()
+    try:
+        if authority.upper() == &#34;EPSG&#34;:
+            sr.ImportFromEPSG(int(code))
+        else:
+            sr.ImportFromProj4(f&#34;+init={srs.upper()} +wktext&#34;)
+    except RuntimeError as e:
+        raise Exception(f&#34;Cannot get the OSR spatial reference corresponding to {srs}&#34;)
+
+    return sr
+
+def bbox_to_geometry(bbox: Tuple[float, float, float, float], srs: str = None, densification: int = 0) -&gt; &#39;osgeo.ogr.Geometry&#39;:  
+    &#34;&#34;&#34;Convert bbox coordinates to OGR geometry
+
+    Args:
+        bbox (Tuple[float, float, float, float]): bounding box (xmin, ymin, xmax, ymax)
+        srs (str, optional): coordinates system. Defaults to None.
+        densification (int, optional): Number of point to add for each side of bounding box. Defaults to 0.
+
+    Returns:
+        osgeo.ogr.Geometry: Corresponding OGR geometry, with spatial reference if provided
+    &#34;&#34;&#34;    
+
+    ring = ogr.Geometry(ogr.wkbLinearRing)
+
+    if densification &gt; 0:
+        step_x = (bbox[2] - bbox[0]) / (densification + 1)
+        step_y = (bbox[3] - bbox[1]) / (densification + 1)
+
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[0] + step_x * i, bbox[1])
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[2], bbox[1] + step_y * i)
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[2] - step_x * i, bbox[3])
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[0], bbox[3] - step_y * i)
+        ring.AddPoint(bbox[0], bbox[1])
+
+    else:
+        ring.AddPoint(bbox[0], bbox[1])
+        ring.AddPoint(bbox[2], bbox[1])
+        ring.AddPoint(bbox[2], bbox[3])
+        ring.AddPoint(bbox[0], bbox[3])
+        ring.AddPoint(bbox[0], bbox[1])
+    
+
+    geom = ogr.Geometry(ogr.wkbPolygon)
+    geom.AddGeometry(ring)
+    geom.SetCoordinateDimension(2)
+
+    if srs is not None:
+        geom.AssignSpatialReference(srs_to_spatialreference(srs))
+    
+    return geom
+
+
+
+def reproject_bbox(bbox: Tuple[float, float, float, float], srs_src: str, srs_dst: str, densification: int = 5) -&gt; Tuple[float, float, float, float]:
+    &#34;&#34;&#34;Return bounding box in other coordinates system 
+
+    Points are added to be sure output bounding box contains input bounding box
+
+    Args:
+        bbox (Tuple[float, float, float, float]): bounding box (xmin, ymin, xmax, ymax) with source coordinates system
+        srs_src (str): source coordinates system
+        srs_dst (str): destination coordinates system
+        densification (int, optional): Number of point to add for each side of bounding box. Defaults to 5.
+
+    Returns:
+        Tuple[float, float, float, float]: bounding box (xmin, ymin, xmax, ymax) with destination coordinates system
+    &#34;&#34;&#34;
+
+    bbox_src = bbox_to_geometry(bbox, srs_src, densification)
+    sr_geo = srs_to_spatialreference(srs_dst)
+
+    bbox_dst = bbox_src.Clone()
+    os.environ[&#34;OGR_ENABLE_PARTIAL_REPROJECTION&#34;] = &#34;YES&#34;
+    bbox_dst.TransformTo(sr_geo)
+
+    env = bbox_dst.GetEnvelope()
+    return (env[0], env[2], env[1], env[3])</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="rok4.Utils.bbox_to_geometry"><code class="name flex">
+<span>def <span class="ident">bbox_to_geometry</span></span>(<span>bbox: Tuple[float, float, float, float], srs: str = None, densification: int = 0) ‑> osgeo.ogr.Geometry</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert bbox coordinates to OGR geometry</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bbox</code></strong> :&ensp;<code>Tuple[float, float, float, float]</code></dt>
+<dd>bounding box (xmin, ymin, xmax, ymax)</dd>
+<dt><strong><code>srs</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>coordinates system. Defaults to None.</dd>
+<dt><strong><code>densification</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of point to add for each side of bounding box. Defaults to 0.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>osgeo.ogr.Geometry</code></dt>
+<dd>Corresponding OGR geometry, with spatial reference if provided</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def bbox_to_geometry(bbox: Tuple[float, float, float, float], srs: str = None, densification: int = 0) -&gt; &#39;osgeo.ogr.Geometry&#39;:  
+    &#34;&#34;&#34;Convert bbox coordinates to OGR geometry
+
+    Args:
+        bbox (Tuple[float, float, float, float]): bounding box (xmin, ymin, xmax, ymax)
+        srs (str, optional): coordinates system. Defaults to None.
+        densification (int, optional): Number of point to add for each side of bounding box. Defaults to 0.
+
+    Returns:
+        osgeo.ogr.Geometry: Corresponding OGR geometry, with spatial reference if provided
+    &#34;&#34;&#34;    
+
+    ring = ogr.Geometry(ogr.wkbLinearRing)
+
+    if densification &gt; 0:
+        step_x = (bbox[2] - bbox[0]) / (densification + 1)
+        step_y = (bbox[3] - bbox[1]) / (densification + 1)
+
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[0] + step_x * i, bbox[1])
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[2], bbox[1] + step_y * i)
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[2] - step_x * i, bbox[3])
+        for i in range(densification + 1):
+            ring.AddPoint(bbox[0], bbox[3] - step_y * i)
+        ring.AddPoint(bbox[0], bbox[1])
+
+    else:
+        ring.AddPoint(bbox[0], bbox[1])
+        ring.AddPoint(bbox[2], bbox[1])
+        ring.AddPoint(bbox[2], bbox[3])
+        ring.AddPoint(bbox[0], bbox[3])
+        ring.AddPoint(bbox[0], bbox[1])
+    
+
+    geom = ogr.Geometry(ogr.wkbPolygon)
+    geom.AddGeometry(ring)
+    geom.SetCoordinateDimension(2)
+
+    if srs is not None:
+        geom.AssignSpatialReference(srs_to_spatialreference(srs))
+    
+    return geom</code></pre>
+</details>
+</dd>
+<dt id="rok4.Utils.reproject_bbox"><code class="name flex">
+<span>def <span class="ident">reproject_bbox</span></span>(<span>bbox: Tuple[float, float, float, float], srs_src: str, srs_dst: str, densification: int = 5) ‑> Tuple[float, float, float, float]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Return bounding box in other coordinates system </p>
+<p>Points are added to be sure output bounding box contains input bounding box</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bbox</code></strong> :&ensp;<code>Tuple[float, float, float, float]</code></dt>
+<dd>bounding box (xmin, ymin, xmax, ymax) with source coordinates system</dd>
+<dt><strong><code>srs_src</code></strong> :&ensp;<code>str</code></dt>
+<dd>source coordinates system</dd>
+<dt><strong><code>srs_dst</code></strong> :&ensp;<code>str</code></dt>
+<dd>destination coordinates system</dd>
+<dt><strong><code>densification</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of point to add for each side of bounding box. Defaults to 5.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Tuple[float, float, float, float]</code></dt>
+<dd>bounding box (xmin, ymin, xmax, ymax) with destination coordinates system</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def reproject_bbox(bbox: Tuple[float, float, float, float], srs_src: str, srs_dst: str, densification: int = 5) -&gt; Tuple[float, float, float, float]:
+    &#34;&#34;&#34;Return bounding box in other coordinates system 
+
+    Points are added to be sure output bounding box contains input bounding box
+
+    Args:
+        bbox (Tuple[float, float, float, float]): bounding box (xmin, ymin, xmax, ymax) with source coordinates system
+        srs_src (str): source coordinates system
+        srs_dst (str): destination coordinates system
+        densification (int, optional): Number of point to add for each side of bounding box. Defaults to 5.
+
+    Returns:
+        Tuple[float, float, float, float]: bounding box (xmin, ymin, xmax, ymax) with destination coordinates system
+    &#34;&#34;&#34;
+
+    bbox_src = bbox_to_geometry(bbox, srs_src, densification)
+    sr_geo = srs_to_spatialreference(srs_dst)
+
+    bbox_dst = bbox_src.Clone()
+    os.environ[&#34;OGR_ENABLE_PARTIAL_REPROJECTION&#34;] = &#34;YES&#34;
+    bbox_dst.TransformTo(sr_geo)
+
+    env = bbox_dst.GetEnvelope()
+    return (env[0], env[2], env[1], env[3])</code></pre>
+</details>
+</dd>
+<dt id="rok4.Utils.srs_to_spatialreference"><code class="name flex">
+<span>def <span class="ident">srs_to_spatialreference</span></span>(<span>srs: str) ‑> osgeo.osr.SpatialReference</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Convert coordinates system as string to OSR spatial reference</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>srs</code></strong> :&ensp;<code>str</code></dt>
+<dd>coordinates system PROJ4 compliant, with authority and code, like EPSG:3857 or IGNF:LAMB93</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>osgeo.osr.SpatialReference</code></dt>
+<dd>Corresponding OSR spatial reference</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def srs_to_spatialreference(srs: str) -&gt; &#39;osgeo.osr.SpatialReference&#39;:
+    &#34;&#34;&#34;Convert coordinates system as string to OSR spatial reference
+
+    Args:
+        srs (str): coordinates system PROJ4 compliant, with authority and code, like EPSG:3857 or IGNF:LAMB93
+
+    Returns:
+        osgeo.osr.SpatialReference: Corresponding OSR spatial reference
+    &#34;&#34;&#34;
+
+    authority, code = srs.split(&#39;:&#39;, 1)
+
+    sr = osr.SpatialReference()
+    try:
+        if authority.upper() == &#34;EPSG&#34;:
+            sr.ImportFromEPSG(int(code))
+        else:
+            sr.ImportFromProj4(f&#34;+init={srs.upper()} +wktext&#34;)
+    except RuntimeError as e:
+        raise Exception(f&#34;Cannot get the OSR spatial reference corresponding to {srs}&#34;)
+
+    return sr</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="rok4" href="index.html">rok4</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="rok4.Utils.bbox_to_geometry" href="#rok4.Utils.bbox_to_geometry">bbox_to_geometry</a></code></li>
+<li><code><a title="rok4.Utils.reproject_bbox" href="#rok4.Utils.reproject_bbox">reproject_bbox</a></code></li>
+<li><code><a title="rok4.Utils.srs_to_spatialreference" href="#rok4.Utils.srs_to_spatialreference">srs_to_spatialreference</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

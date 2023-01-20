@@ -1,0 +1,5 @@
+<map id="MessageDataStream" name="MessageDataStream">
+<area shape="rect" id="node1" title="Gestion des messages sous forme de flux." alt="" coords="5,80,164,107"/>
+<area shape="rect" id="node3" href="$classSERDataStream.html" title=" " alt="" coords="22,155,147,181"/>
+<area shape="rect" id="node2" href="$classDataStream.html" title=" " alt="" coords="35,5,135,32"/>
+</map>

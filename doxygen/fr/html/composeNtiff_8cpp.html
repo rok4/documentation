@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/generation/src/composeNtiff.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_57bbb0f0e43c6d9101717093723c909a.html">generation</a></li><li class="navelem"><a class="el" href="dir_37d94dac7f7914d8cc8c25707f466aaf.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier composeNtiff.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Montage de N images TIFF aux mêmes dimensions et caractéristiques.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;tiffio.h&quot;</code><br />
+<code>#include &quot;tiff.h&quot;</code><br />
+<code>#include &lt;boost/log/core.hpp&gt;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &lt;boost/log/utility/setup/common_attributes.hpp&gt;</code><br />
+<code>#include &lt;boost/log/utility/setup/console.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="LibtiffImage_8h_source.html">image/file/LibtiffImage.h</a>&quot;</code><br />
+<code>#include &quot;image/CompoundImage.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="Format_8h_source.html">enums/Format.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Cache_8h_source.html">utils/Cache.h</a>&quot;</code><br />
+<code>#include &quot;math.h&quot;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de composeNtiff.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="composeNtiff_8cpp__incl.png" border="0" usemap="#build_2sources_2generation_2src_2composeNtiff_8cpp" alt=""/></div>
+<map name="build_2sources_2generation_2src_2composeNtiff_8cpp" id="build_2sources_2generation_2src_2composeNtiff_8cpp">
+<area shape="rect" title="Montage de N images TIFF aux mêmes dimensions et caractéristiques." alt="" coords="879,5,1062,47"/>
+<area shape="rect" title=" " alt="" coords="883,408,963,435"/>
+<area shape="rect" title=" " alt="" coords="190,102,255,129"/>
+<area shape="rect" title=" " alt="" coords="397,333,464,360"/>
+<area shape="rect" title=" " alt="" coords="647,483,719,509"/>
+<area shape="rect" title=" " alt="" coords="537,102,607,129"/>
+<area shape="rect" title=" " alt="" coords="2734,408,2797,435"/>
+<area shape="rect" title=" " alt="" coords="683,102,768,129"/>
+<area shape="rect" title=" " alt="" coords="2503,483,2561,509"/>
+<area shape="rect" title=" " alt="" coords="1014,333,1087,360"/>
+<area shape="rect" title=" " alt="" coords="704,184,768,211"/>
+<area shape="rect" title=" " alt="" coords="945,102,997,129"/>
+<area shape="rect" title=" " alt="" coords="1021,102,1163,129"/>
+<area shape="rect" title=" " alt="" coords="1043,483,1195,509"/>
+<area shape="rect" title=" " alt="" coords="1239,95,1420,136"/>
+<area shape="rect" title=" " alt="" coords="1445,95,1609,136"/>
+<area shape="rect" href="LibtiffImage_8h.html" title="Définition des classes LibtiffImage et LibtiffImageFactory." alt="" coords="280,102,461,129"/>
+<area shape="rect" href="Format_8h.html" title="Définition des namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="1331,333,1459,360"/>
+<area shape="rect" href="CompoundImage_8h_source.html" title=" " alt="" coords="1106,184,1297,211"/>
+<area shape="rect" href="Cache_8h.html" title="Définition des classes IndexCache, CurlPool, StoragePool et ProjPool." alt="" coords="1836,184,1943,211"/>
+<area shape="rect" title=" " alt="" coords="3107,408,3181,435"/>
+<area shape="rect" title=" " alt="" coords="3257,102,3325,129"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="269,259,389,285"/>
+<area shape="rect" title=" " alt="" coords="319,408,390,435"/>
+<area shape="rect" href="FileImage_8h.html" title="Définition des classes FileImage et FileImageFactory." alt="" coords="294,184,461,211"/>
+<area shape="rect" title=" " alt="" coords="1454,408,1525,435"/>
+<area shape="rect" title=" " alt="" coords="246,333,322,360"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="987,408,1139,435"/>
+<area shape="rect" title=" " alt="" coords="398,483,461,509"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="1214,333,1306,360"/>
+<area shape="rect" title=" " alt="" coords="880,483,939,509"/>
+<area shape="rect" title=" " alt="" coords="1723,483,1797,509"/>
+<area shape="rect" href="PixelConverter_8h.html" title="Définition de la classe PixelConverter, permettant de convertir à la volée les pixels." alt="" coords="515,259,717,285"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="893,333,989,360"/>
+<area shape="rect" title=" " alt="" coords="2096,408,2147,435"/>
+<area shape="rect" title=" " alt="" coords="2527,259,2569,285"/>
+<area shape="rect" title=" " alt="" coords="2594,259,2718,285"/>
+<area shape="rect" title=" " alt="" coords="2742,259,2829,285"/>
+<area shape="rect" href="TileMatrixSet_8h_source.html" title=" " alt="" coords="1893,259,2046,285"/>
+<area shape="rect" href="Style_8h.html" title="Définition de la classe Style modélisant les styles." alt="" coords="2298,259,2401,285"/>
+<area shape="rect" href="Context_8h.html" title="Définition de la classe Context." alt="" coords="1691,333,1829,360"/>
+<area shape="rect" href="FileContext_8h.html" title="Implémentation de la classe FileContext." alt="" coords="1046,259,1207,285"/>
+<area shape="rect" title=" " alt="" coords="1904,333,1947,360"/>
+<area shape="rect" title=" " alt="" coords="1971,333,2058,360"/>
+<area shape="rect" href="TileMatrix_8h.html" title="Définition de la classe TileMatrix gérant une matrice de tuiles représentant un niveau d&#39;une pyramide..." alt="" coords="1534,333,1666,360"/>
+<area shape="rect" href="Keyword_8h.html" title="Définition de la classe Keyword gérant les mots&#45;clés des documents de capacités." alt="" coords="2323,333,2445,360"/>
+<area shape="rect" href="Configuration_8h_source.html" title=" " alt="" coords="2171,408,2325,435"/>
+<area shape="rect" href="LegendURL_8h.html" title="Définition de la classe LegendURL gérant les éléments de légendes des documents de capacités." alt="" coords="2893,408,3032,435"/>
+<area shape="rect" href="Palette_8h_source.html" title=" " alt="" coords="2184,333,2299,360"/>
+<area shape="rect" href="Pente_8h.html" title="D�finition de la classe Pente." alt="" coords="2520,333,2627,360"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0">usage</a> ()</td></tr>
+<tr class="memdesc:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'utilisation et les différentes options de la commande composeNtiff <a class="el" href="composeNtiff_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a>.  <a href="composeNtiff_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ef30c42cbc289d899a8be5d2d8f77d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3743d1ffdcedd6d873578928ca0b690a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#a3743d1ffdcedd6d873578928ca0b690a">error</a> (std::string message, int errorCode)</td></tr>
+<tr class="memdesc:a3743d1ffdcedd6d873578928ca0b690a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message d'erreur, l'utilisation de la commande et sort en erreur.  <a href="composeNtiff_8cpp.html#a3743d1ffdcedd6d873578928ca0b690a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3743d1ffdcedd6d873578928ca0b690a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25773de1be12d152bb05b67566cd483"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#ae25773de1be12d152bb05b67566cd483">parseCommandLine</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:ae25773de1be12d152bb05b67566cd483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère les valeurs passées en paramètres de la commande, et les stocke dans les variables globales.  <a href="composeNtiff_8cpp.html#ae25773de1be12d152bb05b67566cd483">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae25773de1be12d152bb05b67566cd483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda97a240459e8997e8c3f9a83cd4af3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#abda97a240459e8997e8c3f9a83cd4af3">loadImages</a> (<a class="el" href="classFileImage.html">FileImage</a> **ppImageOut, <a class="el" href="classCompoundImage.html">CompoundImage</a> **ppCompoundIn)</td></tr>
+<tr class="memdesc:abda97a240459e8997e8c3f9a83cd4af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge les images contenues dans le dossier en entrée et l'image de sortie.  <a href="composeNtiff_8cpp.html#abda97a240459e8997e8c3f9a83cd4af3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abda97a240459e8997e8c3f9a83cd4af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale de l'outil composeNtiff.  <a href="composeNtiff_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab893934a2a359fdd5acac8ff75f30235"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#ab893934a2a359fdd5acac8ff75f30235">widthwiseImage</a> = 0</td></tr>
+<tr class="separator:ab893934a2a359fdd5acac8ff75f30235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712d5c8dcef8e729c38362f3246aa97a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#a712d5c8dcef8e729c38362f3246aa97a">heightwiseImage</a> = 0</td></tr>
+<tr class="separator:a712d5c8dcef8e729c38362f3246aa97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527676d008d5ab68518a5cb08bdea98f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceCompression.html#ab59ae0c9640db55b2cbed59310434030">Compression::eCompression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#a527676d008d5ab68518a5cb08bdea98f">compression</a> = Compression::NONE</td></tr>
+<tr class="separator:a527676d008d5ab68518a5cb08bdea98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3a843e8841857f4ed862def9b33121"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#a0d3a843e8841857f4ed862def9b33121">inputDir</a> = 0</td></tr>
+<tr class="separator:a0d3a843e8841857f4ed862def9b33121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83e540503fbf0062650fb1bb5a06034"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#aa83e540503fbf0062650fb1bb5a06034">outputImage</a> = 0</td></tr>
+<tr class="separator:aa83e540503fbf0062650fb1bb5a06034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1a0a045ba3ce38295c06136a4508a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#aaf1a0a045ba3ce38295c06136a4508a9">debugLogger</a> =false</td></tr>
+<tr class="separator:aaf1a0a045ba3ce38295c06136a4508a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfcd8d5595d8ba1a38ef3c624d1186a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="composeNtiff_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a></td></tr>
+<tr class="separator:aecfcd8d5595d8ba1a38ef3c624d1186a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Montage de N images TIFF aux mêmes dimensions et caractéristiques. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Institut national de l'information géographique et forestière </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a3743d1ffdcedd6d873578928ca0b690a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3743d1ffdcedd6d873578928ca0b690a">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void error </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>errorCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message d'erreur, l'utilisation de la commande et sort en erreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>message d'erreur </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorCode</td><td>code de retour </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abda97a240459e8997e8c3f9a83cd4af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda97a240459e8997e8c3f9a83cd4af3">&#9670;&nbsp;</a></span>loadImages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int loadImages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFileImage.html">FileImage</a> **&#160;</td>
+          <td class="paramname"><em>ppImageOut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCompoundImage.html">CompoundImage</a> **&#160;</td>
+          <td class="paramname"><em>ppCompoundIn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Charge les images contenues dans le dossier en entrée et l'image de sortie. </p>
+<p>Toutes les images doivent avoir les mêmes caractéristiques, dimensions et type des canaux. Les images en entrée seront gérée par un objet de la classe <a class="el" href="classCompoundImage.html">CompoundImage</a>, et l'image en sortie sera une image TIFF.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppImageOut</td><td>image résultante de l'outil </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppCompoundIn</td><td>ensemble des images en entrée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale de l'outil composeNtiff. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>nombre de paramètres </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>tableau des paramètres </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="ae25773de1be12d152bb05b67566cd483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25773de1be12d152bb05b67566cd483">&#9670;&nbsp;</a></span>parseCommandLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseCommandLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère les valeurs passées en paramètres de la commande, et les stocke dans les variables globales. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>nombre de paramètres </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>tableau des paramètres </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>code de retour, 0 si réussi, -1 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a2ef30c42cbc289d899a8be5d2d8f77d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef30c42cbc289d899a8be5d2d8f77d0">&#9670;&nbsp;</a></span>usage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche l'utilisation et les différentes options de la commande composeNtiff <a class="el" href="composeNtiff_8cpp.html#aecfcd8d5595d8ba1a38ef3c624d1186a">help</a>. </p>
+<p>L'affichage se fait dans le niveau de logger INFO </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a527676d008d5ab68518a5cb08bdea98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527676d008d5ab68518a5cb08bdea98f">&#9670;&nbsp;</a></span>compression</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceCompression.html#ab59ae0c9640db55b2cbed59310434030">Compression::eCompression</a> compression = Compression::NONE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="namespaceCompression.html" title="Gestion des informations liées à la compression.">Compression</a> de l'image de sortie </p>
+
+</div>
+</div>
+<a id="aaf1a0a045ba3ce38295c06136a4508a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1a0a045ba3ce38295c06136a4508a9">&#9670;&nbsp;</a></span>debugLogger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool debugLogger =false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Activation du niveau de log debug. Faux par défaut </p>
+
+</div>
+</div>
+<a id="a712d5c8dcef8e729c38362f3246aa97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712d5c8dcef8e729c38362f3246aa97a">&#9670;&nbsp;</a></span>heightwiseImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int heightwiseImage = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nombre d'images dans le sens de la hauteur </p>
+
+</div>
+</div>
+<a id="aecfcd8d5595d8ba1a38ef3c624d1186a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfcd8d5595d8ba1a38ef3c624d1186a">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string help</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= std::string(<span class="stringliteral">&quot;\ncomposeNtiff version &quot;</span>) + std::string(VERSION) + <span class="stringliteral">&quot;\n\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;Monte N TIFF image, forming a regular grid\n\n&quot;</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="stringliteral">&quot;Usage: composeNtiff -s &lt;DIRECTORY&gt; -g &lt;VAL&gt; &lt;VAL&gt; -c &lt;VAL&gt; &lt;OUTPUT FILE&gt;\n\n&quot;</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="stringliteral">&quot;Parameters:\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;     -s source directory. All file into have to be images. If too much images are present, first are used.\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;     -c output compression : default value : none\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             raw     no compression\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             none    no compression\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             jpg     Jpeg encoding (quality 75)\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             jpg90   Jpeg encoding (quality 90)\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             lzw     Lempel-Ziv &amp; Welch encoding\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             pkb     PackBits encoding\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;             zip     Deflate encoding\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;     -g number of images, widthwise and heightwise, to compose the final image\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;     -d debug logger activation\n\n&quot;</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="stringliteral">&quot;Example\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;     composeNtiff -s /home/ign/sources -g 10 10 -c zip output.tif\n\n&quot;</span></div>
+</div><!-- fragment --><p>Message d'usage de la commande pbf2cache </p>
+
+</div>
+</div>
+<a id="a0d3a843e8841857f4ed862def9b33121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3a843e8841857f4ed862def9b33121">&#9670;&nbsp;</a></span>inputDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* inputDir = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dossier des images sources </p>
+
+</div>
+</div>
+<a id="aa83e540503fbf0062650fb1bb5a06034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83e540503fbf0062650fb1bb5a06034">&#9670;&nbsp;</a></span>outputImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* outputImage = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Chemin de l'image en sortie </p>
+
+</div>
+</div>
+<a id="ab893934a2a359fdd5acac8ff75f30235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab893934a2a359fdd5acac8ff75f30235">&#9670;&nbsp;</a></span>widthwiseImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int widthwiseImage = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nombre d'images dans le sens de la largeur </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<map id="build/sources/core&#45;cpp/src/image/EmptyImage.h" name="build/sources/core&#45;cpp/src/image/EmptyImage.h">
+<area shape="rect" id="node1" title="Définition de la classe EmptyImage." alt="" coords="161,5,379,47"/>
+<area shape="rect" id="node2" href="$Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="210,95,330,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,76,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="100,169,171,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="195,169,271,196"/>
+<area shape="rect" id="node6" href="$BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="346,244,498,271"/>
+<area shape="rect" id="node10" title=" " alt="" coords="277,319,340,345"/>
+<area shape="rect" id="node11" href="$CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="397,169,489,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="546,319,698,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="365,319,423,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="447,319,522,345"/>
+<area shape="rect" id="node12" title=" " alt="" coords="522,244,581,271"/>
+</map>

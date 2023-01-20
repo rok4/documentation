@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="IGN">
+      
+      
+      
+        <link rel="prev" href="../specifications/api_server_redoc/">
+      
+      
+        <link rel="next" href="../pregeneration/">
+      
+      <link rel="icon" href="../images/rok4-carre.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Serveur - Projet ROK4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extras/style.css">
+    
+      <link rel="stylesheet" href="../extras/swagger-ui.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#serveur-de-diffusion-wms-wmts-et-tms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Projet ROK4" class="md-header__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../images/rok4-carre.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projet ROK4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Serveur
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../specifications/pyramid/" class="md-tabs__link">
+        Spécifications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Documentation utilisateur
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker/" class="md-tabs__link">
+        Utilisation de Docker
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../devs/" class="md-tabs__link">
+      Documentation développeur
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projet ROK4" class="md-nav__button md-logo" aria-label="Projet ROK4" data-md-component="logo">
+      
+  <img src="../images/rok4-carre.png" alt="logo">
+
+    </a>
+    Projet ROK4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Spécifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spécifications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Spécifications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/pyramid/" class="md-nav__link">
+        Pyramide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/api_server_swaggerui/" class="md-nav__link">
+        API du serveur (SwaggerUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifications/api_server_redoc/" class="md-nav__link">
+        API du serveur (Redoc)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Documentation utilisateur
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation utilisateur" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation utilisateur
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Serveur
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Serveur
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-via-le-paquet-debian" class="md-nav__link">
+    Installation via le paquet debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-depuis-les-sources" class="md-nav__link">
+    Installation depuis les sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation depuis les sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recuperation-du-projet" class="md-nav__link">
+    Récupération du projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-cmake" class="md-nav__link">
+    Variables CMake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependances-a-la-compilation" class="md-nav__link">
+    Dépendances à la compilation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilation-et-installation" class="md-nav__link">
+    Compilation et installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-denvironnement-utilisees-dans-les-librairies-de-core-cpp" class="md-nav__link">
+    Variables d'environnement utilisées dans les librairies de core-cpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-du-serveur" class="md-nav__link">
+    Utilisation du serveur
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation du serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurer-le-serveur" class="md-nav__link">
+    Configurer le serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancer-le-serveur" class="md-nav__link">
+    Lancer le serveur
+  </a>
+  
+    <nav class="md-nav" aria-label="Lancer le serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-ligne-de-commande" class="md-nav__link">
+    En ligne de commande
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-tant-que-service-systemctl" class="md-nav__link">
+    En tant que service systemctl
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-et-configurer-nginx" class="md-nav__link">
+    Installer et configurer NGINX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-aux-capacites-du-serveur" class="md-nav__link">
+    Accès aux capacités du serveur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-general-du-serveur" class="md-nav__link">
+    Fonctionnement général du serveur
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctionnement général du serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identification-du-service-et-du-type-de-requete" class="md-nav__link">
+    Identification du service et du type de requête
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-aux-donnees" class="md-nav__link">
+    Accès aux données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-configurations" class="md-nav__link">
+    Gestion des configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personnalisation-des-points-dacces-aux-services" class="md-nav__link">
+    Personnalisation des points d'accès aux services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pregeneration/" class="md-nav__link">
+        Outils de pré-génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generation/" class="md-nav__link">
+        Outils de génération
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        Outils de gestion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytools/" class="md-nav__link">
+        Outils python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Utilisation de Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Utilisation de Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilisation de Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        ROK4 & Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/build/" class="md-nav__link">
+        Compilation des images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/run/datasets/" class="md-nav__link">
+        Génération de pyramides
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/run/server/" class="md-nav__link">
+        Exécution d'une stack avec le serveur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devs/" class="md-nav__link">
+        Documentation développeur
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-via-le-paquet-debian" class="md-nav__link">
+    Installation via le paquet debian
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-depuis-les-sources" class="md-nav__link">
+    Installation depuis les sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation depuis les sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recuperation-du-projet" class="md-nav__link">
+    Récupération du projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-cmake" class="md-nav__link">
+    Variables CMake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependances-a-la-compilation" class="md-nav__link">
+    Dépendances à la compilation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilation-et-installation" class="md-nav__link">
+    Compilation et installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-denvironnement-utilisees-dans-les-librairies-de-core-cpp" class="md-nav__link">
+    Variables d'environnement utilisées dans les librairies de core-cpp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-du-serveur" class="md-nav__link">
+    Utilisation du serveur
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation du serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurer-le-serveur" class="md-nav__link">
+    Configurer le serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lancer-le-serveur" class="md-nav__link">
+    Lancer le serveur
+  </a>
+  
+    <nav class="md-nav" aria-label="Lancer le serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-ligne-de-commande" class="md-nav__link">
+    En ligne de commande
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-tant-que-service-systemctl" class="md-nav__link">
+    En tant que service systemctl
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-et-configurer-nginx" class="md-nav__link">
+    Installer et configurer NGINX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-aux-capacites-du-serveur" class="md-nav__link">
+    Accès aux capacités du serveur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-general-du-serveur" class="md-nav__link">
+    Fonctionnement général du serveur
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctionnement général du serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identification-du-service-et-du-type-de-requete" class="md-nav__link">
+    Identification du service et du type de requête
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-aux-donnees" class="md-nav__link">
+    Accès aux données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-configurations" class="md-nav__link">
+    Gestion des configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personnalisation-des-points-dacces-aux-services" class="md-nav__link">
+    Personnalisation des points d'accès aux services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="serveur-de-diffusion-wms-wmts-et-tms">Serveur de diffusion WMS, WMTS et TMS</h1>
+<p>Le serveur fait partie du projet open-source ROK4 (sous licence CeCILL-C) développé par les équipes du projet <a href="https://www.geoportail.gouv.fr">Géoportail</a>(<a href="https://twitter.com/Geoportail">@Geoportail</a>) de l’<a href="https://ign.fr">Institut National de l’Information Géographique et Forestière</a> (<a href="https://twitter.com/IGNFrance">@IGNFrance</a>). Il est écrit en C++ et permet la diffusion de données raster ou vecteur.</p>
+<p>Le serveur implémente les standards ouverts de l’Open Geospatial Consortium (OGC) WMS 1.3.0 et WMTS 1.0.0, ainsi que le TMS (Tile Map Service). Il vise deux objectifs principaux :</p>
+<ul>
+<li>L’utilisation d’un cache de données raster unique permettant de servir indifféremment des flux WMS, WMTS et TMS</li>
+<li>Des performances de traitement d’image et de diffusion accrues</li>
+<li>La diffusion de tuiles vecteur telles qu'elles sont stockées, sans transformation (TMS uniquement)</li>
+<li>La diffusion en WMTS selon des Tile Matrix Sets différents de celui de la pyramide utilisée.</li>
+</ul>
+<p>Les pyramides de données utilisées sont produites via les outils de <a href="https://github.com/rok4/pregeneration">prégénération</a> et de <a href="https://github.com/rok4/generation">génération</a>.</p>
+<h2 id="installation-via-le-paquet-debian">Installation via le paquet debian</h2>
+<p>Télécharger les paquets sur GitHub :</p>
+<ul>
+<li><a href="https://github.com/rok4/server/releases/">le serveur</a></li>
+<li><a href="https://github.com/rok4/styles/releases/">les styles</a></li>
+<li><a href="https://github.com/rok4/tilematrixsets/releases/">les TMS</a></li>
+</ul>
+<pre><code class="language-bash">apt install ./rok4-styles-&lt;version&gt;-linux-all.deb
+apt install ./rok4-tilematrixsets-&lt;version&gt;-linux-all.deb
+apt install ./rok4-server-&lt;version&gt;-&lt;system&gt;-amd64.deb
+</code></pre>
+<h2 id="installation-depuis-les-sources">Installation depuis les sources</h2>
+<h3 id="recuperation-du-projet">Récupération du projet</h3>
+<pre><code class="language-bash">git clone --recursive https://github.com/rok4/server
+</code></pre>
+<p>ou</p>
+<pre><code class="language-bash">git clone https://github.com/rok4/server
+git submodule update --init --recursive
+</code></pre>
+<h3 id="variables-cmake">Variables CMake</h3>
+<ul>
+<li><code>CMAKE_INSTALL_PREFIX</code> : dossier d'installation du serveur. Valeur par défaut : <code>/usr/local</code></li>
+<li><code>BUILD_VERSION</code> : version du serveur compilé. Valeur par défaut : <code>0.0.0</code></li>
+<li><code>OBJECT_ENABLED</code> : active la compilation des classes de gestion des stockages objet. Valeur par défaut : <code>0</code>, <code>1</code> pour activer.</li>
+<li><code>DEBUG_BUILD</code> : active la compilation en mode debug. Valeur par défaut : <code>0</code>, <code>1</code> pour activer.</li>
+<li><code>UNITTEST_ENABLED</code> : active la compilation des tests unitaires. Valeur par défaut : <code>0</code>, <code>1</code> pour activer.</li>
+</ul>
+<h3 id="dependances-a-la-compilation">Dépendances à la compilation</h3>
+<ul>
+<li>Submodule GIT</li>
+<li><code>https://github.com/rok4/core-cpp</code></li>
+<li>Paquets debian</li>
+<li>libfcgi-dev</li>
+<li>libtinyxml-dev</li>
+<li>zlib1g-dev</li>
+<li>libcurl4-openssl-dev</li>
+<li>libproj-dev</li>
+<li>libssl-dev</li>
+<li>libturbojpeg0-dev</li>
+<li>libjpeg-dev</li>
+<li>libc6-dev</li>
+<li>libjson11-1-dev</li>
+<li>libboost-log-dev</li>
+<li>libboost-filesystem-dev</li>
+<li>libboost-system-dev</li>
+<li>libsqlite3-dev</li>
+<li>Si <code>OBJECT_ENABLED</code> à <code>1</code><ul>
+<li>librados-dev</li>
+</ul>
+</li>
+<li>Si <code>UNITTEST_ENABLED</code> à <code>1</code><ul>
+<li>libcppunit-dev</li>
+</ul>
+</li>
+</ul>
+<h3 id="compilation-et-installation">Compilation et installation</h3>
+<pre><code class="language-bash">mkdir build &amp;&amp; cd build
+cmake -DCMAKE_INSTALL_PREFIX=/ -DBUILD_VERSION=0.0.1 -DOBJECT_ENABLED=1 ..
+make
+make install
+</code></pre>
+<h2 id="variables-denvironnement-utilisees-dans-les-librairies-de-core-cpp">Variables d'environnement utilisées dans les librairies de core-cpp</h2>
+<p>Leur définition est contrôlée à l'usage.</p>
+<ul>
+<li>Pour le stockage CEPH<ul>
+<li><code>ROK4_CEPH_CONFFILE</code></li>
+<li><code>ROK4_CEPH_USERNAME</code></li>
+<li><code>ROK4_CEPH_CLUSTERNAME</code></li>
+</ul>
+</li>
+<li>Pour le stockage S3<ul>
+<li><code>ROK4_S3_URL</code></li>
+<li><code>ROK4_S3_KEY</code></li>
+<li><code>ROK4_S3_SECRETKEY</code></li>
+</ul>
+</li>
+<li>Pour le stockage SWIFT<ul>
+<li><code>ROK4_SWIFT_AUTHURL</code></li>
+<li><code>ROK4_SWIFT_USER</code></li>
+<li><code>ROK4_SWIFT_PASSWD</code></li>
+<li><code>ROK4_SWIFT_PUBLICURL</code></li>
+<li>Si authentification via Swift<ul>
+<li><code>ROK4_SWIFT_ACCOUNT</code></li>
+</ul>
+</li>
+<li>Si connection via keystone (présence de <code>ROK4_KEYSTONE_DOMAINID</code>)<ul>
+<li><code>ROK4_KEYSTONE_DOMAINID</code></li>
+<li><code>ROK4_KEYSTONE_PROJECTID</code></li>
+</ul>
+</li>
+<li><code>ROK4_SWIFT_TOKEN_FILE</code> afin de sauvegarder le token d'accès, et ne pas le demander si ce fichier en contient un</li>
+</ul>
+</li>
+<li>Pour configurer l'usage de libcurl (intéraction SWIFT et S3)<ul>
+<li><code>ROK4_SSL_NO_VERIFY</code></li>
+<li><code>HTTP_PROXY</code></li>
+<li><code>HTTPS_PROXY</code></li>
+<li><code>NO_PROXY</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="utilisation-du-serveur">Utilisation du serveur</h2>
+<p>Le serveur ROK4 est lancé en mode stand alone. Nous utiliserons ici Nginx comme serveur front pour "traduire" les requêtes HTTP en FCGI et les rediriger vers le serveur ROK4.</p>
+<h3 id="configurer-le-serveur">Configurer le serveur</h3>
+<p>Dans le fichier <code>server.json</code>, on précise le port d'écoute :</p>
+<pre><code class="language-json">    &quot;port&quot;: &quot;:9000&quot;
+</code></pre>
+<p>On configure les logs de manière à les retrouver dans un fichier par jour :</p>
+<pre><code class="language-json">&quot;logger&quot;: {
+    &quot;output&quot;: &quot;rolling_file&quot;,
+    &quot;level&quot;: &quot;info&quot;,
+    &quot;file_prefix&quot;: &quot;/var/log/rok4&quot;,
+    &quot;file_period&quot;: 86400
+}
+</code></pre>
+<p>Les répertoires dans lesquels sont les tile matrix sets et les styles peuvent être des dossiers (comme <code>file:///etc/rok4/tilematrixsets</code>) ou des préfixes objets  (comme <code>s3://tilematrixsets</code>). Sans préfixe précisant le type de stockage, le chemin est interprété en mode fichier.</p>
+<ul>
+<li>Les paramètres possibles du fichier de configuration <code>server.json</code> sont décrits <a href="config/server.schema.json">ici</a></li>
+<li>Les paramètres possibles du fichier de configuration <code>services.json</code> sont décrits <a href="config/services.schema.json">ici</a></li>
+</ul>
+<h3 id="lancer-le-serveur">Lancer le serveur</h3>
+<h4 id="en-ligne-de-commande">En ligne de commande</h4>
+<p>La ligne de commande permettant de lancer ROK4 comme instance autonome est la suivante :</p>
+<pre><code class="language-bash">rok4 -f /chemin/vers/fichier/server.json &amp;
+</code></pre>
+<h4 id="en-tant-que-service-systemctl">En tant que service systemctl</h4>
+<p>Selon l'emplacement d'installation, le fichier dans <code>service/rok4.service</code> peut déjà être à un endroit pris en compte par systemctl (comme <code>/usr/lib/systemd/system</code>). Celui ci est écrit pour un déploiement à la racine, modifiez les chemins pour qu'il soit adapté à votre déploiement. Si l'installation a été faite via le paquet debian, le service est déjà correctement installé, et les configurations sont dans <code>/etc/rok4</code>.</p>
+<pre><code>EnvironmentFile=/etc/rok4/config/env
+WorkingDirectory=/etc/rok4/config/
+</code></pre>
+<p>Le fichier <code>config/env</code> permet de définir les variables d'environnement propres au serveur pour configurer l'utilisation de stockages objets (voir <a href="#variables-denvironnement-utilisées-dans-les-librairies-de-core-cpp">ici</a>).</p>
+<p>Le serveur est lancé en tant que user (et group) <code>rok4</code>. Il convient donc de le créer : <code>useradd rok4</code>.</p>
+<p>Il suffit alors de recharger le démon systemctl avec la commande <code>systemctl daemon-reload</code>. Vous pouvez maintenant piloter le serveur ROK4 via ce système, comme le démarrer avec <code>systemctl start rok4</code>.</p>
+<h3 id="installer-et-configurer-nginx">Installer et configurer NGINX</h3>
+<ul>
+<li>Sous Debian : <code>apt install nginx</code></li>
+<li>Sous Centos : <code>yum install nginx</code></li>
+</ul>
+<p>Remplacer le fichier <code>default</code> présent dans le répertoire <code>/etc/nginx/sites-enabled</code> par le contenu suivant :</p>
+<pre><code>upstream rok4 { server localhost:9000; }
+
+server {
+    listen 80;
+    root /var/www;
+    server_name localhost;
+
+    access_log /var/log/rok4_access.log;
+    error_log /var/log/rok4_error.log;
+
+    location /rok4 {
+        rewrite /rok4/?(.*) /$1 break;
+        fastcgi_pass rok4;
+        include fastcgi_params;
+    }
+}
+</code></pre>
+<p>On redémarre nginx : <code>systemctl restart nginx</code></p>
+<h2 id="acces-aux-capacites-du-serveur">Accès aux capacités du serveur</h2>
+<ul>
+<li>Liste des services de diffusion : http://localhost/rok4/</li>
+<li>GetCapabilities des services de diffusion<ul>
+<li>WMS : http://localhost/rok4/wms?request=GetCapabilities&amp;service=WMS</li>
+<li>WMTS : http://localhost/rok4/wmts?request=GetCapabilities&amp;service=WMTS</li>
+<li>TMS : http://localhost/rok4/tms/1.0.0</li>
+</ul>
+</li>
+<li>Racine de l'API d'administration : http://localhost/rok4/admin/</li>
+</ul>
+<h2 id="fonctionnement-general-du-serveur">Fonctionnement général du serveur</h2>
+<h3 id="identification-du-service-et-du-type-de-requete">Identification du service et du type de requête</h3>
+<p>Lorsque le serveur reçoit une requête, c'est le premier élément du chemin qui détermine le service :</p>
+<ul>
+<li><code>/</code> -&gt; requête globale</li>
+<li><code>/healthcheck</code> -&gt; requête d'état de santé ou statut du serveur</li>
+<li><code>/wmts</code> -&gt; requête WMTS</li>
+<li><code>/wms</code> -&gt; requête WMS</li>
+<li><code>/tms</code> -&gt; requête TMS</li>
+<li><code>/admin</code> -&gt; requête d'administration</li>
+</ul>
+<p>En WMS et WMTS, si c'est une requête POST, le corps est interprété pour extraire les informations. Seuls le getCapabilities, le getMap et le getTile sont disponibles en POST. Le paramètre de requête ou le corps doit confirmer le service pour que la requête soit valide.</p>
+<p>Les requêtes gérées par le serveur sont décrites dans des spécifications au format <a href="openapi.yaml">Open API</a>.</p>
+<h3 id="acces-aux-donnees">Accès aux données</h3>
+<p>L'accès aux données stockées dans les pyramides se fait toujours par tuile. Dans le cas du TMS et WMTS, la requête doit contenir les indices (colonne et ligne) de la tuile voulue. La tuile est ensuite renvoyée sans traitement, ou avec simple ajout/modification de l'en-tête (en TIFF et en PNG). Dans le cas d'un GetMap en WMS, l'emprise demandée est convertie dans le système de coordonnées de la pyramide, et on identifie ainsi la liste des indices des tuiles requises pour calculée l'image voulue. De la même manière qu'en WMTS et TMS, le serveur sait à partir des indices où récupérer la donnée dans l'espace de stockage des pyramides.</p>
+<p>Avec les indices de la tuile à lire, le serveur calcule le nom de la dalle qui la contient et le numéro de la tuile dans cette dalle. Le serveur commence par récupérer le header et l'index de la dalle, contenant les offsets et les tailles de toutes les tuiles de la dalle. Le header fait toujours 2048 octets et l'index a une taille connue par le serveur.</p>
+<p>Dans le cas du stockage objet (CEPH, S3, SWIFT), les objets symboliques ne font jamais plus de 2047 octets. Cette première lecture permet donc de les identifier (on lit moins que voulu). Dans ce cas, ce qu'on a lu contient le nom de l'objet contenant réellement la donnée (précédé de la signature <code>SYMLINK#</code>). On va donc reproduire l'opération sur ce nouvel objet, qui lui ne doit pas être un objet symbolique (pas de lien en cascade). En mode fichier, ce mécanisme est transparent pour le serveur car géré par le système de fichiers.</p>
+<p>Une fois que l'on a récupéré l'index, et grâce au numéro de la tuile dans la dalle, on va pouvoir connaître l'offset et la taille. On va donc faire une deuxième lecture de la dalle pour récupérer la donnée de la tuile.</p>
+<h3 id="gestion-des-configurations">Gestion des configurations</h3>
+<p>Au démarrage du serveur, toutes les configurations (serveur, services, tile matrix sets, styles et couches) sont chargées depuis les fichiers. Lors du fonctionnement, si une requête d'administration modifie cette configuration, les fichiers sont mis à jour (écrits, écrasés ou supprimés).</p>
+<p><img alt="Chargement du serveur" src="docs/images/rok4server-layer-pyramid.png" /></p>
+<h3 id="personnalisation-des-points-dacces-aux-services">Personnalisation des points d'accès aux services</h3>
+<p>Pour que les URLs présentes dans les réponses des services soient correctes malgré des réecritures, il est important de bien renseigner les champs suivant dans le fichier <code>services.json</code>:</p>
+<pre><code class="language-json">    &quot;wms&quot;: {
+        &quot;endpoint_uri&quot;: &quot;http://localhost/rok4/wms&quot;,
+    },
+    &quot;wmts&quot;: {
+        &quot;endpoint_uri&quot;: &quot;http://localhost/rok4/wmts&quot;
+    },
+    &quot;tms&quot;: {
+        &quot;endpoint_uri&quot;: &quot;http://localhost/rok4/tms&quot;
+    }
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../extras/swagger-ui-bundle.js"></script>
+      
+        <script src="../extras/swagger-ui-standalone-preset.js"></script>
+      
+        <script src="../extras/redoc.min.js"></script>
+      
+    
+  </body>
+</html>

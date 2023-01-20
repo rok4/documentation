@@ -1,0 +1,22 @@
+<map id="build/sources/core&#45;cpp/src/image/MergeImage.cpp" name="build/sources/core&#45;cpp/src/image/MergeImage.cpp">
+<area shape="rect" id="node1" title="Implement classes MergeImage, MergeImageFactory and MergeMask and the namespace Merge." alt="" coords="619,5,849,47"/>
+<area shape="rect" id="node2" href="$MergeImage_8h.html" title="Define classes MergeImage, MergeImageFactory and MergeMask and the namespace Merge." alt="" coords="185,95,347,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="505,393,657,420"/>
+<area shape="rect" id="node16" href="$Utils_8h.html" title=" " alt="" coords="686,169,782,196"/>
+<area shape="rect" id="node17" title=" " alt="" coords="766,244,833,271"/>
+<area shape="rect" id="node19" href="$Line_8h.html" title="Define the Line class , to manipulate and convert image&#39;s lines." alt="" coords="561,95,696,121"/>
+<area shape="rect" id="node3" href="$Image_8h.html" title="Define the Image abstract class , to abstract all kind of images." alt="" coords="206,169,326,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,244,76,271"/>
+<area shape="rect" id="node14" title=" " alt="" coords="17,169,80,196"/>
+<area shape="rect" id="node15" href="$Format_8h.html" title="Define and the namespaces Compression, SampleFormat, Photometric, ExtraSample et Format." alt="" coords="370,169,498,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="472,244,543,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="152,244,228,271"/>
+<area shape="rect" id="node7" href="$BoundingBox_8h.html" title="Implement template class BoundingBox." alt="" coords="199,319,351,345"/>
+<area shape="rect" id="node11" title=" " alt="" coords="109,393,172,420"/>
+<area shape="rect" id="node12" href="$CRS_8h.html" title="Define the reference systems handler." alt="" coords="304,244,396,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="230,393,289,420"/>
+<area shape="rect" id="node10" title=" " alt="" coords="313,393,387,420"/>
+<area shape="rect" id="node13" title=" " alt="" coords="386,319,445,345"/>
+<area shape="rect" id="node18" title=" " alt="" coords="662,244,742,271"/>
+<area shape="rect" id="node20" title=" " alt="" coords="595,169,662,196"/>
+</map>

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ROK4: Référence du fichier build/sources/core-cpp/src/image/DecimatedImage.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ROK4
+   </div>
+   <div id="projectbrief">Serveur de diffusion de données géographiques et outils de traitement</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_850eb49cc1c32bbdb91d218a4b1969db.html">sources</a></li><li class="navelem"><a class="el" href="dir_7330a926e86a9b0b329c9e577de04c09.html">core-cpp</a></li><li class="navelem"><a class="el" href="dir_5f66fcedb193519752b9102c8cb486b2.html">src</a></li><li class="navelem"><a class="el" href="dir_3806e1b72a3d84c77d8b67f55e796c89.html">image</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Référence du fichier DecimatedImage.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémentation des classes <a class="el" href="classDecimatedImage.html" title="Décimation d&#39;une image, c&#39;est à dire qu&#39;on ne garde qu&#39;un seul pixel tous les N pixels.">DecimatedImage</a>, DecimatedMask et <a class="el" href="classDecimatedImageFactory.html" title="Usine de création d&#39;une image composée.">DecimatedImageFactory</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="DecimatedImage_8h_source.html">image/DecimatedImage.h</a>&quot;</code><br />
+<code>#include &lt;boost/log/trivial.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="Utils_8h_source.html">utils/Utils.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de DecimatedImage.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="DecimatedImage_8cpp__incl.png" border="0" usemap="#build_2sources_2core-cpp_2src_2image_2DecimatedImage_8cpp" alt=""/></div>
+<map name="build_2sources_2core-cpp_2src_2image_2DecimatedImage_8cpp" id="build_2sources_2core-cpp_2src_2image_2DecimatedImage_8cpp">
+<area shape="rect" title="Implémentation des classes DecimatedImage, DecimatedMask et DecimatedImageFactory." alt="" coords="193,5,455,47"/>
+<area shape="rect" href="DecimatedImage_8h.html" title="Définition des classes DecimatedImage et DecimatedImageFactory." alt="" coords="229,95,419,121"/>
+<area shape="rect" title=" " alt="" coords="648,393,800,420"/>
+<area shape="rect" href="Utils_8h.html" title="Définition de fonctions de conversion et calculs sur des tableaux. Chaque fonctions est définie avec ..." alt="" coords="83,169,179,196"/>
+<area shape="rect" title=" " alt="" coords="203,169,266,196"/>
+<area shape="rect" title=" " alt="" coords="109,244,176,271"/>
+<area shape="rect" title=" " alt="" coords="5,244,85,271"/>
+<area shape="rect" title=" " alt="" coords="290,169,358,196"/>
+<area shape="rect" href="Image_8h.html" title="Définition de la classe abstraite Image, abstrayant les différents types d&#39;images." alt="" coords="433,169,553,196"/>
+<area shape="rect" title=" " alt="" coords="201,244,271,271"/>
+<area shape="rect" title=" " alt="" coords="615,244,686,271"/>
+<area shape="rect" title=" " alt="" coords="347,244,423,271"/>
+<area shape="rect" href="BoundingBox_8h.html" title="Implémentation de la classe template BoundingBox." alt="" coords="385,319,537,345"/>
+<area shape="rect" title=" " alt="" coords="293,393,355,420"/>
+<area shape="rect" href="CRS_8h.html" title="Définition de la gestion des systèmes de référence." alt="" coords="499,244,591,271"/>
+<area shape="rect" title=" " alt="" coords="508,393,567,420"/>
+<area shape="rect" title=" " alt="" coords="409,393,484,420"/>
+<area shape="rect" title=" " alt="" coords="561,319,620,345"/>
+</map>
+</div>
+</div><a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentation des classes <a class="el" href="classDecimatedImage.html" title="Décimation d&#39;une image, c&#39;est à dire qu&#39;on ne garde qu&#39;un seul pixel tous les N pixels.">DecimatedImage</a>, DecimatedMask et <a class="el" href="classDecimatedImageFactory.html" title="Usine de création d&#39;une image composée.">DecimatedImageFactory</a>. </p>
+<ul>
+<li><a class="el" href="classDecimatedImage.html" title="Décimation d&#39;une image, c&#39;est à dire qu&#39;on ne garde qu&#39;un seul pixel tous les N pixels.">DecimatedImage</a> : image calculée à d'images compatibles, superposables </li>
+<li>DecimatedMask : masque composé, associé à une image composée </li>
+<li><a class="el" href="classDecimatedImageFactory.html" title="Usine de création d&#39;une image composée.">DecimatedImageFactory</a> : usine de création d'objet <a class="el" href="classDecimatedImage.html" title="Décimation d&#39;une image, c&#39;est à dire qu&#39;on ne garde qu&#39;un seul pixel tous les N pixels.">DecimatedImage</a> </li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
