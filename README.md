@@ -1,3 +1,7 @@
+DEPRECATED!!
+
+La documentation générale est dans le dépôt rok4.github.io
+
 # Documentation du projet ROK4
 
 Ce dépôt contient : 
